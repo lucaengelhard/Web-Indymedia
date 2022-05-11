@@ -1,3 +1,83 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 2px solid var(--schwarz);
+
+    font-family: Iosevka, monospace;
+    font-weight: 800;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+nav > div > ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+
+}
+
+nav > div > ul > * {
+    padding-right: 3rem;
+}
+
+
+.logo {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo > .closeLetters {
+    letter-spacing: -0.8rem;
+}
+
+
+.rainbow {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.closeLetters {
+    font-weight: 800;
+    letter-spacing: -0.6rem
+}
+
+.toricon > * {
+    width: 2rem;
+}
+
+nav > div > ul > li > a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.headerstart > nav > div > ul > li > a {
+    color: white;
+}
+
+.headerswitch > nav > div > ul > li > a {
+    color: black;
+}
+
+.headerstart > nav > div > ul > li > a:visited {
+    color: white;
+}
+
+.headerswitch > nav > div > ul > li > a:visited {
+    color: black;
+}
+
 .headerstart {
     background-color: transparent;
     transition: background-color 0.1s;
@@ -5,14 +85,6 @@
 
 .headerstart > * {
     border-bottom: 0px;
-}
-
-.headerstart > nav > .logoblack {
-    display: none;
-}
-
-.headerstart > nav > .logowhite {
-    display: block;
 }
 
 .headerswitch {
@@ -23,30 +95,19 @@
     border-bottom: 2px solid var(--schwarz);
 }
 
-.headerswitch > nav > .logowhite {
-    display: none;
+
+.headerstart > nav > a > .logo {
+    color: white;
 }
 
-.headerswitch > nav > .logoblack {
-    display: block;
+.headerswitch > nav > a > .logo {
+    color: black;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem;
-    border-bottom: 2px solid var(--schwarz);
+.headerstart > nav > a > .logo:visited {
+    color: white;
 }
 
-ul {
-    margin: 0;
-    display: flex;
-    list-style: none;
-
-}
-
-ul > * {
-    padding-right: 3rem;
+.headerswitch > nav > a > .logo:visited {
+    color: black;
 }

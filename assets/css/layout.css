@@ -6,6 +6,7 @@ header {
     position: fixed;
     width: 100%;
     background-color: var(--weiss);
+    z-index: 99;
 }
 
 
@@ -29,7 +30,6 @@ header {
 }
 
 .artikelliste {
-    margin-left: 20rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,10 +38,45 @@ header {
 
 .artikelliste > * {
     width: 100%;
-    height: 30rem;
+    height: 100%;
+    max-width: 25%;
 
-    flex: 0 1 30%;
+    flex: 1;
 
     margin: 1rem;
-    background-color: var(--antifa);
+}
+
+#column_menu {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 56px;
+
+    font-family: Iosevka, monospace;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+}
+
+#column_menu > ul {
+    list-style: none;
+}
+
+#column_menu > ul > a {
+    text-decoration: none;
+    color: black;
+}
+
+#column_menu > ul > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.menu_active_topic {
+    font-weight: 800;
+    color: var(--antifa);
+}
+
+.menu_inactive_topic {
+    font-weight: 200
 }

@@ -16,24 +16,8 @@ h3 {
     font-size: 1rem;
 }
 
-nav {
-    font-family: Iosevka;
-    font-weight: 800;
-}
 
-li > a {
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.headerstart > nav > ul > li > a:visited {
-    color: white;
-}
-
-.headerswitch > nav > ul > li > a:visited {
-    color: black;
-}
 
 #landing > div > * {
-    color: var(--weiss);
+    color: white;
 }
