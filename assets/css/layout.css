@@ -1,5 +1,6 @@
 body {
     margin: 0rem;
+    text-overflow: ellipsis;
 }
 
 header {
@@ -23,27 +24,117 @@ header {
     background-image: linear-gradient(0deg, rgba(2, 0, 36, 0.8715861344537815) 0%, rgba(0, 0, 0, 0.6166841736694677) 28%, rgba(0, 0, 0, 0) 45%), url(../images/landingimage.png);
     background-size: cover;
     background-color: var(--schwarz);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
-#landing > div {
-    max-width: 40rem;
+.landing_text {
+    max-width: 60%;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
 }
 
 .artikelliste {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 1300px;
 
 }
 
-.artikelliste > * {
+#column_menu {
     width: 100%;
     height: 100%;
-    max-width: 25%;
 
-    flex: 1;
+    flex: 1 1;
+    ;
+}
 
-    margin: 1rem;
+#column_artikel {
+    width: 100%;
+
+    flex: 1 1 70%;
+
+
+}
+
+.postbox {
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.colums_1_2 {
+    min-width: 70%;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.column_textposts {
+    min-width: 30%;
+}
+
+.post_tags {
+    font-family: Iosevka, monospace;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.featured_post {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.featured_image {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.post_image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.regular_posts {
+    display: flex;
+    gap: 2rem;
+}
+
+.regular_posts > * {
+    flex: 1 1 30%;
+}
+
+.textpost_title {
+    text-transform: uppercase;
+    color: var(--antifa);
+    font-size: 2rem;
+}
+
+.post_reminder {
+    padding: 1rem;
+    border-style: solid;
+    border-color: var(--antifa);
+    border-width: 1px;
+}
+
+.post_button {
+    background-color: var(--antifa);
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    font-family: Iosevka;
 }
 
 #column_menu {

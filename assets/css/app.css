@@ -5,8 +5,6 @@
 
 @import url(layout.css);
 
-@import url(nascar.css);
-
 /*Farben*/
 :root {
     --schwarz: #000000;
