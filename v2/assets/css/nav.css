@@ -1,0 +1,76 @@
+header {
+    position: fixed;
+    top: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    font-family: Iosevka, monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: 800;
+    color: inherit;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navigation > ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    gap: 1.5rem;
+}
+
+.navigation > ul > li > a {
+    font-family: Iosevka, monospace;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation > ul > li > a:visited {
+    color: inherit;
+}
+
+.toricon > img {
+    object-fit: cover;
+    width: 2rem;
+}
+
+
+/* Headerswitch */
+
+.headerswitch {
+    background-color: transparent;
+    color: white;
+}
+
+.headerswitch > nav {
+    border-bottom: 2px solid transparent;
+}
+
+@media screen and (max-width: 1200px) {
+    border-bottom: 0px solid black;
+}

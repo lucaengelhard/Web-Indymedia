@@ -1,35 +1,27 @@
 const header = document.querySelector("header");
 const sectionOne = document.querySelector("#landing");
 
+headerheight = header.offsetHeight;
+
 const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px 0px"
+    rootMargin: "-56px 0px 0px 0px"
 };
-
-var intersectcount = 0;
-
-var statecheck = 0;
 
 const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
     entries.forEach(entry => {
-        if (!entries.isIntersecting) {
-            if (intersectcount == 0) {
-                intersectcount++;
-                //console.log(intersectcount);
-            } else {
-                if (statecheck == 0) {
-                    header.classList.add("headerswitch");
-                    intersectcount++;
-                    //console.log(intersectcount);
-                    statecheck = 1;
-                    //console.log(statecheck);
-                } else {
-                    header.classList.remove("headerswitch");
-                    intersectcount++;
-                    //console.log(intersectcount);
-                    statecheck = 0;
-                    //console.log(statecheck);
-                }
-            }
+
+        intersectcheck = entry.isIntersecting;
+        //console.log(intersectcheck);
+
+        if (intersectcheck === false) {
+            //console.log("switch");
+            header.classList.add("headerswitch");
+            document.getElementById("logogap").style.color = "white";
+        }
+        if (intersectcheck === true) {
+            //console.log("start");
+            header.classList.remove("headerswitch");
+            document.getElementById("logogap").style.color = "black";
         }
     })
 }, sectionOneOptions);

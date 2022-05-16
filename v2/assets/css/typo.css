@@ -1,0 +1,44 @@
+@import url(iosevka.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+h1 {
+    font-family: Iosevka, monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    word-break: normal;
+
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+h2 {}
+
+h3 {}
+
+h4 {
+    font-family: Iosevka, monospace;
+    font-weight: 300;
+    margin: 0px;
+}
+
+
+p {
+    font-family: Manrope, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* rainbow */
+
+.logo > .closeLetters {
+    letter-spacing: -0.8rem;
+}
+
+.closeLetters {
+    letter-spacing: -0.6rem
+}

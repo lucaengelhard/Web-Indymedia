@@ -6,6 +6,9 @@ h1 {
     font-family: Iosevka, monospace;
     font-weight: 600;
     font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    word-break: break-all;
 }
 
 h2 {}
@@ -14,26 +17,11 @@ h3 {
     font-family: Manrope, sans-serif;
     font-weight: 500;
     font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
-nav {
-    font-family: Iosevka;
-    font-weight: 800;
-}
 
-li > a {
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.headerstart > nav > ul > li > a:visited {
-    color: white;
-}
-
-.headerswitch > nav > ul > li > a:visited {
-    color: black;
-}
 
 #landing > div > * {
-    color: var(--weiss);
+    color: white;
 }
