@@ -13,15 +13,15 @@ const sectionOneObserver = new IntersectionObserver(function (entries, sectionOn
         intersectcheck = entry.isIntersecting;
         //console.log(intersectcheck);
 
-        if (intersectcheck === false) {
+        if (intersectcheck === true) {
             //console.log("switch");
             header.classList.add("headerswitch");
-            document.getElementById("logogap").style.color = "white";
+            document.getElementById("logogap").style.color = "black";
         }
-        if (intersectcheck === true) {
+        if (intersectcheck === false) {
             //console.log("start");
             header.classList.remove("headerswitch");
-            document.getElementById("logogap").style.color = "black";
+            document.getElementById("logogap").style.color = "white";
         }
     })
 }, sectionOneOptions);

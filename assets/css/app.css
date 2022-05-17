@@ -1,20 +1,18 @@
 /* Import CSS */
-@import url(nav.css);
-
 @import url(typo.css);
+
+@import url(nav.css);
 
 @import url(layout.css);
 
 /*Farben*/
 :root {
-    --schwarz: #000000;
-    --weiss: #FFFFFF;
     --grau: #D2D2D2;
 
     --antifa: #D91200;
     --oekologie: #76CD1F;
-    --queer: #D90090;
-    --kultur: #FFC800;
+    --feminismus: #D90090;
+    --kultur: #E5B400;
     --rassismus: #951FCC;
     --arbeit: #193CA6;
     --militarismus: #F37A00;

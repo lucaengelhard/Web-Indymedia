@@ -1,125 +1,235 @@
 body {
-    margin: 0rem;
-    text-overflow: ellipsis;
+    margin: 0;
 }
 
-header {
-    position: fixed;
+.landing {
     width: 100%;
-    background-color: var(--weiss);
-    z-index: 99;
+    max-width: 1200px;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+
 }
 
-
-
-#landing {
-    height: 50rem;
+.landing_tab {
     width: 100%;
-
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    height: 7rem;
 
-    /* https://cssgradient.io/ */
-    background-image: linear-gradient(0deg, rgba(2, 0, 36, 0.8715861344537815) 0%, rgba(0, 0, 0, 0.6166841736694677) 28%, rgba(0, 0, 0, 0) 45%), url(../images/landingimage.png);
-    background-size: cover;
-    background-color: var(--schwarz);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    margin-bottom: 1rem;
+
+    gap: 1rem;
+
+    transition: height 0.3s;
+}
+
+
+
+.landing_img {
+    flex: 1 1 60%;
+}
+
+.landing_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .landing_text {
-    max-width: 60%;
+    flex: 1 1 30%;
+    padding-top: 1rem;
+    border-top: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.landing_text > h1 {
+    font-size: 1rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.landing_text > p {
+    display: none;
+    margin: 0;
+}
+
+.landing_current {
+    height: 20rem;
+}
+
+.landing_text > .morebutton {
+    display: none;
+    justify-self: flex-end;
+}
+
+.landing_text > .morebutton > * {
+    margin: 0;
+}
+
+.landing_current > .landing_text > h1 {
+    font-size: 1.5rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* number of lines to show */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.landing_current > .landing_text > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.landing_current > .landing_text > .morebutton {
+    display: block;
 }
 
 #content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap
+    margin-top: 2rem;
 }
 
-.artikelliste {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1300px;
+.homepage_menu {
+    float: left;
+    position: sticky;
+    top: 72px;
 
-}
-
-#column_menu {
-    width: 100%;
-    height: 100%;
-
-    flex: 1 1;
-    ;
-}
-
-#column_artikel {
-    width: 100%;
-
-    flex: 1 1 70%;
-
-
-}
-
-.postbox {
-    display: flex;
-    padding: 2rem;
-    gap: 1rem;
-}
-
-.colums_1_2 {
-    min-width: 70%;
-    display: flex;
-    flex-wrap: wrap
-}
-
-.column_textposts {
-    min-width: 30%;
-}
-
-.post_tags {
     font-family: Iosevka, monospace;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    color: black;
 }
 
-.featured_post {
+.homepage_menu > ul {
+    list-style: none;
+}
+
+.homepage_menu > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+.homepage_menu > ul > li > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.homepage_menu > ul > li > a > h1 {
+    margin: 0;
+}
+
+.article {
+    max-width: 900px;
+    margin: auto;
+}
+
+.article > * {
     width: 100%;
-    flex: 1 1 100%;
-}
-
-.featured_image {
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
-
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.post_image {
-    width: 100%;
-    height: 15rem;
-    object-fit: cover;
-
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.regular_posts {
     display: flex;
     gap: 2rem;
 }
 
-.regular_posts > * {
+.article_image {
+    width: 100%;
+    flex: 1 1 60%;
+}
+
+.article_link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article_link:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured_post > .article_link > img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.post_image {
+    width: 100%;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--antifa);
+}
+
+.post_image > .article_link > img {
+    width: 100%;
+    max-height: 20rem;
+    object-fit: cover;
+}
+
+.article_text {
     flex: 1 1 30%;
 }
 
-.textpost_title {
-    text-transform: uppercase;
+.article_link > h4 {
+    margin-top: 0.2rem;
+}
+
+.article_link > img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.article_link > p {
+    margin-bottom: 0px;
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* number of lines to show */
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.morebutton {
     color: var(--antifa);
-    font-size: 2rem;
+}
+
+.morbutton:visited {
+    color: var(--antifa);
+}
+
+.articlelist_image {
+    display: flex;
+    gap: 2rem;
+}
+
+.post_text {
+    border-bottom: 1px solid var(--antifa);
+    margin-bottom: 2rem;
+
+}
+
+.post_text > a > h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    word-break: normal;
+    text-transform: uppercase;
+
+    color: var(--antifa);
 }
 
 .post_reminder {
@@ -127,9 +237,14 @@ header {
     border-style: solid;
     border-color: var(--antifa);
     border-width: 1px;
+    color: var(--antifa);
 }
 
-.post_button {
+.post_reminder > h1 {
+    word-break: normal;
+}
+
+.reminder_button {
     background-color: var(--antifa);
     border: none;
     padding: 0.5rem;
@@ -137,37 +252,46 @@ header {
     font-family: Iosevka;
 }
 
-#column_menu {
-    display: flex;
-    justify-content: flex-end;
-    position: sticky;
-    top: 56px;
 
-    font-family: Iosevka, monospace;
-    text-transform: uppercase;
+@media screen and (max-width: 1400px) {
+    .article {
+        margin-right: 5rem;
+    }
+
+    .homepage_menu > ul > li > a > h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #content {
+        margin-top: 0;
+    }
+
+    .article {
+        margin: auto;
+    }
+
+    .homepage_menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        border-bottom: 2px solid black;
+    }
+
+    .homepage_menu > ul {
+        display: flex;
+        gap: 1.5rem;
+        justify-self: center;
+        padding: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+    }
+}
+
+.homepage_menu > ul > li > a > h1 {
     font-size: 1.2rem;
-
 }
-
-#column_menu > ul {
-    list-style: none;
-}
-
-#column_menu > ul > a {
-    text-decoration: none;
-    color: black;
-}
-
-#column_menu > ul > a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-.menu_active_topic {
-    font-weight: 800;
-    color: var(--antifa);
-}
-
-.menu_inactive_topic {
-    font-weight: 200
 }
