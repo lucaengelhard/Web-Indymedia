@@ -3,7 +3,13 @@
 
 @import url(nav.css);
 
+@import url(home.css);
+
+@import url(landing.css);
+
 @import url(layout.css);
+
+@import url(topics.css);
 
 /*Farben*/
 :root {
@@ -17,4 +23,5 @@
     --arbeit: #193CA6;
     --militarismus: #F37A00;
     --sozial: #0BC2E5;
+    --sonstige: #000000;
 }

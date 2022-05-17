@@ -68,13 +68,8 @@ nav {
 
 /* Headerswitch */
 
-.headerswitch {
-    background-color: transparent;
-    color: white;
-}
-
 .headerswitch > nav {
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid transparent !important;
 }
 
 @media screen and (max-width: 1200px) {

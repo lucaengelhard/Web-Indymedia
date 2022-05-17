@@ -1,0 +1,77 @@
+#sozial > .article_image > .articlelist_image > .column_left > .post_image {
+    border-bottom: 1px solid var(--sozial);
+}
+
+#sozial > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
+    color: var(--sozial);
+}
+
+#sozial > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
+    color: var(--sozial);
+}
+
+#sozial > .article_image > .articlelist_image > .column_right > .post_image {
+    border-bottom: 1px solid var(--sozial);
+}
+
+#sozial > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
+    color: var(--sozial);
+}
+
+#sozial > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
+    color: var(--sozial);
+}
+
+#sozial > .article_image > .featured_post > .morebutton {
+    color: var(--sozial);
+}
+
+#sozial > .article_image > .featured_post > .morebutton:visited {
+    color: var(--sozial);
+}
+
+
+#sozial > .article_text > .post_text > .morebutton {
+    color: var(--sozial);
+}
+
+#sozial > .article_text > .post_text > .morebutton:visited {
+    color: var(--sozial);
+}
+
+#sozial > .article_text > .post_text {
+    border-bottom: 1px solid var(--sozial);
+}
+
+#sozial > .article_text > .post_text > a > h1 {
+    color: var(--sozial);
+}
+
+#sozial > .article_text > .post_reminder {
+    border-color: var(--sozial);
+    color: var(--sozial);
+}
+
+#sozial > .article_text > .post_reminder > .reminder_button {
+    background-color: var(--sozial);
+}
+
+#sozial > .more_topic > .morebutton {
+    color: var(--sozial);
+}
+
+#sozial > .more_topic > .morebutton:visited {
+    color: var(--sozial);
+}
+
+#sozial_menu.currentTopic {
+    color: var(--sozial);
+}
+
+#sozial_menu.currentTopic:visited {
+    color: var(--sozial);
+}
+
+#nav.bordercolor_sozial {
+    border-bottom-color: var(--sozial);
+}

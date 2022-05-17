@@ -1,135 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
 
-.landing {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-
-
-}
-
-.landing_tab {
-    width: 100%;
-    display: flex;
-    height: 7rem;
-
-    margin-bottom: 1rem;
-
-    gap: 1rem;
-
-    transition: height 0.3s;
-}
-
-
-
-.landing_img {
-    flex: 1 1 60%;
-}
-
-.landing_img > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.landing_text {
-    flex: 1 1 30%;
-    padding-top: 1rem;
-    border-top: 1px solid black;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.landing_text > h1 {
-    font-size: 1rem;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    /* number of lines to show */
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-.landing_text > p {
-    display: none;
-    margin: 0;
-}
-
-.landing_current {
-    height: 20rem;
-}
-
-.landing_text > .morebutton {
-    display: none;
-    justify-self: flex-end;
-}
-
-.landing_text > .morebutton > * {
-    margin: 0;
-}
-
-.landing_current > .landing_text > h1 {
-    font-size: 1.5rem;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    /* number of lines to show */
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
-
-.landing_current > .landing_text > p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    /* number of lines to show */
-    line-clamp: 4;
-    -webkit-box-orient: vertical;
-}
-
-.landing_current > .landing_text > .morebutton {
-    display: block;
-}
-
 #content {
     margin-top: 2rem;
-}
-
-.homepage_menu {
-    float: left;
-    position: sticky;
-    top: 72px;
-
-    font-family: Iosevka, monospace;
-    text-transform: uppercase;
-    color: black;
-}
-
-.homepage_menu > ul {
-    list-style: none;
-}
-
-.homepage_menu > ul > li > a {
-    color: black;
-    text-decoration: none;
-}
-
-.homepage_menu > ul > li > a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.homepage_menu > ul > li > a > h1 {
-    margin: 0;
 }
 
 .article {
@@ -140,7 +18,11 @@ body {
 .article > * {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 4rem;
+
+    scroll-margin-top: 73px;
 }
 
 .article_image {
@@ -169,7 +51,7 @@ body {
 .post_image {
     width: 100%;
     margin-top: 2rem;
-    border-bottom: 1px solid var(--antifa);
+
 }
 
 .post_image > .article_link > img {
@@ -204,21 +86,12 @@ body {
     -webkit-box-orient: vertical;
 }
 
-.morebutton {
-    color: var(--antifa);
-}
-
-.morbutton:visited {
-    color: var(--antifa);
-}
-
 .articlelist_image {
     display: flex;
     gap: 2rem;
 }
 
 .post_text {
-    border-bottom: 1px solid var(--antifa);
     margin-bottom: 2rem;
 
 }
@@ -229,15 +102,15 @@ body {
     word-break: normal;
     text-transform: uppercase;
 
-    color: var(--antifa);
+
 }
 
 .post_reminder {
     padding: 1rem;
     border-style: solid;
-    border-color: var(--antifa);
+
     border-width: 1px;
-    color: var(--antifa);
+
 }
 
 .post_reminder > h1 {
@@ -245,25 +118,42 @@ body {
 }
 
 .reminder_button {
-    background-color: var(--antifa);
+
     border: none;
     padding: 0.5rem;
     color: white;
     font-family: Iosevka;
 }
 
-
-@media screen and (max-width: 1400px) {
-    .article {
-        margin-right: 5rem;
-    }
-
-    .homepage_menu > ul > li > a > h1 {
-        font-size: 1.2rem;
-    }
+.more_topic {
+    margin-left: auto;
 }
 
-@media screen and (max-width: 1200px) {
+footer {
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+.footer_container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer_container > ul {
+    list-style: none;
+}
+
+.footer_container > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .landing {
+        margin-bottom: 0;
+    }
+
     #content {
         margin-top: 0;
     }
@@ -272,26 +162,9 @@ body {
         margin: auto;
     }
 
-    .homepage_menu {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        border-bottom: 2px solid black;
-    }
 
-    .homepage_menu > ul {
-        display: flex;
-        gap: 1.5rem;
-        justify-self: center;
-        padding: 0;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
+    .homepage_menu > ul > li > a > h1 {
+        font-size: 1rem;
 
     }
-}
-
-.homepage_menu > ul > li > a > h1 {
-    font-size: 1.2rem;
-}
 }

@@ -1,6 +1,6 @@
 tablist = currentSelect = document.getElementsByClassName("landing_tab");
 
-function testFunction(element) {
+function landingSwap(element) {
 
     for (let i = 0; i < tablist.length; i++) {
         //console.log(tablist[i]);

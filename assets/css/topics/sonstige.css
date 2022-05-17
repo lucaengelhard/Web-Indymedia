@@ -1,0 +1,77 @@
+#sonstige > .article_image > .articlelist_image > .column_left > .post_image {
+    border-bottom: 1px solid var(--sonstige);
+}
+
+#sonstige > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_image > .articlelist_image > .column_right > .post_image {
+    border-bottom: 1px solid var(--sonstige);
+}
+
+#sonstige > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_image > .featured_post > .morebutton {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_image > .featured_post > .morebutton:visited {
+    color: var(--sonstige);
+}
+
+
+#sonstige > .article_text > .post_text > .morebutton {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_text > .post_text > .morebutton:visited {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_text > .post_text {
+    border-bottom: 1px solid var(--sonstige);
+}
+
+#sonstige > .article_text > .post_text > a > h1 {
+    color: var(--sonstige);
+}
+
+#sonstige > .article_text > .post_reminder {
+    border-color: var(--sonstige);
+    color: var(--sonstige);
+}
+
+#sonstige > .article_text > .post_reminder > .reminder_button {
+    background-color: var(--sonstige);
+}
+
+#sonstige > .more_topic > .morebutton {
+    color: var(--sonstige);
+}
+
+#sonstige > .more_topic > .morebutton:visited {
+    color: var(--sonstige);
+}
+
+#sonstige_menu.currentTopic {
+    color: var(--sonstige);
+}
+
+#sonstige_menu.currentTopic:visited {
+    color: var(--sonstige);
+}
+
+#nav.bordercolor_sonstige {
+    border-bottom-color: var(--sonstige);
+}

@@ -1,29 +1,77 @@
-const header = document.querySelector("header");
-const sectionOne = document.querySelector("#landing");
+if (window.innerWidth <= 1250) {
 
-headerheight = header.offsetHeight;
+    const header = document.querySelector("header");
+    const sectionOne = document.querySelector("#landing");
 
-const sectionOneOptions = {
-    rootMargin: "-56px 0px 0px 0px"
-};
+    headerheight = header.offsetHeight;
 
-const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
-    entries.forEach(entry => {
+    const sectionOneOptions = {
+        rootMargin: "-56px 0px 0px 0px"
+    };
 
-        intersectcheck = entry.isIntersecting;
-        //console.log(intersectcheck);
+    const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
+        entries.forEach(entry => {
 
-        if (intersectcheck === true) {
-            //console.log("switch");
-            header.classList.add("headerswitch");
-            document.getElementById("logogap").style.color = "black";
-        }
-        if (intersectcheck === false) {
-            //console.log("start");
-            header.classList.remove("headerswitch");
-            document.getElementById("logogap").style.color = "white";
-        }
-    })
-}, sectionOneOptions);
+            intersectcheck = entry.isIntersecting;
+            //console.log(intersectcheck);
 
-sectionOneObserver.observe(sectionOne);
+            if (intersectcheck === true) {
+                //console.log("switch");
+
+                header.classList.remove("headerswitch");
+                headercheck = false;
+            }
+            if (intersectcheck === false) {
+                if (window.innerWidth <= 1250) {
+                    //console.log("start");
+                    header.classList.add("headerswitch");
+                    headercheck = true;
+                }
+            }
+        })
+    }, sectionOneOptions);
+
+    sectionOneObserver.observe(sectionOne);
+} else {
+    header.classList.remove("headerswitch");
+}
+
+visualViewport.addEventListener('resize', function () {
+    if (window.innerWidth <= 1250) {
+
+        const header = document.querySelector("header");
+        const sectionOne = document.querySelector("#landing");
+
+        headerheight = header.offsetHeight;
+
+        const sectionOneOptions = {
+            rootMargin: "-56px 0px 0px 0px"
+        };
+
+        const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
+            entries.forEach(entry => {
+
+                intersectcheck = entry.isIntersecting;
+                //console.log(intersectcheck);
+
+                if (intersectcheck === true) {
+                    //console.log("switch");
+
+                    header.classList.remove("headerswitch");
+                    headercheck = false;
+                }
+                if (intersectcheck === false) {
+                    //console.log("start");
+                    if (window.innerWidth <= 1250) {
+                        header.classList.add("headerswitch");
+                        headercheck = true;
+                    }
+                }
+            })
+        }, sectionOneOptions);
+
+        sectionOneObserver.observe(sectionOne);
+    } else {
+        header.classList.remove("headerswitch");
+    }
+});
