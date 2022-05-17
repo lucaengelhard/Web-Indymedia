@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
 }
 
 #landing {
@@ -67,7 +67,7 @@ body {
 }
 
 .homepage_menu > ul > li > a > h1 {
-    margin: 0px;
+    margin: 0;
 }
 
 .article {
@@ -106,6 +106,8 @@ body {
 
 .post_image {
     width: 100%;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--antifa);
 }
 
 .post_image > .article_link > img {
@@ -120,7 +122,11 @@ body {
 
 .article_link > h4 {
     margin-top: 0.2rem;
-    margin-bottom: 0.5rem;
+}
+
+.article_link > img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 .article_link > p {
@@ -141,6 +147,12 @@ body {
 .articlelist_image {
     display: flex;
     gap: 2rem;
+}
+
+.post_text {
+    border-bottom: 1px solid var(--antifa);
+    margin-bottom: 2rem;
+
 }
 
 .post_text > a > h1 {
@@ -185,7 +197,7 @@ body {
 
 @media screen and (max-width: 1200px) {
     #content {
-        margin-top: 0rem;
+        margin-top: 0;
     }
 
     .article {
@@ -204,7 +216,7 @@ body {
         display: flex;
         gap: 1.5rem;
         justify-self: center;
-        padding: 0rem;
+        padding: 0;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
