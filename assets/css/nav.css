@@ -1,113 +1,77 @@
+header {
+    position: fixed;
+    top: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+    color: black;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-bottom: 2px solid var(--schwarz);
+    padding: 0.5rem;
 
-    font-family: Iosevka, monospace;
-    font-weight: 800;
+    border-bottom: 1px solid black;
 }
-
-nav > a {
-    text-decoration: none;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-nav > div > ul {
-    margin: 0;
-    display: flex;
-    list-style: none;
-
-}
-
-nav > div > ul > * {
-    padding-right: 3rem;
-}
-
 
 .logo {
-    font-size: 2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.logo > .closeLetters {
-    letter-spacing: -0.8rem;
-}
-
-
-.rainbow {
-    font-weight: 800;
+    font-family: Iosevka, monospace;
     text-transform: uppercase;
-}
-
-.closeLetters {
-    font-weight: 800;
-    letter-spacing: -0.6rem
-}
-
-.toricon > * {
-    width: 2rem;
-}
-
-nav > div > ul > li > a {
     text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: 800;
+    color: inherit;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navigation > ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    gap: 1.5rem;
+}
+
+.navigation > ul > li > a {
+    font-family: Iosevka, monospace;
+    font-weight: 500;
     font-size: 1.2rem;
+    text-decoration: none;
+    color: inherit;
 }
 
-.headerstart > nav > div > ul > li > a {
-    color: white;
+.navigation > ul > li > a:visited {
+    color: inherit;
 }
 
-.headerswitch > nav > div > ul > li > a {
-    color: black;
+.nav_icons {
+    height: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
-.headerstart > nav > div > ul > li > a:visited {
-    color: white;
-}
-
-.headerswitch > nav > div > ul > li > a:visited {
-    color: black;
-}
-
-.headerstart {
-    background-color: transparent;
-    transition: background-color 0.1s;
-}
-
-.headerstart > * {
-    border-bottom: 0px;
-}
-
-.headerswitch {
-    background-color: white;
-}
-
-.headerswitch > * {
-    border-bottom: 2px solid var(--schwarz);
+.nav_icons > * > img {
+    object-fit: cover;
+    width: 1.2rem;
 }
 
 
-.headerstart > nav > a > .logo {
-    color: white;
+/* Headerswitch */
+
+.headerswitch > nav {
+    border-bottom: 2px solid transparent !important;
 }
 
-.headerswitch > nav > a > .logo {
-    color: black;
-}
-
-.headerstart > nav > a > .logo:visited {
-    color: white;
-}
-
-.headerswitch > nav > a > .logo:visited {
-    color: black;
+@media screen and (max-width: 1200px) {
+    border-bottom: 0px solid black;
 }

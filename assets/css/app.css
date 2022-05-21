@@ -1,22 +1,27 @@
 /* Import CSS */
+@import url(typo.css);
+
 @import url(nav.css);
 
-@import url(typo.css);
+@import url(home.css);
+
+@import url(landing.css);
 
 @import url(layout.css);
 
+@import url(topics.css);
+
 /*Farben*/
 :root {
-    --schwarz: #000000;
-    --weiss: #FFFFFF;
     --grau: #D2D2D2;
 
     --antifa: #D91200;
     --oekologie: #76CD1F;
-    --queer: #D90090;
-    --kultur: #FFC800;
+    --feminismus: #D90090;
+    --kultur: #E5B400;
     --rassismus: #951FCC;
     --arbeit: #193CA6;
     --militarismus: #F37A00;
     --sozial: #0BC2E5;
+    --sonstige: #000000;
 }

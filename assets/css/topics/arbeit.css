@@ -1,0 +1,77 @@
+#arbeit > .article_image > .articlelist_image > .column_left > .post_image {
+    border-bottom: 1px solid var(--arbeit);
+}
+
+#arbeit > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_image > .articlelist_image > .column_right > .post_image {
+    border-bottom: 1px solid var(--arbeit);
+}
+
+#arbeit > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_image > .featured_post > .morebutton {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_image > .featured_post > .morebutton:visited {
+    color: var(--arbeit);
+}
+
+
+#arbeit > .article_text > .post_text > .morebutton {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_text > .post_text > .morebutton:visited {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_text > .post_text {
+    border-bottom: 1px solid var(--arbeit);
+}
+
+#arbeit > .article_text > .post_text > a > h1 {
+    color: var(--arbeit);
+}
+
+#arbeit > .article_text > .post_reminder {
+    border-color: var(--arbeit);
+    color: var(--arbeit);
+}
+
+#arbeit > .article_text > .post_reminder > .reminder_button {
+    background-color: var(--arbeit);
+}
+
+#arbeit > .more_topic > .morebutton {
+    color: var(--arbeit);
+}
+
+#arbeit > .more_topic > .morebutton:visited {
+    color: var(--arbeit);
+}
+
+#arbeit_menu.currentTopic {
+    color: var(--arbeit);
+}
+
+#arbeit_menu.currentTopic:visited {
+    color: var(--arbeit);
+}
+
+#nav.bordercolor_arbeit {
+    border-bottom-color: var(--arbeit);
+}
