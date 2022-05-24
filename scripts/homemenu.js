@@ -1,3 +1,5 @@
+//Hompage Menu Position
+
 viewportsize = window.innerWidth;
 //console.log(viewportsize);
 menu = document.getElementById("homepage_menu");
@@ -15,7 +17,7 @@ if (viewportsize >= 1251) {
     spaceNumber = parseFloat(space);
     //console.log(spaceNumber);
 
-    menuwidth = spaceNumber - 16;
+    menuwidth = spaceNumber - 46;
     //console.log(menuwidth);
 
     menuwidthstring = menuwidth.toString() + "px";
@@ -57,124 +59,131 @@ visualViewport.addEventListener('resize', function () {
     }
 });
 
-topics = document.getElementsByClassName("section_topic");
-const topicOptions = {
-    rootMargin: "0px 0px 0px 0px",
-    threshold: 0.3
+
+
+//Homemenu Colorchanger
+
+topicList = document.getElementsByClassName("section_topic");
+//console.log(topicList);
+
+topicListArray = Array.prototype.slice.call(topicList);
+//console.log(topicListArray);
+
+landingsection = document.getElementById("landing");
+
+const topicObserverOptions = {
+    rootMargin: "150px 0px 100px 0px",
+    threshold: 0.5
 };
 
-let firstload = 0;
+const topicObserver = new IntersectionObserver(function (observedTopics, topicObserver) {
+    observedTopics.forEach(observedTopic => {
 
+        //console.log(observedTopic.target);
+        currentTopic = observedTopic.target.id;
+        console.log(currentTopic);
 
-const topicObserver = new IntersectionObserver(function (topicentry, topicObserver) {
-    //console.log(topicentry);
-
-    for (let i = 0; i < topicentry.length; i++) {
-        //console.log(topicentry[i].target);
-        currentTopic = topicentry[i].target.id;
-        //console.log(currentTopic);
-
-        if (firstload == 9) {
-
-            if (currentTopic == "arbeit") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("arbeit_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_arbeit");
-
+        if (currentTopic == "arbeit") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
             }
+            document.getElementById("arbeit_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_arbeit");
 
-            if (currentTopic == "sozial") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("sozial_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_sozial");
-            }
-
-            if (currentTopic == "oekologie") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("oekologie_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_oekologie");
-
-            }
-
-            if (currentTopic == "kultur") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("kultur_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_kultur");
-            }
-
-            if (currentTopic == "militarismus") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("militarismus_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_militarismus");
-            }
-
-            if (currentTopic == "antifa") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("antifa_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_antifa");
-            }
-
-            if (currentTopic == "feminismus") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("feminismus_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_feminismus");
-            }
-
-            if (currentTopic == "rassismus") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("rassismus_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_rassismus");
-            }
-
-            if (currentTopic == "sonstige") {
-                topiclist = document.getElementsByClassName("menu_topic");
-                for (let a = 0; a < topiclist.length; a++) {
-                    topiclist[a].classList.remove("currentTopic");
-                }
-                document.getElementById("sonstige_menu").classList.add("currentTopic");
-                document.getElementById("nav").classList = " ";
-                document.getElementById("nav").classList.add("bordercolor_sonstige");
-            }
         }
-    }
 
-}, topicOptions);
+        if (currentTopic == "sozial") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("sozial_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_sozial");
+        }
 
-for (let t = 0; t < topics.length; t++) {
-    //console.log(topics[t]);
-    topicObserver.observe(topics[t]);
-    firstload = firstload + 1;
-    //console.log(firstload);
+        if (currentTopic == "oekologie") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("oekologie_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_oekologie");
+
+        }
+
+        if (currentTopic == "kultur") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("kultur_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_kultur");
+        }
+
+        if (currentTopic == "militarismus") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("militarismus_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_militarismus");
+        }
+
+        if (currentTopic == "antifa") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("antifa_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_antifa");
+        }
+
+        if (currentTopic == "feminismus") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("feminismus_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_feminismus");
+        }
+
+        if (currentTopic == "rassismus") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("rassismus_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_rassismus");
+        }
+
+        if (currentTopic == "sonstige") {
+            topiclist = document.getElementsByClassName("menu_topic");
+            for (let a = 0; a < topiclist.length; a++) {
+                topiclist[a].classList.remove("currentTopic");
+            }
+            document.getElementById("sonstige_menu").classList.add("currentTopic");
+            document.getElementById("nav").classList = " ";
+            document.getElementById("nav").classList.add("bordercolor_sonstige");
+        }
+    });
+}, topicObserverOptions);
+
+/*
+for (let t = 0; t < topicList.length; t++) {
+    topicObserver.observe(topicList[t]);
 }
+*/
+
+topicListArray.forEach(topic => {
+    //console.log(topic);
+    topicObserver.observe(topic);
+})

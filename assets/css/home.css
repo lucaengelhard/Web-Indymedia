@@ -29,22 +29,32 @@
     margin: 0;
     text-align: right;
     font-size: 1.2rem;
+    font-weight: 200;
 }
 
+.homepage_menu > ul > li > a > h1:hover{
+font-weight: 600;
+}
+
+.homepage_menu > ul > li > .currentTopic > * {
+    font-weight: 600;
+}
+
+/*
 @media screen and (min-width: 1250px) {
 
     .homepage_menu > ul > li > .currentTopic > * {
-        font-weight: 800;
+        font-weight: 600;
 
     }
 
     .homepage_menu > ul > li > a > * {
-        font-weight: 400;
+        font-weight: 200;
     }
 
 
 }
-
+*/
 
 @media screen and (max-width: 1250px) {
     .homepage_menu {
@@ -105,5 +115,10 @@
         -webkit-hyphens: none;
         -ms-hyphens: none;
         hyphens: none;
+        font-weight: 400;
+    }
+
+    .homepage_menu > ul > li > a > h1:hover {
+        font-weight: 600;
     }
 }
