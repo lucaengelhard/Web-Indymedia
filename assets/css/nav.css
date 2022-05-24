@@ -9,8 +9,14 @@ header {
 }
 
 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     padding: 0.5rem;
@@ -29,12 +35,18 @@ nav {
 }
 
 .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 1.5rem;
 }
 
 .navigation > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0px;
@@ -60,20 +72,33 @@ nav {
 
 .nav_icons {
     height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 0.5rem;
 }
 
-.nav_icons > * > img {
-    object-fit: cover;
+.nav_icons > * {
     width: 1.2rem;
 }
 
-.plusicon > * {
-    stroke-width: 10;
-    width: 1.2rem;
+.nav_icons > a > * {
+    stroke-width: 2;
+    width: 100%;
 }
 
+.nav_icons > a:hover > * > * {
+    stroke-width: 6;
+}
+
+.st0 {
+    fill: none;
+    stroke: #000000;
+}
+
+#nav_burger {
+    display: none;
+}
 
 /* Headerswitch */
 
@@ -83,4 +108,43 @@ nav {
 
 @media screen and (max-width: 1200px) {
     border-bottom: 0px solid black;
+}
+
+@media screen and (max-width: 720px) {
+    .navigation {
+        gap: 1rem;
+        align-items: flex-start
+    }
+
+    .navigation > ul {
+        display: none;
+    }
+
+    .torbutton {
+        display: none;
+    }
+
+    #nav_burger {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #nav_burger > a {
+        width: 100%;
+        height: 2rem;
+    }
+
+    .nav_icons > * {
+        width: 2rem;
+    }
+
+    .nav_icons > a > * > * {
+        stroke-width: 4;
+    }
+
+    .st0 {
+        stroke-width: 4;
+    }
+}
 }

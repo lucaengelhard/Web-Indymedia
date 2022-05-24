@@ -1,6 +1,5 @@
 .landing {
     width: 100%;
-    max-width: 1400px;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -14,7 +13,7 @@
 
     margin-bottom: 1rem;
 
-    gap: 1rem;
+    gap: 2rem;
 
     -webkit-transition: height 0.3s;
 
@@ -23,8 +22,8 @@
 
 .landing_img {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 60%;
-    flex: 1 1 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
     background-color: var(--antifa);
 }
 
@@ -43,19 +42,32 @@
     font-size: 4rem;
     -webkit-transition: font-size 0.2s;
     transition: font-size 0.2s;
+
+    overflow: hidden;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    /* number of lines to show */
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .landingquote {
     color: black;
     display: none;
     height: 0;
+
+
 }
 
 .landing_text {
+    max-width: 400px;
+
     -webkit-box-flex: 1;
     -ms-flex: 1 1 30%;
     flex: 1 1 30%;
     padding-top: 1rem;
+    padding-right: 1rem;
     border-top: 1px solid black;
 
     display: -webkit-box;
@@ -117,6 +129,8 @@
 }
 
 .landing_current > .landing_text > p {
+
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -137,4 +151,41 @@
 .landing_current > .landing_img > .landing_quotebox > .landingquote {
     display: inline;
     font-size: 2rem;
+
+
+}
+
+@media screen and (max-width: 920px) {
+    .landing_img {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+        flex: 1 0 60%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .landing_current > .landing_img > .landing_quotebox > .landingquote {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .landing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .landing_current {
+        height: auto;
+    }
+
+    .landing_img {
+        display: none;
+    }
+
+    .landing_text {
+        max-width: 100%;
+        width: 100%;
+    }
 }

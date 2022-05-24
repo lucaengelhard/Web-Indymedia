@@ -1,9 +1,11 @@
 //Hompage Menu Position
 
+menumargin = 30;
+
 viewportsize = window.innerWidth;
 //console.log(viewportsize);
 menu = document.getElementById("homepage_menu");
-viewportsize = window.innerWidth;
+
 if (viewportsize >= 1251) {
 
     var p = document.getElementById("antifa");
@@ -17,7 +19,7 @@ if (viewportsize >= 1251) {
     spaceNumber = parseFloat(space);
     //console.log(spaceNumber);
 
-    menuwidth = spaceNumber - 46;
+    menuwidth = spaceNumber - menumargin;
     //console.log(menuwidth);
 
     menuwidthstring = menuwidth.toString() + "px";
@@ -25,6 +27,7 @@ if (viewportsize >= 1251) {
 
     menu = document.getElementById("homepage_menu");
 
+    //console.log(menuwidthstring);
     menu.style.width = menuwidthstring;
 } else {
     menu.removeAttribute("style");
@@ -45,7 +48,7 @@ visualViewport.addEventListener('resize', function () {
         spaceNumber = parseFloat(space);
         //console.log(spaceNumber);
 
-        menuwidth = spaceNumber - 16;
+        menuwidth = spaceNumber - menumargin;
         //console.log(menuwidth);
 
         menuwidthstring = menuwidth.toString() + "px";
@@ -81,7 +84,7 @@ const topicObserver = new IntersectionObserver(function (observedTopics, topicOb
 
         //console.log(observedTopic.target);
         currentTopic = observedTopic.target.id;
-        console.log(currentTopic);
+        //console.log(currentTopic);
 
         if (currentTopic == "arbeit") {
             topiclist = document.getElementsByClassName("menu_topic");
@@ -176,12 +179,6 @@ const topicObserver = new IntersectionObserver(function (observedTopics, topicOb
         }
     });
 }, topicObserverOptions);
-
-/*
-for (let t = 0; t < topicList.length; t++) {
-    topicObserver.observe(topicList[t]);
-}
-*/
 
 topicListArray.forEach(topic => {
     //console.log(topic);
