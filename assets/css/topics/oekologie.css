@@ -1,77 +1,47 @@
-#oekologie > .article_image > .articlelist_image > .column_left > .post_image {
-    border-bottom: 1px solid var(--oekologie);
-}
-
-#oekologie > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_image > .articlelist_image > .column_right > .post_image {
-    border-bottom: 1px solid var(--oekologie);
-}
-
-#oekologie > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_image > .featured_post > .morebutton {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_image > .featured_post > .morebutton:visited {
-    color: var(--oekologie);
-}
-
-
-#oekologie > .article_text > .post_text > .morebutton {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_text > .post_text > .morebutton:visited {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_text > .post_text {
-    border-bottom: 1px solid var(--oekologie);
-}
-
-#oekologie > .article_text > .post_text > a > h1 {
-    color: var(--oekologie);
-}
-
-#oekologie > .article_text > .post_reminder {
+#oekologie {
     border-color: var(--oekologie);
+}
+
+.tagtopic-oekologie {
+    border-bottom: 1px solid var(--oekologie);
+}
+
+.tagtopic-oekologie > .morebutton {
     color: var(--oekologie);
 }
 
-#oekologie > .article_text > .post_reminder > .reminder_button {
+.tagtopic-oekologie > .morebutton:visited {
+    color: var(--oekologie);
+}
+
+.article-text > .tagtopic-oekologie > a > h1 {
+    color: var(--oekologie);
+}
+
+.tagtopic-oekologie > a > h4 > span {
+    color: var(--oekologie);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-oekologie > .reminder-button {
     background-color: var(--oekologie);
 }
 
-#oekologie > .more_topic > .morebutton {
+#oekologie-menu.currentTopic {
     color: var(--oekologie);
 }
 
-#oekologie > .more_topic > .morebutton:visited {
+#oekologie-menu.currentTopic:visited {
     color: var(--oekologie);
 }
 
-#oekologie_menu.currentTopic {
-    color: var(--oekologie);
-}
-
-#oekologie_menu.currentTopic:visited {
-    color: var(--oekologie);
-}
-
-#nav.bordercolor_oekologie {
+#nav.bordercolor-oekologie {
     border-bottom-color: var(--oekologie);
+}
+
+@media screen and (max-width: 1250px) {
+    #oekologie {
+        border-top-color: transparent;
+    }
 }

@@ -1,78 +1,47 @@
-    #feminismus > .article_image > .articlelist_image > .column_left > .post_image {
-        border-bottom: 1px solid var(--feminismus);
+#feminismus {
+    border-color: var(--feminismus);
+}
+
+.tagtopic-feminismus {
+    border-bottom: 1px solid var(--feminismus);
+}
+
+.tagtopic-feminismus > .morebutton {
+    color: var(--feminismus);
+}
+
+.tagtopic-feminismus > .morebutton:visited {
+    color: var(--feminismus);
+}
+
+.article-text > .tagtopic-feminismus > a > h1 {
+    color: var(--feminismus);
+}
+
+.tagtopic-feminismus > a > h4 > span {
+    color: var(--feminismus);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-feminismus > .reminder-button {
+    background-color: var(--feminismus);
+}
+
+#feminismus-menu.currentTopic {
+    color: var(--feminismus);
+}
+
+#feminismus-menu.currentTopic:visited {
+    color: var(--feminismus);
+}
+
+#nav.bordercolor-feminismus {
+    border-bottom-color: var(--feminismus);
+}
+
+@media screen and (max-width: 1250px) {
+    #feminismus {
+        border-top-color: transparent;
     }
-
-    #feminismus > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_image > .articlelist_image > .column_right > .post_image {
-        border-bottom: 1px solid var(--feminismus);
-    }
-
-    #feminismus > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_image > .featured_post > .morebutton {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_image > .featured_post > .morebutton:visited {
-        color: var(--feminismus);
-    }
-
-
-    #feminismus > .article_text > .post_text > .morebutton {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_text > .post_text > .morebutton:visited {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_text > .post_text {
-        border-bottom: 1px solid var(--feminismus);
-    }
-
-    #feminismus > .article_text > .post_text > a > h1 {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_text > .post_reminder {
-        border-color: var(--feminismus);
-        color: var(--feminismus);
-    }
-
-    #feminismus > .article_text > .post_reminder > .reminder_button {
-        background-color: var(--feminismus);
-    }
-
-    #feminismus > .more_topic > .morebutton {
-        color: var(--feminismus);
-    }
-
-    #feminismus > .more_topic > .morebutton:visited {
-        color: var(--feminismus);
-    }
-
-    #feminismus_menu.currentTopic {
-        color: var(--feminismus);
-    }
-
-    #feminismus_menu.currentTopic:visited {
-        color: var(--feminismus);
-    }
-
-
-    #nav.bordercolor_feminismus {
-        border-bottom-color: var(--feminismus);
-    }
+}

@@ -1,78 +1,47 @@
-#kultur > .article_image > .articlelist_image > .column_left > .post_image {
-    border-bottom: 1px solid var(--kultur);
-}
-
-#kultur > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-    color: var(--kultur);
-}
-
-#kultur > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-    color: var(--kultur);
-}
-
-#kultur > .article_image > .articlelist_image > .column_right > .post_image {
-    border-bottom: 1px solid var(--kultur);
-}
-
-#kultur > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-    color: var(--kultur);
-}
-
-#kultur > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-    color: var(--kultur);
-}
-
-#kultur > .article_image > .featured_post > .morebutton {
-    color: var(--kultur);
-}
-
-#kultur > .article_image > .featured_post > .morebutton:visited {
-    color: var(--kultur);
-}
-
-
-#kultur > .article_text > .post_text > .morebutton {
-    color: var(--kultur);
-}
-
-#kultur > .article_text > .post_text > .morebutton:visited {
-    color: var(--kultur);
-}
-
-#kultur > .article_text > .post_text {
-    border-bottom: 1px solid var(--kultur);
-}
-
-#kultur > .article_text > .post_text > a > h1 {
-    color: var(--kultur);
-}
-
-#kultur > .article_text > .post_reminder {
+#kultur {
     border-color: var(--kultur);
+}
+
+.tagtopic-kultur {
+    border-bottom: 1px solid var(--kultur);
+}
+
+.tagtopic-kultur > .morebutton {
     color: var(--kultur);
 }
 
-#kultur > .article_text > .post_reminder > .reminder_button {
+.tagtopic-kultur > .morebutton:visited {
+    color: var(--kultur);
+}
+
+.article-text > .tagtopic-kultur > a > h1 {
+    color: var(--kultur);
+}
+
+.tagtopic-kultur > a > h4 > span {
+    color: var(--kultur);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-kultur > .reminder-button {
     background-color: var(--kultur);
 }
 
-#kultur > .more_topic > .morebutton {
+#kultur-menu.currentTopic {
     color: var(--kultur);
 }
 
-#kultur > .more_topic > .morebutton:visited {
+#kultur-menu.currentTopic:visited {
     color: var(--kultur);
 }
 
-#kultur_menu.currentTopic {
-    color: var(--kultur);
-}
-
-#kultur_menu.currentTopic:visited {
-    color: var(--kultur);
-}
-
-
-#nav.bordercolor_kultur {
+#nav.bordercolor-kultur {
     border-bottom-color: var(--kultur);
+}
+
+@media screen and (max-width: 1250px) {
+    #kultur {
+        border-top-color: transparent;
+    }
 }

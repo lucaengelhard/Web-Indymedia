@@ -1,24 +1,24 @@
-tablist = document.getElementsByClassName("landing_tab");
+tablist = document.getElementsByClassName("landing-tab");
 
 function landingSwap(element) {
 
     for (let i = 0; i < tablist.length; i++) {
         //console.log(tablist[i]);
-        currentCheck = tablist[i].classList.contains("landing_current")
+        currentCheck = tablist[i].classList.contains("landing-current")
         //console.log(currentCheck);
         if (currentCheck === true) {
-            tablist[i].classList.remove("landing_current");
+            tablist[i].classList.remove("landing-current");
         }
     }
 
-    element.classList.add("landing_current");
+    element.classList.add("landing-current");
 }
 
 
 //Landing Resizer
 
 viewportsizeLanding = window.innerWidth;
-landingArray = Array.prototype.slice.call(document.getElementsByClassName("landing_img"));
+landingArray = Array.prototype.slice.call(document.getElementsByClassName("landing-img"));
 
 if (viewportsizeLanding >= 921) {
     referenceelement = document.getElementById("arbeit");
@@ -27,7 +27,7 @@ if (viewportsizeLanding >= 921) {
     referncestyle = referenceparent.currentStyle || window.getComputedStyle(referenceparent);
 
     refMarginL = referncestyle.marginLeft;
-    refWidthAdd = referenceelement.querySelector(".article_image").clientWidth;
+    refWidthAdd = referenceelement.querySelector(".article-image").clientWidth;
 
     //console.log(refMarginL);
     //console.log(refWidthAdd);
@@ -62,7 +62,7 @@ visualViewport.addEventListener('resize', function () {
         referncestyle = referenceparent.currentStyle || window.getComputedStyle(referenceparent);
 
         refMarginL = referncestyle.marginLeft;
-        refWidthAdd = referenceelement.querySelector(".article_image").clientWidth;
+        refWidthAdd = referenceelement.querySelector(".article-image").clientWidth;
 
         //console.log(refMarginL);
         //console.log(refWidthAdd);
@@ -70,7 +70,7 @@ visualViewport.addEventListener('resize', function () {
         leftwidth = parseFloat(refMarginL) + refWidthAdd;
         leftwidthString = leftwidth.toString() + "px";
 
-        landingArray = Array.prototype.slice.call(document.getElementsByClassName("landing_img"));
+        landingArray = Array.prototype.slice.call(document.getElementsByClassName("landing-img"));
 
         //console.log(landingArray);
 

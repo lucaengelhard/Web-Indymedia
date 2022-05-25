@@ -1,78 +1,47 @@
-#militarismus > .article_image > .articlelist_image > .column_left > .post_image {
-    border-bottom: 1px solid var(--militarismus);
-}
-
-#militarismus > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_image > .articlelist_image > .column_right > .post_image {
-    border-bottom: 1px solid var(--militarismus);
-}
-
-#militarismus > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_image > .featured_post > .morebutton {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_image > .featured_post > .morebutton:visited {
-    color: var(--militarismus);
-}
-
-
-#militarismus > .article_text > .post_text > .morebutton {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_text > .post_text > .morebutton:visited {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_text > .post_text {
-    border-bottom: 1px solid var(--militarismus);
-}
-
-#militarismus > .article_text > .post_text > a > h1 {
-    color: var(--militarismus);
-}
-
-#militarismus > .article_text > .post_reminder {
+#militarismus {
     border-color: var(--militarismus);
+}
+
+.tagtopic-militarismus {
+    border-bottom: 1px solid var(--militarismus);
+}
+
+.tagtopic-militarismus > .morebutton {
     color: var(--militarismus);
 }
 
-#militarismus > .article_text > .post_reminder > .reminder_button {
+.tagtopic-militarismus > .morebutton:visited {
+    color: var(--militarismus);
+}
+
+.article-text > .tagtopic-militarismus > a > h1 {
+    color: var(--militarismus);
+}
+
+.tagtopic-militarismus > a > h4 > span {
+    color: var(--militarismus);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-militarismus > .reminder-button {
     background-color: var(--militarismus);
 }
 
-#militarismus > .more_topic > .morebutton {
+#militarismus-menu.currentTopic {
     color: var(--militarismus);
 }
 
-#militarismus > .more_topic > .morebutton:visited {
+#militarismus-menu.currentTopic:visited {
     color: var(--militarismus);
 }
 
-#militarismus_menu.currentTopic {
-    color: var(--militarismus);
-}
-
-#militarismus_menu.currentTopic:visited {
-    color: var(--militarismus);
-}
-
-
-#nav.bordercolor_militarismus {
+#nav.bordercolor-militarismus {
     border-bottom-color: var(--militarismus);
+}
+
+@media screen and (max-width: 1250px) {
+    #militarismus {
+        border-top-color: transparent;
+    }
 }

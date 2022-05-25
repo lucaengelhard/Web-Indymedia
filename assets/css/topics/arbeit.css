@@ -1,77 +1,47 @@
-#arbeit > .article_image > .articlelist_image > .column_left > .post_image {
-    border-bottom: 1px solid var(--arbeit);
-}
-
-#arbeit > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_image > .articlelist_image > .column_right > .post_image {
-    border-bottom: 1px solid var(--arbeit);
-}
-
-#arbeit > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_image > .featured_post > .morebutton {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_image > .featured_post > .morebutton:visited {
-    color: var(--arbeit);
-}
-
-
-#arbeit > .article_text > .post_text > .morebutton {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_text > .post_text > .morebutton:visited {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_text > .post_text {
-    border-bottom: 1px solid var(--arbeit);
-}
-
-#arbeit > .article_text > .post_text > a > h1 {
-    color: var(--arbeit);
-}
-
-#arbeit > .article_text > .post_reminder {
+#arbeit {
     border-color: var(--arbeit);
+}
+
+.tagtopic-arbeit {
+    border-bottom: 1px solid var(--arbeit);
+}
+
+.tagtopic-arbeit > .morebutton {
     color: var(--arbeit);
 }
 
-#arbeit > .article_text > .post_reminder > .reminder_button {
+.tagtopic-arbeit > .morebutton:visited {
+    color: var(--arbeit);
+}
+
+.article-text > .tagtopic-arbeit > a > h1 {
+    color: var(--arbeit);
+}
+
+.tagtopic-arbeit > a > h4 > span {
+    color: var(--arbeit);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-arbeit > .reminder-button {
     background-color: var(--arbeit);
 }
 
-#arbeit > .more_topic > .morebutton {
+#arbeit-menu.currentTopic {
     color: var(--arbeit);
 }
 
-#arbeit > .more_topic > .morebutton:visited {
+#arbeit-menu.currentTopic:visited {
     color: var(--arbeit);
 }
 
-#arbeit_menu.currentTopic {
-    color: var(--arbeit);
-}
-
-#arbeit_menu.currentTopic:visited {
-    color: var(--arbeit);
-}
-
-#nav.bordercolor_arbeit {
+#nav.bordercolor-arbeit {
     border-bottom-color: var(--arbeit);
+}
+
+@media screen and (max-width: 1250px) {
+    #arbeit {
+        border-top-color: transparent;
+    }
 }

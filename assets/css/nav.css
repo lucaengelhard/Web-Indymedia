@@ -70,7 +70,7 @@ nav {
     color: inherit;
 }
 
-.nav_icons {
+.nav-icons {
     height: 1.2rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -78,16 +78,16 @@ nav {
     gap: 0.5rem;
 }
 
-.nav_icons > * {
+.nav-icons > * {
     width: 1.2rem;
 }
 
-.nav_icons > a > * {
+.nav-icons > a > * {
     stroke-width: 2;
     width: 100%;
 }
 
-.nav_icons > a:hover > * > * {
+.nav-icons > a:hover > * > * {
     stroke-width: 6;
 }
 
@@ -96,7 +96,7 @@ nav {
     stroke: #000000;
 }
 
-#nav_burger {
+#nav-burger {
     display: none;
 }
 
@@ -124,22 +124,22 @@ nav {
         display: none;
     }
 
-    #nav_burger {
+    #nav-burger {
         display: block;
         width: 2rem;
         height: 2rem;
     }
 
-    #nav_burger > a {
+    #nav-burger > a {
         width: 100%;
         height: 2rem;
     }
 
-    .nav_icons > * {
+    .nav-icons > * {
         width: 2rem;
     }
 
-    .nav_icons > a > * > * {
+    .nav-icons > a > * > * {
         stroke-width: 4;
     }
 

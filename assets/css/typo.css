@@ -49,3 +49,11 @@ p {
 .closeLetters {
     letter-spacing: -0.6rem
 }
+
+.navigation > ul > li > .rainbow {
+    font-weight: 600;
+}
+
+.navigation > ul > li > a > .closeLetters {
+    letter-spacing: -0.57rem;
+}
