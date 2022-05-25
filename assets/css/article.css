@@ -1,0 +1,13 @@
+.content-article {
+    margin-top: 46px;
+}
+
+.filterbox {
+    float: left;
+    max-width: 10%;
+    padding: 1rem;
+}
+
+.content-article > .article > .section-topic {
+    border-top: 0px;
+}

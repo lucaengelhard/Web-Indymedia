@@ -20,24 +20,43 @@
                     <li><a href="#">Was tun?</a></li>
                     <li><a href="#">Tutorials</a></li>
                 </ul>
-                <div class="nav_icons">
-                    <a href="#"><img src="assets/elements/plusicon.svg"></a>
-                    <a href="#"><img src="assets/elements/Tor-Black.svg"></a>
-                </div>
+                <div id="nav-content" class="nav-icons">
+                    <a href="#">
+                        <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50%" cy="50%" r="32" stroke="black" stroke-width="2" />
+                            <line x1="20%" y1="50%" x2="80%" y2="50%" stroke="black" stroke-width="2" />
+                            <line x1="50%" y1="20%" x2="50%" y2="80%" stroke="black" stroke-width="2" />
+                        </svg></a>
 
+                    <a href="#" class="torbutton"><svg version="1.1" id="Ebene-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
+                            <circle class="st0" cx="35" cy="35" r="31.6" />
+                            <path class="st0" d="M34,58.1c0.2,0,0.5,0,0.7,0c13,0,23.5-10.5,23.5-23.5S47.6,11.1,34.6,11.1c-0.2,0-0.5,0-0.7,0" />
+                            <path class="st0" d="M34,50.3c0.4,0,0.7,0,1,0c8.5,0,15.3-6.9,15.3-15.3c0-8.5-6.9-15.4-15.3-15.4c-0.4,0-0.7,0-1,0" />
+                            <path class="st0" d="M34,41.8c0.2,0,0.5,0,0.7,0c3.9,0,7.2-3.2,7.2-7.2c0-3.9-3.2-7.2-7.2-7.2c-0.2,0-0.5,0-0.7,0" />
+                        </svg>
+                    </a>
+                </div>
+                <div id="nav-burger" class="nav-icons"><a href="#"><svg version="1.1" id="Ebene-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
+                            <g>
+                                <line class="st0" x1="0%" y1="20%" x2="100%" y2="20%" />
+                                <line class="st0" x1="0%" y1="50%" x2="100%" y2="50%" />
+                                <line class="st0" x1="0%" y1="80%" x2="100%" y2="80%" />
+                            </g>
+                        </svg></a>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="landing" class="landing">
-            <article class="landing_tab landing_current" onclick="landingSwap(this)">
-                <div class="landing_img"><img src="assets/images/landingimage.png" alt=""></div>
-                <div class="landing_text">
+            <article class="landing-tab landing-current" onclick="landingSwap(this)">
+                <div class="landing-img"><img src="assets/images/landingimage.png" alt=""></div>
+                <div class="landing-text">
                     <h4>
-                        <span class="post_author">anonym</span> |
-                        <span class="post_date">16.04.22</span> |
-                        <span class="post_location">Lübeck</span>
+                        <span class="post-author">anonym</span> |
+                        <span class="post-date">16.04.22</span> |
+                        <span class="post-location">Lübeck</span>
                     </h4>
                     <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                     <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -48,15 +67,15 @@
                     </a>
                 </div>
             </article>
-            <article class="landing_tab" onclick="landingSwap(this)">
-                <div class="landing_img">
-                    <div class="landing_quotebox">&#8220;<span class="landingquote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum placeat temporibus facere aliquid consequatur hic perspiciatis dolor et dolorum dolorem.</span>&#8221;</div>
+            <article class="landing-tab" onclick="landingSwap(this)">
+                <div class="landing-img">
+                    <div class="landing-quotebox">&#8220;<span class="landingquote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum placeat temporibus facere aliquid consequatur hic perspiciatis dolor et dolorum dolorem.</span>&#8221;</div>
                 </div>
-                <div class="landing_text">
+                <div class="landing-text">
                     <h4>
-                        <span class="post_author">anonym</span> |
-                        <span class="post_date">16.04.22</span> |
-                        <span class="post_location">Lübeck</span>
+                        <span class="post-author">anonym</span> |
+                        <span class="post-date">16.04.22</span> |
+                        <span class="post-location">Lübeck</span>
                     </h4>
                     <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                     <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -66,13 +85,13 @@
                     </a>
                 </div>
             </article>
-            <article class="landing_tab" onclick="landingSwap(this)">
-                <div class="landing_img"><img src="assets/images/landingimage.png" alt=""></div>
-                <div class="landing_text">
+            <article class="landing-tab" onclick="landingSwap(this)">
+                <div class="landing-img"><img src="assets/images/landingimage.png" alt=""></div>
+                <div class="landing-text">
                     <h4>
-                        <span class="post_author">anonym</span> |
-                        <span class="post_date">16.04.22</span> |
-                        <span class="post_location">Lübeck</span>
+                        <span class="post-author">anonym</span> |
+                        <span class="post-date">16.04.22</span> |
+                        <span class="post-location">Lübeck</span>
                     </h4>
                     <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                     <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -84,48 +103,48 @@
             </article>
         </section>
         <section id="content">
-            <div id="homepage_menu" class="homepage_menu">
+            <div id="homepage-menu" class="homepage-menu">
                 <ul>
-                    <li><a id="arbeit_menu" class="menu_topic" href="#arbeit">
+                    <li><a id="arbeit-menu" class="menu-topic" href="#arbeit">
                             <h1>Arbeit</h1>
                         </a></li>
-                    <li><a id="sozial_menu" class="menu_topic" href="#sozial">
+                    <li><a id="sozial-menu" class="menu-topic" href="#sozial">
                             <h1>Sozial</h1>
                         </a></li>
-                    <li><a id="oekologie_menu" class="currentTopic menu_topic" href="#oekologie">
+                    <li><a id="oekologie-menu" class="currentTopic menu-topic" href="#oekologie">
                             <h1>Ökologie</h1>
                         </a></li>
-                    <li><a id="kultur_menu" class="menu_topic" href="#kultur">
+                    <li><a id="kultur-menu" class="menu-topic" href="#kultur">
                             <h1>Kultur</h1>
                         </a></li>
-                    <li><a id="militarismus_menu" class="menu_topic" href="#militarismus">
+                    <li><a id="militarismus-menu" class="menu-topic" href="#militarismus">
                             <h1>Militarismus</h1>
                         </a></li>
-                    <li><a id="antifa_menu" class="menu_topic" href="#antifa">
+                    <li><a id="antifa-menu" class="menu-topic" href="#antifa">
                             <h1>Antifa</h1>
                         </a></li>
-                    <li><a id="feminismus_menu" class="menu_topic" href="#feminismus">
+                    <li><a id="feminismus-menu" class="menu-topic" href="#feminismus">
                             <h1>Feminismus</h1>
                         </a></li>
-                    <li><a id="rassismus_menu" class="menu_topic" href="#rassismus">
+                    <li><a id="rassismus-menu" class="menu-topic" href="#rassismus">
                             <h1>Rassismus</h1>
                         </a></li>
-                    <li><a id="sonstige_menu" class="menu_topic" href="#sonstige">
+                    <li><a id="sonstige-menu" class="menu-topic" href="#sonstige">
                             <h1>ETC.</h1>
                         </a></li>
                 </ul>
             </div>
             <div class="article">
-                <section id="arbeit" class="section_topic">
-                    <div class="article_image">
+                <section id="arbeit" class="section-topic">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-arbeit" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -137,15 +156,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-arbeit" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -155,49 +174,16 @@
                                         </a>
                                     </a>
                                 </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-arbeit" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -208,50 +194,17 @@
                                     </a>
                                 </article>
 
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
                             </div>
                         </div>
                     </div>
-                    <div class="article_text">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-arbeit" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -261,12 +214,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-arbeit" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -276,58 +229,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-arbeit" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -338,24 +245,24 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-arbeit">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-arbeit"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="sozial" class="section_topic">
-                    <div class="article_text">
+                <section id="sozial" class="section-topic">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-sozial" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -365,12 +272,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-sozial" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -380,58 +287,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-sozial" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -442,20 +303,20 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-sozial">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="article_image">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-sozial" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -467,15 +328,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-sozial" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -485,49 +346,16 @@
                                         </a>
                                     </a>
                                 </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-sozial" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -538,57 +366,24 @@
                                     </a>
                                 </article>
 
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
                             </div>
                         </div>
                     </div>
 
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-sozial"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="oekologie" class="section_topic">
-                    <div class="article_image">
+                <section id="oekologie" class="section-topic">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-oekologie" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -599,16 +394,15 @@
                             </a>
                         </article>
 
-
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-oekologie" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -618,83 +412,16 @@
                                         </a>
                                     </a>
                                 </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-oekologie" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -707,14 +434,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="article_text">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-oekologie" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -724,12 +451,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-oekologie" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -739,58 +466,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-oekologie" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -801,24 +482,24 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-oekologie">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-oekologie"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="kultur" class="section_topic">
-                    <div class="article_text">
+                <section id="kultur" class="section-topic">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-kultur" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -828,12 +509,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-kultur" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -843,58 +524,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-kultur" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -905,20 +540,20 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-kultur">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="article_image">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-kultur" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -930,47 +565,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-kultur" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -983,14 +586,14 @@
 
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-kultur" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1001,57 +604,24 @@
                                     </a>
                                 </article>
 
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
                             </div>
                         </div>
                     </div>
 
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-kultur"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="militarismus" class="section_topic">
-                    <div class="article_image">
+                <section id="militarismus" class="section-topic">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-militarismus" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1063,15 +633,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-militarismus" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1081,49 +651,16 @@
                                         </a>
                                     </a>
                                 </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-militarismus" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1134,50 +671,17 @@
                                     </a>
                                 </article>
 
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
                             </div>
                         </div>
                     </div>
-                    <div class="article_text">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-militarismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1187,12 +691,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-militarismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1202,58 +706,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-militarismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1264,24 +722,24 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-militarismus">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-militarismus"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="antifa" class="section_topic">
-                    <div class="article_text">
+                <section id="antifa" class="section-topic">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-antifa" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1291,12 +749,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-antifa" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1306,58 +764,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-antifa" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1368,20 +780,20 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-antifa">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="article_image">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-antifa" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1393,15 +805,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-antifa" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1411,49 +823,16 @@
                                         </a>
                                     </a>
                                 </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-antifa" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1464,57 +843,24 @@
                                     </a>
                                 </article>
 
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
                             </div>
                         </div>
                     </div>
 
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-antifa"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="feminismus" class="section_topic">
-                    <div class="article_image">
+                <section id="feminismus" class="section-topic">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-feminismus" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1526,47 +872,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-feminismus" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1579,48 +893,14 @@
 
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-feminismus" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1633,14 +913,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="article_text">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-feminismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1650,12 +930,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-feminismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1665,12 +945,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-feminismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1680,71 +960,24 @@
                                 </a>
                             </a>
                         </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-feminismus">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-feminismus"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="rassismus" class="section_topic">
-                    <div class="article_text">
+                <section id="rassismus" class="section-topic">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-rassismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1754,12 +987,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-rassismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1769,58 +1002,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-rassismus" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1831,20 +1018,20 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-rassismus">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="article_image">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-rassismus" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1856,15 +1043,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-rassismus" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1874,83 +1061,15 @@
                                         </a>
                                     </a>
                                 </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-rassismus" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1964,20 +1083,20 @@
                         </div>
                     </div>
 
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-rassismus"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
-                <section id="sonstige" class="section_topic">
-                    <div class="article_image">
+                <section id="sonstige" class="section-topic">
+                    <div class="article-image">
 
-                        <article class="featured_post" title="">
-                            <a class="article_link" href="#">
+                        <article class="featured-post tagtopic-sonstige" title="">
+                            <a class="article-link" href="#">
                                 <img src="assets/images/220308-femkampftag-078.jpg">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -1989,47 +1108,15 @@
                         </article>
 
 
-                        <div class="articlelist_image">
-                            <div class="column_left">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                        <div class="articlelist-image">
+                            <div class="column-left">
+                                <article class="post-image tagtopic-sonstige" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/landingimage.png">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/220308-femkampftag-078.jpg">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -2042,48 +1129,14 @@
 
 
                             </div>
-                            <div class="column_right">
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
+                            <div class="column-right">
+                                <article class="post-image tagtopic-sonstige" title="">
+                                    <a class="article-link" href="#">
                                         <img src="assets/images/220308-femkampftag-078.jpg">
                                         <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
-                                        </h4>
-                                        <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                        <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                        </p>
-                                        <a class="morebutton" href="#">
-                                            <p>mehr >></p>
-                                        </a>
-                                    </a>
-                                </article>
-
-                                <article class="post_image" title="">
-                                    <a class="article_link" href="#">
-                                        <img src="assets/images/landingimage.png">
-                                        <h4>
-                                            <span class="post_author">anonym</span> |
-                                            <span class="post_date">16.04.22</span> |
-                                            <span class="post_location">Lübeck</span>
+                                            <span class="post-author">anonym</span> |
+                                            <span class="post-date">16.04.22</span> |
+                                            <span class="post-location">Lübeck</span>
                                         </h4>
                                         <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                         <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -2096,14 +1149,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="article_text">
+                    <div class="article-text">
 
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-sonstige" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -2113,12 +1166,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-sonstige" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -2128,58 +1181,12 @@
                                 </a>
                             </a>
                         </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
+                        <article class="post-text tagtopic-sonstige" title="">
+                            <a class="article-link" href="#">
                                 <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
-                                </h4>
-                                <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
-                                <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
-                                </p>
-                                <a class="morebutton" href="#">
-                                    <p>mehr >></p>
-                                </a>
-                            </a>
-                        </article>
-                        <article class="post_text" title="">
-                            <a class="article_link" href="#">
-                                <h4>
-                                    <span class="post_author">anonym</span> |
-                                    <span class="post_date">16.04.22</span> |
-                                    <span class="post_location">Lübeck</span>
+                                    <span class="post-author">anonym</span> |
+                                    <span class="post-date">16.04.22</span> |
+                                    <span class="post-location">Lübeck</span>
                                 </h4>
                                 <h1>Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.</h1>
                                 <p>Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer
@@ -2190,12 +1197,12 @@
                             </a>
                         </article>
 
-                        <div class="post_reminder">
+                        <div class="post-reminder tagtopic-sonstige">
                             <h1>Hier könnte dein Beitrag stehen</h1>
-                            <button class="reminder_button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
+                            <button class="reminder-button" type="button" onclick="alert('Alerta')">Beitrag schreiben</button>
                         </div>
                     </div>
-                    <div class="more_topic"><a href="#" class="morebutton">
+                    <div class="more-topic tagtopic-sonstige"><a href="#" class="morebutton">
                             <p>weiterlesen >></p>
                         </a></div>
                 </section>
@@ -2204,7 +1211,7 @@
     </main>
 
     <footer>
-        <div class="footer_container">
+        <div class="footer-container">
             <ul>
                 <li><a href="">
                         <h2>Über</h2>

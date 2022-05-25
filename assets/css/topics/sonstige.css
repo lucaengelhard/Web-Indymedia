@@ -1,77 +1,47 @@
-#sonstige > .article_image > .articlelist_image > .column_left > .post_image {
-    border-bottom: 1px solid var(--sonstige);
-}
-
-#sonstige > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_image > .articlelist_image > .column_right > .post_image {
-    border-bottom: 1px solid var(--sonstige);
-}
-
-#sonstige > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_image > .featured_post > .morebutton {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_image > .featured_post > .morebutton:visited {
-    color: var(--sonstige);
-}
-
-
-#sonstige > .article_text > .post_text > .morebutton {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_text > .post_text > .morebutton:visited {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_text > .post_text {
-    border-bottom: 1px solid var(--sonstige);
-}
-
-#sonstige > .article_text > .post_text > a > h1 {
-    color: var(--sonstige);
-}
-
-#sonstige > .article_text > .post_reminder {
+#sonstige {
     border-color: var(--sonstige);
+}
+
+.tagtopic-sonstige {
+    border-bottom: 1px solid var(--sonstige);
+}
+
+.tagtopic-sonstige > .morebutton {
     color: var(--sonstige);
 }
 
-#sonstige > .article_text > .post_reminder > .reminder_button {
+.tagtopic-sonstige > .morebutton:visited {
+    color: var(--sonstige);
+}
+
+.article-text > .tagtopic-sonstige > a > h1 {
+    color: var(--sonstige);
+}
+
+.tagtopic-sonstige > a > h4 > span {
+    color: var(--sonstige);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-sonstige > .reminder-button {
     background-color: var(--sonstige);
 }
 
-#sonstige > .more_topic > .morebutton {
+#sonstige-menu.currentTopic {
     color: var(--sonstige);
 }
 
-#sonstige > .more_topic > .morebutton:visited {
+#sonstige-menu.currentTopic:visited {
     color: var(--sonstige);
 }
 
-#sonstige_menu.currentTopic {
-    color: var(--sonstige);
-}
-
-#sonstige_menu.currentTopic:visited {
-    color: var(--sonstige);
-}
-
-#nav.bordercolor_sonstige {
+#nav.bordercolor-sonstige {
     border-bottom-color: var(--sonstige);
+}
+
+@media screen and (max-width: 1250px) {
+    #sonstige {
+        border-top-color: transparent;
+    }
 }

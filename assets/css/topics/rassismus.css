@@ -1,77 +1,47 @@
-#rassismus > .article_image > .articlelist_image > .column_left > .post_image {
-    border-bottom: 1px solid var(--rassismus);
-}
-
-#rassismus > .article_image > .articlelist_image > .column_left > .post_image > .morebutton {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_image > .articlelist_image > .column_left > .post_image > .morbutton:visited {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_image > .articlelist_image > .column_right > .post_image {
-    border-bottom: 1px solid var(--rassismus);
-}
-
-#rassismus > .article_image > .articlelist_image > .column_right > .post_image > .morebutton {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_image > .articlelist_image > .column_right > .post_image > .morebutton:visited {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_image > .featured_post > .morebutton {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_image > .featured_post > .morebutton:visited {
-    color: var(--rassismus);
-}
-
-
-#rassismus > .article_text > .post_text > .morebutton {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_text > .post_text > .morebutton:visited {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_text > .post_text {
-    border-bottom: 1px solid var(--rassismus);
-}
-
-#rassismus > .article_text > .post_text > a > h1 {
-    color: var(--rassismus);
-}
-
-#rassismus > .article_text > .post_reminder {
+#rassismus {
     border-color: var(--rassismus);
+}
+
+.tagtopic-rassismus {
+    border-bottom: 1px solid var(--rassismus);
+}
+
+.tagtopic-rassismus > .morebutton {
     color: var(--rassismus);
 }
 
-#rassismus > .article_text > .post_reminder > .reminder_button {
+.tagtopic-rassismus > .morebutton:visited {
+    color: var(--rassismus);
+}
+
+.article-text > .tagtopic-rassismus > a > h1 {
+    color: var(--rassismus);
+}
+
+.tagtopic-rassismus > a > h4 > span {
+    color: var(--rassismus);
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.tagtopic-rassismus > .reminder-button {
     background-color: var(--rassismus);
 }
 
-#rassismus > .more_topic > .morebutton {
+#rassismus-menu.currentTopic {
     color: var(--rassismus);
 }
 
-#rassismus > .more_topic > .morebutton:visited {
+#rassismus-menu.currentTopic:visited {
     color: var(--rassismus);
 }
 
-#rassismus_menu.currentTopic {
-    color: var(--rassismus);
-}
-
-#rassismus_menu.currentTopic:visited {
-    color: var(--rassismus);
-}
-
-#nav.bordercolor_rassismus {
+#nav.bordercolor-rassismus {
     border-bottom-color: var(--rassismus);
+}
+
+@media screen and (max-width: 1250px) {
+    #rassismus {
+        border-top-color: transparent;
+    }
 }

@@ -9,8 +9,14 @@ header {
 }
 
 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     padding: 0.5rem;
@@ -29,12 +35,18 @@ nav {
 }
 
 .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 1.5rem;
 }
 
 .navigation > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0px;
@@ -44,27 +56,49 @@ nav {
 
 .navigation > ul > li > a {
     font-family: Iosevka, monospace;
-    font-weight: 500;
+    font-weight: 200;
     font-size: 1.2rem;
     text-decoration: none;
     color: inherit;
+}
+
+.navigation > ul > li > a:hover {
+    font-weight: 600;
 }
 
 .navigation > ul > li > a:visited {
     color: inherit;
 }
 
-.nav_icons {
+.nav-icons {
     height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 0.5rem;
 }
 
-.nav_icons > * > img {
-    object-fit: cover;
+.nav-icons > * {
     width: 1.2rem;
 }
 
+.nav-icons > a > * {
+    stroke-width: 2;
+    width: 100%;
+}
+
+.nav-icons > a:hover > * > * {
+    stroke-width: 6;
+}
+
+.st0 {
+    fill: none;
+    stroke: #000000;
+}
+
+#nav-burger {
+    display: none;
+}
 
 /* Headerswitch */
 
@@ -74,4 +108,43 @@ nav {
 
 @media screen and (max-width: 1200px) {
     border-bottom: 0px solid black;
+}
+
+@media screen and (max-width: 720px) {
+    .navigation {
+        gap: 1rem;
+        align-items: flex-start
+    }
+
+    .navigation > ul {
+        display: none;
+    }
+
+    .torbutton {
+        display: none;
+    }
+
+    #nav-burger {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #nav-burger > a {
+        width: 100%;
+        height: 2rem;
+    }
+
+    .nav-icons > * {
+        width: 2rem;
+    }
+
+    .nav-icons > a > * > * {
+        stroke-width: 4;
+    }
+
+    .st0 {
+        stroke-width: 4;
+    }
+}
 }

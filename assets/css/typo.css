@@ -1,10 +1,10 @@
-@import url(iosevka.css);
+@import url(../fonts/Iosevka/iosevka.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 h1 {
     font-family: Iosevka, monospace;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.5rem;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -48,4 +48,12 @@ p {
 
 .closeLetters {
     letter-spacing: -0.6rem
+}
+
+.navigation > ul > li > .rainbow {
+    font-weight: 600;
+}
+
+.navigation > ul > li > a > .closeLetters {
+    letter-spacing: -0.57rem;
 }

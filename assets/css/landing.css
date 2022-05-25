@@ -1,60 +1,87 @@
 .landing {
     width: 100%;
-    max-width: 1400px;
     margin-top: 3rem;
     margin-bottom: 3rem;
-
-
 }
 
-.landing_tab {
+.landing-tab {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 7rem;
 
     margin-bottom: 1rem;
 
-    gap: 1rem;
+    gap: 2rem;
+
+    -webkit-transition: height 0.3s;
 
     transition: height 0.3s;
 }
 
-.landing_img {
-    flex: 1 1 60%;
+.landing-img {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
     background-color: var(--antifa);
 }
 
-.landing_img > img {
+.landing-img > img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
-.landing_quotebox {
+.landing-quotebox {
     padding: 1rem;
 
     font-family: Iosevka, monospace;
     color: white;
     font-size: 4rem;
+    -webkit-transition: font-size 0.2s;
     transition: font-size 0.2s;
+
+    overflow: hidden;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    /* number of lines to show */
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .landingquote {
     color: black;
     display: none;
     height: 0;
+
+
 }
 
-.landing_text {
+.landing-text {
+    max-width: 400px;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 30%;
     flex: 1 1 30%;
     padding-top: 1rem;
+    padding-right: 1rem;
     border-top: 1px solid black;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
-.landing_text > h1 {
+.landing-text > h1 {
     font-size: 1rem;
 
     overflow: hidden;
@@ -66,30 +93,30 @@
     -webkit-box-orient: vertical;
 }
 
-.landing_text > p {
+.landing-text > p {
     display: none;
     margin: 0;
 }
 
-.landing_current {
+.landing-current {
     height: 20rem;
 }
 
-.landing_text > .morebutton {
+.landing-text > .morebutton {
     display: none;
     justify-self: flex-end;
     color: var(--antifa);
 }
 
-.landing_text > .morebutton:visited {
+.landing-text > .morebutton:visited {
     color: var(--antifa);
 }
 
-.landing_text > .morebutton > * {
+.landing-text > .morebutton > * {
     margin: 0;
 }
 
-.landing_current > .landing_text > h1 {
+.landing-current > .landing-text > h1 {
     font-size: 1.5rem;
 
     overflow: hidden;
@@ -101,7 +128,9 @@
     -webkit-box-orient: vertical;
 }
 
-.landing_current > .landing_text > p {
+.landing-current > .landing-text > p {
+
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -111,15 +140,52 @@
     -webkit-box-orient: vertical;
 }
 
-.landing_current > .landing_text > .morebutton {
+.landing-current > .landing-text > .morebutton {
     display: block;
 }
 
-.landing_current > .landing_img > .landing_quotebox {
+.landing-current > .landing-img > .landing-quotebox {
     font-size: 2rem;
 }
 
-.landing_current > .landing_img > .landing_quotebox > .landingquote {
+.landing-current > .landing-img > .landing-quotebox > .landingquote {
     display: inline;
     font-size: 2rem;
+
+
+}
+
+@media screen and (max-width: 920px) {
+    .landing-img {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+        flex: 1 0 60%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .landing-current > .landing-img > .landing-quotebox > .landingquote {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .landing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .landing-current {
+        height: auto;
+    }
+
+    .landing-img {
+        display: none;
+    }
+
+    .landing-text {
+        max-width: 100%;
+        width: 100%;
+    }
 }
