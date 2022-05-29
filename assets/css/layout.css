@@ -107,6 +107,10 @@ body {
     gap: 2rem;
 }
 
+.articlelist-image > * {
+    max-width: 50%
+}
+
 .post-text {
     margin-bottom: 2rem;
 
