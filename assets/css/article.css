@@ -1,13 +1,156 @@
+label {
+  cursor: pointer;
+  font-weight: 300;
+  color: var(--grau);
+}
+
+label:hover {
+  font-weight: 600;
+  color:black;
+}
+
+input[type="search"] {
+  width: 100%;
+
+  border: none;
+  border-bottom: 1px solid black;
+
+  font-family: Iosevka, monospace;
+}
+
+input[type="search"]:focus {
+  outline:none;
+}
+::placeholder {
+  font-family: Iosevka, monospace;
+}
+
+input[type="checkbox"]:checked+label {
+  font-weight: 600;
+  color: black;
+}
+
+input[type=range]{
+  width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 1px;
+    background: black;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: black;
+    margin-top: -4px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    background: black;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: black;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
 .content-article {
-    margin-top: 46px;
+  margin-top: 46px;
+  display: flex;
+}
+
+.content-article>.article {
+  margin-left: 3rem;
 }
 
 .filterbox {
-    float: left;
-    max-width: 10%;
-    padding: 1rem;
+  float: none;
+  display: flex;
+  justify-self: end;
+  margin-left: auto;
+  padding-left: 1rem;
+  margin-top: 2rem;
 }
 
-.content-article > .article > .section-topic {
-    border-top: 0px;
+.content-article>.article>.section-topic {
+  border-top: 0px;
+}
+
+.filterbox >* >* {
+  margin-top: 1rem;
+}
+
+.filter-location > * {
+  display: block;
+}
+
+.filter-location > label {
+  margin-top: 0.5rem;
+  color: black;
+  cursor: default;
+}
+
+.filter-location > label:hover {
+  margin-top: 0.5rem;
+  color: black;
+  font-weight: 300;
+}
+
+.filter-contenttype {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-contenttype>input {
+  display: none;
+}
+
+.filter-topic>h4 {
+  font-weight: 600;
+}
+
+.filter-topic>*>input {
+  display: none;
+}
+
+.filter-tags > h4 {
+  font-weight: 600;
+}
+
+.filter-tags>div>input {
+  display: none;
+}
+
+.filter-confirm>* {
+  display: block;
+  cursor: pointer;
+
+font-family: Iosevka, monospace;
+font-size: 1rem;
+border:none;
+  background-color: transparent;
+}
+
+.filter-confirm>*:nth-child(2) {
+  color: var(--grau);
 }

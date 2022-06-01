@@ -1,47 +1,48 @@
 #feminismus {
-    border-color: var(--feminismus);
+  border-color: var(--feminismus);
+  color: var(--feminismus);
 }
 
-.tagtopic-feminismus {
-    border-bottom: 1px solid var(--feminismus);
+#feminismus>*>.home-section-title-line>* {
+  background-color: var(--feminismus);
 }
 
-.tagtopic-feminismus > .morebutton {
-    color: var(--feminismus);
+.post-text.tagtopic-feminismus {
+  border-bottom: 1px solid var(--feminismus);
 }
 
-.tagtopic-feminismus > .morebutton:visited {
-    color: var(--feminismus);
+.tagtopic-feminismus>a>h1 {
+  color: black;
 }
 
-.article-text > .tagtopic-feminismus > a > h1 {
-    color: var(--feminismus);
+.tagtopic-feminismus>a>h1:hover {
+  color: var(--feminismus);
 }
 
-.tagtopic-feminismus > a > h4 > span {
-    color: var(--feminismus);
-    text-decoration: none;
-    border-bottom: 0px;
+.tagtopic-feminismus>a>h4>span {
+  color: var(--feminismus);
+  text-decoration: none;
+  border-bottom: 0px;
 }
 
-.tagtopic-feminismus > .reminder-button {
-    background-color: var(--feminismus);
+.tagtopic-feminismus>.reminder-button {
+  background-color: var(--feminismus);
 }
 
 #feminismus-menu.currentTopic {
-    color: var(--feminismus);
+  color: var(--feminismus);
 }
 
 #feminismus-menu.currentTopic:visited {
-    color: var(--feminismus);
+  color: var(--feminismus);
 }
 
 #nav.bordercolor-feminismus {
-    border-bottom-color: var(--feminismus);
+  border-bottom-color: var(--feminismus);
 }
 
 @media screen and (max-width: 1250px) {
-    #feminismus {
-        border-top-color: transparent;
-    }
+  #feminismus {
+    border-top-color: transparent;
+  }
 }

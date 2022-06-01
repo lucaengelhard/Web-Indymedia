@@ -13,6 +13,10 @@
 
 @import url(topics.css);
 
+@import url(map.css);
+
+@import url(leaflet.css);
+
 /*Farben*/
 :root {
     --grau: #D2D2D2;

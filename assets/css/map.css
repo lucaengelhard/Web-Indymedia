@@ -1,0 +1,65 @@
+.map-main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.filterbox-karte {
+  margin-top: 100px;
+  float: none;
+  flex: 1 0 30%;
+  min-width: 200px;
+}
+
+#map {
+  height: 40rem;
+  width: 100%;
+}
+
+.map-box {
+  margin-top: 100px;
+width: 100%;
+height: 40rem;
+flex: 1 0 60%;
+}
+
+
+
+.map-list-object {
+  max-width:550px;
+  margin-top: 2rem;
+}
+
+.map-article-link{
+  text-decoration: none;
+  color: black;
+}
+
+.map-place-link {
+  text-decoration: none;
+  color: black;
+}
+
+.map-location-link {
+  text-decoration: none;
+  color: black;
+}
+
+.map-icon {
+  margin-top: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.map-eventtype-line {
+  width: 10rem;
+  height: 1px;
+  background: var(--arbeit);
+}
+
+.map-eventtype-link {
+  text-decoration: none;
+  height: 31px;
+}

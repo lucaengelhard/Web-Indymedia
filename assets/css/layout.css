@@ -11,6 +11,8 @@ body {
     margin-top: 2rem;
 }
 
+
+
 .article {
     max-width: 900px;
     margin: auto;
@@ -26,8 +28,6 @@ body {
     gap: 2rem;
     margin-bottom: 4rem;
     padding-top: 2rem;
-
-    border-top: 3px solid;
 
     scroll-margin-top: 73px;
 }
@@ -49,6 +49,10 @@ body {
 .article-link:visited {
     text-decoration: none;
     color: inherit;
+}
+
+.article-link > p {
+  color:black;
 }
 
 .featured-post > .article-link > img {
@@ -84,6 +88,12 @@ body {
 .article-link > img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.article-link > img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .article-link > p {

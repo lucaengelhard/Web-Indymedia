@@ -1,47 +1,48 @@
 #rassismus {
-    border-color: var(--rassismus);
+  border-color: var(--rassismus);
+  color: var(--rassismus);
 }
 
-.tagtopic-rassismus {
-    border-bottom: 1px solid var(--rassismus);
+#rassismus>*>.home-section-title-line>* {
+  background-color: var(--rassismus);
 }
 
-.tagtopic-rassismus > .morebutton {
-    color: var(--rassismus);
+.post-text.tagtopic-rassismus {
+  border-bottom: 1px solid var(--rassismus);
 }
 
-.tagtopic-rassismus > .morebutton:visited {
-    color: var(--rassismus);
+.tagtopic-rassismus>a>h1 {
+  color: black;
 }
 
-.article-text > .tagtopic-rassismus > a > h1 {
-    color: var(--rassismus);
+.tagtopic-rassismus>a>h1:hover {
+  color: var(--rassismus);
 }
 
-.tagtopic-rassismus > a > h4 > span {
-    color: var(--rassismus);
-    text-decoration: none;
-    border-bottom: 0px;
+.tagtopic-rassismus>a>h4>span {
+  color: var(--rassismus);
+  text-decoration: none;
+  border-bottom: 0px;
 }
 
-.tagtopic-rassismus > .reminder-button {
-    background-color: var(--rassismus);
+.tagtopic-rassismus>.reminder-button {
+  background-color: var(--rassismus);
 }
 
 #rassismus-menu.currentTopic {
-    color: var(--rassismus);
+  color: var(--rassismus);
 }
 
 #rassismus-menu.currentTopic:visited {
-    color: var(--rassismus);
+  color: var(--rassismus);
 }
 
 #nav.bordercolor-rassismus {
-    border-bottom-color: var(--rassismus);
+  border-bottom-color: var(--rassismus);
 }
 
 @media screen and (max-width: 1250px) {
-    #rassismus {
-        border-top-color: transparent;
-    }
+  #rassismus {
+    border-top-color: transparent;
+  }
 }

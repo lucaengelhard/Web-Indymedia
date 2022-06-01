@@ -1,6 +1,8 @@
 @import url(../fonts/Iosevka/iosevka.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url(../fonts/Lunchtype22/lunchtype22.css);
+
+@import url('https://fonts.googleapis.com/css2?family=lunchtype22:wght@200;300;400;500;600;700;800&display=swap');
 
 h1 {
     font-family: Iosevka, monospace;
@@ -34,7 +36,7 @@ h4 {
 
 
 p {
-    font-family: Manrope, sans-serif;
+    font-family: lunchtype22, sans-serif;
     font-weight: 300;
     font-size: 1rem;
     margin-top: 0.5rem;

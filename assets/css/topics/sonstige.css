@@ -1,47 +1,48 @@
 #sonstige {
-    border-color: var(--sonstige);
+  border-color: var(--sonstige);
+  color: var(--sonstige);
 }
 
-.tagtopic-sonstige {
-    border-bottom: 1px solid var(--sonstige);
+#sonstige>*>.home-section-title-line>* {
+  background-color: var(--sonstige);
 }
 
-.tagtopic-sonstige > .morebutton {
-    color: var(--sonstige);
+.post-text.tagtopic-sonstige {
+  border-bottom: 1px solid var(--sonstige);
 }
 
-.tagtopic-sonstige > .morebutton:visited {
-    color: var(--sonstige);
+.tagtopic-sonstige>a>h1 {
+  color: black;
 }
 
-.article-text > .tagtopic-sonstige > a > h1 {
-    color: var(--sonstige);
+.tagtopic-sonstige>a>h1:hover {
+  color: var(--sonstige);
 }
 
-.tagtopic-sonstige > a > h4 > span {
-    color: var(--sonstige);
-    text-decoration: none;
-    border-bottom: 0px;
+.tagtopic-sonstige>a>h4>span {
+  color: var(--sonstige);
+  text-decoration: none;
+  border-bottom: 0px;
 }
 
-.tagtopic-sonstige > .reminder-button {
-    background-color: var(--sonstige);
+.tagtopic-sonstige>.reminder-button {
+  background-color: var(--sonstige);
 }
 
 #sonstige-menu.currentTopic {
-    color: var(--sonstige);
+  color: var(--sonstige);
 }
 
 #sonstige-menu.currentTopic:visited {
-    color: var(--sonstige);
+  color: var(--sonstige);
 }
 
 #nav.bordercolor-sonstige {
-    border-bottom-color: var(--sonstige);
+  border-bottom-color: var(--sonstige);
 }
 
 @media screen and (max-width: 1250px) {
-    #sonstige {
-        border-top-color: transparent;
-    }
+  #sonstige {
+    border-top-color: transparent;
+  }
 }

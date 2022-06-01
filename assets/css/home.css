@@ -7,6 +7,7 @@
     text-transform: uppercase;
     color: black;
 
+margin-top: 7rem;
     z-index: 99;
 }
 
@@ -38,6 +39,33 @@ font-weight: 600;
 
 .homepage-menu > ul > li > .currentTopic > * {
     font-weight: 600;
+}
+
+.home-section-title {
+  width: 100%;
+  display: flex;
+
+  align-items:flex-end;
+}
+
+.home-section-title-text {
+  display: inline-block;
+}
+
+.home-section-title-text > * {
+  font-size: 3rem;
+  margin:  0;
+}
+
+.home-section-title-line {
+  flex-grow: 1;
+  padding-left: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+
+.home-section-title-line > * {
+  height: 0.2rem;
+  border: 0;
 }
 
 /*
