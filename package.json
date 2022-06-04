@@ -1,0 +1,14 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Indymedia Node Serverside js",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"node start\")"
+  },
+  "author": "Luca Engelhard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
