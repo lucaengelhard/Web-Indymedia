@@ -17,6 +17,8 @@
 
 @import url(leaflet.css);
 
+@import url(articlepage.css);
+
 /*Farben*/
 :root {
     --grau: #D2D2D2;

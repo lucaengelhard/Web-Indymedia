@@ -17,10 +17,19 @@
 }
 */
 
-const user = {
-    "id": 1,
-    "name": "John Doe",
-    "age": 22
+const article = {
+    "postid": "8",
+    "posturl": "",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": ["FemiNIsmus", "arbeit","antifa"],
+    "tags": ["repression", "danni", "peter", "aktionsbericht"],
+    "image": "../assets/images/landingimage.png",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer"
 };
 
 const options = {
@@ -28,13 +37,13 @@ const options = {
   headers: {
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify(user)
+  body: JSON.stringify(article)
 };
 
 fetch("/api", options);
 
 function getFile(){
-  fetch('/nodefiletest/user.json')
+  fetch('/nodefiletest/articlelist.json')
   .then(response => response.json())
   .then(userlist => {
     console.log(userlist);
