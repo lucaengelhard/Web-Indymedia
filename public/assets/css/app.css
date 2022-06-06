@@ -19,6 +19,8 @@
 
 @import url(articlepage.css);
 
+@import url(create.css);
+
 /*Farben*/
 :root {
     --grau: #D2D2D2;

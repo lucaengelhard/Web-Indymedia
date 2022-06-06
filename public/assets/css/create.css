@@ -1,0 +1,38 @@
+.editor-main {
+  margin-top: 6rem;
+max-width: 900px;
+margin-left: auto;
+margin-right: auto;
+padding-bottom: 5rem;
+padding-left: 2rem;
+padding-right: 2rem;
+}
+
+.editor-shorttext {
+  margin-top: 1rem;
+}
+
+.editor-shorttext-input {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--grau);
+}
+
+.text-editor-header{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+display: flex;
+justify-content: space-between;
+}
+
+.editor-content {
+ height: 70vh;
+  width: 100%;
+  background-color: var(--grau);
+  overflow-y: scroll;
+}
+
+.editor-content > img {
+  font-display: block;
+  width: 100%;
+}

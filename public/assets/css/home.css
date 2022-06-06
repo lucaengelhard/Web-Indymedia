@@ -107,25 +107,14 @@ font-weight: 600;
 @media screen and (max-width:780px) {
 
     .homepage-menu {
-        overflow-x: scroll;
+      overflow-y:auto;
         justify-content: flex-start;
-
-        scrollbar-width: thin;
-        scrollbar-color: var(--antifa) white;
+        -ms-overflow-style: none;  
+  scrollbar-width: none;  
     }
 
     .homepage-menu::-webkit-scrollbar {
-        height: 9px;
-    }
-
-    .homepage-menu::-webkit-scrollbar-track {
-        background: white;
-    }
-
-    .homepage-menu::-webkit-scrollbar-thumb {
-        background-color: var(--antifa);
-        border-radius: 20px;
-        border: 3px solid white;
+        display: none;
     }
 
     .homepage-menu > ul {

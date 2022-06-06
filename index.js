@@ -151,7 +151,7 @@ function articlepageCreator(newentryID, titledash, data) {
 
     fs.writeFile("public/" + posturl, content, function(err) {
       if(err) throw err;
-      //console.log("saved " + newentryID +"-"+ titleclean+".html");
+      console.log("saved " + newentryID +"-"+ titleclean+".html");
     });
   });
 }

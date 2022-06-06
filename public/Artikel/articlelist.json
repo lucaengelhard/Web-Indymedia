@@ -20,7 +20,8 @@
       "aktionsbericht"
     ],
     "image": "../assets/images/landingimage.png",
-    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer"
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "aaaaaaaaaaaaaaa"
   },
   {
     "postid": 2,
@@ -43,7 +44,8 @@
       "aktionsbericht"
     ],
     "image": "../assets/images/landingimage.png",
-    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer"
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
   },
   {
     "postid": 3,
@@ -66,6 +68,175 @@
       "aktionsbericht"
     ],
     "image": "../assets/images/landingimage.png",
-    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer"
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 4,
+    "posturl": "../Artikel/4-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "../assets/images/landingimage.png",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 5,
+    "posturl": "../Artikel/5-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "../assets/images/landingimage.png",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 6,
+    "posturl": "../Artikel/6-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "../assets/images/landingimage.png",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 7,
+    "posturl": "../Artikel/7-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": true,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 8,
+    "posturl": "../Artikel/8-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": true,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 9,
+    "posturl": "../Artikel/9-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": true,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "../assets/images/landingimage.png",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  "
+  },
+  {
+    "postid": 10,
+    "posturl": "../Artikel/10-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": true,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "FemiNIsmus",
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "../assets/images/landingimage.png",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "asdasdadasdadaxcasd Hallo<br>"
   }
 ]}
