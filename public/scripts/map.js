@@ -7,8 +7,21 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+var greenIcon = L.icon({
+    iconUrl: '../assets/elements/img_250767.png',
+    //shadowUrl: 'leaf-shadow.png',
 
-var marker = L.marker([51.541, 10.305]).addTo(map);
+    iconSize:     [38, 38], // size of the icon
+    //shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [19, 19], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+
+var marker = L.marker([51.541, 10.305], {icon: greenIcon}).addTo(map);
+
+
 
 marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 

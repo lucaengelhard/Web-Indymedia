@@ -6,8 +6,8 @@
 
 .article-headerimage > img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 40rem;
+  object-fit:cover;
 }
 
 .article-text-wrapper {
@@ -15,4 +15,18 @@
   margin-right: auto;
   margin-top: 2rem;
   max-width: 900px;
+}
+
+img {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  color: var(--currentColor);
+}
+
+blockquote {
+  color: var(--currentColor);
 }

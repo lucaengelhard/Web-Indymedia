@@ -141,13 +141,23 @@ input[type=range]:focus {
   display: block;
   cursor: pointer;
   font-family: Iosevka, monospace;
+  font-weight: 300;
   font-size: 1rem;
   border: none;
   background-color: transparent;
 }
 
+.filter-confirm>*:nth-child(1):hover {
+  font-weight: 600;
+}
+
 .filter-confirm>*:nth-child(2) {
   color: var(--grau);
+}
+
+.filter-confirm>*:nth-child(2):hover {
+  color: black;
+  font-weight: 600;
 }
 
 .filter-button {
@@ -206,20 +216,20 @@ input[type=range]:focus {
     width: 100%;
   }
 
-.filter-section>.filter-input-box {
-  display: block;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: white;
-  border-bottom: 1px solid black;
-  transition: opacity 0.3s;
-}
+  .filter-section>.filter-input-box {
+    display: block;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 1px solid black;
+    transition: opacity 0.3s;
+  }
 
-.filter-contenttype {
-  display: block;
-}
+  .filter-contenttype {
+    display: block;
+  }
 
   .filterbox>*>* {
     margin-top: 0;
@@ -227,15 +237,16 @@ input[type=range]:focus {
 
   .filterbox>*>*>h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 300;
   }
 
   .filter-confirm {
     display: none;
+    padding-right: 1rem;
   }
 
-  .filter-active >.filter-input-box {
+  .filter-active>.filter-input-box {
     display: block;
     height: max-content;
     width: 100%;
@@ -244,37 +255,37 @@ input[type=range]:focus {
     width: calc(100% - 2rem);
   }
 
-.filter-search > .filter-input-box > input {
-  font-size: 1.5rem;
-  width: 100%;
-}
+  .filter-search>.filter-input-box>input {
+    font-size: 1rem;
+    width: 100%;
+  }
 
-.filter-location > div > input[type="search"] {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
+  .filter-location>div>input[type="search"] {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
-.filter-input-box > label {
-  font-size: 2rem;
-  line-height: 3rem;
-  display:block;
-}
+  .filter-input-box>label {
+    font-size: 1rem;
+    line-height: 2rem;
+    display: block;
+  }
 
-  .filter-topic > .filter-input-box > h4 {
+  .filter-topic>.filter-input-box>h4 {
     display: none;
   }
 
-  .filter-topic > div > div > label {
-    font-size: 2rem;
+  .filter-topic>div>div>label {
+    font-size: 1rem;
     line-height: 3rem;
   }
 
-  .filter-tags > div > h4 {
+  .filter-tags>div>h4 {
     display: none;
   }
 
-  .filter-tags > div > input {
-    font-size: 1.5rem;
+  .filter-tags>div>input {
+    font-size: 1rem;
   }
 
   .filter-confirm-active {
@@ -283,38 +294,23 @@ input[type=range]:focus {
     gap: 1rem;
   }
 
-    .filter-confirm-active > input {
-      display: none;
-      padding-right: 1rem;
-    }
+  .filter-confirm-active>input {
+    display: none;
+    padding-right: 1rem;
+  }
 
-.filter-button {
-  display: block;
-}
+  .filter-button {
+    display: block;
+  }
 
   .filter-confirm-button {
-    width: 2.5rem;
+    width: 1.2rem;
   }
 
-  .filter-confirm-button > svg > * > .cls-1 {
-    stroke-width:1px;
-  }
-
-  .filter-confirm-button:hover > svg > * > .cls-1 {
-    stroke-width:2px;
-  }
 
   .filter-reset-button {
-    width: 1rem;
-  }
-
-  .filter-reset-button > svg > g>g>line {
-    stroke-width:1px;
-  }
-
-  .filter-reset-button:hover > svg > g>g>line {
-    stroke-width:2px;
-  }
+    width: 0.8rem;
+}
 }
 
 @media screen and (max-width: 920px) {
@@ -323,7 +319,40 @@ input[type=range]:focus {
     padding-right: 1rem;
   }
 
-  .filter-input-box {
+  .filter-confirm-button {
+    width: 1.5rem;
+  }
 
+  .filter-reset-button {
+    width: 1rem;
+  }
+
+
+  .filterbox>*>*>h1 {
+    font-size: 1.5rem;
+  }
+
+  .filter-search>.filter-input-box>input {
+    font-size: 1.5rem;
+  }
+
+  .filter-topic>div>div>label {
+    font-size: 1.5rem;
+  }
+
+  .filter-location>div>input[type="search"] {
+    font-size: 1.5rem;
+  }
+
+  .filter-topic>div>div>label {
+    font-size: 1.5rem;
+  }
+
+  .filter-input-box>label {
+    font-size: 1.5rem;
+  }
+
+  .filter-tags>div>input {
+    font-size: 1.5rem;
   }
 }

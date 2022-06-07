@@ -125,6 +125,7 @@ function articlepageCreator(newentryID, titledash, data) {
       if (lasttopic === 1) {
         topicLower = topic.toLowerCase();
         topicClass = "tagtopic-" + topicLower;
+        currentColor = topicLower;
         //console.log(topicClass);
       }
       if (lasttopic === topics.length) {
@@ -140,6 +141,7 @@ function articlepageCreator(newentryID, titledash, data) {
 
 
     //Replace content
+    content = content.replace(/\"\+currentColor\+\"/g, currentColor);
     content = content.replace(/\"\+image\+\"/g, imageMarkup);
     content = content.replace(/\"\+title\+\"/g, title);
     content = content.replace(/\"\+author\+\"/g, author);

@@ -4,7 +4,7 @@ document.addEventListener("click", e => {
   if (isDropdownButton == true) {
 
     const isActiveFilter = e.target.parentElement.matches(".filter-active");
-    console.log(isActiveFilter);
+    //console.log(isActiveFilter);
 
     if (isActiveFilter == true) {
       filterActive = Array.from(document.getElementsByClassName("filter-active"));
@@ -22,6 +22,53 @@ document.addEventListener("click", e => {
 
   } else {
     return
+  }
+});
+
+document.addEventListener("click", e => {
+  const isResetButton = e.target.parentElement.matches(".filter-reset-button");
+  //console.log(isResetButton);
+  if (isResetButton == true) {
+    form = document.getElementById("filter-form");
+    //console.log(form);
+    form.reset();
+  }
+});
+
+
+//Range Live Preview
+document.addEventListener("input", object => {
+  const rangeLabel = document.getElementById("filter-location-range-label");
+  const isLocationRange = object.target.matches(".filter-location-range");
+  //console.log(isLocationRange);
+  if (isLocationRange == true) {
+    //console.log(object.target.value);
+    let currentRange = object.target.value;
+
+    if (currentRange >= 1000) {
+      //console.log("kilometer");
+      currentRange = currentRange.toString();
+
+      currentRangeStart = currentRange.substring(0, currentRange.length - 3);
+      currentRangeStart = parseInt(currentRangeStart);
+
+      currentRangeEnd = currentRange.substring(currentRange.length - 3, currentRange.length);
+      currentRangeEnd = parseInt(currentRangeEnd);
+
+      if (currentRangeStart >= 10) {
+        currentRangePrint = currentRangeStart;
+        rangeLabel.innerHTML = " "+currentRangePrint + "km";
+
+      } else {
+        currentRangePrint= currentRangeStart + "," + currentRangeEnd;
+        rangeLabel.innerHTML = " "+currentRangePrint + "km";
+      }
+
+    } else {
+      rangeLabel.innerHTML = " "+currentRange + "m";
+    }
+  } else {
+    return;
   }
 });
 

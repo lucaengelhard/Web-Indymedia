@@ -36,3 +36,14 @@ justify-content: space-between;
   font-display: block;
   width: 100%;
 }
+
+blockquote {
+  font-family: Iosevka, monospace;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+blockquote::before {
+  display: block;
+  content: url(../elements/quote.svg);
+}

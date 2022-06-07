@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/articlepage.css">
   <title>"+title+"</title>
 </head>
 
@@ -48,6 +49,11 @@
     </nav>
   </header>
   <main>
+    <style media="screen">
+    :root {
+      --currentColor: var(--"+currentColor+");
+    }
+    </style>
     <section class="article-headerimage">"+image+"</section>
     <section class="article-text-wrapper">
       <h4>

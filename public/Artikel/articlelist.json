@@ -19,9 +19,9 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
-    "richtext": "aaaaaaaaaaaaaaa"
+    "richtext": "\n  "
   },
   {
     "postid": 2,
@@ -43,7 +43,7 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
     "richtext": "\n  "
   },
@@ -67,7 +67,7 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
     "richtext": "\n  "
   },
@@ -91,14 +91,14 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
     "richtext": "\n  "
   },
   {
     "postid": 5,
     "posturl": "../Artikel/5-Alle-zusammen-gegen-ihre-Repression.html",
-    "featured": false,
+    "featured": true,
     "mediatype": "artikel",
     "title": "Alle zusammen gegen ihre% Repression?",
     "author": "anonym",
@@ -115,14 +115,14 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
     "richtext": "\n  "
   },
   {
     "postid": 6,
     "posturl": "../Artikel/6-Alle-zusammen-gegen-ihre-Repression.html",
-    "featured": false,
+    "featured": true,
     "mediatype": "artikel",
     "title": "Alle zusammen gegen ihre% Repression?",
     "author": "anonym",
@@ -139,7 +139,7 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
     "richtext": "\n  "
   },
@@ -194,7 +194,7 @@
   {
     "postid": 9,
     "posturl": "../Artikel/9-Alle-zusammen-gegen-ihre-Repression.html",
-    "featured": true,
+    "featured": false,
     "mediatype": "artikel",
     "title": "Alle zusammen gegen ihre% Repression?",
     "author": "anonym",
@@ -211,14 +211,14 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
-    "richtext": "\n  "
+    "richtext": "\n  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</div><div><br></div><div><b><br>Lorem\n ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam \nnon illum similique distinctio cum adipisci nostrum praesentium omnis \nullam nulla rem sit perspiciatis quasi provident, deserunt, esse cumque \nmolestiae ipsum doloremque, ex labore quae veritatis. Tempore, \nperferendis, impedit. At.<br></b></div><div><b><br></b></div><div><b><i><br>Lorem\n ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam \nnon illum similique distinctio cum adipisci nostrum praesentium omnis \nullam nulla rem sit perspiciatis quasi provident, deserunt, esse cumque \nmolestiae ipsum doloremque, ex labore quae veritatis. Tempore, \nperferendis, impedit. At.</i><br></b></div><div><b><br></b></div><div><u>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</u></div><div><u><br></u></div><div><ul><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</i></b></li><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</i></b></li><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque <br></i></b></li></ul><div><ol><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</i></b><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</i></b></li></ol><div><br></div><div align=\"left\"><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</i></b></div><div align=\"left\"><b><i><br></i></b></div><div align=\"left\"><b><i><br></i></b></div><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</div><div align=\"left\"><br></div><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.</div><div align=\"left\"><br></div><img src=\"https://lucaengelhard.com/content/bilder/politics/210731-websitepolitics-003.jpg\"><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam \nlaboriosam non illum similique distinctio cum adipisci nostrum \npraesentium omnis ullam nulla rem sit perspiciatis quasi provident, \ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae \nveritatis. Tempore, perferendis, impedit. At.<b><i></i></b></div></div></div>"
   },
   {
     "postid": 10,
     "posturl": "../Artikel/10-Alle-zusammen-gegen-ihre-Repression.html",
-    "featured": true,
+    "featured": false,
     "mediatype": "artikel",
     "title": "Alle zusammen gegen ihre% Repression?",
     "author": "anonym",
@@ -235,8 +235,31 @@
       "peter",
       "aktionsbericht"
     ],
-    "image": "../assets/images/landingimage.png",
+    "image": "../assets/images/220308-femkampftag-078.jpg",
     "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
-    "richtext": "asdasdadasdadaxcasd Hallo<br>"
+    "richtext": "\n  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</div><div><br></div><div><b><br>Lorem\n ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam\nnon illum similique distinctio cum adipisci nostrum praesentium omnis\nullam nulla rem sit perspiciatis quasi provident, deserunt, esse cumque\nmolestiae ipsum doloremque, ex labore quae veritatis. Tempore,\nperferendis, impedit. At.<br></b></div><div><b><br></b></div><div><b><i><br>Lorem\n ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam\nnon illum similique distinctio cum adipisci nostrum praesentium omnis\nullam nulla rem sit perspiciatis quasi provident, deserunt, esse cumque\nmolestiae ipsum doloremque, ex labore quae veritatis. Tempore,\nperferendis, impedit. At.</i><br></b></div><div><b><br></b></div><div><u>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</u></div><div><u><br></u></div><ul><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></li><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></li><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque <br></i></b></li></ul><ol><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></li></ol><div><br></div><div align=\"left\"><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></div><div align=\"left\"><b><i><br></i></b></div><div align=\"left\"><b><i><br></i></b></div><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</div><div align=\"left\"><br></div><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</div><div align=\"left\"><br></div><img src=\"https://lucaengelhard.com/content/bilder/politics/210731-websitepolitics-003.jpg\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At."
+  },
+  {
+    "postid": 11,
+    "posturl": "../Artikel/11-Alle-zusammen-gegen-ihre-Repression.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Alle zusammen gegen ihre% Repression?",
+    "author": "anonym",
+    "date": "16.04.22",
+    "location": "Lübeck",
+    "topics": [
+      "arbeit",
+      "antifa"
+    ],
+    "tags": [
+      "repression",
+      "danni",
+      "peter",
+      "aktionsbericht"
+    ],
+    "image": "../assets/images/220308-femkampftag-078.jpg",
+    "shorttext": "Die studentische Veranstaltungsgruppe „Politik & Popcorn“ der Universität zu Lübeck hat am vergangenen Montag zur anstehenden Landtagswahl in Schleswig-Holstein Vertreter*innen aus der Politik zu einer",
+    "richtext": "\n  \n  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</div><div><br></div><div><b><br>Lorem\n ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam\nnon illum similique distinctio cum adipisci nostrum praesentium omnis\nullam nulla rem sit perspiciatis quasi provident, deserunt, esse cumque\nmolestiae ipsum doloremque, ex labore quae veritatis. Tempore,\nperferendis, impedit. At.<br></b></div><div><b><br></b></div><div><b><i><br>Lorem\n ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam\nnon illum similique distinctio cum adipisci nostrum praesentium omnis\nullam nulla rem sit perspiciatis quasi provident, deserunt, esse cumque\nmolestiae ipsum doloremque, ex labore quae veritatis. Tempore,\nperferendis, impedit. At.</i><br></b></div><div><b><br></b></div><div><u>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</u></div><div><u><br></u></div><ul><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></li><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></li><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque <br></i></b></li></ul><ol><li><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></li></ol><div><br></div><div align=\"left\"><b><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</i></b></div><div align=\"left\"><b><i><br></i></b></div><div align=\"left\"><b><i><br></i></b></div><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</div><div align=\"left\"><br></div><div align=\"left\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At.</div><div align=\"left\"><br></div><img src=\"https://lucaengelhard.com/content/bilder/politics/210731-websitepolitics-003.jpg\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam\nlaboriosam non illum similique distinctio cum adipisci nostrum\npraesentium omnis ullam nulla rem sit perspiciatis quasi provident,\ndeserunt, esse cumque molestiae ipsum doloremque, ex labore quae\nveritatis. Tempore, perferendis, impedit. At."
   }
 ]}
