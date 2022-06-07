@@ -13,7 +13,7 @@
 
 <body>
   <header id="header">
-    <nav id="nav" class="nav">
+    <nav id="nav" class="nav nav-map">
       <a href="index.html" class="logo rainbow">indymedia.</a>
       <div class="navigation">
         <ul>
@@ -50,75 +50,98 @@
     </nav>
   </header>
   <main class="map-main">
-    <div id="map-filterbox" class="filterbox homepage-menu filterbox-karte">
-      <form id="map-filter-form" onsubmit="">
-        <div class="filter-search">
-          <input type="search" id="map-filter-search-input" placeholder="Suche" autocomplete="on" name="search">
+    <div id="filterbox" class="filterbox homepage-menu filterbox-map">
+      <form id="filter-form" onsubmit="">
+        <div class="filter-search filter-section">
+          <h1 class="filtermobile">Suche</h1>
+          <div class="filter-input-box"><input type="search" id="filter-search-input" placeholder="Suche" autocomplete="on" name="search"></div>
         </div>
-        <div class="filer-contenttype">
+        <div class="filter-contenttype filter-section">
+          <h1 class="filtermobile">Medientyp</h1>
+          <div class="filter-input-box">
+            <input type="checkbox" id="filter-check-artikel" name="filter-check-artikel">
+            <label for="filter-check-artikel">Artikel</label>
 
-          <input type="checkbox" id="map-filter-check-events" name="map-filter-check-events">
-          <label for="map-filter-check-events">Events</label>
+            <input type="checkbox" id="filter-check-video" name="filter-check-video">
+            <label for="filter-check-video">Videos</label>
 
-          <input type="checkbox" id="map-filter-check-gruppen" name="map-filter-check-gruppen">
-          <label for="map-filter-check-gruppen">Gruppen</label>
+            <input type="checkbox" id="filter-check-foto" name="filter-check-foto">
+            <label for="filter-check-foto">Fotos</label>
+          </div>
 
-          <input type="checkbox" id="map-filter-check-orte" name="map-filter-check-orte">
-          <label for="map-filter-check-orte">Orte</label>
         </div>
-        <div class="filter-location">
+        <div class="filter-location filter-section">
+          <h1 class="filtermobile">Ort</h1>
+          <div class="filter-input-box"><input type="search" id="filter-location-search" placeholder="Ort (Name/PLZ)" autocomplete="on" name="placesearch">
 
-          <input type="search" id="filter-location-search" placeholder="Ort (Name/PLZ)" autocomplete="on" name="placesearch">
+            <label for="filter-location-range"><span class="labeltext">Umkreis</span><span class="rangevalue"  id="filter-location-range-label"></span></label>
+            <input type="range" min="0" max="600000" value="0" id="filter-location-range" name="locationrange" class="filter-location-range">
+          </div>
 
-          <label for="filter-location-range">Umkreis</label>
-          <input type="range" min="0" max="600000" value="0" id="filter-location-range" name="locationrange">
         </div>
-        <div class="filter-topic">
-          <h4>Thema</h4>
-          <div><input type="checkbox" id="filter-topiccheck-arbeit" name="filter-topiccheck-arbeit">
-            <label for="filter-topiccheck-arbeit">Arbeit</label>
+
+        <div class="filter-topic filter-section">
+          <h1 class="filtermobile">Thema</h1>
+          <div class="filter-input-box">
+            <h4>Thema</h4>
+            <div><input type="checkbox" id="filter-topiccheck-arbeit" name="filter-topiccheck-arbeit">
+              <label for="filter-topiccheck-arbeit">Arbeit</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-sozial" name="filter-topiccheck-sozial">
+              <label for="filter-topiccheck-sozial">Sozial</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-oekologie" name="filter-topiccheck-oekologie">
+              <label for="filter-topiccheck-oekologie">Ökologie</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-kultur" name="filter-topiccheck-kultur">
+              <label for="filter-topiccheck-kultur">Kultur</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-militarismus" name="filter-topiccheck-militarismus">
+              <label for="filter-topiccheck-militarismus">Militarismus</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-antifa" name="filter-topiccheck-antifa">
+              <label for="filter-topiccheck-antifa">Antifa</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-feminismus" name="filter-topiccheck-feminismus">
+              <label for="filter-topiccheck-feminismus">Feminismus</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-rassismus" name="filter-topiccheck-rassismus">
+              <label for="filter-topiccheck-rassismus">Rassismus</label>
+            </div>
+
+            <div><input type="checkbox" id="filter-topiccheck-sonstige" name="filter-topiccheck-sonstige">
+              <label for="filter-topiccheck-sonstige">Sonstige</label>
+            </div>
           </div>
 
-          <div><input type="checkbox" id="filter-topiccheck-sozial" name="filter-topiccheck-sozial">
-            <label for="filter-topiccheck-sozial">Sozial</label>
-          </div>
+        </div>
 
-          <div><input type="checkbox" id="filter-topiccheck-oekologie" name="filter-topiccheck-oekologie">
-            <label for="filter-topiccheck-oekologie">Ökologie</label>
-          </div>
-
-          <div><input type="checkbox" id="filter-topiccheck-kultur" name="filter-topiccheck-kultur">
-            <label for="filter-topiccheck-kultur">Kultur</label>
-          </div>
-
-          <div><input type="checkbox" id="filter-topiccheck-militarismus" name="filter-topiccheck-militarismus">
-            <label for="filter-topiccheck-militarismus">Militarismus</label>
-          </div>
-
-          <div><input type="checkbox" id="filter-topiccheck-antifa" name="filter-topiccheck-antifa">
-            <label for="filter-topiccheck-antifa">Antifa</label>
-          </div>
-
-          <div><input type="checkbox" id="filter-topiccheck-feminismus" name="filter-topiccheck-feminismus">
-            <label for="filter-topiccheck-feminismus">Feminismus</label>
-          </div>
-
-          <div><input type="checkbox" id="filter-topiccheck-rassismus" name="filter-topiccheck-rassismus">
-            <label for="filter-topiccheck-rassismus">Rassismus</label>
-          </div>
-
-          <div><input type="checkbox" id="filter-topiccheck-sonstige" name="filter-topiccheck-sonstige">
-            <label for="filter-topiccheck-sonstige">Sonstige</label>
+        <div class="filter-tags filter-section" id="filter-tags">
+          <h1 class="filtermobile">Tags</h1>
+          <div class="filter-input-box">
+            <h4>Tags</h4>
+            <input type="search" id="filter-tag-search" placeholder="Tagsuche" autocomplete="off" name="tagsearch" list="filter-tag-list">
+            <datalist id="filter-tag-list">
+            </datalist>
           </div>
         </div>
-        <div class="filter-type" id="filter-type">
-          <input type="search" id="map-filter-type-search" placeholder="Veranstaltungsart" autocomplete="off" name="typesearch" list="map-filter-type-list">
-          <datalist id="map-filter-type-list">
-          </datalist>
-        </div>
-        <div class="filter-confirm">
-          <input type="submit" value="Auswahl bestätigen">
-          <input type="reset" value="Auswahl zurücksetzen">
+
+        <div class="filter-confirm filter-confirm-active">
+          <input type="submit" value="Auswahl bestätigen" name="confirm">
+          <input type="reset" value="Auswahl zurücksetzen" name="">
+          <div class="filter-confirm-button filter-button" type="submit">
+            <input type="image" src="../assets/elements/check.svg" name="" value="">
+          </div>
+          <div class="filter-reset-button filter-button">
+            <img src="../assets/elements/cross.svg">
+          </div>
         </div>
       </form>
     </div>

@@ -33,6 +33,83 @@ var circle = L.circle([51.541, 10.305], {
 }).addTo(map);
 
 //Mapfilter
+//Mobile Filter
+//Interaktion mobil
+document.addEventListener("click", e => {
+  const isDropdownButton = e.target.matches(".filtermobile");
+  if (isDropdownButton == true) {
+
+    const isActiveFilter = e.target.parentElement.matches(".filter-active");
+    //console.log(isActiveFilter);
+
+    if (isActiveFilter == true) {
+      filterActive = Array.from(document.getElementsByClassName("filter-active"));
+      filterActive.forEach((filter, i) => {
+        filter.classList.remove("filter-active");
+      });
+    } else {
+      filterActive = Array.from(document.getElementsByClassName("filter-active"));
+      filterActive.forEach((filter, i) => {
+        filter.classList.remove("filter-active");
+      });
+
+      e.target.parentElement.classList.add("filter-active");
+    }
+
+  } else {
+    return
+  }
+});
+
+document.addEventListener("click", e => {
+  const isResetButton = e.target.parentElement.matches(".filter-reset-button");
+  //console.log(isResetButton);
+  if (isResetButton == true) {
+    form = document.getElementById("filter-form");
+    //console.log(form);
+    form.reset();
+  }
+});
+
+
+//Range Live Preview
+document.addEventListener("input", object => {
+  const rangeLabel = document.getElementById("filter-location-range-label");
+  const isLocationRange = object.target.matches(".filter-location-range");
+  //console.log(isLocationRange);
+  if (isLocationRange == true) {
+    //console.log(object.target.value);
+    let currentRange = object.target.value;
+
+    if (currentRange >= 1000) {
+      //console.log("kilometer");
+      currentRange = currentRange.toString();
+
+      currentRangeStart = currentRange.substring(0, currentRange.length - 3);
+      currentRangeStart = parseInt(currentRangeStart);
+
+      currentRangeEnd = currentRange.substring(currentRange.length - 3, currentRange.length);
+      currentRangeEnd = parseInt(currentRangeEnd);
+
+      if (currentRangeStart >= 10) {
+        currentRangePrint = currentRangeStart;
+        rangeLabel.innerHTML = " "+currentRangePrint + "km";
+
+      } else {
+        currentRangePrint= currentRangeStart + "," + currentRangeEnd;
+        rangeLabel.innerHTML = " "+currentRangePrint + "km";
+      }
+
+    } else {
+      rangeLabel.innerHTML = " "+currentRange + "m";
+    }
+  } else {
+    return;
+  }
+});
+
+
+//Process Data
 
 let url = window.location.href;
 let params = (new URL(url)).searchParams;
