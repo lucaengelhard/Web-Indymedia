@@ -35,6 +35,7 @@ const upload = multer({
 
 //get User Input
 app.post("/api", upload.single("image"), (request, response, cb) => {
+  console.log(request.body.article);
 
   filewriter(request);
 

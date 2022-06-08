@@ -73,7 +73,7 @@
       <input type="file" name="editor-titleimage-input" id="editor-titleimage-input" value="">
     </div>
     <div class="editor-title">
-      <input type="text" name="editor-title-input" id="editor-title-input" value="Titel" maxlength="100">
+      <input type="text" name="editor-title-input" id="editor-title-input" placeholder="Titel" maxlength="100">
     </div>
   </form>
 
@@ -114,11 +114,18 @@
     <div><input type="checkbox" id="filter-topiccheck-sonstige" name="sonstige">
       <label for="filter-topiccheck-sonstige">Sonstige</label>
   </div>
+
+
 </form>
-  <div class="editor-shorttext">
-    <h4>Kurztext</h4>
-    <div class="editor-shorttext-input" id="editor-shorttext-input" contenteditable="true"></div>
-  </div>
+
+<div class="editor-user-tags">
+  <input type="text" name="editor-usertags-input" id="editor-usertags-input" placeholder="Tags">
+  <div class="editor-user-tags-selected" id="editor-user-tags-selected"></div>
+</div>
+
+<textarea name="editor-shorttext-input" class="editor-shorttext-input" id="editor-shorttext-input" placeholder="Zusammenfassung" maxlength="250">
+</textarea>
+
   <div class="text-editor-header">
     <div class="text-editor-utility"><button type="button" class="btn" data-element="bold">
       <i class="fa fa-bold"></i>

@@ -8,7 +8,7 @@ elements.forEach((element, i) => {
       document.execCommand(command, false, url);
     } else {
       if (command == "heading") {
-        console.log(command);
+       //console.log(command);
         document.execCommand("formatBlock", false, "H1");
       } else {
         if (command == "quote") {
@@ -22,16 +22,37 @@ elements.forEach((element, i) => {
 });
 
 
+$(function(){
+ $("#editor-usertags-input").on({
+   focusout : function() {
+     var txt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig, " ");
+     if(txt) $("<span/>", {text:txt.toLowerCase(), appendTo:$("#editor-user-tags-selected")});
+     this.value="";
+   },
+   keyup : function(ev) {
+     if(/(188|13)/.test(ev.which)) $(this).focusout();
+   }
+ });
+});
 
+document.addEventListener("click", (clickedObject) =>{
+  isTagCard = clickedObject.target.parentElement.id === "editor-user-tags-selected";
+
+  if(isTagCard){clickedObject.target.remove();}
+
+});
 
 document.getElementById("editor-submit-button").onclick = function() {
   var submittedtitle = postTitle();
   var submittedimage = postImage();
   var submittedtopics = postTopics();
+  var submittedtags = postTags();
   var submittedshorttext = postShorttext();
   var submittedcontent = postBody();
 
-  articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedshorttext, submittedcontent);
+console.log(submittedtopics);
+  //console.log(submittedshorttext);
+  articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent);
 }
 
 function postBody() {
@@ -62,26 +83,38 @@ function postTopics() {
     isTagOn = tag.checked;
     if (isTagOn == true) {
       onTopics.push(tag.name);
-      console.log(onTopics);
+     //console.log(onTopics);
     }
   });
-
-
   return onTopics;
+}
+
+function postTags(){
+  submittedtags = [];
+  editorTags=$("#editor-user-tags-selected > span").toArray();
+
+  editorTags.forEach((tag, i) => {
+    //console.log(tag.innerText);
+    submittedtags.push(tag.innerText);
+  });
+
+  //console.log(submittedtags);
+  return submittedtags;
 }
 
 function postShorttext() {
   editorShorttext = document.getElementById("editor-shorttext-input");
-  editorShorttext = editorShorttext.innerHTML;
+  editorShorttext = editorShorttext.value;
   return editorShorttext;
 }
 
-function articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedshorttext, submittedcontent) {
-  console.log(submittedtitle);
-  console.log(submittedimage);
-  console.log(submittedtopics);
-  console.log(submittedshorttext);
-  console.log(submittedcontent);
+function articleSubmit(submittedtitle, submittedimage, submittedtopics,submittedtags, submittedshorttext, submittedcontent) {
+ //console.log(submittedtitle);
+ //console.log(submittedimage);
+ //console.log(submittedtopics);
+ //console.log(submittedshorttext);
+ //console.log(submittedcontent);
+ //console.log(submittedtags);
 
   const article = {
     "postid": "8",
@@ -106,13 +139,14 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
   }
 
   article.topics = submittedtopics;
+  article.tags = submittedtags;
   article.shorttext = submittedshorttext;
   article.richtext = submittedcontent;
 
-  console.log(article);
+ //console.log(article);
 
   articleString = JSON.stringify(article);
-  console.log(articleString);
+ //console.log(articleString);
   const formData = new FormData();
   formData.append("article", articleString);
   if (submittedimage === undefined) {} else {
@@ -134,7 +168,7 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
       fetch('../artikel/articlelist.json')
         .then(response => response.json())
         .then(userlist => {
-          console.log(userlist);
+         //console.log(userlist);
         });
     }*/
 
