@@ -1,23 +1,41 @@
 const express = require("express");
-const fs = require('fs');
 const app = express();
 
+const fs = require('fs');
+
+const multer = require("multer");
+
 const port = 3000;
-
-var buffer = new Buffer.alloc(6000);
-
-
 
 app.listen(port, () => console.log("server listening at port " + port));
 
 app.use(express.static("public"));
+
 app.use(express.json({
   limit: "1mb"
 }))
 
 
+app.use(express.urlencoded({
+  extended: true
+}));
+
+const storage = multer.diskStorage({
+  destination: "public/assets/images/uploads/",
+  filename: function(req, file, cb) {
+    const postid = getNewPostID();
+    cb(null, postid + "-" + Math.round(Math.random() * 1E9) + file.originalname);
+  }
+});
+
+const upload = multer({
+  storage: storage
+});
+
+
 //get User Input
-app.post("/api", (request, response) => {
+app.post("/api", upload.single("image"), (request, response, cb) => {
+
   filewriter(request);
 
   response.json({
@@ -27,9 +45,14 @@ app.post("/api", (request, response) => {
 });
 
 
+
+
 //Update Database
 function filewriter(request) {
-  var data = request.body;
+  var data = request.body.article;
+  //console.log(JSON.parse(data));
+
+  data = JSON.parse(data);
 
 
   const fileName = "./public/Artikel/articlelist.json";
@@ -38,16 +61,17 @@ function filewriter(request) {
   //New ID
   //console.log(file.articles.length);
 
-if(file.articles.length == 0) {
-  newentryID = 1;
-  data.postid = newentryID;
-} else {
-  var lastentry = file.articles[file.articles.length - 1];
-  lastentry = parseInt(lastentry.postid);
+  newentryID = getNewPostID();
 
-  newentryID = lastentry + 1;
   data.postid = newentryID;
-}
+  console.log(request.file);
+  if (request.file == undefined) {} else {
+    imagepath = request.file.destination.replace("public", "..");
+    data.image = imagepath + request.file.filename;
+  }
+
+
+
 
 
   //New URL
@@ -63,11 +87,10 @@ if(file.articles.length == 0) {
   posturl = "/Artikel/" + newentryID + "-" + titleclean + ".html";
   //console.log(posturl);
 
-  data.posturl = ".."+posturl;
+  data.posturl = ".." + posturl;
 
 
-
-
+  //console.log(data);
 
   //Append Entry
   filecontentArray = JSON.stringify(file.articles);
@@ -80,16 +103,21 @@ if(file.articles.length == 0) {
 
 
   //Create Page
-
-  articlepageCreator(newentryID, titledash, data);
+  if (data.topics.length == 0) {
+  } else {
+    articlepageCreator(newentryID, titledash, data);
 
     fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
       if (err) {
         throw err;
       }
     });
+  }
+
 
 }
+
+
 
 function articlepageCreator(newentryID, titledash, data) {
   fs.readFile("public/artikel/0-articlebase.html", "utf-8", function(err, content) {
@@ -110,12 +138,12 @@ function articlepageCreator(newentryID, titledash, data) {
     richtext = data.richtext;
 
 
-//Image
+    //Image
     //console.log(image);
 
-    imageMarkup = "<img src='"+image+"' alt=''>"
+    imageMarkup = "<img src='" + image + "' alt=''>"
 
-//console.log(imageMarkup);
+    //console.log(imageMarkup);
 
     //Topiclist
     topicMarkup = "";
@@ -125,7 +153,6 @@ function articlepageCreator(newentryID, titledash, data) {
       if (lasttopic === 1) {
         topicLower = topic.toLowerCase();
         topicClass = "tagtopic-" + topicLower;
-        currentColor = topicLower;
         //console.log(topicClass);
       }
       if (lasttopic === topics.length) {
@@ -139,6 +166,7 @@ function articlepageCreator(newentryID, titledash, data) {
       }
     });
 
+    const currentColor = currentColorFunc(topics);
 
     //Replace content
     content = content.replace(/\"\+currentColor\+\"/g, currentColor);
@@ -152,8 +180,36 @@ function articlepageCreator(newentryID, titledash, data) {
     content = content.replace(/\"\+content\+\"/g, richtext);
 
     fs.writeFile("public/" + posturl, content, function(err) {
-      if(err) throw err;
-      console.log("saved " + newentryID +"-"+ titleclean+".html");
+      if (err) throw err;
+      console.log("saved " + newentryID + "-" + titleclean + ".html");
     });
   });
+}
+
+function getNewPostID() {
+  const fileName = "./public/Artikel/articlelist.json";
+  const file = require(fileName);
+
+  //New ID
+  //console.log(file.articles.length);
+
+  if (file.articles.length == 0) {
+    newentryID = 1;
+    return newentryID;
+
+  } else {
+    var lastentry = file.articles[file.articles.length - 1];
+    lastentry = parseInt(lastentry.postid);
+
+    newentryID = lastentry + 1;
+
+
+    return newentryID;
+  }
+}
+
+function currentColorFunc(topics) {
+  //console.log(topics[0]);
+  currentColor = topics[0];
+  return currentColor;
 }

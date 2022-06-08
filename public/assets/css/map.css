@@ -84,6 +84,11 @@ flex: 1 1 60%;
     border-bottom: 1px solid black;
     white-space: nowrap;
   }
+
+  .maplist {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {

@@ -9,7 +9,7 @@ padding-right: 2rem;
 }
 
 .editor-shorttext {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .editor-shorttext-input {
@@ -21,15 +21,77 @@ padding-right: 2rem;
 .text-editor-header{
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-display: flex;
-justify-content: space-between;
+}
+
+.editor-title-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.editor-title-wrapper >* > label{
+  margin-bottom: 0.2rem;
+}
+
+.editor-titleimage >*{
+  font-family: Iosevka, monospace;
+  color: black;
+}
+
+.editor-titleimage > label {
+  display: block;
+  font-weight: 300;
+  cursor: default;
+}
+
+.editor-title {
+  width: 50%;
+}
+
+.editor-title > * {
+  font-family: Iosevka, monospace;
+  color: black;
+  display: block;
+}
+
+.editor-title > input {
+  width: 100%;
+  border:none;
+  border-bottom: 1px solid black;
+}
+
+.editor-title > label {
+  font-weight: 300;
+  cursor: default;
+}
+
+.editor-title > label:hover {
+  font-weight: 300;
+}
+
+.editor-tag-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.editor-tag-wrapper > *> label {
+  font-family: Iosevka, monospace;
+
+}
+
+.editor-submit {
+  margin-top: 1rem;
 }
 
 .editor-content {
  height: 70vh;
   width: 100%;
   background-color: var(--grau);
-  overflow-y: scroll;
+  overflow-y: default;
 }
 
 .editor-content > img {
@@ -46,4 +108,14 @@ blockquote {
 blockquote::before {
   display: block;
   content: url(../elements/quote.svg);
+}
+
+@media screen and (max-width: 720px) {
+  .editor-tag-wrapper {
+    gap: 1rem;
+  }
+
+  .editor-tag-wrapper > *> label {
+    font-size: 2rem;
+  }
 }

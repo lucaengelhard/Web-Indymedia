@@ -15,6 +15,7 @@ body {
 
 .article {
     max-width: 900px;
+    min-width: 50%;
     margin: auto;
 }
 
@@ -98,8 +99,6 @@ body {
 
 .article-link > p {
     margin-bottom: 0px;
-    text-overflow: ellipsis;
-    ;
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -108,6 +107,16 @@ body {
     /* number of lines to show */
     line-clamp: 5;
     -webkit-box-orient: vertical;
+}
+
+.article-link > h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* number of lines to show */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .articlelist-image {

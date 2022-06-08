@@ -12,16 +12,33 @@
 
 <body>
   <header id="header">
-    <nav id="nav" class="nav">
+    <nav id="nav" class="nav nav-map">
       <a href="index.html" class="logo rainbow">indymedia.</a>
       <div class="navigation">
-        <ul>
+        <ul id="nav-list">
+          <div class="burger-close" id="burger-close">
+            <svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.01 14.01">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #000;
+                    stroke-miterlimit: 10;
+                  }
+                </style>
+              </defs>
+              <g id="Ebene_1-2">
+                <g><line class="cls-1" x1=".71" y1="13.31" x2="13.31" y2=".71"/><line class="cls-1" x1="13.31" y1="13.31" x2=".71" y2=".71"/></g>
+              </g>
+            </svg>
+          </div>
           <li><a href="artikel.html">Artikel</a></li>
-          <li><a href="karte.html">Was tun?</a></li>
-          <li><a href="#">Tutorials</a></li>
+          <li><a href="karte.html" class="rainbow">Was tun?</a></li>
+          <li><a href="tutorials.html">Tutorials</a></li>
+
         </ul>
         <div id="nav-content" class="nav-icons">
-          <a href="#">
+          <a href="create.html">
             <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="50%" cy="50%" r="32" stroke="black" stroke-width="2" />
               <line x1="20%" y1="50%" x2="80%" y2="50%" stroke="black" stroke-width="2" />
@@ -36,14 +53,15 @@
             </svg>
           </a>
         </div>
-        <div id="nav-burger" class="nav-icons"><a href="#"><svg version="1.1" id="Ebene-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;"
-              xml:space="preserve">
+        <div id="nav-burger" class="nav-icons"><a href="#">
+            <svg version="1.1" id="Ebene-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
               <g>
                 <line class="st0" x1="0%" y1="20%" x2="100%" y2="20%" />
                 <line class="st0" x1="0%" y1="50%" x2="100%" y2="50%" />
                 <line class="st0" x1="0%" y1="80%" x2="100%" y2="80%" />
               </g>
-            </svg></a>
+            </svg>
+          </a>
         </div>
       </div>
     </nav>
@@ -1270,5 +1288,6 @@
 <script src="scripts/landing.js" type="text/javascript"></script>
 <script src="scripts/headerscroll.js" type="text/javascript"></script>
 <script src="scripts/homemenu.js" type="text/javascript"></script>
+<script src="scripts/nav.js" type="text/javascript"></script>
 
 </html>

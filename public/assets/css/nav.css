@@ -100,6 +100,10 @@ nav {
     display: none;
 }
 
+.burger-close {
+  display: none;
+}
+
 /* Headerswitch */
 
 .headerswitch > nav {
@@ -145,6 +149,46 @@ nav {
 
     .st0 {
         stroke-width: 4;
+    }
+
+    .burger-active {
+    display: block !important;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: calc(100vw - 6rem);
+    padding: 3rem !important;
+    border-bottom: 1px solid black;
+    }
+
+    .burger-active > li > a {
+    font-size: 3rem !important;
+    }
+
+    .burger-active > li > a > .closeLetters{
+      letter-spacing: -1.3rem !important;
+    }
+
+    .burger-active>.burger-close {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .burger-close {
+      cursor: pointer;
+    }
+
+    .burger-close > svg {
+      width: 2rem;
+    }
+
+    .burger-close > svg > g > g > * {
+      stroke-width: 1px;
+    }
+
+    .burger-close:hover > svg > g > g > * {
+      stroke-width:2px;
     }
 }
 }

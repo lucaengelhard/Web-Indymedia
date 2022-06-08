@@ -91,6 +91,7 @@ font-weight: 600;
         justify-content: center;
         background-color: white;
         border-bottom: 1px solid black;
+        margin-top: 0;
     }
 
     .homepage-menu > ul {
@@ -109,8 +110,8 @@ font-weight: 600;
     .homepage-menu {
       overflow-y:auto;
         justify-content: flex-start;
-        -ms-overflow-style: none;  
-  scrollbar-width: none;  
+        -ms-overflow-style: none;
+  scrollbar-width: none;
     }
 
     .homepage-menu::-webkit-scrollbar {
