@@ -16,8 +16,8 @@ L.mapbox.styleLayer("mapbox://styles/luuccaa/cl467yt3d000e14pkrn0vo6y2").addTo(m
 
 //Icons
 //Icons definieren
-var iconKüche = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+var iconKueche = L.icon({
+  iconUrl: '../assets/elements/mapicons/iconKueche.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -39,7 +39,7 @@ var iconKultur = L.icon({
 });
 
 var iconDiskussion = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '../assets/elements/mapicons/iconDiskussion.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -50,7 +50,7 @@ var iconDiskussion = L.icon({
 });
 
 var iconInfo = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '../assets/elements/mapicons/iconInfo.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -61,7 +61,7 @@ var iconInfo = L.icon({
 });
 
 var iconDemo = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '../assets/elements/mapicons/iconDemo.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -72,7 +72,7 @@ var iconDemo = L.icon({
 });
 
 var iconAktion = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '../assets/elements/mapicons/iconAktion.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -83,7 +83,18 @@ var iconAktion = L.icon({
 });
 
 var iconGruppe = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '../assets/elements/mapicons/iconGruppe.png',
+  //shadowUrl: 'leaf-shadow.png',
+
+  iconSize: [40, 60], // size of the icon
+  //shadowSize:   [50, 64], // size of the shadow
+  iconAnchor: [20, 60], // point of the icon which will correspond to marker's location
+  //shadowAnchor: [4, 62],  // the same for the shadow
+  popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+var iconOrt = L.icon({
+  iconUrl: '../assets/elements/mapicons/iconOrt.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -99,7 +110,7 @@ function filterExecute(placesFilterArray) {
   fetch("../map/maplist.json")
     .then(result => result.json())
     .then(parsedResult => {
-      //console.log(placesFilterArray);
+      ////console.log(placesFilterArray);
       mappoints = parsedResult.mappoints;
       filterMap(mappoints, placesFilterArray);
       filterEventList(mappoints, placesFilterArray);
@@ -107,9 +118,9 @@ function filterExecute(placesFilterArray) {
 }
 
 function filterEventList(mappoints, placesFilterArray) {
-  console.log(mappoints);
+  //console.log(mappoints);
   idToPrint = parseInt(placesFilterArray.toString());
-  console.log(idToPrint);
+  //console.log(idToPrint);
   maplist = document.getElementById("maplist");
 
   mappoints.forEach((item, i) => {
@@ -129,7 +140,7 @@ function filterEventList(mappoints, placesFilterArray) {
 
 
       if (shouldprint) {
-        maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='#' class='map-article-link'>        <h4><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </h4>          <h1>" + item.title + "</h1>        </a>        <h4><ahref='" + item.posturl + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |</a>          <a href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></a>        </h4>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
+        maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='#' class='map-article-link'>        <h4><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </h4>          <h1>" + item.title + "</h1></a>        <h4><ahref='" + item.posturl + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </h4>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
       }
     }
 
@@ -151,7 +162,7 @@ function filterMap(mappoints, placesFilterArray) {
   });
 
   placesToDisplay.forEach((place, i) => {
-    //console.log(place.address);
+    ////console.log(place.address);
     currentLocation = place.address + " " + place.city;
     getLocation(currentLocation, place);
   });
@@ -167,20 +178,31 @@ function getLocation(currentLocation, place) {
 
 function placeMarker(parsedResult, place) {
   currentLatLong = [];
-  //console.log(parsedResult[0]);
-  //console.log(parsedResult[0].lat);
-  //console.log(parsedResult[0].lon);
-  //console.log(place.city);
+  ////console.log(parsedResult[0]);
+  ////console.log(parsedResult[0].lat);
+  ////console.log(parsedResult[0].lon);
+  ////console.log(place.city);
 
-  //console.log(parsedResult[0].address);
+  ////console.log(parsedResult[0].address);
   currentLatLong.push(parsedResult[0].lat);
   currentLatLong.push(parsedResult[0].lon);
 
-  //console.log(currentLatLong);
+  ////console.log(currentLatLong);
+//console.log(place.markertype);
 
+if(place.markertype == "gruppe"){
   var marker = L.marker(currentLatLong, {
-    icon: iconEssen
+    icon: iconGruppe
   }).addTo(map);
+}else if (place.markertype == "ort") {
+  var marker = L.marker(currentLatLong, {
+    icon: iconOrt
+  }).addTo(map);
+} else {
+  marker = eventMarker(currentLatLong, place);
+}
+
+
 
 
   //Popups
@@ -190,9 +212,9 @@ function placeMarker(parsedResult, place) {
   popup.push(parsedResult[0].address.house_number);
   popup.push(parsedResult[0].address.postcode);
 
-  //console.log(parsedResult[0].address);
-  // //console.log(parsedResult[0].address.town);
-  //console.log(parsedResult[0].address.city);
+  ////console.log(parsedResult[0].address);
+  // ////console.log(parsedResult[0].address.town);
+  ////console.log(parsedResult[0].address.city);
 
   if (parsedResult[0].address.town !== undefined) {
     popup.push(parsedResult[0].address.town);
@@ -208,8 +230,6 @@ function placeMarker(parsedResult, place) {
 
 
   address = popup.join(" ");
-
-  //console.log(address);
 
   if (place.place.length !== 0) {
     popuptext = "<a href='" + place.posturl + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
@@ -228,7 +248,7 @@ document.addEventListener("click", e => {
   if (isDropdownButton == true) {
 
     const isActiveFilter = e.target.parentElement.matches(".filter-active");
-    //console.log(isActiveFilter);
+    ////console.log(isActiveFilter);
 
     if (isActiveFilter == true) {
       filterActive = Array.from(document.getElementsByClassName("filter-active"));
@@ -252,10 +272,10 @@ document.addEventListener("click", e => {
 document.addEventListener("click", e => {
   try {
     const isResetButton = e.target.parentElement.matches(".filter-reset-button");
-    //console.log(isResetButton);
+    ////console.log(isResetButton);
     if (isResetButton == true) {
       form = document.getElementById("filter-form");
-      //console.log(form);
+      ////console.log(form);
       form.reset();
     }
   } catch (e) {
@@ -269,7 +289,7 @@ const filterlocationSearch = document.getElementById("filter-location-search");
 const filterlocationList = document.getElementById("filter-location-list");
 
 filterlocationSearch.addEventListener("change", () => {
-  //console.log(filterlocationSearch.value);
+  ////console.log(filterlocationSearch.value);
 
   fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + filterlocationSearch.value)
     .then(result => result.json())
@@ -282,13 +302,13 @@ filterlocationSearch.addEventListener("change", () => {
         if (parsedResult[0] == undefined) {
           throw "Keine übereinstimmenden Orte gefunden";
         } else {
-          //console.log(parsedResult[0].lat);
-          //console.log(parsedResult[0].lon);
+          ////console.log(parsedResult[0].lat);
+          ////console.log(parsedResult[0].lon);
 
           filterLatLon.push(parsedResult[0].lat);
           filterLatLon.push(parsedResult[0].lon);
 
-          //console.log(filterLatLon);
+          ////console.log(filterLatLon);
 
           //Range Live Preview
           if (circleRange != undefined) {
@@ -310,12 +330,12 @@ filterlocationSearch.addEventListener("change", () => {
           document.addEventListener("change", object => {
             const rangeLabel = document.getElementById("filter-location-range-label");
             const isLocationRange = object.target.matches(".filter-location-range");
-            //console.log(isLocationRange);
+            ////console.log(isLocationRange);
             if (isLocationRange == true) {
-              //console.log(object.target.value);
+              ////console.log(object.target.value);
               let currentRange = object.target.value;
 
-              //console.log(filterLatLon);
+              ////console.log(filterLatLon);
               currentFilterLocation = filterLatLon;
 
 
@@ -342,7 +362,7 @@ filterlocationSearch.addEventListener("change", () => {
 
 
               if (currentRange >= 1000) {
-                //console.log("kilometer");
+                ////console.log("kilometer");
                 currentRange = currentRange.toString();
 
                 currentRangeStart = currentRange.substring(0, currentRange.length - 3);
@@ -482,8 +502,8 @@ function filterStart() {
           .then(response => response.json())
           .then(maplist => {
             mapnodes = maplist.mappoints;
-            //console.log(mapnodes);
-            //console.log(mapfilterOutput);
+            ////console.log(mapnodes);
+            ////console.log(mapfilterOutput);
 
             //eventtypes autocomplete
             eventtypes = [];
@@ -492,11 +512,11 @@ function filterStart() {
                 eventtypes.push(node.eventtype.toLowerCase());
               }
             });
-            //console.log(eventtypes);
+            ////console.log(eventtypes);
 
             //Check every entry
             mapnodes.forEach((node, i) => {
-              //console.log(node);
+              ////console.log(node);
 
               //Check type
               mapTypeCheck = checkType(maptypeactivator, node);
@@ -505,7 +525,7 @@ function filterStart() {
               range = parseInt(mapSearchParamsLocation.range);
               rangeCheck = checkLocation(range, filterCoordinates, node);
 
-              //console.log(rangeCheck);
+              ////console.log(rangeCheck);
 
               //Check Topic
               topiccheck = checkTopic(maptopicactivator, node);
@@ -518,7 +538,7 @@ function filterStart() {
 
               if (rangeCheck == false || mapTypeCheck == false || topiccheck == false || eventtypecheck == false) {} else {
                 placesFilterArray.push(node.mapnodeid);
-                //console.log(placesFilterArray);
+                ////console.log(placesFilterArray);
                 filterExecute(placesFilterArray);
               }
 
@@ -564,8 +584,8 @@ function filterStart() {
       .then(response => response.json())
       .then(maplist => {
         mapnodes = maplist.mappoints;
-        //console.log(mapnodes);
-        //console.log(mapfilterOutput);
+        ////console.log(mapnodes);
+        ////console.log(mapfilterOutput);
 
         //eventtypes autocomplete
         eventtypes = [];
@@ -574,7 +594,7 @@ function filterStart() {
             eventtypes.push(node.eventtype.toLowerCase());
           }
         });
-        //console.log(eventtypes);
+        ////console.log(eventtypes);
 
         //Check every entry
         mapnodes.forEach((node, i) => {
@@ -592,7 +612,7 @@ function filterStart() {
 
           if (mapTypeCheck == false || topiccheck == false || eventtypecheck == false) {} else {
             placesFilterArray.push(node.mapnodeid);
-            //console.log(placesFilterArray);
+            ////console.log(placesFilterArray);
             filterExecute(placesFilterArray);
           }
         });
@@ -601,6 +621,40 @@ function filterStart() {
         eventtypeautocomp(eventtypes);
       })
   }
+}
+
+function eventMarker(currentLatLong, place){
+  if(place.eventtype == "küche"){
+    var marker = L.marker(currentLatLong, {
+      icon: iconKueche
+    }).addTo(map);
+  }
+  if(place.eventtype == "kultur"){
+    var marker = L.marker(currentLatLong, {
+      icon: iconKultur
+    }).addTo(map);
+  }
+  if(place.eventtype == "diskussion"){
+    var marker = L.marker(currentLatLong, {
+      icon: iconDiskussion
+    }).addTo(map);
+  }
+  if(place.eventtype == "info"){
+    var marker = L.marker(currentLatLong, {
+      icon: iconInfo
+    }).addTo(map);
+  }
+  if(place.eventtype == "demo"){
+    var marker = L.marker(currentLatLong, {
+      icon: iconDemo
+    }).addTo(map);
+  }
+  if(place.eventtype == "aktion"){
+    var marker = L.marker(currentLatLong, {
+      icon: iconAktion
+    }).addTo(map);
+  }
+  return marker;
 }
 
 function checkLocation(range, filterCoordinates, node) {
@@ -614,10 +668,10 @@ function checkLocation(range, filterCoordinates, node) {
 
   var distanceKM = calcdistance(lat1, lon1, lat2, lon2, unit);
 
-  //console.log(distanceKM);
+  ////console.log(distanceKM);
 
   distanceM = distanceKM * 1000;
-  //console.log(distanceM);
+  ////console.log(distanceM);
 
   rangeCheck = null;
   if (range > distanceM) {

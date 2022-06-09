@@ -27,7 +27,7 @@
       "latlong": [48.801050849999996,9.792186289464551],
       "topics": ["FemiNIsmus", "militarismus"],
       "markertype":"event",
-      "eventtype": "volxküche"
+      "eventtype": "küche"
     },{
       "mapnodeid": 3,
       "posturl": "",
@@ -41,9 +41,9 @@
       "latlong": [48.77518035,9.178451246905096],
       "topics": ["FemiNIsmus", "ANTIFA"],
       "markertype":"event",
-      "eventtype": "podiumsdiskussion"
+      "eventtype": "diskussion"
     },{
-      "mapnodeid": 3,
+      "mapnodeid": 4,
       "posturl": "",
       "markertype": "event",
       "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
@@ -55,7 +55,22 @@
       "latlong": [48.77518035,9.178451246905096],
       "topics": ["FemiNIsmus", "ANTIFA"],
       "markertype":"event",
-      "eventtype": "podiumsdiskussion"
+      "eventtype": "diskussion"
+    }
+    ,{
+      "mapnodeid": 4,
+      "posturl": "",
+      "markertype": "event",
+      "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
+      "date": "16.04.22",
+      "time": "13:12",
+      "city": "Krefeld",
+      "place": "",
+      "address": "",
+      "latlong": [48.77518035,9.178451246905096],
+      "topics": ["FemiNIsmus", "ANTIFA"],
+      "markertype":"ort",
+      "eventtype": ""
     }
   ]
 }
