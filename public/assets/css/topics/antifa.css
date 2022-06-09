@@ -1,0 +1,48 @@
+#antifa {
+  border-color: var(--antifa);
+  color: var(--antifa);
+}
+
+#antifa>*>.home-section-title-line>* {
+  background-color: var(--antifa);
+}
+
+.post-text.tagtopic-antifa {
+  border-bottom: 1px solid var(--antifa);
+}
+
+.tagtopic-antifa>a>h1 {
+  color: black;
+}
+
+.tagtopic-antifa>a>h1:hover {
+  color: var(--antifa);
+}
+
+.tagtopic-antifa>a>h4>span {
+  color: var(--antifa);
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.tagtopic-antifa>.reminder-button {
+  background-color: var(--antifa);
+}
+
+#antifa-menu.currentTopic {
+  color: var(--antifa);
+}
+
+#antifa-menu.currentTopic:visited {
+  color: var(--antifa);
+}
+
+#nav.bordercolor-antifa {
+  border-bottom-color: var(--antifa);
+}
+
+@media screen and (max-width: 1250px) {
+  #antifa {
+    border-top-color: transparent;
+  }
+}

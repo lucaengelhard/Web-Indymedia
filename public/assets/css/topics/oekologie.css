@@ -1,0 +1,48 @@
+#oekologie {
+  border-color: var(--oekologie);
+  color: var(--oekologie);
+}
+
+#oekologie>*>.home-section-title-line>* {
+  background-color: var(--oekologie);
+}
+
+.post-text.tagtopic-oekologie {
+  border-bottom: 1px solid var(--oekologie);
+}
+
+.tagtopic-oekologie>a>h1 {
+  color: black;
+}
+
+.tagtopic-oekologie>a>h1:hover {
+  color: var(--oekologie);
+}
+
+.tagtopic-oekologie>a>h4>span {
+  color: var(--oekologie);
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.tagtopic-oekologie>.reminder-button {
+  background-color: var(--oekologie);
+}
+
+#oekologie-menu.currentTopic {
+  color: var(--oekologie);
+}
+
+#oekologie-menu.currentTopic:visited {
+  color: var(--oekologie);
+}
+
+#nav.bordercolor-oekologie {
+  border-bottom-color: var(--oekologie);
+}
+
+@media screen and (max-width: 1250px) {
+  #oekologie {
+    border-top-color: transparent;
+  }
+}

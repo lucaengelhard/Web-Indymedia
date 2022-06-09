@@ -1,0 +1,48 @@
+#kultur {
+  border-color: var(--kultur);
+  color: var(--kultur);
+}
+
+#kultur>*>.home-section-title-line>* {
+  background-color: var(--kultur);
+}
+
+.post-text.tagtopic-kultur {
+  border-bottom: 1px solid var(--kultur);
+}
+
+.tagtopic-kultur>a>h1 {
+  color: black;
+}
+
+.tagtopic-kultur>a>h1:hover {
+  color: var(--kultur);
+}
+
+.tagtopic-kultur>a>h4>span {
+  color: var(--kultur);
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.tagtopic-kultur>.reminder-button {
+  background-color: var(--kultur);
+}
+
+#kultur-menu.currentTopic {
+  color: var(--kultur);
+}
+
+#kultur-menu.currentTopic:visited {
+  color: var(--kultur);
+}
+
+#nav.bordercolor-kultur {
+  border-bottom-color: var(--kultur);
+}
+
+@media screen and (max-width: 1250px) {
+  #kultur {
+    border-top-color: transparent;
+  }
+}

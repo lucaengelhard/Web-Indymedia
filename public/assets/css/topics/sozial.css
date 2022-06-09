@@ -1,0 +1,48 @@
+#sozial {
+  border-color: var(--sozial);
+  color: var(--sozial);
+}
+
+#sozial>*>.home-section-title-line>* {
+  background-color: var(--sozial);
+}
+
+.post-text.tagtopic-sozial {
+  border-bottom: 1px solid var(--sozial);
+}
+
+.tagtopic-sozial>a>h1 {
+  color: black;
+}
+
+.tagtopic-sozial>a>h1:hover {
+  color: var(--sozial);
+}
+
+.tagtopic-sozial>a>h4>span {
+  color: var(--sozial);
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.tagtopic-sozial>.reminder-button {
+  background-color: var(--sozial);
+}
+
+#sozial-menu.currentTopic {
+  color: var(--sozial);
+}
+
+#sozial-menu.currentTopic:visited {
+  color: var(--sozial);
+}
+
+#nav.bordercolor-sozial {
+  border-bottom-color: var(--sozial);
+}
+
+@media screen and (max-width: 1250px) {
+  #sozial {
+    border-top-color: transparent;
+  }
+}

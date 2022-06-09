@@ -1,0 +1,142 @@
+.homepage-menu {
+    float: left;
+    position: sticky;
+    top: 57px;
+
+    font-family: Iosevka, monospace;
+    text-transform: uppercase;
+    color: black;
+
+margin-top: 7rem;
+    z-index: 99;
+}
+
+.homepage-menu > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.homepage-menu > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+.homepage-menu > ul > li > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.homepage-menu > ul > li > a > h1 {
+    margin: 0;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.homepage-menu > ul > li > a > h1:hover{
+font-weight: 600;
+}
+
+.homepage-menu > ul > li > .currentTopic > * {
+    font-weight: 600;
+}
+
+.home-section-title {
+  width: 100%;
+  display: flex;
+
+  align-items:flex-end;
+}
+
+.home-section-title-text {
+  display: inline-block;
+}
+
+.home-section-title-text > * {
+  font-size: 3rem;
+  margin:  0;
+}
+
+.home-section-title-line {
+  flex-grow: 1;
+  padding-left: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+
+.home-section-title-line > * {
+  height: 0.2rem;
+  border: 0;
+}
+
+/*
+@media screen and (min-width: 1250px) {
+
+    .homepage-menu > ul > li > .currentTopic > * {
+        font-weight: 600;
+
+    }
+
+    .homepage-menu > ul > li > a > * {
+        font-weight: 200;
+    }
+
+
+}
+*/
+
+@media screen and (max-width: 1250px) {
+    .homepage-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        border-bottom: 1px solid black;
+        margin-top: 0;
+    }
+
+    .homepage-menu > ul {
+        display: flex;
+        gap: 1.5rem;
+        justify-self: center;
+        padding: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+    }
+}
+
+@media screen and (max-width:780px) {
+
+    .homepage-menu {
+      overflow-y:auto;
+        justify-content: flex-start;
+        -ms-overflow-style: none;
+  scrollbar-width: none;
+    }
+
+    .homepage-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .homepage-menu > ul {
+        display: inline-flex;
+        justify-self: left;
+        padding-left: 1rem;
+    }
+
+    .homepage-menu > ul > l1 {
+        display: inline-table;
+    }
+
+    .homepage-menu > ul > li > a > h1 {
+        white-space: nowrap;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        font-weight: 400;
+    }
+
+    .homepage-menu > ul > li > a > h1:hover {
+        font-weight: 600;
+    }
+}

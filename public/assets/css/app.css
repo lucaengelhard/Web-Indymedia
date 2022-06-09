@@ -1,0 +1,35 @@
+/* Import CSS */
+@import url(typo.css);
+
+@import url(nav.css);
+
+@import url(home.css);
+
+@import url(landing.css);
+
+@import url(layout.css);
+
+@import url(article.css);
+
+@import url(topics.css);
+
+@import url(map.css);
+
+@import url(mapbox.css);
+
+@import url(create.css);
+
+/*Farben*/
+:root {
+    --grau: #D2D2D2;
+
+    --antifa: #D91200;
+    --oekologie: #76CD1F;
+    --feminismus: #D90090;
+    --kultur: #E5B400;
+    --rassismus: #951FCC;
+    --arbeit: #193CA6;
+    --militarismus: #F37A00;
+    --sozial: #0BC2E5;
+    --sonstige: #000000;
+}

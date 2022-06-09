@@ -1,0 +1,48 @@
+#arbeit {
+  border-color: var(--arbeit);
+  color: var(--arbeit);
+}
+
+#arbeit>*>.home-section-title-line>* {
+  background-color: var(--arbeit);
+}
+
+.post-text.tagtopic-arbeit {
+  border-bottom: 1px solid var(--arbeit);
+}
+
+.tagtopic-arbeit>a>h1 {
+  color: black;
+}
+
+.tagtopic-arbeit>a>h1:hover {
+  color: var(--arbeit);
+}
+
+.tagtopic-arbeit>a>h4>span {
+  color: var(--arbeit);
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.tagtopic-arbeit>.reminder-button {
+  background-color: var(--arbeit);
+}
+
+#arbeit-menu.currentTopic {
+  color: var(--arbeit);
+}
+
+#arbeit-menu.currentTopic:visited {
+  color: var(--arbeit);
+}
+
+#nav.bordercolor-arbeit {
+  border-bottom-color: var(--arbeit);
+}
+
+@media screen and (max-width: 1250px) {
+  #arbeit {
+    border-top-color: transparent;
+  }
+}

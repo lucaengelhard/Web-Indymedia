@@ -1,0 +1,48 @@
+#sonstige {
+  border-color: var(--sonstige);
+  color: var(--sonstige);
+}
+
+#sonstige>*>.home-section-title-line>* {
+  background-color: var(--sonstige);
+}
+
+.post-text.tagtopic-sonstige {
+  border-bottom: 1px solid var(--sonstige);
+}
+
+.tagtopic-sonstige>a>h1 {
+  color: black;
+}
+
+.tagtopic-sonstige>a>h1:hover {
+  color: var(--sonstige);
+}
+
+.tagtopic-sonstige>a>h4>span {
+  color: var(--sonstige);
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.tagtopic-sonstige>.reminder-button {
+  background-color: var(--sonstige);
+}
+
+#sonstige-menu.currentTopic {
+  color: var(--sonstige);
+}
+
+#sonstige-menu.currentTopic:visited {
+  color: var(--sonstige);
+}
+
+#nav.bordercolor-sonstige {
+  border-bottom-color: var(--sonstige);
+}
+
+@media screen and (max-width: 1250px) {
+  #sonstige {
+    border-top-color: transparent;
+  }
+}
