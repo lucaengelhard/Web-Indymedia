@@ -8,7 +8,12 @@
   <link rel="stylesheet" href="assets/css/app.css">
   <title>Was tun?</title>
 
-  <script src="scripts/leaflet.js"></script>
+  <!--<script src="scripts/leaflet.js"></script>-->
+  <script src="scripts/mapbox.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+
 </head>
 
 <body>
@@ -29,7 +34,10 @@
                 </style>
               </defs>
               <g id="Ebene_1-2">
-                <g><line class="cls-1" x1=".71" y1="13.31" x2="13.31" y2=".71"/><line class="cls-1" x1="13.31" y1="13.31" x2=".71" y2=".71"/></g>
+                <g>
+                  <line class="cls-1" x1=".71" y1="13.31" x2="13.31" y2=".71" />
+                  <line class="cls-1" x1="13.31" y1="13.31" x2=".71" y2=".71" />
+                </g>
               </g>
             </svg>
           </div>
@@ -90,7 +98,9 @@
         </div>
         <div class="filter-location filter-section">
           <h1 class="filtermobile">Ort</h1>
-          <div class="filter-input-box"><input type="search" id="filter-location-search" placeholder="Ort (Name/PLZ)" autocomplete="on" name="placesearch">
+          <div class="filter-input-box">
+            <input type="search" id="filter-location-search" placeholder="Ort (Name/PLZ)" autocomplete="on" name="placesearch">
+            <div class="filter-location-list" id="filter-location-list"></div>
 
             <label for="filter-location-range"><span class="labeltext">Umkreis</span><span class="rangevalue" id="filter-location-range-label"></span></label>
             <input type="range" min="0" max="600000" value="0" id="filter-location-range" name="locationrange" class="filter-location-range">
@@ -165,98 +175,8 @@
     </div>
     <section class="map-box">
       <div id="map"></div>
-      <div class="maplist">
-        <article class="map-list-object">
-          <a href="#" class="map-article-link">
-            <h4><span class="map-date">16.04.22</span> |
-              <span class="map-time">19:00 Uhr</span>
-            </h4>
-            <h1>David Graeber und David Wengrow: Anfänge - Vortrag und Diskussion</h1>
-          </a>
-          <h4><a href="#" class="map-place-link"><span class="map-place">Berlin</span> |</a>
-            <a href="#" class="map-location-link"><span class="map-location">Stiftung Haus der Demokratie und Menschenrechte </span></a>
-          </h4>
-          <div class="map-icon">
-            <div class="map-eventtype-line"></div>
-            <a href="#" class="map-eventtype-link"><img src="assets\elements\kulturveranstaltung-placeholder.svg" alt=""></a>
-          </div>
-        </article>
-
-        <article class="map-list-object">
-          <a href="#" class="map-article-link">
-            <h4><span class="map-date">16.04.22</span> |
-              <span class="map-time">19:00 Uhr</span>
-            </h4>
-            <h1>David Graeber und David Wengrow: Anfänge - Vortrag und Diskussion</h1>
-          </a>
-          <h4><a href="#" class="map-place-link"><span class="map-place">Berlin</span> |</a>
-            <a href="#" class="map-location-link"><span class="map-location">Stiftung Haus der Demokratie und Menschenrechte </span></a>
-          </h4>
-          <div class="map-icon">
-            <div class="map-eventtype-line"></div>
-            <a href="#" class="map-eventtype-link"><img src="assets\elements\kulturveranstaltung-placeholder.svg" alt=""></a>
-          </div>
-        </article>
-        <article class="map-list-object">
-          <a href="#" class="map-article-link">
-            <h4><span class="map-date">16.04.22</span> |
-              <span class="map-time">19:00 Uhr</span>
-            </h4>
-            <h1>David Graeber und David Wengrow: Anfänge - Vortrag und Diskussion</h1>
-          </a>
-          <h4><a href="#" class="map-place-link"><span class="map-place">Berlin</span> |</a>
-            <a href="#" class="map-location-link"><span class="map-location">Stiftung Haus der Demokratie und Menschenrechte </span></a>
-          </h4>
-          <div class="map-icon">
-            <div class="map-eventtype-line"></div>
-            <a href="#" class="map-eventtype-link"><img src="assets\elements\kulturveranstaltung-placeholder.svg" alt=""></a>
-          </div>
-        </article>
-        <article class="map-list-object">
-          <a href="#" class="map-article-link">
-            <h4><span class="map-date">16.04.22</span> |
-              <span class="map-time">19:00 Uhr</span>
-            </h4>
-            <h1>David Graeber und David Wengrow: Anfänge - Vortrag und Diskussion</h1>
-          </a>
-          <h4><a href="#" class="map-place-link"><span class="map-place">Berlin</span> |</a>
-            <a href="#" class="map-location-link"><span class="map-location">Stiftung Haus der Demokratie und Menschenrechte </span></a>
-          </h4>
-          <div class="map-icon">
-            <div class="map-eventtype-line"></div>
-            <a href="#" class="map-eventtype-link"><img src="assets\elements\kulturveranstaltung-placeholder.svg" alt=""></a>
-          </div>
-        </article>
-        <article class="map-list-object">
-          <a href="#" class="map-article-link">
-            <h4><span class="map-date">16.04.22</span> |
-              <span class="map-time">19:00 Uhr</span>
-            </h4>
-            <h1>David Graeber und David Wengrow: Anfänge - Vortrag und Diskussion</h1>
-          </a>
-          <h4><a href="#" class="map-place-link"><span class="map-place">Berlin</span> |</a>
-            <a href="#" class="map-location-link"><span class="map-location">Stiftung Haus der Demokratie und Menschenrechte </span></a>
-          </h4>
-          <div class="map-icon">
-            <div class="map-eventtype-line"></div>
-            <a href="#" class="map-eventtype-link"><img src="assets\elements\kulturveranstaltung-placeholder.svg" alt=""></a>
-          </div>
-        </article>
-        <article class="map-list-object">
-          <a href="#" class="map-article-link">
-            <h4><span class="map-date">16.04.22</span> |
-              <span class="map-time">19:00 Uhr</span>
-            </h4>
-            <h1>David Graeber und David Wengrow: Anfänge - Vortrag und Diskussion</h1>
-          </a>
-          <h4><a href="#" class="map-place-link"><span class="map-place">Berlin</span> |</a>
-            <a href="#" class="map-location-link"><span class="map-location">Stiftung Haus der Demokratie und Menschenrechte </span></a>
-          </h4>
-          <div class="map-icon">
-            <div class="map-eventtype-line"></div>
-            <a href="#" class="map-eventtype-link"><img src="assets\elements\kulturveranstaltung-placeholder.svg" alt=""></a>
-          </div>
-        </article>
+      <div class="maplist" id="maplist">
+        <div class="maplist-title">Events:</div>
       </div>
     </section>
   </main>

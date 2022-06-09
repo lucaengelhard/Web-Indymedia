@@ -93,9 +93,12 @@ scrollbar-width: none;
 
 }
 
-.editor-user-tags {
+.editor-user-tags-wrapper {
   margin-top: 0.5rem;
   flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem;
 }
 
 .editor-user-tags > input {
@@ -127,6 +130,42 @@ cursor: pointer;
   content:"×";
   padding-left: 0.3rem;
   padding-right: 0.2rem;
+}
+
+.editor-user-location-wrapper {
+  display: block;
+}
+
+.editor-user-location {
+  border:none;
+  border-bottom: 1px solid black;
+  width: 30%;
+  min-width: 200px;
+  font-family: Iosevka, monospace;
+}
+
+.editor-user-location-list {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  max-height: 20rem;
+  width: 15rem;
+  overflow-y: auto;
+}
+
+.editor-user-location-list-point {
+  margin: 0.5rem;
+  font-family: Iosevka,monospace;
+  cursor: pointer;
+  padding: 0.5rem;
+  border:  1px solid transparent;
+}
+
+.editor-user-location-list-point:hover{
+  border:  1px solid var(--grau);
 }
 
 .editor-submit {

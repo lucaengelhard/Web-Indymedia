@@ -1,70 +1,61 @@
 {
-    "mappoints": [{
-            "mapnodeid": "1",
-            "posturl": "",
-            "markertype": "event",
-            "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
-            "date": "16.04.22",
-            "place": "Lübeck",
-            "location": "Stiftung Haus der Demokratie und Menschenrechte",
-            "topics": ["FemiNIsmus", "ANTIFA"],
-            "eventtype":"podiumsdiskussion"
-},
-
-        {
-            "mapnodeid": "2",
-            "posturl": "",
-            "markertype": "gruppe",
-            "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
-            "date": "16.04.22",
-            "place": "Lübeck",
-            "location": "Stiftung Haus der Demokratie und Menschenrechte",
-            "topics": ["ArBeIt", "antifa"],
-            "eventtype": "essen"
-},
-
-        {
-            "mapnodeid": "3",
-            "posturl": "",
-            "markertype": "ort",
-            "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
-            "date": "16.04.22",
-            "place": "Lübeck",
-            "location": "Stiftung Haus der Demokratie und Menschenrechte",
-            "topics": ["FemiNIsmus", "arbeit"],
-            "eventtype": "demonstration"
-},
-        {
-            "mapnodeid": "4",
-            "posturl": "",
-            "markertype": "ort",
-            "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
-            "date": "16.04.22",
-            "place": "Lübeck",
-            "location": "Stiftung Haus der Demokratie und Menschenrechte",
-            "topics": ["FemiNIsmus", "arbeit"],
-            "eventtype":"aktion"
-},
-        {
-            "mapnodeid": "5",
-            "posturl": "",
-            "markertype": "event",
-            "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
-            "date": "16.04.22",
-            "place": "Lübeck",
-            "location": "Stiftung Haus der Demokratie und Menschenrechte",
-            "topics": ["FemiNIsmus", "arbeit"],
-            "eventtype":"infoveranstaltung"
-},
-        {
-            "mapnodeid": "6",
-            "posturl": "",
-            "markertype": "event",
-            "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
-            "date": "16.04.22",
-            "place": "Lübeck",
-            "location": "Stiftung Haus der Demokratie und Menschenrechte",
-            "topics": ["FemiNIsmus", "arbeit"],
-            "eventtype": "demonstration"
-}]
+  "mappoints": [
+    {
+      "mapnodeid": 1,
+      "posturl": "",
+      "markertype": "event",
+      "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
+      "date": "16.04.22",
+      "time": "",
+      "city": "Besigheim",
+      "place": "Haus der Menschenrechte",
+      "address": "Christofstraße 16",
+      "latlong": [48.99550535,9.148825430597963],
+      "topics": ["FemiNIsmus", "ANTIFA"],
+      "markertype":"gruppe",
+      "eventtype": ""
+    }, {
+      "mapnodeid": 2,
+      "posturl": "",
+      "markertype": "gruppe",
+      "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
+      "date": "16.04.22",
+      "time": "13:12",
+      "city": "Schwäbisch Gmünd",
+      "place": "Haus der Menschenrechte",
+      "address": "Ledergasse 50",
+      "latlong": [48.801050849999996,9.792186289464551],
+      "topics": ["FemiNIsmus", "militarismus"],
+      "markertype":"event",
+      "eventtype": "volxküche"
+    },{
+      "mapnodeid": 3,
+      "posturl": "",
+      "markertype": "event",
+      "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
+      "date": "16.04.22",
+      "time": "13:12",
+      "city": "Stuttgart",
+      "place": "",
+      "address": "Marktplatz",
+      "latlong": [48.77518035,9.178451246905096],
+      "topics": ["FemiNIsmus", "ANTIFA"],
+      "markertype":"event",
+      "eventtype": "podiumsdiskussion"
+    },{
+      "mapnodeid": 3,
+      "posturl": "",
+      "markertype": "event",
+      "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
+      "date": "16.04.22",
+      "time": "13:12",
+      "city": "Berlin",
+      "place": "",
+      "address": "Kottbusser Tor",
+      "latlong": [48.77518035,9.178451246905096],
+      "topics": ["FemiNIsmus", "ANTIFA"],
+      "markertype":"event",
+      "eventtype": "podiumsdiskussion"
+    }
+  ]
 }
