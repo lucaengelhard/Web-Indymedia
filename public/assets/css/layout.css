@@ -194,6 +194,10 @@ footer {
     text-decoration: none;
 }
 
+.footer-container > ul > li > a> h2:hover {
+  font-weight: 600;
+}
+
 
 @media screen and (max-width: 1250px) {
     .landing {
