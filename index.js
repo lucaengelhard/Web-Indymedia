@@ -35,9 +35,31 @@ const upload = multer({
 
 //get User Input
 app.post("/api", upload.single("image"), (request, response, cb) => {
-  console.log(request.body.article);
+  console.log(JSON.parse(request.body.article).mediatype);
 
-  filewriter(request);
+  //Check mediatype
+  mediatype = JSON.parse(request.body.article).mediatype;
+
+if(mediatype == "artikel") {
+  fileWriterArticle(request);
+}
+
+if(mediatype == "video") {
+  fileWriterVideo(request);
+}
+
+if(mediatype == "photo") {
+  fileWriterPhoto(request);
+}
+
+if(mediatype == "map") {
+  fileWriterMap(request);
+}
+
+if(mediatype == "tutorial") {
+  fileWriterTutorial(request);
+}
+
 
   response.json({
     status: 'success'
@@ -49,7 +71,7 @@ app.post("/api", upload.single("image"), (request, response, cb) => {
 
 
 //Update Database
-function filewriter(request) {
+function fileWriterArticle(request) {
   var data = request.body.article;
   //console.log(JSON.parse(data));
 
@@ -118,7 +140,25 @@ function filewriter(request) {
 
 }
 
+function fileWriterVideo(request){
+  var data = request.body.article;
+  //console.log(JSON.parse(data));
 
+  data = JSON.parse(data);
+  console.log(data);
+}
+
+function fileWriterPhoto() {
+
+}
+
+function fileWriterMap() {
+
+}
+
+function fileWriterTutorial() {
+
+}
 
 function articlepageCreator(newentryID, titledash, data) {
   fs.readFile("public/artikel/0-articlebase.html", "utf-8", function(err, content) {

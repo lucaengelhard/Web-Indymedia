@@ -60,20 +60,101 @@ document.addEventListener("click", (clickedObject) => {
 });
 
 document.getElementById("editor-submit-button").onclick = function() {
-  try {
-    var submittedtitle = postTitle();
-    var submittedimage = postImage();
-    var submittedtopics = postTopics();
-    var submittedtags = postTags();
-    var submittedshorttext = postShorttext();
-    var submittedcontent = postBody();
-    var submitteddate = postDate();
-    var submittedlocation = postLocation();
+  //Check mediatype
+  mediatype = document.getElementById("editor-form").dataset.mediatype;
 
-    articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
-  } catch (e) {
-    alert(e);
+
+  if (mediatype == "article") {
+    console.log(mediatype);
+    try {
+      var submittedtitle = postTitle();
+      var submittedimage = postImage();
+      var submittedtopics = postTopics();
+      var submittedtags = postTags();
+      var submittedshorttext = postShorttext();
+      var submittedcontent = postBody();
+      var submitteddate = postDate();
+      var submittedlocation = postLocation();
+
+      articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+    } catch (e) {
+      alert(e);
+    }
   }
+
+  if (mediatype == "video") {
+    console.log(mediatype);
+    try {
+      var submittedtitle = postTitle();
+      var submittedvideo = postVideo();
+      var submittedtopics = postTopics();
+      var submittedtags = postTags();
+      var submittedshorttext = postShorttext();
+      var submittedcontent = postBody();
+      var submitteddate = postDate();
+      var submittedlocation = postLocation();
+
+      videoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+    } catch (e) {
+      alert(e);
+    }
+  }
+
+  if (mediatype == "photo") {
+    console.log(mediatype);
+    try {
+      var submittedtitle = postTitle();
+      var submittedgallery = postGallery();
+      var submittedtopics = postTopics();
+      var submittedtags = postTags();
+      var submittedshorttext = postShorttext();
+      var submittedcontent = postBody();
+      var submitteddate = postDate();
+      var submittedlocation = postLocation();
+
+      photoSubmit(submittedtitle, submittedgallery, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+    } catch (e) {
+      alert(e);
+    }
+  }
+
+  if (mediatype == "map") {
+    console.log(mediatype);
+    try {
+      var submittedtitle = postTitle();
+      var submittedimage = postImage();
+      var submittedtopics = postTopics();
+      var submittedtags = postTags();
+      var submittedshorttext = postShorttext();
+      var submittedcontent = postBody();
+      var submittedinfo = postInfo();
+      var submitteddate = postDate();
+      var submittedlocation = postLocation();
+
+      mapSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submittedinfo, submitteddate, submittedlocation);
+    } catch (e) {
+      alert(e);
+    }
+  }
+
+  if (mediatype == "tutorial") {
+    console.log(mediatype);
+    try {
+      var submittedtitle = postTitle();
+      var submittedimage = postImage();
+      var submittedtopics = postTopics();
+      var submittedtags = postTags();
+      var submittedshorttext = postShorttext();
+      var submittedcontent = postBody();
+      var submitteddate = postDate();
+      var submittedlocation = postLocation();
+
+      mapSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+    } catch (e) {
+      alert(e);
+    }
+  }
+
 }
 
 function postBody() {
@@ -104,6 +185,18 @@ function postImage() {
   return editorImage[0];
 }
 
+function postVideo() {
+  editorVideo = document.getElementById("editor-titleimage-input");
+  editorVideo = editorVideo.files;
+  return editorVideo[0];
+}
+
+function postGallery() {
+  editorGallery = document.getElementById("editor-titleimage-input");
+  editorGallery = editorGallery.files;
+  return editorGallery;
+}
+
 function postTopics() {
   let onTopics = [];
   editorTopics = document.getElementById("editor-tag-wrapper");
@@ -120,9 +213,9 @@ function postTopics() {
 
   console.log(onTopics.length);
 
-  if(onTopics.length === 0){
+  if (onTopics.length === 0) {
     throw "mindestens ein Themen-Tag muss dein Artikel haben :)";
-  }else {
+  } else {
     return onTopics;
   }
 }
@@ -310,6 +403,76 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
   formData.append("article", articleString);
   if (submittedimage === undefined) {} else {
     formData.append("image", submittedimage, submittedimage.name);
+  }
+
+  const options = {
+    method: 'Post',
+    /*headers: {
+      'Content-Type': 'application/json'
+    },*/
+    body: formData
+  };
+
+  fetch("/api", options);
+
+  /*
+    function getFile() {
+      fetch('../artikel/articlelist.json')
+        .then(response => response.json())
+        .then(userlist => {
+         //console.log(userlist);
+        });
+    }*/
+
+}
+
+function VideoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation) {
+  //console.log(submittedtitle);
+  //console.log(submittedimage);
+  //console.log(submittedtopics);
+  //console.log(submittedshorttext);
+  //console.log(submittedcontent);
+  //console.log(submittedtags);
+  console.log(submittedlocation);
+
+  const article = {
+    "postid": "",
+    "posturl": "",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "",
+    "author": "anonym",
+    "date": "",
+    "location": [],
+    "topics": [],
+    "tags": [],
+    "video": "",
+    "shorttext": "",
+    "richtext": ""
+  };
+
+  article.title = submittedtitle;
+
+  article.date = submitteddate;
+  article.location = submittedlocation;
+
+  if (submittedimage === undefined) {} else {
+    article.video = "../assets/videos/uploads/" + submittedvideo.name;
+  }
+
+  article.topics = submittedtopics;
+  article.tags = submittedtags;
+  article.shorttext = submittedshorttext;
+  article.richtext = submittedcontent;
+
+  //console.log(article);
+
+  articleString = JSON.stringify(article);
+  //console.log(articleString);
+  const formData = new FormData();
+  formData.append("article", articleString);
+  if (submittedimage === undefined) {} else {
+    formData.append("video", submittedvideo, submittedvideo.name);
   }
 
   const options = {

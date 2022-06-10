@@ -73,17 +73,21 @@
     }
     </style>
     <section class="article-headerimage">"+image+"</section>
-    <section class="article-text-wrapper">
-      <h4>
-        <span class='post-author'>"+author+"</span> |
-        <span class='post-date'>"+date+"</span> |
-        <span class='post-location'>"+articlelocation+"</span>
-      </h4>
-      <h1>"+title+"</h1>
-      <h4 class='post-tags'>"+topicMarkup+"</h4>
-      <p class="post-shorttext">"+shorttext+"</p>
-      <p class="post-body">"+content+"</p>
-    </section>
+<div class="content-sizer">
+  <section class="article-text-box">
+    <div class="article-text-wrapper"><h4>
+      <span class='post-author'>"+author+"</span> |
+      <span class='post-date'>"+date+"</span> |
+      <span class='post-location'>"+articlelocation+"</span>
+    </h4>
+    <h1>"+title+"</h1>
+    <h4 class='post-tags'>"+topicMarkup+"</h4>
+    <p class="post-shorttext">"+shorttext+"</p>
+    <p class="post-body">"+content+"</p></div>
+
+  </section>
+</div>
+
   </main>
   <footer>
     <div class="footer-container">

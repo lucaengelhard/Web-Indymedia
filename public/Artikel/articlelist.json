@@ -1,25 +1,24 @@
 {"articles":[
   {
     "postid": 1,
-    "posturl": "../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html",
+    "posturl": "../Artikel/1-Es-muss-ja-auch-noch-geschaut-werden-was-fr-eine-Art-Post-der-ganze-Schei-berhaupt-ist.html",
     "featured": false,
     "mediatype": "artikel",
-    "title": "Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website",
+    "title": "Es muss ja auch noch geschaut werden, was für eine Art Post der ganze Scheiß überhaupt ist",
     "author": "anonym",
-    "date": "09.06.2022",
+    "date": "10.06.2022",
     "location": [
-      "Stuttgart Stuttgart-Mitte",
-      "70173"
+      "Schwäbisch Gmünd",
+      "73525"
     ],
     "topics": [
-      "feminismus"
+      "oekologie"
     ],
     "tags": [
-      "feministischer kampftag",
-      "b ndnis 8. m rz"
+      "test"
     ],
-    "image": "../assets/images/uploads/1-269989217220308-femkampftag-039.jpg",
-    "shorttext": "Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website",
-    "richtext": "Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website"
+    "image": "../assets/images/uploads/1-787919429220308-femkampftag-001.jpg",
+    "shorttext": "Es muss ja auch noch geschaut werden, was für eine Art Post der ganze Scheiß überhaupt ist",
+    "richtext": "Es muss ja auch noch geschaut werden, was für eine Art Post der ganze Scheiß überhaupt istEs muss ja auch noch geschaut werden, was für eine Art Post der ganze Scheiß überhaupt istEs muss ja auch noch geschaut werden, was für eine Art Post der ganze Scheiß überhaupt istEs muss ja auch noch geschaut werden, was für eine Art Post der ganze Scheiß überhaupt ist"
   }
 ]}

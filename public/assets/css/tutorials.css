@@ -1,0 +1,94 @@
+img {
+  margin: 0;
+  max-height: 30rem;
+  object-fit: cover;
+}
+
+.carousel {
+  position: relative;
+ margin: 0;
+}
+
+.carousel-nav {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.carousel-button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-family: Iosevka, monospace;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 7px;
+}
+
+.carousel-button:hover {
+  font-weight: 600;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.carousel-indicator {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-family: Iosevka, monospace;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 7px;
+}
+
+.carousel-indicator:hover {
+  font-weight: 600;
+}
+
+.current-indicator {
+  font-weight: 600;
+}
+
+.carousel-track-container {
+  width: 100%;
+  height: max-content;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  position: relative;
+  transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+  width: calc(100%);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  background-color: white;
+
+  height: max-content;
+
+}
+
+.slide-content {
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.carousel-heading {
+  font-family: Iosevka, monospace;
+  margin: 0.5rem 0;
+}
+
+.carousel-content {
+  display: block;
+}
