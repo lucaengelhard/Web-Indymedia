@@ -187,6 +187,7 @@ footer {
 
 .footer-container > ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-container > ul > li > a {
