@@ -24,6 +24,14 @@
   .tutorial-search > input {
     font-size: 2rem;
   }
+
+  .post-image {
+    margin-top: 0;
+  }
+
+  .post-text {
+    border-bottom: 1px solid black
+  }
 </style>
 
 <body>
@@ -93,39 +101,14 @@
 
       <div class="article">
         <form class="tutorial-search">
-          <input type="search" name="" value="" placeholder="Suche">
+          <input type="search" name="tutorialSearch" value="" placeholder="Suche" id="tutorial-search-input">
         </form>
         <section class="section-topic">
           <div class="article-image">
             <div class="articlelist-image">
-              <div class="column-left">
-
-                <article id="1" class="post-image" title="Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website">
-                  <a class="article-link" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                    <img src="../assets/images/uploads/1-269989217220308-femkampftag-039.jpg">
-
-                    <h4><span class="post-author">anonym</span></h4>
-                    <h1>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website</h1>
-                    <p>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website </p>
-                  </a>
-                  <a class="morebutton" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                    <p>mehr &gt;&gt;</p>
-                  </a>
-                </article>
-                <article id="1" class="post-image" title="Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website">
-                  <a class="article-link" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                    <img src="../assets/images/uploads/1-269989217220308-femkampftag-039.jpg">
-
-                    <h4><span class="post-author">anonym</span></h4>
-                    <h1>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website</h1>
-                    <p>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website </p>
-                  </a>
-                  <a class="morebutton" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                    <p>mehr &gt;&gt;</p>
-                  </a>
-                </article>
+              <div class="column-left" id="column-left">
               </div>
-              <div class="column-right">
+              <div class="column-right" id="column-right">
                 <article id="1" class="post-image" title="Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website">
                   <a class="article-link" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
                     <img src="../assets/images/uploads/1-269989217220308-femkampftag-039.jpg">
@@ -153,27 +136,7 @@
               </div>
             </div>
           </div>
-          <div class="article-text">
-            <article id="1" class="post-text" title="Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website">
-              <a class="article-link" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                <h4><span class="post-author">anonym</span></h4>
-                <h1>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website</h1>
-                <p>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website </p>
-              </a>
-              <a class="morebutton" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                <p>mehr &gt;&gt;</p>
-              </a>
-            </article>
-            <article id="1" class="post-text" title="Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website">
-              <a class="article-link" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                <h4><span class="post-author">anonym</span></h4>
-                <h1>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website</h1>
-                <p>Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website </p>
-              </a>
-              <a class="morebutton" href="../Artikel/1-Dieser-Artikel-ist-sooo-Sinnbildlich-fr-die-auerordentlich-gute-Gestaltung-dieser-Website.html">
-                <p>mehr &gt;&gt;</p>
-              </a>
-            </article>
+          <div class="article-text" id="article-text">
           </div>
         </section>
       </div>
@@ -204,5 +167,6 @@
 </body>
 <script src="scripts/rainbow.js" type="text/javascript"></script>
 <script src="scripts/nav.js" type="text/javascript"></script>
+<script src="scripts/tutorials.js" type="text/javascript"></script>
 
 </html>
