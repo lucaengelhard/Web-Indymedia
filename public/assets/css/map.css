@@ -1,5 +1,5 @@
 .map-main {
-  width: 100%;
+  width: calc(100% - 2px);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -21,7 +21,6 @@
 .map-box {
 width: 100%;
 flex: 1 1 60%;
-
 }
 
 .leaflet-container{

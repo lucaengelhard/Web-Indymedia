@@ -3611,7 +3611,7 @@
         qe = Ne.extend({
           options: {
             position: "bottomright",
-            prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
+            prefix: '<a href="/http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
           },
           initialize: function(t) {
             l(this, t), this._attributions = {}
@@ -6621,7 +6621,7 @@
   10: [function(require, module, exports) {
     "use strict";
     var config = require("./config"),
-      version = require("../package.json").version;
+      version = require("/package.json").version;
     module.exports = function(e, o) {
       if (!(o = o || L.mapbox.accessToken) && config.REQUIRE_ACCESS_TOKEN) throw new Error("An API access token is required to use Mapbox.js. See https://www.mapbox.com/mapbox.js/api/v" + version + "/api-access-tokens/");
       var s = "https:" === document.location.protocol || config.FORCE_HTTPS ? config.HTTPS_URL : config.HTTP_URL;
@@ -6641,7 +6641,7 @@
       return module.exports("/styles/v1/" + s, o)
     };
   }, {
-    "../package.json": 6,
+    "/package.json": 6,
     "./config": 7
   }],
   11: [function(require, module, exports) {
@@ -7241,7 +7241,7 @@
       gridLayer = require("./grid_layer"),
       styleLayer = require("./style_layer");
     L.mapbox = module.exports = {
-      VERSION: require("../package.json").version,
+      VERSION: require("/package.json").version,
       geocoder: require("./geocoder"),
       marker: require("./marker"),
       simplestyle: require("./simplestyle"),
@@ -7267,9 +7267,9 @@
       sanitize: require("@mapbox/sanitize-caja"),
       template: require("mustache").to_html,
       feedback: require("./feedback")
-    }, window.L.Icon.Default.imagePath = ("https:" === document.location.protocol || "http:" === document.location.protocol ? "" : "https:") + "//api.tiles.mapbox.com/mapbox.js/v" + require("../package.json").version + "/images/";
+    }, window.L.Icon.Default.imagePath = ("https:" === document.location.protocol || "http:" === document.location.protocol ? "" : "https:") + "//api.tiles.mapbox.com/mapbox.js/v" + require("/package.json").version + "/images/";
   }, {
-    "../package.json": 6,
+    "/package.json": 6,
     "./config": 7,
     "./feature_layer": 8,
     "./feedback": 9,

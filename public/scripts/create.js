@@ -11,27 +11,98 @@ topicButtons.hover((button) => {
 
 //Editor
 const elements = document.querySelectorAll(".btn");
+const imageselect = document.querySelector(".text-editor-imageselect-wrapper");
+
+const imageselectButton = document.querySelector(".imageselect-add");
+
 
 elements.forEach((element, i) => {
   element.addEventListener("click", () => {
     let command = element.dataset["element"];
-    if (command == "createLink" || command == "insertImage") {
+    if (command == "createLink") {
       let url = prompt("URL eingeben", "https://")
       document.execCommand(command, false, url);
     } else {
-      if (command == "heading") {
-        //console.log(command);
-        document.execCommand("formatBlock", false, "H1");
-      } else {
-        if (command == "quote") {
-          document.execCommand("formatBlock", false, "blockquote");
-        }
-        document.execCommand(command, false, null);
-      }
+      if (command == "insertImage") {
 
+
+        if (imageselect.classList.contains("imageselect-hide")) {
+          imageselect.classList.remove("imageselect-hide");
+          imageselect.classList.add("imageselect-show");
+        } else {
+          imageselect.classList.add("imageselect-hide");
+          imageselect.classList.remove("imageselect-show");
+        }
+
+
+      } else {
+        if (command == "heading") {
+          //console.log(command);
+          document.execCommand("formatBlock", false, "H1");
+        } else {
+          if (command == "quote") {
+            document.execCommand("formatBlock", false, "blockquote");
+          }
+          document.execCommand(command, false, null);
+        }
+      }
     }
   });
 });
+
+imageSelector(imageselect);
+
+function imageSelector(imageselect) {
+  imageCollection = Array.from(imageselect.querySelectorAll("img"));
+  console.log(imageCollection);
+  imageCollection.forEach((image, i) => {
+    image.addEventListener("click", e => {
+      imgURL = e.target.src;
+      document.execCommand("insertImage", false, imgURL);
+    });
+  });
+
+}
+
+imageselectButton.addEventListener("click", e => {
+  imageUpload();
+})
+
+function imageUpload() {
+  const imageselectUpload = document.querySelector(".imageselect-upload");
+  imageselectUpload.click();
+
+  imageselectUpload.onchange = () => {
+    uploadedfile = imageselectUpload.files[0];
+    console.log(uploadedfile);
+
+    const formData = new FormData();
+    formData.append("image", uploadedfile);
+
+    console.log(formData);
+    const options = {
+      method: 'Post',
+      /*headers: {
+        'Content-Type': 'application/json'
+      },*/
+      body: formData
+    };
+
+    fetch("/temp", options)
+      .then(res => res.json())
+      .then(response => {
+        filepath = response.addedfile;
+        console.log(filepath);
+        const selectList = document.querySelector(".text-editor-imageselect");
+        selectList.insertAdjacentHTML("beforeend", "<img src=" + filepath + " alt=''>");
+        const imageselect = document.querySelector(".text-editor-imageselect-wrapper");
+        imageSelector(imageselect);
+      })
+
+  }
+}
+
+
 
 
 $(function() {
@@ -64,6 +135,8 @@ document.getElementById("editor-submit-button").onclick = function() {
   mediatype = document.getElementById("editor-form").dataset.mediatype;
 
 
+
+
   if (mediatype == "article") {
     console.log(mediatype);
     try {
@@ -72,11 +145,10 @@ document.getElementById("editor-submit-button").onclick = function() {
       var submittedtopics = postTopics();
       var submittedtags = postTags();
       var submittedshorttext = postShorttext();
-      var submittedcontent = postBody();
+
       var submitteddate = postDate();
       var submittedlocation = postLocation();
-
-      articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+      var submittedcontent = postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
     } catch (e) {
       alert(e);
     }
@@ -142,14 +214,12 @@ document.getElementById("editor-submit-button").onclick = function() {
     try {
       var submittedtitle = postTitle();
       var submittedimage = postImage();
-      var submittedtopics = postTopics();
       var submittedtags = postTags();
       var submittedshorttext = postShorttext();
-      var submittedcontent = postBody();
-      var submitteddate = postDate();
-      var submittedlocation = postLocation();
 
-      mapSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+      var submittedcontent = postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
+
+
     } catch (e) {
       alert(e);
     }
@@ -157,14 +227,68 @@ document.getElementById("editor-submit-button").onclick = function() {
 
 }
 
-function postBody() {
+function postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation) {
+
   editorElement = document.getElementById("editor-richtext");
   submittedcontent = editorElement.innerHTML;
 
   if (editorElement.innerText.length === 0) {
     throw "Content braucht dein Artikel schon :)"
   } else {
-    return submittedcontent;
+
+    richtextImages = Array.from(editorElement.querySelectorAll("img"));
+
+    //console.log(richtextImages);
+
+    urlList = [];
+
+    richtextImages.forEach((image, i) => {
+      urlList.push(image.src);
+    });
+
+    imagelistJSON = JSON.stringify({
+      urlList
+    });
+
+    //console.log(formData);
+    const options = {
+      method: 'Post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: imagelistJSON
+    };
+
+    fetch("/fileswitch", options)
+      .then(res => res.json())
+      .then(response => {
+
+        //submittedcontentSplit = submittedcontent.split("/");
+        //console.log(submittedcontentSplit);
+
+        images = Array.from(editorElement.querySelectorAll("img"));
+
+        images.forEach((image, i) => {
+          currentURL = image.src;
+          newURL = currentURL.replace("/temp/", "/");
+          urlStart = newURL.search("/assets/");
+          console.log(urlStart);
+
+          newURL = newURL.substr(urlStart, newURL.length);
+          image.src = newURL;
+        });
+
+        submittedcontent = editorElement.innerHTML;
+        if (mediatype == "article") {articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);}
+
+        if (mediatype == "tutorial") {
+
+          postSteps(submittedtitle, submittedimage, submittedtags, submittedshorttext, submittedcontent);
+        }
+
+      })
+
+
   }
 }
 
@@ -303,6 +427,34 @@ function postLocation() {
 
 }
 
+function postSteps(submittedtitle, submittedimage, submittedtags, submittedshorttext, submittedcontent) {
+  const stepList = document.querySelector(".tutorial-steps-wrapper");
+  const steps = Array.from(stepList.children);
+
+  submittedsteps = [];
+
+  steps.forEach((step, i) => {
+    const stepImage = step.querySelector(".tutorial-steps-image").files[0];
+    const stepTitle = step.querySelector(".tutorial-steps-title").value;
+    const stepContent = step.querySelector(".tutorial-steps-content").value;
+
+    stepObj = {
+      "image": stepImage,
+      "heading": stepTitle,
+      "content": stepContent
+    };
+
+    console.log(stepObj);
+
+
+    submittedsteps.push(stepObj);
+
+    //return stepObj;
+  });
+  //console.log(submittedshorttext);
+  tutorialSubmit(submittedtitle, submittedimage, submittedtags, submittedshorttext, submittedcontent, submittedsteps);
+}
+
 const locationSearch = document.getElementById("editor-user-location");
 const locationList = document.getElementById("editor-user-location-list");
 const locationLabel = document.getElementById("editor-user-location-label");
@@ -311,7 +463,7 @@ const locationLabel = document.getElementById("editor-user-location-label");
 
 const searchCities = async searchText => {
   //console.log("searching");
-  const res = await fetch("../map/zipcodes.de.json");
+  const res = await fetch("/map/zipcodes.de.json");
   const cities = await res.json();
 
   //console.log(cities);
@@ -387,7 +539,7 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
   article.location = submittedlocation;
 
   if (submittedimage === undefined) {} else {
-    article.image = "../assets/images/" + submittedimage.name;
+    article.image = "/assets/images/" + submittedimage.name;
   }
 
   article.topics = submittedtopics;
@@ -417,7 +569,7 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
 
   /*
     function getFile() {
-      fetch('../artikel/articlelist.json')
+      fetch('/artikel/articlelist.json')
         .then(response => response.json())
         .then(userlist => {
          //console.log(userlist);
@@ -457,7 +609,7 @@ function VideoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedt
   article.location = submittedlocation;
 
   if (submittedimage === undefined) {} else {
-    article.video = "../assets/videos/uploads/" + submittedvideo.name;
+    article.video = "/assets/videos/uploads/" + submittedvideo.name;
   }
 
   article.topics = submittedtopics;
@@ -487,11 +639,111 @@ function VideoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedt
 
   /*
     function getFile() {
-      fetch('../artikel/articlelist.json')
+      fetch('/artikel/articlelist.json')
         .then(response => response.json())
         .then(userlist => {
          //console.log(userlist);
         });
     }*/
 
+}
+
+function tutorialSubmit(submittedtitle, submittedimage, submittedtags, submittedshorttext, submittedcontent, submittedsteps) {
+  /*
+  const article = {
+    "postid": 1,
+    "posturl": "",
+    "title": "Tutorial 1 ist richtig geil",
+    "author": "anonym",
+    "tags": [],
+    "image": "g",
+    "shorttext": "",
+    "richtext": "",
+    "steps": [
+      {
+        "image": "",
+        "heading": "",
+        "content": ""
+      }
+    ]
+  };
+*/
+
+
+
+  const article = {
+    "postid": 1,
+    "posturl": "",
+    "title": "",
+    "author": "anonym",
+    "tags": [ ],
+    "image": "",
+    "shorttext": "",
+    "richtext": "",
+    "steps": [{
+        "image": "",
+        "heading": "",
+        "content": ""
+      },
+      {
+        "heading": "",
+        "content": ""
+      }
+    ]
+  };
+
+  article.title = submittedtitle;
+
+  if (submittedimage === undefined) {} else {
+    article.image = "/assets/images/" + submittedimage.name;
+  }
+
+  article.tags = submittedtags;
+  article.shorttext = submittedshorttext;
+  article.richtext = submittedcontent;
+
+  article.mediatype = "tutorial";
+
+  console.log(submittedsteps);
+  article.steps = submittedsteps;
+
+  //console.log(article);
+
+
+  //console.log(articleString);
+  const formData = new FormData();
+
+  if (submittedimage === undefined) {} else {
+    formData.append("image", submittedimage, submittedimage.name);
+  }
+
+  stepImages = [];
+  submittedsteps.forEach((step, i) => {
+    if (step.image != undefined) {
+      formData.append("image", step.image, step.image.name);
+      article.steps[i].image = true;
+      //stepImages.push(step.image);
+      //console.log(stepImages);
+    } else {
+      article.steps[i].image = false;
+    }
+  });
+
+  articleString = JSON.stringify(article);
+  formData.append("article", articleString);
+
+  console.log(article);
+  //formData.append("stepImages", stepImages);
+
+  //console.log(formData);
+
+  const options = {
+    method: 'Post',
+    /*headers: {
+      'Content-Type': 'application/json'
+    },*/
+    body: formData
+  };
+
+  fetch("/api", options);
 }

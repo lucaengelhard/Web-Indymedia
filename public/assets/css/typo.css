@@ -1,6 +1,6 @@
-@import url(../fonts/Iosevka/iosevka.css);
+@import url(/fonts/Iosevka/iosevka.css);
 
-@import url(../fonts/Lunchtype22/lunchtype22.css);
+@import url(/fonts/Lunchtype22/lunchtype22.css);
 
 body {
   font-family: lunchtype22, sans-serif;

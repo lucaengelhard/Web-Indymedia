@@ -20,20 +20,20 @@ function searchInput(input){
     tutorialFiltered = [];
     if(input.length != 0){
     tutorials.forEach((tutorial, i) => {
-      //console.log(tutorial);
+      input = input.toLowerCase();
 
       titlecheck = false;
-      if(tutorial.title.includes(input)){
+      if(tutorial.title.toLowerCase().includes(input)){
         titlecheck = true;
       }
 
       shorttextcheck = false;
-      if(tutorial.shorttext.includes(input)){
+      if(tutorial.shorttext.toLowerCase().includes(input)){
         shorttextcheck = true;
       }
 
       richtextcheck = false;
-      if(tutorial.richtext.includes(input)){
+      if(tutorial.richtext.toLowerCase().includes(input)){
         richtextcheck = true;
       }
 

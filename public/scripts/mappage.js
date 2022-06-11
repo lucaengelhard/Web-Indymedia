@@ -3,7 +3,7 @@ const tolerance = 20;
 
 const maplist = document.getElementById("maplist");
 
-fetch("../map/maplist.json")
+fetch("/map/maplist.json")
 .then(res => res.json())
 .then(maplist => {
   data = maplist.mappoints;

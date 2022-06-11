@@ -4,6 +4,11 @@ img {
   object-fit: cover;
 }
 
+.article-text-wrapper > h4, .article-text-wrapper > h1, .article-text-wrapper > p {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .carousel {
   position: relative;
  margin: 0;

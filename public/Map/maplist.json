@@ -12,12 +12,12 @@
       "address": "Christofstraße 16",
       "latlong": [48.99550535,9.148825430597963],
       "topics": ["FemiNIsmus", "ANTIFA"],
-      "eventtype": "../assets/images/uploads/1-269989217220308-femkampftag-039.jpg",
+      "eventtype": "",
       "image":""
     }, {
       "mapnodeid": 2,
       "posturl": "",
-      "markertype": "gruppe",
+      "markertype": "event",
       "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
       "date": "16.04.22",
       "time": "13:12",
