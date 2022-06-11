@@ -53,20 +53,21 @@ elements.forEach((element, i) => {
 imageSelector(imageselect);
 
 function imageSelector(imageselect) {
-  imageCollection = Array.from(imageselect.querySelectorAll("img"));
+  if(imageselect != null){imageCollection = Array.from(imageselect.querySelectorAll("img"));
   console.log(imageCollection);
   imageCollection.forEach((image, i) => {
     image.addEventListener("click", e => {
       imgURL = e.target.src;
       document.execCommand("insertImage", false, imgURL);
     });
-  });
+  });}
+
 
 }
-
-imageselectButton.addEventListener("click", e => {
+if(imageselectButton != null){imageselectButton.addEventListener("click", e => {
   imageUpload();
-})
+})}
+
 
 function imageUpload() {
   const imageselectUpload = document.querySelector(".imageselect-upload");
@@ -158,15 +159,18 @@ document.getElementById("editor-submit-button").onclick = function() {
     console.log(mediatype);
     try {
       var submittedtitle = postTitle();
-      var submittedvideo = postVideo();
+
       var submittedtopics = postTopics();
       var submittedtags = postTags();
       var submittedshorttext = postShorttext();
-      var submittedcontent = postBody();
       var submitteddate = postDate();
       var submittedlocation = postLocation();
 
-      videoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+      //console.log(submittedlocation);
+
+      var submittedvideo = postVideo(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
+
+
     } catch (e) {
       alert(e);
     }
@@ -309,9 +313,17 @@ function postImage() {
   return editorImage[0];
 }
 
-function postVideo() {
+function postVideo(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation) {
   editorVideo = document.getElementById("editor-titleimage-input");
-  editorVideo = editorVideo.files;
+  editorVideo = editorVideo.files[0];
+
+  if(editorVideo.type == "video/mp4"){
+    VideoSubmit(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, editorVideo);
+  }else {
+    throw "wrong file format use mp4"
+  }
+
+
   return editorVideo[0];
 }
 
@@ -578,20 +590,22 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
 
 }
 
-function VideoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation) {
-  //console.log(submittedtitle);
-  //console.log(submittedimage);
-  //console.log(submittedtopics);
-  //console.log(submittedshorttext);
+function VideoSubmit(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, editorVideo) {
+  console.log(submittedtitle);
+  console.log(submittedimage);
+  console.log(submittedtopics);
+  console.log(submittedshorttext);
   //console.log(submittedcontent);
-  //console.log(submittedtags);
+  console.log(submittedtags);
   console.log(submittedlocation);
+
+
 
   const article = {
     "postid": "",
     "posturl": "",
     "featured": false,
-    "mediatype": "artikel",
+    "mediatype": "video",
     "title": "",
     "author": "anonym",
     "date": "",
@@ -599,8 +613,7 @@ function VideoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedt
     "topics": [],
     "tags": [],
     "video": "",
-    "shorttext": "",
-    "richtext": ""
+    "shorttext": ""
   };
 
   article.title = submittedtitle;
@@ -608,24 +621,25 @@ function VideoSubmit(submittedtitle, submittedvideo, submittedtopics, submittedt
   article.date = submitteddate;
   article.location = submittedlocation;
 
-  if (submittedimage === undefined) {} else {
-    article.video = "/assets/videos/uploads/" + submittedvideo.name;
+  if (editorVideo != undefined)  {
+    article.video = "/assets/videos/uploads/" + editorVideo.name;
   }
 
   article.topics = submittedtopics;
   article.tags = submittedtags;
   article.shorttext = submittedshorttext;
-  article.richtext = submittedcontent;
+  //article.richtext = submittedcontent;
 
   //console.log(article);
-
+  console.log(article);
+  console.log(editorVideo);
   articleString = JSON.stringify(article);
   //console.log(articleString);
   const formData = new FormData();
   formData.append("article", articleString);
-  if (submittedimage === undefined) {} else {
-    formData.append("video", submittedvideo, submittedvideo.name);
-  }
+
+    formData.append("image", editorVideo, editorVideo.name);
+
 
   const options = {
     method: 'Post',

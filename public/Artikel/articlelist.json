@@ -1,3 +1,140 @@
 {"articles":[
-
+  {
+    "postid": 1,
+    "posturl": "/Artikel/1-Test.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Test",
+    "author": "anonym",
+    "date": "11.06.2022",
+    "location": [
+      "Stuttgart Stuttgart-Mitte",
+      "70173"
+    ],
+    "topics": [
+      "kultur"
+    ],
+    "tags": [],
+    "image": "/assets/images/uploads/847784053220325-FFF-1.jpg",
+    "shorttext": "Adasdasd",
+    "richtext": "asdadasdads"
+  },
+  {
+    "postid": 2,
+    "posturl": "/Artikel/2-Test.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Test",
+    "author": "anonym",
+    "date": "11.06.2022",
+    "location": [
+      "Stuttgart Stuttgart-Mitte",
+      "70173"
+    ],
+    "topics": [
+      "kultur"
+    ],
+    "tags": [],
+    "image": "/assets/images/uploads/165568938220325-FFF-1.jpg",
+    "shorttext": "Adasdasd",
+    "richtext": "asdadasdads"
+  },
+  {
+    "postid": 3,
+    "posturl": "/Artikel/3-Test.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "Test",
+    "author": "anonym",
+    "date": "11.06.2022",
+    "location": [
+      "Stuttgart Stuttgart-Mitte",
+      "70173"
+    ],
+    "topics": [
+      "kultur"
+    ],
+    "tags": [],
+    "image": "/assets/images/uploads/480047998220325-FFF-1.jpg",
+    "shorttext": "Adasdasd",
+    "richtext": "asdadasdads"
+  },
+  {
+    "postid": 4,
+    "posturl": "/Artikel/4-asdadad.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "asdadad",
+    "author": "anonym",
+    "date": "11.06.2022",
+    "location": [
+      "Atterwasch",
+      "03172"
+    ],
+    "topics": [
+      "feminismus"
+    ],
+    "tags": [],
+    "image": "",
+    "shorttext": "asdasdasd",
+    "richtext": "dasdasdasdasd"
+  },
+  {
+    "postid": 5,
+    "posturl": "/Artikel/5-asdadad.html",
+    "featured": false,
+    "mediatype": "artikel",
+    "title": "asdadad",
+    "author": "anonym",
+    "date": "11.06.2022",
+    "location": [
+      "Atterwasch",
+      "03172"
+    ],
+    "topics": [
+      "feminismus"
+    ],
+    "tags": [],
+    "image": "",
+    "shorttext": "asdasdasd",
+    "richtext": "dasdasdasdasd"
+  },
+  {
+    "postid": 6,
+    "posturl": "/Artikel/6-asdasda.html",
+    "featured": false,
+    "mediatype": "video",
+    "title": "asdasda",
+    "author": "anonym",
+    "date": "11.06.2022",
+    "location": [
+      "null",
+      "null"
+    ],
+    "topics": [
+      "antifa"
+    ],
+    "tags": [],
+    "video": "/assets/images/uploads/927146545C0001.MP4",
+    "shorttext": "asdadasd"
+  },
+  {
+    "postid": 7,
+    "posturl": "/Artikel/7-asdasda.html",
+    "featured": false,
+    "mediatype": "video",
+    "title": "asdasda",
+    "author": "anonym",
+    "date": "12.06.2022",
+    "location": [
+      "Besigheim",
+      "74354"
+    ],
+    "topics": [
+      "antifa"
+    ],
+    "tags": [],
+    "video": "/assets/images/uploads/788840223C0001.MP4",
+    "shorttext": "asdadasd"
+  }
 ]}

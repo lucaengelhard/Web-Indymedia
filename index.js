@@ -124,7 +124,7 @@ function fileWriterArticle(request) {
 
   //Create Page
   if (data.topics.length == 0) {} else {
-    articlepageCreator(newentryID, titledash, data);
+    videopageCreator(newentryID, titledash, data);
 
     fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
       if (err) {
@@ -139,9 +139,61 @@ function fileWriterArticle(request) {
 function fileWriterVideo(request) {
   var data = request.body.article;
   //console.log(JSON.parse(data));
+  video = request.files[0];
+  console.log(video);
+  console.log(data);
 
   data = JSON.parse(data);
   //console.log(data);
+
+  //create Thumbnail
+  
+
+  const fileName = "./public/Artikel/articlelist.json";
+  const file = require(fileName);
+
+  newentryID = getNewPostIDArticle();
+  data.postid = newentryID;
+
+  videopath = video.destination.replace("public", "");
+  data.video = videopath + video.filename;
+
+  titledash = titlecleaner(data);
+  posturl = "/Artikel/" + newentryID + "-" + titledash + ".html";
+  data.posturl = posturl;
+
+  console.log(data);
+
+  //Append Entry
+  filecontentArray = JSON.stringify(file.articles);
+  filecontentArray = JSON.parse(filecontentArray);
+
+
+
+  filecontentArray.push(data);
+  filecontent = JSON.stringify(filecontentArray, null, 2);
+
+  console.log(filecontent);
+
+  console.log(newentryID);
+  console.log(titledash);
+  console.log(data);
+
+
+  //Create Page
+  if (data.topics.length == 0) {} else {
+  videopageCreator(newentryID, titledash, data);
+
+
+
+
+    fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
+      if (err) {
+        throw err;
+      }
+    });
+  }
+
 }
 
 function fileWriterPhoto() {
@@ -191,7 +243,7 @@ function fileWriterTutorial(request) {
 
   data = uploadedTutorial;
 
-  const fileName = "./public/tutorials/tutoriallist.json"
+  const fileName = "/public/tutorials/tutoriallist.json"
   const file = require(fileName);
 
   if(file.tutorials.length == 0) {
@@ -329,6 +381,76 @@ function articlepageCreator(newentryID, titledash, data) {
   });
 }
 
+function videopageCreator(newentryID, titledash, data) {
+  fs.readFile("public/artikel/0-articlebase.html", "utf-8", function(err, content) {
+    if (err) {
+      return console.log(err);
+    }
+    //console.log(content);
+    //console.log(data.title);
+
+    title = data.title;
+    author = data.author;
+    date = data.date;
+    location = data.location;
+    topics = data.topics;
+    tags = data.tags;
+    video = data.video;
+    shorttext = data.shorttext;
+
+
+
+    //post
+    //Image
+    //console.log(image);
+
+    videoMarkup = "<video controls> <source src='" + video + "' type='video/mp4'></video>";
+
+    console.log(videoMarkup);
+
+    //console.log(imageMarkup);
+
+    //Topiclist
+    topicMarkup = "";
+
+    lasttopic = 1;
+    topics.forEach(topic => {
+      if (lasttopic === 1) {
+        topicLower = topic.toLowerCase();
+        topicClass = "tagtopic-" + topicLower;
+        //console.log(topicClass);
+      }
+      if (lasttopic === topics.length) {
+        topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span>")
+        //console.log(topicMarkup);
+
+      } else {
+        topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span> | ")
+        //console.log(topicMarkup);
+        lasttopic++;
+      }
+    });
+
+    const currentColor = currentColorFunc(topics);
+
+    //Replace content
+    content = content.replace(/\"\+currentColor\+\"/g, currentColor);
+    content = content.replace(/\"\+image\+\"/g, videoMarkup);
+    content = content.replace(/\"\+title\+\"/g, title);
+    content = content.replace(/\"\+author\+\"/g, author);
+    content = content.replace(/\"\+date\+\"/g, date);
+    content = content.replace(/\"\+articlelocation\+\"/g, location);
+    content = content.replace(/\"\+topicMarkup\+\"/g, topicMarkup);
+    content = content.replace(/\"\+shorttext\+\"/g, shorttext);
+    content = content.replace(/\"\+content\+\"/g, "");
+
+    fs.writeFile("public/" + posturl, content, function(err) {
+      if (err) throw err;
+      console.log("saved " + newentryID + "-" + titleclean + ".html");
+    });
+  });
+}
+
 function getNewPostIDArticle() {
   const fileName = "./public/Artikel/articlelist.json";
   const file = require(fileName);
@@ -427,3 +549,32 @@ app.post("/fileswitch", (request, response,cb) => {
     status: 'success',
 });
 });
+
+setInterval(clearTemp, 600000);
+
+function clearTemp(){
+
+  console.log("clearing temp");
+
+  fs.readdir("public/assets/images/uploads/temp",(err, files) => {
+    if (err)
+    console.log(err);
+  else {
+    //console.log(files);
+    files.forEach((file, i) => {
+      fs.unlink("public/assets/images/uploads/temp/"+ file, ()=>{
+        console.log("deleted " + file);
+      });
+    });
+
+  }
+  })
+  /*
+  fs.rmdir("/public/assets/images/uploads/temp", () => {
+    console.log("temp clear");
+    fs.mkdir("/public/assets/images/uploads/temp/fileswitch", ()=>{
+      console.log("temp restored");
+    });
+  });
+*/
+}
