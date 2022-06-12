@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <title>Artikel Schreiben</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav id="nav" class="nav">
+      <a href="/index.html" class="logo rainbow">indymedia.</a>
+      <div class="navigation">
+        <ul id="nav-list">
+          <div class="burger-close" id="burger-close">
+            <svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.01 14.01">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #000;
+                    stroke-miterlimit: 10;
+                  }
+                </style>
+              </defs>
+              <g id="Ebene_1-2">
+                <g>
+                  <line class="cls-1" x1=".71" y1="13.31" x2="13.31" y2=".71" />
+                  <line class="cls-1" x1="13.31" y1="13.31" x2=".71" y2=".71" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <li><a href="/artikel.html">Artikel</a></li>
+          <li><a href="/karte.html" class="rainbow">Was tun?</a></li>
+          <li><a href="/tutorials.html">Tutorials</a></li>
+
+        </ul>
+        <div id="nav-content" class="nav-icons">
+          <a href="/create.html">
+            <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50%" cy="50%" r="32" stroke="black" stroke-width="2" />
+              <line x1="20%" y1="50%" x2="80%" y2="50%" stroke="black" stroke-width="2" />
+              <line x1="50%" y1="20%" x2="50%" y2="80%" stroke="black" stroke-width="2" />
+            </svg></a>
+
+          <a href="#" class="torbutton"><svg version="1.1" id="Ebene-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
+              <circle class="st0" cx="35" cy="35" r="31.6" />
+              <path class="st0" d="M34,58.1c0.2,0,0.5,0,0.7,0c13,0,23.5-10.5,23.5-23.5S47.6,11.1,34.6,11.1c-0.2,0-0.5,0-0.7,0" />
+              <path class="st0" d="M34,50.3c0.4,0,0.7,0,1,0c8.5,0,15.3-6.9,15.3-15.3c0-8.5-6.9-15.4-15.3-15.4c-0.4,0-0.7,0-1,0" />
+              <path class="st0" d="M34,41.8c0.2,0,0.5,0,0.7,0c3.9,0,7.2-3.2,7.2-7.2c0-3.9-3.2-7.2-7.2-7.2c-0.2,0-0.5,0-0.7,0" />
+            </svg>
+          </a>
+        </div>
+        <div id="nav-burger" class="nav-icons"><a href="#">
+            <svg version="1.1" id="Ebene-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
+              <g>
+                <line class="st0" x1="0%" y1="20%" x2="100%" y2="20%" />
+                <line class="st0" x1="0%" y1="50%" x2="100%" y2="50%" />
+                <line class="st0" x1="0%" y1="80%" x2="100%" y2="80%" />
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="editor-main">
+    <form class="editor-title-wrapper" id="editor-form" data-mediatype="article">
+      <div class="editor-titleimage">
+        <label for="editor-titleimage-input">Titelbild</label>
+        <input type="file" name="editor-titleimage-input" id="editor-titleimage-input" value="">
+      </div>
+      <div class="editor-title">
+        <input type="text" name="editor-title-input" id="editor-title-input" placeholder="Titel" maxlength="100">
+      </div>
+    </form>
+
+    <form class="editor-tag-wrapper" id="editor-tag-wrapper">
+      <div>
+        <input type="checkbox" id="filter-topiccheck-arbeit" name="arbeit">
+        <label for="filter-topiccheck-arbeit">Arbeit</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-sozial" name="sozial">
+        <label for="filter-topiccheck-sozial">Sozial</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-oekologie" name="oekologie">
+        <label for="filter-topiccheck-oekologie">Ökologie</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-kultur" name="kultur">
+        <label for="filter-topiccheck-kultur">Kultur</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-militarismus" name="militarismus">
+        <label for="filter-topiccheck-militarismus">Militarismus</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-antifa" name="antifa">
+        <label for="filter-topiccheck-antifa">Antifa</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-feminismus" name="feminismus">
+        <label for="filter-topiccheck-feminismus">Feminismus</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-rassismus" name="rassismus">
+        <label for="filter-topiccheck-rassismus">Rassismus</label>
+      </div>
+
+      <div><input type="checkbox" id="filter-topiccheck-sonstige" name="sonstige">
+        <label for="filter-topiccheck-sonstige">Sonstige</label>
+      </div>
+
+
+    </form>
+
+    <div class="editor-user-tags-wrapper">
+      <div class="editor-user-tags"><input type="text" name="editor-usertags-input" id="editor-usertags-input" placeholder="Tags"><div class="editor-user-tags-selected" id="editor-user-tags-selected"></div></div>
+
+
+      <div class="editor-user-location-wrapper"> <input type="text" name="editor-user-location" id="editor-user-location" class="editor-user-location" placeholder="Ort / PLZ" list="editor-user-location-list" autocomplete="on">
+        <div class="editor-user-location-list" id="editor-user-location-list">
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <textarea name="editor-shorttext-input" class="editor-shorttext-input" id="editor-shorttext-input" placeholder="Zusammenfassung" maxlength="250">
+</textarea>
+
+    <div class="text-editor-header">
+      <div class="text-editor-utility"><button type="button" class="btn" data-element="bold">
+          <i class="fa fa-bold"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="italic">
+          <i class="fa fa-italic"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="underline">
+          <i class="fa fa-underline"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="insertUnorderedList">
+          <i class="fa fa-list-ul"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="insertorderedList">
+          <i class="fa fa-list-ol"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="heading">
+          <i class="fa fa-header"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="quote">
+          <i class="fa fa-quote-right"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="createLink">
+          <i class="fa fa-link"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="justifyLeft">
+          <i class="fa fa-align-left"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="justifyCenter">
+          <i class="fa fa-align-center"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="justifyRight">
+          <i class="fa fa-align-right"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="justifyFull">
+          <i class="fa fa-align-justify"></i>
+        </button>
+
+        <button type="button" class="btn" data-element="insertImage">
+          <i class="fa fa-image"></i>
+        </button>
+        <div class="text-editor-imageselect-wrapper imageselect-hide">
+          <div class="text-editor-imageselect ">
+            <input type="file" name="imageselect-upload" class="imageselect-upload" value="" hidden>
+            <button type="button" name="imageselect-add" class="imageselect-add">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="editor-content" id="editor-richtext" contenteditable="true">
+    </div>
+
+    <button type="button" id="editor-submit-button" class="btn editor-submit">
+      Post Erstellen
+    </button>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <ul>
+        <li><a href="/about.html">
+            <h2>Über</h2>
+          </a></li>
+        <li><a href="/kontakt.html">
+            <h2>Kontakt</h2>
+          </a></li>
+        <li><a href="/linkliste.html">
+            <h2>Linkliste</h2>
+          </a></li>
+        <li><a href="/archiv.html">
+            <h2>Archiv</h2>
+          </a></li>
+          <li><a href="/support.html">
+              <h2>Unterstützen</h2>
+            </a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/scripts/create.js" charset="utf-8"></script>
+  <script src="/scripts/rainbow.js" type="text/javascript"></script>
+  <script src="/scripts/nav.js" type="text/javascript"></script>
+  <script src="https://use.fontawesome.com/a31a3f8384.js" type="text/javascript">
+
+  </script>
+</body>
+
+</html>

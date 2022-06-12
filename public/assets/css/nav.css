@@ -59,7 +59,7 @@ nav {
     font-weight: 200;
     font-size: 1.2rem;
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
 
 .navigation > ul > li > a:hover {
@@ -67,7 +67,7 @@ nav {
 }
 
 .navigation > ul > li > a:visited {
-    color: inherit;
+    color: black;
 }
 
 .nav-icons {

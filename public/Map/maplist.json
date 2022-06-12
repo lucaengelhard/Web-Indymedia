@@ -3,7 +3,7 @@
     {
       "mapnodeid": 1,
       "posturl": "",
-      "markertype": "event",
+      "markertype": "ort",
       "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
       "date": "16.04.22",
       "time": "",
@@ -12,12 +12,12 @@
       "address": "Christofstraße 16",
       "latlong": [48.99550535,9.148825430597963],
       "topics": ["FemiNIsmus", "ANTIFA"],
-      "markertype":"gruppe",
-      "eventtype": ""
+      "eventtype": "",
+      "image":""
     }, {
       "mapnodeid": 2,
       "posturl": "",
-      "markertype": "gruppe",
+      "markertype": "event",
       "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
       "date": "16.04.22",
       "time": "13:12",
@@ -26,8 +26,8 @@
       "address": "Ledergasse 50",
       "latlong": [48.801050849999996,9.792186289464551],
       "topics": ["FemiNIsmus", "militarismus"],
-      "markertype":"event",
-      "eventtype": "küche"
+      "eventtype": "küche",
+      "image":""
     },{
       "mapnodeid": 3,
       "posturl": "",
@@ -40,8 +40,8 @@
       "address": "Marktplatz",
       "latlong": [48.77518035,9.178451246905096],
       "topics": ["FemiNIsmus", "ANTIFA"],
-      "markertype":"event",
-      "eventtype": "diskussion"
+      "eventtype": "diskussion",
+      "image":""
     },{
       "mapnodeid": 4,
       "posturl": "",
@@ -54,13 +54,13 @@
       "address": "Kottbusser Tor",
       "latlong": [48.77518035,9.178451246905096],
       "topics": ["FemiNIsmus", "ANTIFA"],
-      "markertype":"event",
-      "eventtype": "diskussion"
+      "eventtype": "diskussion",
+      "image":""
     }
     ,{
-      "mapnodeid": 4,
+      "mapnodeid": 5,
       "posturl": "",
-      "markertype": "event",
+      "markertype": "gruppe",
       "title": "Alle zusammen gegen ihre Repression? Ein Rückblick auf vier Antirepressionsdemos in Leipzig.",
       "date": "16.04.22",
       "time": "13:12",
@@ -69,8 +69,8 @@
       "address": "",
       "latlong": [48.77518035,9.178451246905096],
       "topics": ["FemiNIsmus", "ANTIFA"],
-      "markertype":"ort",
-      "eventtype": ""
+      "eventtype": "",
+      "image":""
     }
   ]
 }

@@ -7,7 +7,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/{z}/{x}/{y}?
   tileSize: 512,
   zoomOffset: -1,
   maxZoom: 10,
-  attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  attribution: '© <a href="/https://www.mapbox.com/contribute/">Mapbox</a> © <a href="/http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 
   //accessToken: accessToken
 }).addTo(map);
@@ -17,7 +17,7 @@ L.mapbox.styleLayer("mapbox://styles/luuccaa/cl467yt3d000e14pkrn0vo6y2").addTo(m
 //Icons
 //Icons definieren
 var iconKueche = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconKueche.png',
+  iconUrl: '/assets/elements/mapicons/iconKueche.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -28,7 +28,7 @@ var iconKueche = L.icon({
 });
 
 var iconKultur = L.icon({
-  iconUrl: '../assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '/assets/elements/mapicons/mapicon-food.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -39,7 +39,7 @@ var iconKultur = L.icon({
 });
 
 var iconDiskussion = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconDiskussion.png',
+  iconUrl: '/assets/elements/mapicons/iconDiskussion.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -50,7 +50,7 @@ var iconDiskussion = L.icon({
 });
 
 var iconInfo = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconInfo.png',
+  iconUrl: '/assets/elements/mapicons/iconInfo.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -61,7 +61,7 @@ var iconInfo = L.icon({
 });
 
 var iconDemo = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconDemo.png',
+  iconUrl: '/assets/elements/mapicons/iconDemo.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -72,7 +72,7 @@ var iconDemo = L.icon({
 });
 
 var iconAktion = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconAktion.png',
+  iconUrl: '/assets/elements/mapicons/iconAktion.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -83,7 +83,7 @@ var iconAktion = L.icon({
 });
 
 var iconGruppe = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconGruppe.png',
+  iconUrl: '/assets/elements/mapicons/iconGruppe.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -94,7 +94,7 @@ var iconGruppe = L.icon({
 });
 
 var iconOrt = L.icon({
-  iconUrl: '../assets/elements/mapicons/iconOrt.png',
+  iconUrl: '/assets/elements/mapicons/iconOrt.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -107,10 +107,10 @@ var iconOrt = L.icon({
 
 //Daten auslesen
 function filterExecute(placesFilterArray) {
-  fetch("../map/maplist.json")
+  fetch("/map/maplist.json")
     .then(result => result.json())
     .then(parsedResult => {
-      ////console.log(placesFilterArray);
+      //console.log(placesFilterArray);
       mappoints = parsedResult.mappoints;
       filterMap(mappoints, placesFilterArray);
       filterEventList(mappoints, placesFilterArray);
@@ -118,34 +118,40 @@ function filterExecute(placesFilterArray) {
 }
 
 function filterEventList(mappoints, placesFilterArray) {
-  //console.log(mappoints);
-  idToPrint = parseInt(placesFilterArray.toString());
-  //console.log(idToPrint);
-  maplist = document.getElementById("maplist");
+  //////console.log(mappoints);
 
-  mappoints.forEach((item, i) => {
-    shouldprint = item.mapnodeid == idToPrint
+  placesFilterArray.forEach((place, i) => {
+    ////console.log(place);
+    idToPrint = place;
+    ////console.log(idToPrint);
+    maplist = document.getElementById("maplist");
 
-    if(item.markertype == "event"){
-      if(item.place != ""){
-        place = item.place;
-      } else {
-        place = item.address;
+    mappoints.forEach((item, i) => {
+      shouldprint = item.mapnodeid == idToPrint
+
+      if (item.markertype == "event") {
+        if (item.place != "") {
+          place = item.place;
+        } else {
+          place = item.address;
+        }
+
+        tagTopic = item.topics[0].toLowerCase();
+
+        locationlink = "#";
+        iconurl = "#";
+
+
+        if (shouldprint) {
+          maplist.insertAdjacentHTML("beforeend", "<article class='map-list-object tagtopic-" + tagTopic + "'><a href='#' class='map-article-link'>        <h4><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </h4>          <h1>" + item.title + "</h1></a>        <h4><ahref='" + item.posturl + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </h4>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
+        }
       }
 
-      tagTopic = item.topics[0].toLowerCase();
 
-      locationlink = "#";
-      iconurl = "#";
-
-
-      if (shouldprint) {
-        maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='#' class='map-article-link'>        <h4><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </h4>          <h1>" + item.title + "</h1></a>        <h4><ahref='" + item.posturl + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </h4>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
-      }
-    }
-
-
+    });
   });
+
+
 
 
 }
@@ -162,7 +168,7 @@ function filterMap(mappoints, placesFilterArray) {
   });
 
   placesToDisplay.forEach((place, i) => {
-    ////console.log(place.address);
+    ////////console.log(place.address);
     currentLocation = place.address + " " + place.city;
     getLocation(currentLocation, place);
   });
@@ -178,29 +184,29 @@ function getLocation(currentLocation, place) {
 
 function placeMarker(parsedResult, place) {
   currentLatLong = [];
-  ////console.log(parsedResult[0]);
-  ////console.log(parsedResult[0].lat);
-  ////console.log(parsedResult[0].lon);
-  ////console.log(place.city);
+  ////////console.log(parsedResult[0]);
+  ////////console.log(parsedResult[0].lat);
+  ////////console.log(parsedResult[0].lon);
+  ////////console.log(place.city);
 
-  ////console.log(parsedResult[0].address);
+  ////////console.log(parsedResult[0].address);
   currentLatLong.push(parsedResult[0].lat);
   currentLatLong.push(parsedResult[0].lon);
 
-  ////console.log(currentLatLong);
-//console.log(place.markertype);
+  ////////console.log(currentLatLong);
+  //////console.log(place.markertype);
 
-if(place.markertype == "gruppe"){
-  var marker = L.marker(currentLatLong, {
-    icon: iconGruppe
-  }).addTo(map);
-}else if (place.markertype == "ort") {
-  var marker = L.marker(currentLatLong, {
-    icon: iconOrt
-  }).addTo(map);
-} else {
-  marker = eventMarker(currentLatLong, place);
-}
+  if (place.markertype == "gruppe") {
+    var marker = L.marker(currentLatLong, {
+      icon: iconGruppe
+    }).addTo(map);
+  } else if (place.markertype == "ort") {
+    var marker = L.marker(currentLatLong, {
+      icon: iconOrt
+    }).addTo(map);
+  } else {
+    marker = eventMarker(currentLatLong, place);
+  }
 
 
 
@@ -212,9 +218,9 @@ if(place.markertype == "gruppe"){
   popup.push(parsedResult[0].address.house_number);
   popup.push(parsedResult[0].address.postcode);
 
-  ////console.log(parsedResult[0].address);
-  // ////console.log(parsedResult[0].address.town);
-  ////console.log(parsedResult[0].address.city);
+  ////////console.log(parsedResult[0].address);
+  // ////////console.log(parsedResult[0].address.town);
+  ////////console.log(parsedResult[0].address.city);
 
   if (parsedResult[0].address.town !== undefined) {
     popup.push(parsedResult[0].address.town);
@@ -248,7 +254,7 @@ document.addEventListener("click", e => {
   if (isDropdownButton == true) {
 
     const isActiveFilter = e.target.parentElement.matches(".filter-active");
-    ////console.log(isActiveFilter);
+    ////////console.log(isActiveFilter);
 
     if (isActiveFilter == true) {
       filterActive = Array.from(document.getElementsByClassName("filter-active"));
@@ -272,10 +278,10 @@ document.addEventListener("click", e => {
 document.addEventListener("click", e => {
   try {
     const isResetButton = e.target.parentElement.matches(".filter-reset-button");
-    ////console.log(isResetButton);
+    ////////console.log(isResetButton);
     if (isResetButton == true) {
       form = document.getElementById("filter-form");
-      ////console.log(form);
+      ////////console.log(form);
       form.reset();
     }
   } catch (e) {
@@ -289,8 +295,13 @@ const filterlocationSearch = document.getElementById("filter-location-search");
 const filterlocationList = document.getElementById("filter-location-list");
 
 filterlocationSearch.addEventListener("change", () => {
-  ////console.log(filterlocationSearch.value);
+  ////////console.log(filterlocationSearch.value);
 
+  locationRange();
+
+});
+
+function locationRange() {
   fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + filterlocationSearch.value)
     .then(result => result.json())
     .then(parsedResult => {
@@ -302,16 +313,20 @@ filterlocationSearch.addEventListener("change", () => {
         if (parsedResult[0] == undefined) {
           throw "Keine übereinstimmenden Orte gefunden";
         } else {
-          ////console.log(parsedResult[0].lat);
-          ////console.log(parsedResult[0].lon);
+          ////////console.log(parsedResult[0].lat);
+          ////////console.log(parsedResult[0].lon);
 
           filterLatLon.push(parsedResult[0].lat);
           filterLatLon.push(parsedResult[0].lon);
 
-          ////console.log(filterLatLon);
+          ////////console.log(filterLatLon);
 
           //Range Live Preview
+
+          console.log(circleRange);
+
           if (circleRange != undefined) {
+            console.log("deleting layers 1");
             map.removeLayer(circleRange);
             map.removeLayer(circlePoint);
           }
@@ -326,87 +341,54 @@ filterlocationSearch.addEventListener("change", () => {
             radius: 10
           }).addTo(map);
 
-
-          document.addEventListener("change", object => {
-            const rangeLabel = document.getElementById("filter-location-range-label");
-            const isLocationRange = object.target.matches(".filter-location-range");
-            ////console.log(isLocationRange);
-            if (isLocationRange == true) {
-              ////console.log(object.target.value);
-              let currentRange = object.target.value;
-
-              ////console.log(filterLatLon);
-              currentFilterLocation = filterLatLon;
-
-
-              if (circleRange != undefined) {
-                map.removeLayer(circleRange);
-                map.removeLayer(circlePoint);
-              }
-
-              circleRange = L.circle(currentFilterLocation, {
-                color: 'black',
-                fillColor: 'var(--grau)',
-                fillOpacity: 0.5,
-                radius: currentRange
-              }).addTo(map);
-
-              circlePoint = L.circle(currentFilterLocation, {
-                color: 'black',
-                fillColor: 'var(--grau)',
-                fillOpacity: 0.5,
-                radius: 10
-              }).addTo(map);
-
-
-
-
-              if (currentRange >= 1000) {
-                ////console.log("kilometer");
-                currentRange = currentRange.toString();
-
-                currentRangeStart = currentRange.substring(0, currentRange.length - 3);
-                currentRangeStart = parseInt(currentRangeStart);
-
-                currentRangeEnd = currentRange.substring(currentRange.length - 3, currentRange.length);
-                currentRangeEnd = parseInt(currentRangeEnd);
-
-                if (currentRangeStart >= 10) {
-                  currentRangePrint = currentRangeStart;
-                  rangeLabel.innerHTML = " " + currentRangePrint + "km";
-
-                } else {
-                  currentRangePrint = currentRangeStart + "," + currentRangeEnd;
-                  rangeLabel.innerHTML = " " + currentRangePrint + "km";
-                }
-
-              } else {
-                rangeLabel.innerHTML = " " + currentRange + "m";
-              }
-            } else {
-              return;
-            }
+          circleRange = rangeCircle(filterLatLon, circleRange, circlePoint, map)
+          document.getElementById("filter-location-range").addEventListener("change", object => {
+            circleRange = rangeCircle(filterLatLon, circleRange, circlePoint, map)
           });
         }
 
+
+        return circleRange
       } catch (e) {
         alert(e);
       }
     });
-});
-
+}
 //Process Data
 filterStart();
+locationRange();
+locationRange();
 
 function filterStart() {
   let url = window.location.href;
   let params = (new URL(url)).searchParams;
+
+  filterActive = false;
+  for (var key of params.keys()) {
+    filterActive = true;
+  }
 
   var filteredMapList = [];
   var mapfilterOutput = [];
   var mapsearchOutput = "";
 
   var eventtypes = [];
+
+  if (!filterActive) {
+    ////console.log("inactive");
+    fetch('/Map/maplist.json')
+      .then(response => response.json())
+      .then(maplist => {
+        mapnodes = maplist.mappoints;
+        placesFilterArray = [];
+        mapnodes.forEach((node, i) => {
+          placesFilterArray.push(node.mapnodeid);
+        });
+        filterExecute(placesFilterArray);
+        ////console.log(mapnodes);
+      });
+    return;
+  }
 
   search = params.get("search")
 
@@ -452,6 +434,68 @@ function filterStart() {
     "sonstige": filtertopicchecksonstige
   }
 
+  //Keep Filter Values
+  console.log(typesearch);
+  console.log(mapSearchParamsType);
+  console.log(mapSearchParamsLocation);
+  console.log(mapSearchParamsTopic);
+
+  //Keep Search
+  if (typesearch != "") {
+    document.getElementById("filter-eventtype-search").value = typesearch;
+  }
+
+  //Keep type
+  if (mapSearchParamsType.event == "on") {
+    document.getElementById("filter-check-events").checked = true;
+  }
+
+  if (mapSearchParamsType.gruppe == "on") {
+    document.getElementById("filter-check-gruppen").checked = true;
+  }
+
+  if (mapSearchParamsType.ort == "on") {
+    document.getElementById("filter-check-orte").checked = true;
+  }
+
+  //Keep Location
+  if (mapSearchParamsLocation.location != "") {
+    document.getElementById("filter-location-search").value = mapSearchParamsLocation.location;
+  }
+
+  if (mapSearchParamsLocation.range > 0) {
+    document.getElementById("filter-location-range").value = mapSearchParamsLocation.range;
+  }
+
+  //Keep Topics
+  if (mapSearchParamsTopic.arbeit == "on") {
+    document.getElementById("filter-topiccheck-arbeit").checked = true;
+  }
+  if (mapSearchParamsTopic.sozial == "on") {
+    document.getElementById("filter-topiccheck-sozial").checked = true;
+  }
+  if (mapSearchParamsTopic.oekologie == "on") {
+    document.getElementById("filter-topiccheck-oekologie").checked = true;
+  }
+  if (mapSearchParamsTopic.kultur == "on") {
+    document.getElementById("filter-topiccheck-kultur").checked = true;
+  }
+  if (mapSearchParamsTopic.militarismus == "on") {
+    document.getElementById("filter-topiccheck-militarismus").checked = true;
+  }
+  if (mapSearchParamsTopic.antifa == "on") {
+    document.getElementById("filter-topiccheck-antifa").checked = true;
+  }
+  if (mapSearchParamsTopic.feminismus == "on") {
+    document.getElementById("filter-topiccheck-feminismus").checked = true;
+  }
+  if (mapSearchParamsTopic.rassismus == "on") {
+    document.getElementById("filter-topiccheck-rassismus").checked = true;
+  }
+  if (mapSearchParamsTopic.sonstige == "on") {
+    document.getElementById("filter-topiccheck-sonstige").checked = true;
+  }
+
   //Execute Filter
   if (mapSearchParamsLocation.location != "") {
     fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + mapSearchParamsLocation.location)
@@ -485,11 +529,11 @@ function filterStart() {
 
 
         //Array search
-        if (search == "") {} else {
+        if (search == null) {} else {
           mapfilterOutput.push(search.toLowerCase());
         }
         //Array eventtypesearch
-        if (typesearch == "") {
+        if (typesearch == null) {
           mapeventtypeactivator = null;
         } else {
           mapfilterOutput.push(typesearch.toLowerCase());
@@ -502,8 +546,8 @@ function filterStart() {
           .then(response => response.json())
           .then(maplist => {
             mapnodes = maplist.mappoints;
-            ////console.log(mapnodes);
-            ////console.log(mapfilterOutput);
+            ////////console.log(mapnodes);
+            ////////console.log(mapfilterOutput);
 
             //eventtypes autocomplete
             eventtypes = [];
@@ -512,33 +556,33 @@ function filterStart() {
                 eventtypes.push(node.eventtype.toLowerCase());
               }
             });
-            ////console.log(eventtypes);
+            ////////console.log(eventtypes);
 
             //Check every entry
             mapnodes.forEach((node, i) => {
-              ////console.log(node);
+              ////////console.log(node);
 
               //Check type
-              mapTypeCheck = checkType(maptypeactivator, node);
+              mapTypeCheck = checkType(maptypeactivator, node, mapfilterOutput);
 
               //Check Location
               range = parseInt(mapSearchParamsLocation.range);
               rangeCheck = checkLocation(range, filterCoordinates, node);
 
-              ////console.log(rangeCheck);
+              ////////console.log(rangeCheck);
 
               //Check Topic
-              topiccheck = checkTopic(maptopicactivator, node);
+              topiccheck = checkTopic(maptopicactivator, node, mapfilterOutput);
 
               //Check eventtype
-              eventtypecheck = checkEventtype(mapeventtypeactivator, node);
+              eventtypecheck = checkEventtype(mapeventtypeactivator, node, mapfilterOutput);
 
               placesFilterArray = [];
 
 
               if (rangeCheck == false || mapTypeCheck == false || topiccheck == false || eventtypecheck == false) {} else {
                 placesFilterArray.push(node.mapnodeid);
-                ////console.log(placesFilterArray);
+                ////////console.log(placesFilterArray);
                 filterExecute(placesFilterArray);
               }
 
@@ -584,7 +628,7 @@ function filterStart() {
       .then(response => response.json())
       .then(maplist => {
         mapnodes = maplist.mappoints;
-        ////console.log(mapnodes);
+        ////////console.log(mapnodes);
         ////console.log(mapfilterOutput);
 
         //eventtypes autocomplete
@@ -594,19 +638,19 @@ function filterStart() {
             eventtypes.push(node.eventtype.toLowerCase());
           }
         });
-        ////console.log(eventtypes);
+        ////////console.log(eventtypes);
 
         //Check every entry
         mapnodes.forEach((node, i) => {
 
           //Check type
-          mapTypeCheck = checkType(maptypeactivator, node);
+          mapTypeCheck = checkType(maptypeactivator, node, mapfilterOutput);
 
           //Check Topic
-          topiccheck = checkTopic(maptopicactivator, node);
+          topiccheck = checkTopic(maptopicactivator, node, mapfilterOutput);
 
           //Check eventtype
-          eventtypecheck = checkEventtype(mapeventtypeactivator, node);
+          eventtypecheck = checkEventtype(mapeventtypeactivator, node, mapfilterOutput);
 
           placesFilterArray = [];
 
@@ -623,33 +667,33 @@ function filterStart() {
   }
 }
 
-function eventMarker(currentLatLong, place){
-  if(place.eventtype == "küche"){
+function eventMarker(currentLatLong, place) {
+  if (place.eventtype == "küche") {
     var marker = L.marker(currentLatLong, {
       icon: iconKueche
     }).addTo(map);
   }
-  if(place.eventtype == "kultur"){
+  if (place.eventtype == "kultur") {
     var marker = L.marker(currentLatLong, {
       icon: iconKultur
     }).addTo(map);
   }
-  if(place.eventtype == "diskussion"){
+  if (place.eventtype == "diskussion") {
     var marker = L.marker(currentLatLong, {
       icon: iconDiskussion
     }).addTo(map);
   }
-  if(place.eventtype == "info"){
+  if (place.eventtype == "info") {
     var marker = L.marker(currentLatLong, {
       icon: iconInfo
     }).addTo(map);
   }
-  if(place.eventtype == "demo"){
+  if (place.eventtype == "demo") {
     var marker = L.marker(currentLatLong, {
       icon: iconDemo
     }).addTo(map);
   }
-  if(place.eventtype == "aktion"){
+  if (place.eventtype == "aktion") {
     var marker = L.marker(currentLatLong, {
       icon: iconAktion
     }).addTo(map);
@@ -668,10 +712,10 @@ function checkLocation(range, filterCoordinates, node) {
 
   var distanceKM = calcdistance(lat1, lon1, lat2, lon2, unit);
 
-  ////console.log(distanceKM);
+  ////////console.log(distanceKM);
 
   distanceM = distanceKM * 1000;
-  ////console.log(distanceM);
+  ////////console.log(distanceM);
 
   rangeCheck = null;
   if (range > distanceM) {
@@ -682,7 +726,7 @@ function checkLocation(range, filterCoordinates, node) {
   return rangeCheck;
 }
 
-function checkType(maptypeactivator, node) {
+function checkType(maptypeactivator, node, mapfilterOutput) {
   mapTypeCheck = null;
   if (maptypeactivator === true) {
     mapTypeCheck = false;
@@ -693,7 +737,7 @@ function checkType(maptypeactivator, node) {
   return mapTypeCheck;
 }
 
-function checkEventtype(mapeventtypeactivator, node) {
+function checkEventtype(mapeventtypeactivator, node, mapfilterOutput) {
   eventtypecheck = null;
   if (mapeventtypeactivator) {
     eventtypecheck = false;
@@ -702,15 +746,63 @@ function checkEventtype(mapeventtypeactivator, node) {
   return eventtypecheck;
 }
 
-function checkTopic(maptopicactivator, node) {
+function checkTopic(maptopicactivator, node, mapfilterOutput) {
   topiccheck = null;
   if (maptopicactivator) {
     topiccheck = false;
+    topicsLowerCase = [];
+    //////console.log(node.topics);
 
     node.topics.forEach((topic, i) => {
-      topiccheck = mapfilterOutput.includes(topic.toLowerCase());
+      topicsLowerCase.push(topic.toLowerCase());
     });
+
+
+
+    /*
+        node.topics.every(topic => {
+          ////console.log(topic);
+          topiccheck = mapfilterOutput.includes(topic.toLowerCase());
+          ////console.log(node.mapnodeid + " "+ topiccheck);
+
+          if(topiccheck) {
+            ////console.log(topiccheck);
+            return topiccheck;
+          }
+        })
+        */
+    /*
+        node.topics.forEach((topic, i) => {
+          //////console.log(topic);
+          topiccheck = mapfilterOutput.includes(topic.toLowerCase());
+          ////console.log(node.mapnodeid + " " + mapfilterOutput + " " +topic  " "+ topiccheck);
+        });*/
+    /*
+        mapfilterOutput.forEach((item, i) => {
+          //////console.log(item);
+          topiccheck = topicsLowerCase.includes(item);
+          ////console.log(node.mapnodeid + " " + item + " " +topicsLowerCase + " "+ topiccheck);
+        });
+    */
+
+
+    topiceverycheck = mapfilterOutput.every(item => {
+      //////console.log(item);
+      //////console.log(topicsLowerCase);
+      topiccheck = topicsLowerCase.includes(item);
+      //  ////console.log(topiccheck);
+      return topiccheck;
+    });
+
+
+
+
+    //////console.log(topiceverycheck);
+
+    topiccheck = topiceverycheck;
+
   }
+  //////console.log(topiccheck);
   return topiccheck;
 }
 
@@ -745,4 +837,65 @@ function calcdistance(lat1, lon1, lat2, lon2, unit) {
     }
     return dist;
   }
+}
+
+function rangeCircle(filterLatLon, circleRange, circlePoint, map){
+
+  const rangeLabel = document.getElementById("filter-location-range-label");
+  ////////console.log(isLocationRange);
+  ////////console.log(object.target.value);
+  let currentRange = document.getElementById("filter-location-range").value;
+
+  ////////console.log(filterLatLon);
+  currentFilterLocation = filterLatLon;
+
+//console.log(map);
+
+  if (circleRange != undefined) {
+    console.log("deleting layers 2");
+    map.removeLayer(circleRange);
+    map.removeLayer(circlePoint);
+  }
+
+  circleRange = L.circle(currentFilterLocation, {
+    color: 'black',
+    fillColor: 'var(--grau)',
+    fillOpacity: 0.5,
+    radius: currentRange
+  }).addTo(map);
+
+  circlePoint = L.circle(currentFilterLocation, {
+    color: 'black',
+    fillColor: 'var(--grau)',
+    fillOpacity: 0.5,
+    radius: 10
+  }).addTo(map);
+
+
+
+
+  if (currentRange >= 1000) {
+    ////////console.log("kilometer");
+    currentRange = currentRange.toString();
+
+    currentRangeStart = currentRange.substring(0, currentRange.length - 3);
+    currentRangeStart = parseInt(currentRangeStart);
+
+    currentRangeEnd = currentRange.substring(currentRange.length - 3, currentRange.length);
+    currentRangeEnd = parseInt(currentRangeEnd);
+
+    if (currentRangeStart >= 10) {
+      currentRangePrint = currentRangeStart;
+      rangeLabel.innerHTML = " " + currentRangePrint + "km";
+
+    } else {
+      currentRangePrint = currentRangeStart + "," + currentRangeEnd;
+      rangeLabel.innerHTML = " " + currentRangePrint + "km";
+    }
+
+  } else {
+    rangeLabel.innerHTML = " " + currentRange + "m";
+  }
+
+  return circleRange
 }

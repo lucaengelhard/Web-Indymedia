@@ -1,0 +1,69 @@
+
+
+.location-info {
+  flex: 1 1 30%;
+  max-width: 30%;
+  overflow-x: auto;
+
+  word-break: break-all;
+  font-family: Iosevka,monospace;
+  font-weight: 300;
+
+}
+
+.location-info-box {
+  padding-top: 0.5rem;
+  border-top: 1px solid black;
+
+}
+
+.address {
+font-weight: 600;
+}
+
+.location-info-additional {
+  margin-top: 1rem;
+}
+
+.mappage-upcoming {
+  max-width: 900px;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .maplist {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .maplist {
+    /*padding-left: 1rem;
+    padding-right: 1rem;*/
+  }
+
+  .article-text-box{
+    flex-wrap: wrap;
+  }
+
+  .location-info {
+    max-width: none;
+    width: max-content;
+  }
+
+  .location-info-box{
+    width: max-content;
+  }
+
+  .location-info-address {
+    width: max-content;
+  }
+
+  .location-info-additional {
+    width: max-content;
+  }
+
+  .address {
+    width: max-content;
+  }
+}

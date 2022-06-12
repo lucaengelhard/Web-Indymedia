@@ -9,6 +9,8 @@ const port = 3000;
 
 app.listen(port, () => console.log("server listening at port " + port));
 
+
+
 app.use(express.static("public"));
 
 app.use(express.json({
@@ -23,8 +25,8 @@ app.use(express.urlencoded({
 const storage = multer.diskStorage({
   destination: "public/assets/images/uploads/",
   filename: function(req, file, cb) {
-    const postid = getNewPostID();
-    cb(null, postid + "-" + Math.round(Math.random() * 1E9) + file.originalname);
+    //const postid = 0;
+    cb(null, Math.round(Math.random() * 1E9) + file.originalname);
   }
 });
 
@@ -34,10 +36,37 @@ const upload = multer({
 
 
 //get User Input
-app.post("/api", upload.single("image"), (request, response, cb) => {
-  console.log(request.body.article);
+app.post("/api", upload.any("image"), (request, response, cb) => {
+  //console.log(JSON.parse(request.body.article).steps.length);
+  //console.log(request.files.length);
 
-  filewriter(request);
+  console.log(request.files);
+
+  //console.log(JSON.parse(request.body.article));
+
+  //Check mediatype
+  mediatype = JSON.parse(request.body.article).mediatype;
+
+  if (mediatype == "artikel") {
+    fileWriterArticle(request);
+  }
+
+  if (mediatype == "video") {
+    fileWriterVideo(request);
+  }
+
+  if (mediatype == "photo") {
+    fileWriterPhoto(request);
+  }
+
+  if (mediatype == "map") {
+    fileWriterMap(request);
+  }
+
+  if (mediatype == "tutorial") {
+    fileWriterTutorial(request);
+  }
+
 
   response.json({
     status: 'success'
@@ -49,7 +78,7 @@ app.post("/api", upload.single("image"), (request, response, cb) => {
 
 
 //Update Database
-function filewriter(request) {
+function fileWriterArticle(request) {
   var data = request.body.article;
   //console.log(JSON.parse(data));
 
@@ -62,13 +91,13 @@ function filewriter(request) {
   //New ID
   //console.log(file.articles.length);
 
-  newentryID = getNewPostID();
+  newentryID = getNewPostIDArticle();
 
   data.postid = newentryID;
-  console.log(request.file);
-  if (request.file == undefined) {} else {
-    imagepath = request.file.destination.replace("public", "..");
-    data.image = imagepath + request.file.filename;
+  console.log(request.files);
+  if (request.files[0] == undefined) {} else {
+    imagepath = request.files[0].destination.replace("public", "");
+    data.image = imagepath + request.files[0].filename;
   }
 
 
@@ -76,19 +105,9 @@ function filewriter(request) {
 
 
   //New URL
-  const title = data.title;
-  const titledash = title.replace(/ /g, "-");
-
-  //console.log(titledash);
-
-  titleclean = titledash.replace(/[^a-zA-Z0-9 -]/g, "");
-  //console.log(titleclean);
-
-
-  posturl = "/Artikel/" + newentryID + "-" + titleclean + ".html";
-  //console.log(posturl);
-
-  data.posturl = ".." + posturl;
+  titledash = titlecleaner(data);
+  posturl = "/Artikel/" + newentryID + "-" + titledash + ".html";
+  data.posturl = posturl;
 
 
   //console.log(data);
@@ -104,9 +123,8 @@ function filewriter(request) {
 
 
   //Create Page
-  if (data.topics.length == 0) {
-  } else {
-    articlepageCreator(newentryID, titledash, data);
+  if (data.topics.length == 0) {} else {
+    videopageCreator(newentryID, titledash, data);
 
     fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
       if (err) {
@@ -118,7 +136,182 @@ function filewriter(request) {
 
 }
 
+function fileWriterVideo(request) {
+  var data = request.body.article;
+  //console.log(JSON.parse(data));
+  video = request.files[0];
+  console.log(video);
+  console.log(data);
 
+  data = JSON.parse(data);
+  //console.log(data);
+
+  //create Thumbnail
+  
+
+  const fileName = "./public/Artikel/articlelist.json";
+  const file = require(fileName);
+
+  newentryID = getNewPostIDArticle();
+  data.postid = newentryID;
+
+  videopath = video.destination.replace("public", "");
+  data.video = videopath + video.filename;
+
+  titledash = titlecleaner(data);
+  posturl = "/Artikel/" + newentryID + "-" + titledash + ".html";
+  data.posturl = posturl;
+
+  console.log(data);
+
+  //Append Entry
+  filecontentArray = JSON.stringify(file.articles);
+  filecontentArray = JSON.parse(filecontentArray);
+
+
+
+  filecontentArray.push(data);
+  filecontent = JSON.stringify(filecontentArray, null, 2);
+
+  console.log(filecontent);
+
+  console.log(newentryID);
+  console.log(titledash);
+  console.log(data);
+
+
+  //Create Page
+  if (data.topics.length == 0) {} else {
+  videopageCreator(newentryID, titledash, data);
+
+
+
+
+    fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
+      if (err) {
+        throw err;
+      }
+    });
+  }
+
+}
+
+function fileWriterPhoto() {
+
+}
+
+function fileWriterMap() {
+
+}
+
+function fileWriterTutorial(request) {
+
+
+  uploadedTutorial =JSON.parse(request.body.article);
+
+  titleimagecheck = false;
+  if(uploadedTutorial.image == ""){
+    titleimagecheck = false;
+  } else {
+    titleimagecheck = true;
+  }
+
+  //console.log(titleimagecheck);
+  //console.log(uploadedTutorial);
+
+  /*uploadedTutorial = {
+    "postid": 1,
+    "posturl": "",
+    "title": "Tutorial 1 ist richtig geil",
+    "author": "anonym",
+    "tags": [
+      "feministischer kampftag",
+      "b ndnis 8. m rz"
+    ],
+    "image": "/assets/images/uploads/1-269989217220308-femkampftag-039.jpg",
+    "shorttext": "Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website",
+    "richtext": "Dieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser WebsiteDieser Artikel ist sooo Sinnbildlich für die außerordentlich gute Gestaltung dieser Website",
+    "steps": [{
+      "image": "/assets/images/uploads/1-269989217220308-femkampftag-039.jpg",
+      "heading": "Lorem ipsum dolor sit amet.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores placeat similique eius, nihil perferendis sed delectus dolorem, officia officiis rem ut in earum distinctio quisquam. Assumenda doloribus, aperiam odio dolorem placeat dicta? Expedita deserunt asperiores commodi suscipit, quae ea quas vero impedit dicta. Consequuntur iure deleniti ullam enim sunt, cupiditate, labore error aliquid ad doloremque sit maxime, in nisi nam culpa impedit voluptas! Omnis totam, doloribus consequatur ea corporis, culpa veniam! Quasi, odio corrupti. Incidunt eligendi similique ratione explicabo, itaque quaerat obcaecati. Illum corrupti deleniti corporis, sint voluptatum iste, cumque laboriosam perferendis officiis dolores facere nulla tempore ratione voluptatem voluptate. "
+    }, {
+      "heading": "Lorem ipsum dolor sit amet.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores placeat similique eius, nihil perferendis sed delectus dolorem, officia officiis rem ut in earum distinctio quisquam. Assumenda doloribus, aperiam odio dolorem placeat dicta? Expedita deserunt asperiores commodi suscipit, quae ea quas vero impedit dicta. Consequuntur iure deleniti ullam enim sunt, cupiditate, labore error aliquid ad doloremque sit maxime, in nisi nam culpa impedit voluptas! Omnis totam, doloribus consequatur ea corporis, culpa veniam! Quasi, odio corrupti. Incidunt eligendi similique ratione explicabo, itaque quaerat obcaecati. Illum corrupti deleniti corporis, sint voluptatum iste, cumque laboriosam perferendis officiis dolores facere nulla tempore ratione voluptatem voluptate. "
+    }]
+  }*/
+
+  data = uploadedTutorial;
+
+  const fileName = "/public/tutorials/tutoriallist.json"
+  const file = require(fileName);
+
+  if(file.tutorials.length == 0) {
+    newentryID = 1;
+  } else {
+    var lastentry = file.tutorials[file.tutorials.length - 1];
+    lastentry = parseInt(lastentry.postid);
+
+    newentryID = lastentry + 1;
+  }
+
+  //console.log(newentryID);
+
+  data.postid = newentryID;
+
+  //Handle Uploaded Files
+console.log(request.files);
+imageposition = 0;
+if(titleimagecheck){
+  console.log(request.files[imageposition]);
+  imagedest = request.files[imageposition].destination.replace("public", "");
+  data.image = imagedest+request.files[imageposition].filename;
+  imageposition++;
+  data.steps.forEach((step, i) => {
+    if(step.image){
+      imagedest = request.files[imageposition].destination.replace("public", "");
+        data.steps[i].image = imagedest+request.files[imageposition].filename;
+        imageposition++;
+    }
+  });
+} else {
+  console.log(data.steps);
+  data.steps.forEach((step, i) => {
+    if(step.image){
+      imagedest = request.files[imageposition].destination.replace("public", "");
+        data.steps[i].image = imagedest+request.files[imageposition].filename;
+        imageposition++;
+    }
+  });
+
+}
+
+console.log(data);
+
+  //New url
+ titleclean = titlecleaner(data);
+ posturl = "tutorials/tutorial.html?postid="+data.postid;
+ data.posturl = posturl;
+
+
+ //Append newentryID
+ filecontentArray = JSON.stringify(file.tutorials);
+ filecontentArray = JSON.parse(filecontentArray);
+ //console.log(filecontent);
+
+ filecontentArray.push(data);
+ filecontent = JSON.stringify(filecontentArray, null, 2);
+
+ //console.log(filecontent);
+
+ //Create Page
+
+ fs.writeFile("public/tutorials/tutoriallist.json", "{\"tutorials\":" + filecontent + "}", (err) => {
+   if (err) {
+     throw err;
+   }
+ });
+}
 
 function articlepageCreator(newentryID, titledash, data) {
   fs.readFile("public/artikel/0-articlebase.html", "utf-8", function(err, content) {
@@ -139,6 +332,7 @@ function articlepageCreator(newentryID, titledash, data) {
     richtext = data.richtext;
 
 
+    //post
     //Image
     //console.log(image);
 
@@ -187,7 +381,77 @@ function articlepageCreator(newentryID, titledash, data) {
   });
 }
 
-function getNewPostID() {
+function videopageCreator(newentryID, titledash, data) {
+  fs.readFile("public/artikel/0-articlebase.html", "utf-8", function(err, content) {
+    if (err) {
+      return console.log(err);
+    }
+    //console.log(content);
+    //console.log(data.title);
+
+    title = data.title;
+    author = data.author;
+    date = data.date;
+    location = data.location;
+    topics = data.topics;
+    tags = data.tags;
+    video = data.video;
+    shorttext = data.shorttext;
+
+
+
+    //post
+    //Image
+    //console.log(image);
+
+    videoMarkup = "<video controls> <source src='" + video + "' type='video/mp4'></video>";
+
+    console.log(videoMarkup);
+
+    //console.log(imageMarkup);
+
+    //Topiclist
+    topicMarkup = "";
+
+    lasttopic = 1;
+    topics.forEach(topic => {
+      if (lasttopic === 1) {
+        topicLower = topic.toLowerCase();
+        topicClass = "tagtopic-" + topicLower;
+        //console.log(topicClass);
+      }
+      if (lasttopic === topics.length) {
+        topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span>")
+        //console.log(topicMarkup);
+
+      } else {
+        topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span> | ")
+        //console.log(topicMarkup);
+        lasttopic++;
+      }
+    });
+
+    const currentColor = currentColorFunc(topics);
+
+    //Replace content
+    content = content.replace(/\"\+currentColor\+\"/g, currentColor);
+    content = content.replace(/\"\+image\+\"/g, videoMarkup);
+    content = content.replace(/\"\+title\+\"/g, title);
+    content = content.replace(/\"\+author\+\"/g, author);
+    content = content.replace(/\"\+date\+\"/g, date);
+    content = content.replace(/\"\+articlelocation\+\"/g, location);
+    content = content.replace(/\"\+topicMarkup\+\"/g, topicMarkup);
+    content = content.replace(/\"\+shorttext\+\"/g, shorttext);
+    content = content.replace(/\"\+content\+\"/g, "");
+
+    fs.writeFile("public/" + posturl, content, function(err) {
+      if (err) throw err;
+      console.log("saved " + newentryID + "-" + titleclean + ".html");
+    });
+  });
+}
+
+function getNewPostIDArticle() {
   const fileName = "./public/Artikel/articlelist.json";
   const file = require(fileName);
 
@@ -213,4 +477,104 @@ function currentColorFunc(topics) {
   //console.log(topics[0]);
   currentColor = topics[0];
   return currentColor;
+}
+
+function titlecleaner(data) {
+  const title = data.title;
+  const titledash = title.replace(/ /g, "-");
+
+  titleclean = titledash.replace(/[^a-zA-Z0-9 -]/g, "");
+
+  return titleclean;
+}
+
+
+
+
+
+//temp Images
+const tempstorage = multer.diskStorage({
+  destination: "public/assets/images/uploads/temp/",
+  filename: function(req, file, cb) {
+    //const postid = 0;
+    cb(null, Math.round(Math.random() * 1E9) + file.originalname);
+  }
+});
+
+const tempupload = multer({
+  storage: tempstorage
+});
+
+app.post("/temp", tempupload.any("image"), (request, response, cb) => {
+  //console.log(request.files[0]);
+
+  imagepath = request.files[0].destination.replace("public", "") + request.files[0].filename;
+
+  console.log(imagepath);
+
+  response.json({
+    status: 'success',
+    addedfile: imagepath
+  });
+});
+
+/*
+const switchStorage = multer.diskStorage({
+  destination: "public/assets/images/uploads/temp/fileswitch/",
+  filename: function(req, file, cb) {
+    //const postid = 0;
+    cb(null, Math.round(Math.random() * 1E9) + file.originalname);
+  }
+});
+
+const fileswitch = multer({
+  storage: switchStorage
+});
+*/
+
+app.post("/fileswitch", (request, response,cb) => {
+  imagelist = request.body.urlList;
+
+  imagelist.forEach((image, i) => {
+    currentURL = image.replace("http://localhost:3000", "public");
+    newURL = image.replace("http://localhost:3000", "public").replace("/temp/","/");
+
+    fs.rename(currentURL, newURL, ()=> {
+      console.log("file moved");
+    })
+  });
+
+
+  response.json({
+    status: 'success',
+});
+});
+
+setInterval(clearTemp, 600000);
+
+function clearTemp(){
+
+  console.log("clearing temp");
+
+  fs.readdir("public/assets/images/uploads/temp",(err, files) => {
+    if (err)
+    console.log(err);
+  else {
+    //console.log(files);
+    files.forEach((file, i) => {
+      fs.unlink("public/assets/images/uploads/temp/"+ file, ()=>{
+        console.log("deleted " + file);
+      });
+    });
+
+  }
+  })
+  /*
+  fs.rmdir("/public/assets/images/uploads/temp", () => {
+    console.log("temp clear");
+    fs.mkdir("/public/assets/images/uploads/temp/fileswitch", ()=>{
+      console.log("temp restored");
+    });
+  });
+*/
 }
