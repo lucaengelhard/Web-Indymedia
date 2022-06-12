@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--feminismus);
 }
 
+.tagtopic-feminismus > a > .featured-quote{
+  background-color: var(--feminismus);
+}
+
 .tagtopic-feminismus>a>h1 {
   color: black;
 }

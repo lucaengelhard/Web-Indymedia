@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--antifa);
 }
 
+.tagtopic-antifa > a > .featured-quote{
+  background-color: var(--antifa);
+}
+
 .tagtopic-antifa>a>h1 {
   color: black;
 }

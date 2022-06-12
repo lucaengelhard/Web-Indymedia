@@ -86,6 +86,9 @@ const topicObserver = new IntersectionObserver(function (observedTopics, topicOb
 
         //console.log(observedTopic.target);
         currentTopic = observedTopic.target.id;
+
+        console.log(currentTopic);
+
         //console.log(currentTopic);
 
         if (currentTopic == "arbeit") {
@@ -183,21 +186,28 @@ const topicObserver = new IntersectionObserver(function (observedTopics, topicOb
 }, topicObserverOptions);
 
 topicListArray.forEach(topic => {
-    //console.log(topic);
+    console.log(topic);
     topicObserver.observe(topic);
 })
+
 document.body.onload = function () {
+  topiclistStart = Array.from(document.getElementsByClassName("section-topic"));
     if (window.scrollY <= 200) {
-        for (let a = 0; a < topiclist.length; a++) {
-            topiclist[a].classList.remove("currentTopic");
-        }
+
+      topiclistStart.forEach((topic, i) => {
+        topic.classList.remove("currentTopic");
+      });
     }
 };
+
 document.body.onscroll = function () {
+  topiclistStart = Array.from(document.getElementsByClassName("section-topic"));
     if (window.scrollY <= 200) {
-        for (let a = 0; a < topiclist.length; a++) {
-            topiclist[a].classList.remove("currentTopic");
-            document.getElementById("nav").classList = " ";
-        }
+
+      topiclistStart.forEach((topic, i) => {
+        topiclist[a].classList.remove("currentTopic");
+        document.getElementById("nav").classList = " ";
+      });
+
     }
 };

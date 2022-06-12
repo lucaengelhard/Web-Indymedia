@@ -279,7 +279,7 @@ blockquote {
 
 blockquote::before {
   display: block;
-  content: url(/elements/quote.svg);
+  content: url(../elements/quote.svg);
 }
 
 @media screen and (max-width: 720px) {

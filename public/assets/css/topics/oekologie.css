@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--oekologie);
 }
 
+.tagtopic-oekologie > a > .featured-quote{
+  background-color: var(--oekologie);
+}
+
 .tagtopic-oekologie>a>h1 {
   color: black;
 }

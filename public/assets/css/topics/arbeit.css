@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--arbeit);
 }
 
+.tagtopic-arbeit > a > .featured-quote{
+  background-color: var(--arbeit);
+}
+
 .tagtopic-arbeit>a>h1 {
   color: black;
 }

@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--militarismus);
 }
 
+.tagtopic-militarismus > a > .featured-quote{
+  background-color: var(--militarismus);
+}
+
 .tagtopic-militarismus>a>h1 {
   color: black;
 }
