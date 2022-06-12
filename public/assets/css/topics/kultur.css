@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--kultur);
 }
 
+.tagtopic-kultur > a > .featured-quote{
+  background-color: var(--kultur);
+}
+
 .tagtopic-kultur>a>h1 {
   color: black;
 }

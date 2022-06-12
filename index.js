@@ -124,7 +124,7 @@ function fileWriterArticle(request) {
 
   //Create Page
   if (data.topics.length == 0) {} else {
-    videopageCreator(newentryID, titledash, data);
+    articlepageCreator(newentryID, titledash, data);
 
     fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
       if (err) {
@@ -147,7 +147,7 @@ function fileWriterVideo(request) {
   //console.log(data);
 
   //create Thumbnail
-  
+
 
   const fileName = "./public/Artikel/articlelist.json";
   const file = require(fileName);

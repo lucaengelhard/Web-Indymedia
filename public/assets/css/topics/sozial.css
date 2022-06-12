@@ -11,6 +11,10 @@
   border-bottom: 1px solid var(--sozial);
 }
 
+.tagtopic-sozial > a > .featured-quote{
+  background-color: var(--sozial);
+}
+
 .tagtopic-sozial>a>h1 {
   color: black;
 }

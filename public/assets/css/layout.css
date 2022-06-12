@@ -11,6 +11,10 @@ body {
     margin-top: 2rem;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
 
 video {
   width: 100%;
@@ -37,6 +41,24 @@ video {
     padding-top: 2rem;
 
     scroll-margin-top: 73px;
+}
+
+.featured-quote {
+  font-family: Iosevka, monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: red;
+  margin-bottom: 0.5rem;
+}
+
+.featured-quote > div::before {
+  display: block;
+  content: url(../elements/quotewhite.svg);
+}
+
+.featured-quote > div {
+  color: white;
 }
 
 .article-image {

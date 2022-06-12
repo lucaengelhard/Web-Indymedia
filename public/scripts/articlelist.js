@@ -59,20 +59,20 @@ fetch('/Artikel/articlelist.json')
         if (mediatype == "artikel") {
           if (imageurl == "") {
             //console.log("noimage");
-            articleText[0].insertAdjacentHTML("beforeend", "<article id='" + postid + "' class='post-text " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+            articleText[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-text " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
           } else {
             if (featured == true) {
               articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='featured-post " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><img src='" + imageurl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
             } else {
               if (columnswap == 0) {
-                columnLeft[0].insertAdjacentHTML("beforeend", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><img src='" + imageurl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+                columnLeft[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><img src='" + imageurl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
                 //console.log("links");
 
                 columnswap = 1;
               } else {
-                columnRight[0].insertAdjacentHTML("beforeend", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><img src='" + imageurl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+                columnRight[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><img src='" + imageurl + "'><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
                 //console.log("rechts");
 
@@ -88,13 +88,13 @@ fetch('/Artikel/articlelist.json')
 
           } else {
             if (columnswap == 0) {
-              columnLeft[0].insertAdjacentHTML("beforeend", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+              columnLeft[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
               //console.log("links");
 
               columnswap = 1;
             } else {
-              columnRight[0].insertAdjacentHTML("beforeend", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+              columnRight[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
               //console.log("rechts");
 
