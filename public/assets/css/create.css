@@ -64,6 +64,11 @@ padding-right: 2rem;
   border: 1px solid var(--grau);
 }
 
+.map-editor-additionalinfo{
+  max-height: none;
+  resize: vertical;
+}
+
 .text-editor-header{
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -135,6 +140,7 @@ scrollbar-width: none;
   display: flex;
   flex-wrap: wrap;
   gap:1rem;
+  font-family: Iosevka, monospace;
 }
 
 .editor-user-tags > input {
@@ -143,6 +149,25 @@ scrollbar-width: none;
   width: 30%;
   min-width: 200px;
   font-family: Iosevka, monospace;
+}
+
+
+.editor-user-tags-wrapper > form> label{
+  font-weight: 600;
+  color: black;
+}
+
+.editor-eventtype {
+  display: none;
+}
+
+.editor-eventtype-show {
+  display:block;
+}
+
+.editor-eventtype > label{
+  font-weight: 600;
+  color: black;
 }
 
 .editor-user-tags-selected {

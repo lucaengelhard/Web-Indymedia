@@ -54,7 +54,7 @@ imageSelector(imageselect);
 
 function imageSelector(imageselect) {
   if(imageselect != null){imageCollection = Array.from(imageselect.querySelectorAll("img"));
-  console.log(imageCollection);
+  //console.log(imageCollection);
   imageCollection.forEach((image, i) => {
     image.addEventListener("click", e => {
       imgURL = e.target.src;
@@ -75,12 +75,12 @@ function imageUpload() {
 
   imageselectUpload.onchange = () => {
     uploadedfile = imageselectUpload.files[0];
-    console.log(uploadedfile);
+    //console.log(uploadedfile);
 
     const formData = new FormData();
     formData.append("image", uploadedfile);
 
-    console.log(formData);
+    //console.log(formData);
     const options = {
       method: 'Post',
       /*headers: {
@@ -93,7 +93,7 @@ function imageUpload() {
       .then(res => res.json())
       .then(response => {
         filepath = response.addedfile;
-        console.log(filepath);
+        //console.log(filepath);
         const selectList = document.querySelector(".text-editor-imageselect");
         selectList.insertAdjacentHTML("beforeend", "<img src=" + filepath + " alt=''>");
         const imageselect = document.querySelector(".text-editor-imageselect-wrapper");
@@ -139,7 +139,7 @@ document.getElementById("editor-submit-button").onclick = function() {
 
 
   if (mediatype == "article") {
-    console.log(mediatype);
+    //console.log(mediatype);
     try {
       var submittedtitle = postTitle();
       var submittedimage = postImage();
@@ -149,14 +149,14 @@ document.getElementById("editor-submit-button").onclick = function() {
 
       var submitteddate = postDate();
       var submittedlocation = postLocation();
-      var submittedcontent = postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
+      postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
     } catch (e) {
       alert(e);
     }
   }
 
   if (mediatype == "video") {
-    console.log(mediatype);
+    //console.log(mediatype);
     try {
       var submittedtitle = postTitle();
 
@@ -168,7 +168,7 @@ document.getElementById("editor-submit-button").onclick = function() {
 
       //console.log(submittedlocation);
 
-      var submittedvideo = postVideo(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
+      postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
 
 
     } catch (e) {
@@ -177,7 +177,7 @@ document.getElementById("editor-submit-button").onclick = function() {
   }
 
   if (mediatype == "photo") {
-    console.log(mediatype);
+    //console.log(mediatype);
     try {
       var submittedtitle = postTitle();
       var submittedgallery = postGallery();
@@ -188,40 +188,40 @@ document.getElementById("editor-submit-button").onclick = function() {
       var submitteddate = postDate();
       var submittedlocation = postLocation();
 
-      photoSubmit(submittedtitle, submittedgallery, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation);
+      postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
     } catch (e) {
       alert(e);
     }
   }
 
   if (mediatype == "map") {
-    console.log(mediatype);
+    //console.log(mediatype);
     try {
+      var submittedlocation = mappostLocation();
       var submittedtitle = postTitle();
       var submittedimage = postImage();
       var submittedtopics = postTopics();
       var submittedtags = postTags();
       var submittedshorttext = postShorttext();
-      var submittedcontent = postBody();
       var submittedinfo = postInfo();
-      var submitteddate = postDate();
-      var submittedlocation = postLocation();
 
-      mapSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submittedinfo, submitteddate, submittedlocation);
+      var submitteddate = postDate();
+
+      var submittedcontent = postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
     } catch (e) {
       alert(e);
     }
   }
 
   if (mediatype == "tutorial") {
-    console.log(mediatype);
+    //console.log(mediatype);
     try {
       var submittedtitle = postTitle();
       var submittedimage = postImage();
       var submittedtags = postTags();
       var submittedshorttext = postShorttext();
 
-      var submittedcontent = postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
+      var submittedcontent = postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
 
 
     } catch (e) {
@@ -231,7 +231,7 @@ document.getElementById("editor-submit-button").onclick = function() {
 
 }
 
-function postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation) {
+function postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo) {
 
   editorElement = document.getElementById("editor-richtext");
   submittedcontent = editorElement.innerHTML;
@@ -276,7 +276,7 @@ function postBody(mediatype, submittedtitle, submittedimage, submittedtopics, su
           currentURL = image.src;
           newURL = currentURL.replace("/temp/", "/");
           urlStart = newURL.search("/assets/");
-          console.log(urlStart);
+          //console.log(urlStart);
 
           newURL = newURL.substr(urlStart, newURL.length);
           image.src = newURL;
@@ -288,6 +288,20 @@ function postBody(mediatype, submittedtitle, submittedimage, submittedtopics, su
         if (mediatype == "tutorial") {
 
           postSteps(submittedtitle, submittedimage, submittedtags, submittedshorttext, submittedcontent);
+        }
+
+        if (mediatype == "map"){
+          //console.log(submittedtitle);
+          //console.log(submittedtopics);
+          //console.log(submittedimage);
+          //console.log(submittedtags);
+          //console.log(submittedshorttext);
+          //console.log(submittedcontent);
+          //console.log(submitteddate);
+          //console.log(submittedlocation);
+          //console.log(submittedinfo);
+
+          mapSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation, submittedinfo);
         }
 
       })
@@ -347,7 +361,7 @@ function postTopics() {
     }
   });
 
-  console.log(onTopics.length);
+  //console.log(onTopics.length);
 
   if (onTopics.length === 0) {
     throw "mindestens ein Themen-Tag muss dein Artikel haben :)";
@@ -439,6 +453,24 @@ function postLocation() {
 
 }
 
+function mappostLocation() {
+  const locationdata = document.querySelector("#map-editor-user-location");
+  //console.log(locationdata);
+  maplocationArray = [];
+  maplocationArray.push(locationdata.dataset.city);
+  maplocationArray.push(locationdata.dataset.address);
+  maplocationArray.push(locationdata.dataset.latlong);
+
+  return maplocationArray;
+}
+
+function postInfo() {
+  editorInfo = document.querySelector(".map-editor-additionalinfo");
+  editorInfo = editorInfo.value
+
+  return editorInfo
+}
+
 function postSteps(submittedtitle, submittedimage, submittedtags, submittedshorttext, submittedcontent) {
   const stepList = document.querySelector(".tutorial-steps-wrapper");
   const steps = Array.from(stepList.children);
@@ -456,7 +488,7 @@ function postSteps(submittedtitle, submittedimage, submittedtags, submittedshort
       "content": stepContent
     };
 
-    console.log(stepObj);
+    //console.log(stepObj);
 
 
     submittedsteps.push(stepObj);
@@ -516,8 +548,92 @@ const searchCities = async searchText => {
 
 }
 
-locationSearch.addEventListener("input", () => searchCities(locationSearch.value));
+if(document.getElementById("editor-form").dataset.mediatype != "map"){
+  locationSearch.addEventListener("input", () => searchCities(locationSearch.value));
+}
 
+const locationSearchMap = document.getElementById("map-editor-user-location");
+
+locationSearchMap.addEventListener("change", () => {
+  //console.log(locationSearchMap.value);
+  fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + locationSearchMap.value)
+    .then(result => result.json())
+    .then(parsedResult => {
+      //console.log(parsedResult[0]);
+
+      if(parsedResult.length > 0){
+        //data
+        if(parsedResult[0].address.city != undefined){
+          city = parsedResult[0].address.city;
+        }else {
+          if(parsedResult[0].address.town != undefined){
+            city = parsedResult[0].address.town;
+          }else {
+            city = parsedResult[0].address.county;
+          }
+
+        }
+
+        if(parsedResult[0].address.square != undefined){
+          address = parsedResult[0].address.square;
+        }else {
+          if(parsedResult[0].address.house_number != undefined){
+            address = parsedResult[0].address.road +" "+ parsedResult[0].address.house_number;
+          } else {
+            address = parsedResult[0].address.road;
+          }
+        }
+
+
+
+
+
+        latlong = [parsedResult[0].lat, parsedResult[0].lon];
+
+        //console.log(city);
+        //console.log(address);
+        //console.log(latlong);
+
+        locationSearchMap.dataset.city = city;
+        locationSearchMap.dataset.address = address;
+        locationSearchMap.dataset.latlong = latlong;
+
+      } else {
+        alert("kein Übereinstimmender Ort gefunden")
+      }
+
+    });
+});
+
+
+const markertype = document.querySelector(".editor-markertype");
+const typeEvent = document.querySelector("#markertype-event");
+const eventtypechooser = document.querySelector(".editor-eventtype");
+
+if(typeEvent.checked){
+  eventtypechooser.classList.add("editor-eventtype-show");
+};
+
+markertypeOptions = Array.from(markertype.children);
+console.log(markertypeOptions);
+
+markertypeOptions.forEach((type, i) => {
+  type.addEventListener("change", ()=>{
+    if(typeEvent.checked){
+      eventtypechooser.classList.add("editor-eventtype-show");
+    }else {
+        eventtypechooser.classList.remove("editor-eventtype-show");
+    }
+  })
+});
+
+
+typeEvent.onclick = ()=>{
+  //console.log(typeEvent.checked);
+  if(typeEvent.checked){
+    eventtypechooser.classList.add("editor-eventtype-show");
+  };
+}
 
 
 function articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation) {
@@ -527,7 +643,7 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
   //console.log(submittedshorttext);
   //console.log(submittedcontent);
   //console.log(submittedtags);
-  console.log(submittedlocation);
+  //console.log(submittedlocation);
 
   const article = {
     "postid": "",
@@ -544,6 +660,8 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
     "shorttext": "",
     "richtext": ""
   };
+
+
 
   article.title = submittedtitle;
 
@@ -590,14 +708,103 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
 
 }
 
+function mapSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation, submittedinfo){
+  const article = {
+    "mediatype": "map",
+    "mapnodeid": 1,
+    "posturl": "",
+    "markertype": "",
+    "title": "",
+    "date": "",
+    "time": "",
+    "city": "",
+    "place": "",
+    "address": "",
+    "latlong": [],
+    "topics": [],
+    "eventtype": "",
+    "image":""
+  };
+
+
+
+//Marker
+markerArray = Array.from(document.querySelector(".editor-markertype").children);
+
+markerArray.forEach((marker, i) => {
+  if(marker.checked){
+    article.markertype= marker.value;
+  }
+});
+
+if(article.markertype == "event"){
+  eventArray = Array.from(document.querySelector(".editor-eventtype").children);
+  eventArray.forEach((type, i) => {
+    if(type.checked){
+      article.eventtype = type.value;
+    }
+  });
+
+  dateArray = document.querySelector(".editor-date").value.split("-");
+  article.date = dateArray[2]+"."+dateArray[1]+"."+dateArray[0];
+  article.time = document.querySelector(".editor-time").value;
+}
+
+
+  submittedlocationquote = submittedlocation[2].split(",");
+  submittedlatlong = [];
+  //console.log(submittedlocationquote);
+  submittedlocationquote.forEach((item, i) => {
+    //console.log(item.replace(/""\"/g, ""));
+    submittedlatlong.push(parseFloat(item.replace(/""\"/g, "")));
+  });
+
+
+
+  article.title = submittedtitle;
+  //article.markertype = ;
+  article.city = submittedlocation[0];
+  //article.place = ;
+  article.address = submittedlocation[1];
+  article.latlong = submittedlatlong;
+  article.topics = submittedtopics;
+  article.image = submittedimage;
+  article.info = submittedinfo.replace(/\r?\n/g, '<br>');
+
+  article.shorttext = submittedshorttext;
+  article.content = submittedcontent;
+
+  //console.log(article);
+
+
+  articleString = JSON.stringify(article);
+
+  const formData = new FormData();
+
+  formData.append("article", articleString);
+  if (submittedimage === undefined) {} else {
+    formData.append("image", submittedimage, submittedimage.name);
+  }
+
+  const options = {
+    method: 'Post',
+    /*headers: {
+      'Content-Type': 'application/json'
+    },*/
+    body: formData
+  };
+
+  fetch("/api", options);
+}
+
 function VideoSubmit(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, editorVideo) {
-  console.log(submittedtitle);
-  console.log(submittedimage);
-  console.log(submittedtopics);
-  console.log(submittedshorttext);
+  //console.log(submittedtitle);
+  //console.log(submittedimage);
+  //console.log(submittedtopics);
+  //console.log(submittedshorttext);
   //console.log(submittedcontent);
-  console.log(submittedtags);
-  console.log(submittedlocation);
+  //console.log(submittedtags);
+  //console.log(submittedlocation);
 
 
 
@@ -631,8 +838,8 @@ function VideoSubmit(mediatype, submittedtitle, submittedimage, submittedtopics,
   //article.richtext = submittedcontent;
 
   //console.log(article);
-  console.log(article);
-  console.log(editorVideo);
+  //console.log(article);
+  //console.log(editorVideo);
   articleString = JSON.stringify(article);
   //console.log(articleString);
   const formData = new FormData();
@@ -718,7 +925,7 @@ function tutorialSubmit(submittedtitle, submittedimage, submittedtags, submitted
 
   article.mediatype = "tutorial";
 
-  console.log(submittedsteps);
+  //console.log(submittedsteps);
   article.steps = submittedsteps;
 
   //console.log(article);
@@ -746,7 +953,7 @@ function tutorialSubmit(submittedtitle, submittedimage, submittedtags, submitted
   articleString = JSON.stringify(article);
   formData.append("article", articleString);
 
-  console.log(article);
+  //console.log(article);
   //formData.append("stepImages", stepImages);
 
   //console.log(formData);

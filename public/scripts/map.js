@@ -16,6 +16,7 @@ L.mapbox.styleLayer("mapbox://styles/luuccaa/cl467yt3d000e14pkrn0vo6y2").addTo(m
 
 //Icons
 //Icons definieren
+
 var iconKueche = L.icon({
   iconUrl: '/assets/elements/mapicons/iconKueche.png',
   //shadowUrl: 'leaf-shadow.png',
@@ -168,12 +169,13 @@ function filterMap(mappoints, placesFilterArray) {
   });
 
   placesToDisplay.forEach((place, i) => {
-    ////////console.log(place.address);
+    //console.log(place.latlong);
     currentLocation = place.address + " " + place.city;
-    getLocation(currentLocation, place);
+    placeMarker(place);
   });
 }
 
+/*
 function getLocation(currentLocation, place) {
   fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + currentLocation)
     .then(result => result.json())
@@ -181,31 +183,45 @@ function getLocation(currentLocation, place) {
       placeMarker(parsedResult, place);
     });
 }
-
-function placeMarker(parsedResult, place) {
-  currentLatLong = [];
+*/
+function placeMarker(place) {
+  currentLatLong = place.latlong;
   ////////console.log(parsedResult[0]);
   ////////console.log(parsedResult[0].lat);
   ////////console.log(parsedResult[0].lon);
   ////////console.log(place.city);
 
   ////////console.log(parsedResult[0].address);
-  currentLatLong.push(parsedResult[0].lat);
-  currentLatLong.push(parsedResult[0].lon);
+//  currentLatLong.push(parsedResult[0].lat);
+  //currentLatLong.push(parsedResult[0].lon);
 
   ////////console.log(currentLatLong);
   //////console.log(place.markertype);
 
+  const randomizePlacement = Math.random()*0.0001;
+
+const plusminus= Math.random();
+if(plusminus > 0.5){
+  latlongrandom = [currentLatLong[0]+randomizePlacement,currentLatLong[1]-randomizePlacement];
+}else {
+  latlongrandom = [currentLatLong[0]-randomizePlacement,currentLatLong[1]+randomizePlacement];
+}
+
+
+
+console.log(currentLatLong);
+  console.log(latlongrandom);
+
   if (place.markertype == "gruppe") {
-    var marker = L.marker(currentLatLong, {
+    var marker = L.marker(latlongrandom, {
       icon: iconGruppe
     }).addTo(map);
   } else if (place.markertype == "ort") {
-    var marker = L.marker(currentLatLong, {
+    var marker = L.marker(latlongrandom, {
       icon: iconOrt
     }).addTo(map);
   } else {
-    marker = eventMarker(currentLatLong, place);
+    marker = eventMarker(latlongrandom, place);
   }
 
 
@@ -214,14 +230,19 @@ function placeMarker(parsedResult, place) {
   //Popups
   popup = [];
 
+/*
   popup.push(parsedResult[0].address.road);
   popup.push(parsedResult[0].address.house_number);
   popup.push(parsedResult[0].address.postcode);
+*/
+
+
+
 
   ////////console.log(parsedResult[0].address);
   // ////////console.log(parsedResult[0].address.town);
   ////////console.log(parsedResult[0].address.city);
-
+/*
   if (parsedResult[0].address.town !== undefined) {
     popup.push(parsedResult[0].address.town);
   } else {
@@ -232,16 +253,21 @@ function placeMarker(parsedResult, place) {
         popup.push(parsedResult[0].address.county);
       }
     }
+  }*/
+  //popup.push
+
+  if(place.address != "undefined"){
+    address = place.address + " "+place.city;
+  } else {
+    address = place.city;
   }
 
 
-  address = popup.join(" ");
-
   if (place.place.length !== 0) {
-    popuptext = "<a href='" + place.posturl + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
+    popuptext = "<a href='/map/0-mapbase.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
     marker.bindPopup(popuptext);
   } else {
-    popuptext = "<a href='" + place.posturl + "'>" + place.title + "</a><div>" + address + "</div>";
+    popuptext = "<a href='/map/0-mapbase.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + address + "</div>";
     marker.bindPopup(popuptext);
   }
 }
@@ -311,7 +337,12 @@ function locationRange() {
 
       try {
         if (parsedResult[0] == undefined) {
-          throw "Keine übereinstimmenden Orte gefunden";
+          if(firstLoad < 2){
+            firstLoad++;
+          }else {
+            throw "Keine übereinstimmenden Orte gefunden";
+          }
+
         } else {
           ////////console.log(parsedResult[0].lat);
           ////////console.log(parsedResult[0].lon);
@@ -356,6 +387,7 @@ function locationRange() {
 }
 //Process Data
 filterStart();
+firstLoad = 0;
 locationRange();
 locationRange();
 
@@ -376,7 +408,7 @@ function filterStart() {
 
   if (!filterActive) {
     ////console.log("inactive");
-    fetch('/Map/maplist.json')
+    fetch('/map/maplist.json')
       .then(response => response.json())
       .then(maplist => {
         mapnodes = maplist.mappoints;
@@ -542,7 +574,7 @@ function filterStart() {
 
 
 
-        fetch('/Map/maplist.json')
+        fetch('/map/maplist.json')
           .then(response => response.json())
           .then(maplist => {
             mapnodes = maplist.mappoints;
@@ -624,7 +656,7 @@ function filterStart() {
       mapeventtypeactivator = true;
     }
 
-    fetch('/Map/maplist.json')
+    fetch('/map/maplist.json')
       .then(response => response.json())
       .then(maplist => {
         mapnodes = maplist.mappoints;

@@ -200,7 +200,60 @@ function fileWriterPhoto() {
 
 }
 
-function fileWriterMap() {
+function fileWriterMap(request) {
+  var data = request.body.article;
+
+  data = JSON.parse(data);
+
+  const fileName = "./public/map/maplist.json";
+  const file = require(fileName);
+
+  console.log(file);
+
+  if(file.mappoints.length == 0) {
+    newentryID = 1;
+  } else {
+    var lastentry = file.mappoints[file.mappoints.length - 1];
+    lastentry = parseInt(lastentry.mapnodeid);
+
+    newentryID = lastentry + 1;
+  }
+
+
+  console.log(newentryID);
+
+  data.mapnodeid = newentryID;
+
+  console.log(request.files);
+  if (request.files[0] == undefined) {} else {
+    imagepath = request.files[0].destination.replace("public", "");
+    data.image = imagepath + request.files[0].filename;
+  }
+
+  titledash = titlecleaner(data);
+  posturl = "/Artikel/" + newentryID + "-" + titledash + ".html";
+  data.posturl = posturl;
+
+  console.log(data);
+
+
+  filecontentArray = JSON.stringify(file.mappoints);
+  filecontentArray = JSON.parse(filecontentArray);
+
+  filecontentArray.push(data);
+  filecontent = JSON.stringify(filecontentArray, null, 2);
+
+  console.log(filecontent);
+
+  if (data.topics.length == 0) {} else {
+    //mappageCreator(newentryID, titledash, data);
+
+    fs.writeFile("public/map/maplist.json", "{\"mappoints\":" + filecontent + "}", (err) => {
+      if (err) {
+        throw err;
+      }
+    });
+  }
 
 }
 
@@ -451,6 +504,96 @@ function videopageCreator(newentryID, titledash, data) {
   });
 }
 
+/*
+function   mappageCreator(newentryID, titledash, data) {
+  fs.readFile("public/map/0-mapbase.html", "utf-8", function(err, content) {
+    if (err) {
+      return console.log(err);
+    }
+
+    title = data.title;
+    date = data.date;
+    time = data.time;
+    city = data.city;
+    place = data.place;
+    address = data.address;
+    latlong = data.latlong;
+    topics= data.topics;
+    markertype = data.markertype;
+    eventtype = data.eventtype;
+    body = data.content;
+    shorttext = data.shorttext;
+    adinfo = data.info;
+
+    if(data.image != undefined){
+      imageMarkup = "<img src='" + data.image + "' alt=''>";
+    } else {
+      imageMarkup = "";
+    }
+
+    topicMarkup = "";
+
+    lasttopic = 1;
+    topics.forEach(topic => {
+      if (lasttopic === 1) {
+        topicLower = topic.toLowerCase();
+        topicClass = "tagtopic-" + topicLower;
+        //console.log(topicClass);
+      }
+      if (lasttopic === topics.length) {
+        topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span>")
+        //console.log(topicMarkup);
+
+      } else {
+        topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span> | ")
+        //console.log(topicMarkup);
+        lasttopic++;
+      }
+    });
+
+    const currentColor = currentColorFunc(topics);
+
+
+      content = content.replace(/\"\+image\+\"/g, imageMarkup);
+
+    content = content.replace(/\"\+city\+\"/g, city);
+    if(markertype == "event"){
+      content = content.replace(/\"\+eventtype\+\"/g, eventtype);
+    }else {
+      content = content.replace(/\"\+markertype\+\"/g, markertype);
+    }
+
+    content = content.replace(/\"\+title\+\"/g, title);
+
+    content = content.replace(/\"\+shorttext\+\"/g, shorttext);
+    content = content.replace(/\"\+content\+\"/g, body);
+
+    if(data.address == "undefined"){
+      content = content.replace(/\"\+address\+\"/g, data.city);
+    }else {
+      content = content.replace(/\"\+address\+\"/g, data.city + " "+ data.address);
+    }
+
+
+    content = content.replace(/\"\+additionalInfo\+\"/g, adinfo);
+
+    content = content.replace(/\"\+date\+\"/g, date);
+    content = content.replace(/\"\+time\+\"/g, time);
+
+
+    console.log(content);
+
+
+
+    fs.writeFile("public/"+posturl, content, function(err){
+        if(err) throw err;
+        console.log("saved " + newentryID + "-" + titleclean + ".html");
+    });
+
+
+  });
+}*/
+
 function getNewPostIDArticle() {
   const fileName = "./public/Artikel/articlelist.json";
   const file = require(fileName);
@@ -578,3 +721,18 @@ function clearTemp(){
   });
 */
 }
+
+
+
+
+//Check IP Address
+
+app.post("/ipcheck", function(req,res){
+console.log(req.ip);
+
+
+res.json({
+  ip: req.ip
+});
+
+});
