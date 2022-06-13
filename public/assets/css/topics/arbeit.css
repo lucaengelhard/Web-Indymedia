@@ -23,7 +23,7 @@
   color: var(--arbeit);
 }
 
-.tagtopic-arbeit>a>h4>span {
+.tagtopic-arbeit>a>.subtitle>span {
   color: var(--arbeit);
   text-decoration: none;
   border-bottom: 0px;
@@ -35,6 +35,19 @@
 
 .tagtopic-arbeit> div > .map-eventtype-line{
   background-color: var(--arbeit);
+}
+
+.tagtopic-arbeit > .landing-img {
+background-color: var(--arbeit);
+}
+
+.tagtopic-arbeit > .landing-text > .morebutton {
+    color: var(--arbeit);
+}
+
+
+.tagtopic-arbeit > .landing-text > .morebutton:visited {
+    color: var(--arbeit);
 }
 
 #arbeit-menu.currentTopic {

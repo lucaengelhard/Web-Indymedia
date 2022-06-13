@@ -23,7 +23,7 @@
   color: var(--sozial);
 }
 
-.tagtopic-sozial>a>h4>span {
+.tagtopic-sozial>a>.subtitle>span {
   color: var(--sozial);
   text-decoration: none;
   border-bottom: 0px;
@@ -35,6 +35,19 @@
 
 .tagtopic-sozial> div > .map-eventtype-line{
   background-color: var(--sozial);
+}
+
+.tagtopic-sozial > .landing-img {
+background-color: var(--sozial);
+}
+
+.tagtopic-sozial > .landing-text > .morebutton {
+    color: var(--sozial);
+}
+
+
+.tagtopic-sozial > .landing-text > .morebutton:visited {
+    color: var(--sozial);
 }
 
 #sozial-menu.currentTopic {

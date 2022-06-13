@@ -23,7 +23,7 @@
   color: var(--rassismus);
 }
 
-.tagtopic-rassismus>a>h4>span {
+.tagtopic-rassismus>a>.subtitle>span {
   color: var(--rassismus);
   text-decoration: none;
   border-bottom: 0px;
@@ -35,6 +35,19 @@
 
 .tagtopic-rassismus> div > .map-eventtype-line{
   background-color: var(--rassismus);
+}
+
+.tagtopic-rassismus > .landing-img {
+background-color: var(--rassismus);
+}
+
+.tagtopic-rassismus > .landing-text > .morebutton {
+    color: var(--rassismus);
+}
+
+
+.tagtopic-antifa > .landing-text > .morebutton:visited {
+    color: var(--rassismus);
 }
 
 #rassismus-menu.currentTopic {

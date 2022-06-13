@@ -129,11 +129,11 @@ input[type=range]:focus {
   gap: 0.5rem;
 }
 
-.filter-topic>h4 {
+.filter-topic>.subtitle {
   font-weight: 600;
 }
 
-.filter-tags>h4 {
+.filter-tags>.subtitle {
   font-weight: 600;
 }
 
@@ -271,7 +271,7 @@ input[type=range]:focus {
     display: block;
   }
 
-  .filter-topic>.filter-input-box>h4 {
+  .filter-topic>.filter-input-box>.subtitle {
     display: none;
   }
 
@@ -280,7 +280,7 @@ input[type=range]:focus {
     line-height: 3rem;
   }
 
-  .filter-tags>div>h4 {
+  .filter-tags>div>.subtitle {
     display: none;
   }
 

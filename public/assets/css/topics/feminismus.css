@@ -23,7 +23,7 @@
   color: var(--feminismus);
 }
 
-.tagtopic-feminismus>a>h4>span {
+.tagtopic-feminismus>a>.subtitle>span {
   color: var(--feminismus);
   text-decoration: none;
   border-bottom: 0px;
@@ -35,6 +35,19 @@
 
 .tagtopic-feminismus> div > .map-eventtype-line{
   background-color: var(--feminismus);
+}
+
+.tagtopic-feminismus > .landing-img {
+background-color: var(--feminismus);
+}
+
+.tagtopic-feminismus > .landing-text > .morebutton {
+    color: var(--feminismus);
+}
+
+
+.tagtopic-feminismus > .landing-text > .morebutton:visited {
+    color: var(--feminismus);
 }
 
 #feminismus-menu.currentTopic {
