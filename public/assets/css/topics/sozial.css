@@ -37,6 +37,19 @@
   background-color: var(--sozial);
 }
 
+.tagtopic-sozial > .landing-img {
+background-color: var(--sozial);
+}
+
+.tagtopic-sozial > .landing-text > .morebutton {
+    color: var(--sozial);
+}
+
+
+.tagtopic-sozial > .landing-text > .morebutton:visited {
+    color: var(--sozial);
+}
+
 #sozial-menu.currentTopic {
   color: var(--sozial);
 }

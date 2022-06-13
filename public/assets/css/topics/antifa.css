@@ -37,6 +37,19 @@
   background-color: var(--antifa);
 }
 
+.tagtopic-antifa > .landing-img {
+background-color: var(--antifa);
+}
+
+.tagtopic-antifa > .landing-text > .morebutton {
+    color: var(--antifa);
+}
+
+
+.tagtopic-antifa > .landing-text > .morebutton:visited {
+    color: var(--antifa);
+}
+
 #antifa-menu.currentTopic {
   color: var(--antifa);
 }

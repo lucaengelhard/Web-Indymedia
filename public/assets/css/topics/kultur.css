@@ -37,6 +37,19 @@
   background-color: var(--kultur);
 }
 
+.tagtopic-kultur > .landing-img {
+background-color: var(--kultur);
+}
+
+.tagtopic-kultur > .landing-text > .morebutton {
+    color: var(--kultur);
+}
+
+
+.tagtopic-kultur > .landing-text > .morebutton:visited {
+    color: var(--kultur);
+}
+
 #kultur-menu.currentTopic {
   color: var(--kultur);
 }

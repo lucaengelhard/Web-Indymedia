@@ -37,6 +37,19 @@
   background-color: var(--militarismus);
 }
 
+.tagtopic-militarismus > .landing-img {
+background-color: var(--militarismus);
+}
+
+.tagtopic-militarismus > .landing-text > .morebutton {
+    color: var(--militarismus);
+}
+
+
+.tagtopic-militarismus > .landing-text > .morebutton:visited {
+    color: var(--militarismus);
+}
+
 #militarismus-menu.currentTopic {
   color: var(--militarismus);
 }

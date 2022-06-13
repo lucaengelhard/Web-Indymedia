@@ -37,6 +37,19 @@
   background-color: var(--feminismus);
 }
 
+.tagtopic-feminismus > .landing-img {
+background-color: var(--feminismus);
+}
+
+.tagtopic-feminismus > .landing-text > .morebutton {
+    color: var(--feminismus);
+}
+
+
+.tagtopic-feminismus > .landing-text > .morebutton:visited {
+    color: var(--feminismus);
+}
+
 #feminismus-menu.currentTopic {
   color: var(--feminismus);
 }

@@ -37,6 +37,19 @@
   background-color: var(--rassismus);
 }
 
+.tagtopic-rassismus > .landing-img {
+background-color: var(--rassismus);
+}
+
+.tagtopic-rassismus > .landing-text > .morebutton {
+    color: var(--rassismus);
+}
+
+
+.tagtopic-antifa > .landing-text > .morebutton:visited {
+    color: var(--rassismus);
+}
+
 #rassismus-menu.currentTopic {
   color: var(--rassismus);
 }

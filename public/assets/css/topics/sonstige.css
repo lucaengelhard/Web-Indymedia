@@ -37,6 +37,19 @@
   background-color: var(--sonstige);
 }
 
+.tagtopic-sonstige > .landing-img {
+background-color: var(--sonstige);
+}
+
+.tagtopic-sonstige > .landing-text > .morebutton {
+    color: var(--sonstige);
+}
+
+
+.tagtopic-sonstige > .landing-text > .morebutton:visited {
+    color: var(--sonstige);
+}
+
 #sonstige-menu.currentTopic {
   color: var(--sonstige);
 }

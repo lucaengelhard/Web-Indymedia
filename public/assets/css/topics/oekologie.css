@@ -37,6 +37,19 @@
   background-color: var(--oekologie);
 }
 
+.tagtopic-oekologie > .landing-img {
+background-color: var(--oekologie);
+}
+
+.tagtopic-oekologie > .landing-text > .morebutton {
+    color: var(--oekologie);
+}
+
+
+.tagtopic-oekologie > .landing-text > .morebutton:visited {
+    color: var(--oekologie);
+}
+
 #oekologie-menu.currentTopic {
   color: var(--oekologie);
 }

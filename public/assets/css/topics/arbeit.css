@@ -37,6 +37,19 @@
   background-color: var(--arbeit);
 }
 
+.tagtopic-arbeit > .landing-img {
+background-color: var(--arbeit);
+}
+
+.tagtopic-arbeit > .landing-text > .morebutton {
+    color: var(--arbeit);
+}
+
+
+.tagtopic-arbeit > .landing-text > .morebutton:visited {
+    color: var(--arbeit);
+}
+
 #arbeit-menu.currentTopic {
   color: var(--arbeit);
 }

@@ -38,6 +38,33 @@ fetch("/artikel/articlelist.json")
 
   //console.log(sectionList);
 
+  const landing = document.querySelector(".landing");
+  landingCounter = 0;
+  articles.slice().reverse().forEach((article, i) => {
+    console.log(article);
+    if(landingCounter <= 2 && article.featured){
+
+      if(article.image != ""){
+        landing.insertAdjacentHTML("beforeend", "<article class='landing-tab tagtopic-"+article.topics[0]+"' onclick='landingSwap(this)'>        <div class='landing-img'><img src='"+article.image+"' alt=''></div>        <div class='landing-text'>          <h4>            <span class='post-author'>"+article.author+"</span> |            <span class='post-date'>"+article.date+"</span> |            <span class='post-location'>"+article.location+"</span>          </h4>          <h1>"+article.title+"</h1>          <p>"+article.shorttext+"          </p>          <a class='morebutton' href='"+article.posturl+"'>            <p>mehr >></p>          </a>        </div>      </article>");
+      } else {
+        landing.insertAdjacentHTML("beforeend", "<article class='landing-tab tagtopic-"+article.topics[0]+"' onclick='landingSwap(this)'>          <div class='landing-img'><div class='landing-quotebox'><img src='/assets/elements/quotewhite.svg'><span class='landingquote'>"+article.quote+"</span></div></div>          <div class='landing-text'>            <h4>              <span class='post-author'>"+article.author+"</span> |              <span class='post-date'>"+article.date+"</span> |              <span class='post-location'>"+article.location+"</span>            </h4>            <h1>"+article.title+"</h1>            <p>"+article.shorttext+"            </p>            <a class='morebutton' href='"+article.posturl+"'>              <p>mehr >></p>            </a>          </div>        </article>");
+      }
+
+
+
+      landingCounter++
+    }
+
+  });
+
+  landinglist = Array.from(landing.children);
+
+  console.log(landinglist);
+
+  landinglist[0].classList.add("landing-current");
+
+
+
   sectionList.forEach((section, i) => {
     const articleImage = section.querySelector(".article-image");
     const columnLeft = section.querySelector(".column-left");
@@ -221,7 +248,8 @@ fetch("/artikel/articlelist.json")
     });
 
     //console.log(section);
-    articleText.insertAdjacentHTML("beforeend", "<div class='post-reminder "+topicClass+"'><h1>Hier könnte dein Beitrag stehen</h1><button class='reminder-button' type'button' onclick='alert('alerta')'>Beitrag schreiben</button></div></div><div class='more-topic '"+topicClass+"><a href='/artikel.html?search=&placesearch=&locationrange=0&filter-topiccheck-"+section.id+"=on&tagsearch=&confirm=Auswahl+bestätigen' class='morebutton'><p>weiterlesen >></p></a></div>")
+    /*
+    articleText.insertAdjacentHTML("beforeend", "<div class='post-reminder "+topicClass+"'><h1>Hier könnte dein Beitrag stehen</h1><button class='reminder-button' type'button' onclick='alert('alerta')'>Beitrag schreiben</button></div></div><div class='more-topic '"+topicClass+"><a href='/artikel.html?search=&placesearch=&locationrange=0&filter-topiccheck-"+section.id+"=on&tagsearch=&confirm=Auswahl+bestätigen' class='morebutton'><p>weiterlesen >></p></a></div>")*/
 
 /*
     <div class="post-reminder tagtopic-arbeit">
@@ -234,8 +262,6 @@ fetch("/artikel/articlelist.json")
     </a></div>*/
 
   });
-
-
 
   /*
   articles.forEach((article, i) => {

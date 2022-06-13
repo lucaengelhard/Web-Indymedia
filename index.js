@@ -873,3 +873,46 @@ res.json({
 });
 
 });
+
+//featuredswitch
+app.post("/featuredswitch", function(req,res){
+console.log(req.body);
+
+data= req.body;
+
+const fileName = "./public/Artikel/articlelist.json";
+const file = require(fileName);
+
+currentList = file.articles;
+
+console.log(currentList);
+
+currentList.forEach((article, i) => {
+  if(article.postid == parseInt(data.postid)){
+    article.featured = data.featuredswitch;
+    if(data.quote !=""){
+      article.quote = data.quote;
+    }
+  }
+});
+
+console.log(currentList);
+
+listsubmit = "{\"articles\":" + JSON.stringify(currentList) + "}";
+
+
+
+console.log(listsubmit);
+
+
+fs.writeFile(fileName, listsubmit, function(err) {
+  if (err) throw err;
+  console.log("switched featured of article to "+data.featuredswitch);
+});
+
+
+res.json({
+  stauts: "sucess"
+});
+
+});
