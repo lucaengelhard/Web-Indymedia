@@ -40,7 +40,7 @@ app.post("/api", upload.any("image"), (request, response, cb) => {
   //console.log(JSON.parse(request.body.article).steps.length);
   //console.log(request.files.length);
 
-  console.log(request.files);
+  //console.log(request.files);
 
   //console.log(JSON.parse(request.body.article));
 
@@ -196,7 +196,62 @@ function fileWriterVideo(request) {
 
 }
 
-function fileWriterPhoto() {
+function fileWriterPhoto(request) {
+  console.log(request.body.article);
+  //console.log(request.files);
+
+  data = request.body.article;
+
+  gallery = request.files;
+
+  data = JSON.parse(data);
+
+  galleryArray = [];
+
+  gallery.forEach((image, i) => {
+    //console.log(image);
+    imagelink = image.destination.replace("public", "");
+    galleryArray.push(imagelink+image.filename);
+  });
+
+
+  console.log(galleryArray);
+  data.gallerypath = galleryArray;
+
+
+
+  const fileName = "./public/Artikel/articlelist.json";
+  const file = require(fileName);
+
+  newentryID = getNewPostIDArticle();
+  data.postid = newentryID;
+
+  console.log(data);
+
+  titledash = titlecleaner(data);
+  posturl = "/Artikel/" + newentryID + "-" + titledash + ".html";
+  data.posturl = posturl;
+
+
+  filecontentArray = JSON.stringify(file.articles);
+  filecontentArray = JSON.parse(filecontentArray);
+
+  filecontentArray.push(data);
+  filecontent = JSON.stringify(filecontentArray, null, 2);
+
+  //Create Page
+  if (data.topics.length == 0) {} else {
+    photopageCreator(newentryID, titledash, data);
+
+
+
+
+  fs.writeFile("public/Artikel/articlelist.json", "{\"articles\":" + filecontent + "}", (err) => {
+      if (err) {
+        throw err;
+      }
+    });
+  }
 
 }
 
@@ -296,7 +351,8 @@ function fileWriterTutorial(request) {
 
   data = uploadedTutorial;
 
-  const fileName = "/public/tutorials/tutoriallist.json"
+  const fileName = "./public/tutorials/tutoriallist.json";
+  //console.log(fileName);
   const file = require(fileName);
 
   if(file.tutorials.length == 0) {
@@ -504,9 +560,90 @@ function videopageCreator(newentryID, titledash, data) {
   });
 }
 
+function photopageCreator(newentryID, titledash, data) {
+  fs.readFile("public/artikel/0-photobase.html", "utf-8", function(err, content) {
+    if (err) {
+      return console.log(err);
+    }
+
+
+
+    title = data.title;
+    author = data.author;
+    date = data.date;
+    location = data.location;
+    topics = data.topics;
+    tags = data.tags;
+    gallery = data.gallerypath;
+    shorttext = data.shorttext;
+
+
+    console.log(data);
+
+    galleryMarkup = "";
+
+    gallery.forEach((image, i) => {
+      imagepath = "<img src='"+image+"'>";
+      galleryMarkup += imagepath;
+    });
+
+console.log(galleryMarkup);
+
+//Topiclist
+topicMarkup = "";
+
+lasttopic = 1;
+topics.forEach(topic => {
+  if (lasttopic === 1) {
+    topicLower = topic.toLowerCase();
+    topicClass = "tagtopic-" + topicLower;
+    //console.log(topicClass);
+  }
+  if (lasttopic === topics.length) {
+    topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span>")
+    //console.log(topicMarkup);
+
+  } else {
+    topicMarkup = topicMarkup.concat("<span>" + topic.toLowerCase() + "<span> | ")
+    //console.log(topicMarkup);
+    lasttopic++;
+  }
+});
+
+
+const currentColor = currentColorFunc(topics);
+
+//Replace content
+content = content.replace(/\"\+currentColor\+\"/g, currentColor);
+content = content.replace(/\"\+image\+\"/g, galleryMarkup);
+content = content.replace(/\"\+title\+\"/g, title);
+content = content.replace(/\"\+author\+\"/g, author);
+content = content.replace(/\"\+date\+\"/g, date);
+content = content.replace(/\"\+articlelocation\+\"/g, location);
+content = content.replace(/\"\+topicMarkup\+\"/g, topicMarkup);
+content = content.replace(/\"\+shorttext\+\"/g, shorttext);
+content = content.replace(/\"\+content\+\"/g, "");
+
+console.log(content);
+console.log(data);
+
+
+    /*
+    <img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt=""><img src="/assets/images/uploads/574662106220325-FFF-1.jpg" alt="">*/
+
+
+    fs.writeFile("public/" + posturl, content, function(err) {
+      if (err) throw err;
+      console.log("saved " + newentryID + "-" + titleclean + ".html");
+    });
+
+
+  });
+}
+
 /*
 function   mappageCreator(newentryID, titledash, data) {
-  fs.readFile("public/map/0-mapbase.html", "utf-8", function(err, content) {
+  fs.readFile("public/map/map.html", "utf-8", function(err, content) {
     if (err) {
       return console.log(err);
     }

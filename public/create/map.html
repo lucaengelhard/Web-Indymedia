@@ -83,7 +83,7 @@
     <form class="editor-title-wrapper" id="editor-form" data-mediatype="map">
       <div class="editor-titleimage">
         <label for="editor-titleimage-input">Titelbild</label>
-        <input type="file" name="editor-titleimage-input" id="editor-titleimage-input" value="">
+        <input type="file" name="editor-titleimage-input" id="editor-titleimage-input" value="" accept="image/*">
       </div>
       <div class="editor-title">
         <input type="text" name="editor-title-input" id="editor-title-input" placeholder="Titel" maxlength="100">
@@ -233,6 +233,12 @@
         <button type="button" class="btn" data-element="insertImage">
           <i class="fa fa-image"></i>
         </button>
+        <div class="text-editor-imageselect-wrapper imageselect-hide">
+          <div class="text-editor-imageselect ">
+            <input type="file" name="imageselect-upload" class="imageselect-upload" value="" hidden accept="image/*">
+            <button type="button" name="imageselect-add" class="imageselect-add">+</button>
+          </div>
+        </div>
       </div>
 
     </div>

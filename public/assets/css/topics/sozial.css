@@ -33,6 +33,10 @@
   background-color: var(--sozial);
 }
 
+.tagtopic-sozial> div > .map-eventtype-line{
+  background-color: var(--sozial);
+}
+
 #sozial-menu.currentTopic {
   color: var(--sozial);
 }

@@ -33,6 +33,10 @@
   background-color: var(--antifa);
 }
 
+.tagtopic-antifa> div > .map-eventtype-line{
+  background-color: var(--antifa);
+}
+
 #antifa-menu.currentTopic {
   color: var(--antifa);
 }

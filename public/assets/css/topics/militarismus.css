@@ -33,6 +33,10 @@
   background-color: var(--militarismus);
 }
 
+.tagtopic-militarismus> div > .map-eventtype-line{
+  background-color: var(--militarismus);
+}
+
 #militarismus-menu.currentTopic {
   color: var(--militarismus);
 }

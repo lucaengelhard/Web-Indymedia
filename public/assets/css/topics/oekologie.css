@@ -33,6 +33,10 @@
   background-color: var(--oekologie);
 }
 
+.tagtopic-oekologie> div > .map-eventtype-line{
+  background-color: var(--oekologie);
+}
+
 #oekologie-menu.currentTopic {
   color: var(--oekologie);
 }

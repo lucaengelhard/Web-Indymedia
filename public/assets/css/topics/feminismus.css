@@ -33,6 +33,10 @@
   background-color: var(--feminismus);
 }
 
+.tagtopic-feminismus> div > .map-eventtype-line{
+  background-color: var(--feminismus);
+}
+
 #feminismus-menu.currentTopic {
   color: var(--feminismus);
 }

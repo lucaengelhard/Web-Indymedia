@@ -135,7 +135,7 @@ document.getElementById("editor-submit-button").onclick = function() {
   //Check mediatype
   mediatype = document.getElementById("editor-form").dataset.mediatype;
 
-
+console.log(mediatype);
 
 
   if (mediatype == "article") {
@@ -149,6 +149,7 @@ document.getElementById("editor-submit-button").onclick = function() {
 
       var submitteddate = postDate();
       var submittedlocation = postLocation();
+
       postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
     } catch (e) {
       alert(e);
@@ -168,7 +169,7 @@ document.getElementById("editor-submit-button").onclick = function() {
 
       //console.log(submittedlocation);
 
-      postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
+      postVideo(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
 
 
     } catch (e) {
@@ -184,11 +185,19 @@ document.getElementById("editor-submit-button").onclick = function() {
       var submittedtopics = postTopics();
       var submittedtags = postTags();
       var submittedshorttext = postShorttext();
-      var submittedcontent = postBody();
+
       var submitteddate = postDate();
       var submittedlocation = postLocation();
 
-      postBody(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, submittedinfo);
+      console.log(submittedtitle);
+      console.log(submittedgallery);
+      console.log(submittedtopics);
+      console.log(submittedtags);
+      console.log(submittedshorttext);
+      console.log(submittedlocation);
+
+      postPhoto(mediatype, submittedtitle, submittedgallery, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation);
+
     } catch (e) {
       alert(e);
     }
@@ -325,6 +334,72 @@ function postImage() {
   editorImage = document.getElementById("editor-titleimage-input");
   editorImage = editorImage.files;
   return editorImage[0];
+}
+
+function postPhoto(mediatype, submittedtitle, submittedgallery, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation){
+
+  const article = {
+    "postid": "",
+    "posturl": "",
+    "featured": false,
+    "mediatype": "photo",
+    "title": "",
+    "author": "anonym",
+    "date": "",
+    "location": [],
+    "topics": [],
+    "tags": [],
+    "gallery": "",
+    "shorttext": "",
+    "gallerypath": []
+  };
+
+  article.title = submittedtitle;
+
+  article.date = submitteddate;
+  article.location = submittedlocation;
+
+  article.topics = submittedtopics;
+
+  article.tags = submittedtags;
+
+  article.shorttext = submittedshorttext;
+
+  article.gallery = submittedgallery;
+
+  articleString = JSON.stringify(article);
+
+  const formData = new FormData();
+
+  console.log(articleString);
+
+
+  formData.append("article", articleString);
+
+  Array.from(submittedgallery).forEach((image, i) => {
+    console.log(image);
+    formData.append("image", image, image.name);
+  });
+
+  const options = {
+    method: 'Post',
+    /*headers: {
+      'Content-Type': 'application/json'
+    },*/
+    body: formData
+  };
+
+
+  fetch("/api", options)
+  .then(response => response.json())
+  .then(response => {
+    if(response.status == "success"){
+      window.location.replace("/artikel.html")
+    }else {
+      alert("irgendetwas ist beim Upload schiefgegangen, versuche es noch einmal! :)")
+    }
+  });
+
 }
 
 function postVideo(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation) {
@@ -548,74 +623,83 @@ const searchCities = async searchText => {
 
 }
 
-if(document.getElementById("editor-form").dataset.mediatype != "map"){
+
+if(document.getElementById("editor-form").dataset.mediatype != "map" && document.getElementById("editor-form").dataset.mediatype != "tutorial"){
+  console.log("!");
   locationSearch.addEventListener("input", () => searchCities(locationSearch.value));
 }
 
 const locationSearchMap = document.getElementById("map-editor-user-location");
 
-locationSearchMap.addEventListener("change", () => {
-  //console.log(locationSearchMap.value);
-  fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + locationSearchMap.value)
-    .then(result => result.json())
-    .then(parsedResult => {
-      //console.log(parsedResult[0]);
+if(document.getElementById("editor-form").dataset.mediatype == "map"){
+  locationSearchMap.addEventListener("change", () => {
+    //console.log(locationSearchMap.value);
+    fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + locationSearchMap.value)
+      .then(result => result.json())
+      .then(parsedResult => {
+        //console.log(parsedResult[0]);
 
-      if(parsedResult.length > 0){
-        //data
-        if(parsedResult[0].address.city != undefined){
-          city = parsedResult[0].address.city;
-        }else {
-          if(parsedResult[0].address.town != undefined){
-            city = parsedResult[0].address.town;
+        if(parsedResult.length > 0){
+          //data
+          if(parsedResult[0].address.city != undefined){
+            city = parsedResult[0].address.city;
           }else {
-            city = parsedResult[0].address.county;
+            if(parsedResult[0].address.town != undefined){
+              city = parsedResult[0].address.town;
+            }else {
+              city = parsedResult[0].address.county;
+            }
+
           }
 
-        }
-
-        if(parsedResult[0].address.square != undefined){
-          address = parsedResult[0].address.square;
-        }else {
-          if(parsedResult[0].address.house_number != undefined){
-            address = parsedResult[0].address.road +" "+ parsedResult[0].address.house_number;
-          } else {
-            address = parsedResult[0].address.road;
+          if(parsedResult[0].address.square != undefined){
+            address = parsedResult[0].address.square;
+          }else {
+            if(parsedResult[0].address.house_number != undefined){
+              address = parsedResult[0].address.road +" "+ parsedResult[0].address.house_number;
+            } else {
+              address = parsedResult[0].address.road;
+            }
           }
+
+
+
+
+
+          latlong = [parsedResult[0].lat, parsedResult[0].lon];
+
+          //console.log(city);
+          //console.log(address);
+          //console.log(latlong);
+
+          locationSearchMap.dataset.city = city;
+          locationSearchMap.dataset.address = address;
+          locationSearchMap.dataset.latlong = latlong;
+
+        } else {
+          alert("kein Übereinstimmender Ort gefunden")
         }
 
+      });
+  });
+}
 
-
-
-
-        latlong = [parsedResult[0].lat, parsedResult[0].lon];
-
-        //console.log(city);
-        //console.log(address);
-        //console.log(latlong);
-
-        locationSearchMap.dataset.city = city;
-        locationSearchMap.dataset.address = address;
-        locationSearchMap.dataset.latlong = latlong;
-
-      } else {
-        alert("kein Übereinstimmender Ort gefunden")
-      }
-
-    });
-});
 
 
 const markertype = document.querySelector(".editor-markertype");
 const typeEvent = document.querySelector("#markertype-event");
 const eventtypechooser = document.querySelector(".editor-eventtype");
 
-if(typeEvent.checked){
-  eventtypechooser.classList.add("editor-eventtype-show");
-};
+if(document.getElementById("editor-form").dataset.mediatype == "map"){
+  if(typeEvent.checked){
+    eventtypechooser.classList.add("editor-eventtype-show");
+  };
+}
 
+
+if(document.getElementById("editor-form").dataset.mediatype == "map"){
 markertypeOptions = Array.from(markertype.children);
-console.log(markertypeOptions);
+//console.log(markertypeOptions);
 
 markertypeOptions.forEach((type, i) => {
   type.addEventListener("change", ()=>{
@@ -635,7 +719,7 @@ typeEvent.onclick = ()=>{
   };
 }
 
-
+}
 function articleSubmit(submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submittedcontent, submitteddate, submittedlocation) {
   //console.log(submittedtitle);
   //console.log(submittedimage);
@@ -695,7 +779,15 @@ function articleSubmit(submittedtitle, submittedimage, submittedtopics, submitte
     body: formData
   };
 
-  fetch("/api", options);
+  fetch("/api", options)
+  .then(response => response.json())
+  .then(response => {
+    if(response.status == "success"){
+      window.location.replace("/artikel.html")
+    }else {
+      alert("irgendetwas ist beim Upload schiefgegangen, versuche es noch einmal! :)")
+    }
+  });
 
   /*
     function getFile() {
@@ -794,7 +886,15 @@ if(article.markertype == "event"){
     body: formData
   };
 
-  fetch("/api", options);
+  fetch("/api", options)
+  .then(response => response.json())
+  .then(response => {
+    if(response.status == "success"){
+      window.location.replace("/karte.html")
+    }else {
+      alert("irgendetwas ist beim Upload schiefgegangen, versuche es noch einmal! :)")
+    }
+  });
 }
 
 function VideoSubmit(mediatype, submittedtitle, submittedimage, submittedtopics, submittedtags, submittedshorttext, submitteddate, submittedlocation, editorVideo) {
@@ -856,7 +956,15 @@ function VideoSubmit(mediatype, submittedtitle, submittedimage, submittedtopics,
     body: formData
   };
 
-  fetch("/api", options);
+  fetch("/api", options)
+  .then(response => response.json())
+  .then(response => {
+    if(response.status == "success"){
+      window.location.replace("/artikel.html")
+    }else {
+      alert("irgendetwas ist beim Upload schiefgegangen, versuche es noch einmal! :)")
+    }
+  });
 
   /*
     function getFile() {
@@ -966,5 +1074,13 @@ function tutorialSubmit(submittedtitle, submittedimage, submittedtags, submitted
     body: formData
   };
 
-  fetch("/api", options);
+  fetch("/api", options)
+  .then(response => response.json())
+  .then(response => {
+    if(response.status == "success"){
+      window.location.replace("/tutorials.html")
+    }else {
+      alert("irgendetwas ist beim Upload schiefgegangen, versuche es noch einmal! :)")
+    }
+  });
 }
