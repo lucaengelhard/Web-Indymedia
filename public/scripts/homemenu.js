@@ -87,7 +87,7 @@ const topicObserver = new IntersectionObserver(function (observedTopics, topicOb
         //console.log(observedTopic.target);
         currentTopic = observedTopic.target.id;
 
-        console.log(currentTopic);
+        //console.log(currentTopic);
 
         //console.log(currentTopic);
 
@@ -185,6 +185,8 @@ const topicObserver = new IntersectionObserver(function (observedTopics, topicOb
     });
 }, topicObserverOptions);
 
+
+
 topicListArray.forEach(topic => {
     console.log(topic);
     topicObserver.observe(topic);
@@ -205,7 +207,7 @@ document.body.onscroll = function () {
     if (window.scrollY <= 200) {
 
       topiclistStart.forEach((topic, i) => {
-        topiclist[a].classList.remove("currentTopic");
+        topic.classList.remove("currentTopic");
         document.getElementById("nav").classList = " ";
       });
 

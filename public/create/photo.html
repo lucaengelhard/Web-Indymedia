@@ -72,8 +72,8 @@
   <main class="editor-main">
     <form class="editor-title-wrapper" id="editor-form" data-mediatype="photo">
       <div class="editor-titleimage">
-        <label for="editor-titleimage-input">Titelbild</label>
-        <input type="file" name="editor-titleimage-input" id="editor-titleimage-input" value="">
+        <label for="editor-titleimage-input">Fotos hochladen</label>
+        <input type="file" name="editor-titleimage-input" id="editor-titleimage-input" value="" multiple accept="image/*">
       </div>
       <div class="editor-title">
         <input type="text" name="editor-title-input" id="editor-title-input" placeholder="Titel" maxlength="100">
@@ -136,7 +136,7 @@
 
     <textarea name="editor-shorttext-input" class="editor-shorttext-input" id="editor-shorttext-input" placeholder="Zusammenfassung" maxlength="250">
 </textarea>
-
+<!--
     <div class="text-editor-header">
       <div class="text-editor-utility"><button type="button" class="btn" data-element="bold">
           <i class="fa fa-bold"></i>
@@ -192,8 +192,9 @@
       </div>
 
     </div>
+
     <div class="editor-content" id="editor-richtext" contenteditable="true">
-    </div>
+    </div>-->
 
     <button type="button" id="editor-submit-button" class="btn editor-submit">
       Post Erstellen

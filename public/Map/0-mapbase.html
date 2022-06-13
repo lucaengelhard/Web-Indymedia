@@ -11,6 +11,16 @@
   <title>"+title+"</title>
 </head>
 
+<style media="screen">
+  .article-text-wrapper {
+    margin-top: 0;
+  }
+
+  .location-info-datetime{
+    margin-top: 0.5rem;
+  }
+</style>
+
 <body>
   <header id="header" data-postid="">
     <nav id="nav" class="nav nav-map">
@@ -77,32 +87,38 @@
       }
     </style>
     <section class="article-headerimage">"+image+"</section>
-    <div class="content-sizer"><section class="article-text-box">
-      <div class="article-text-wrapper">
-        <h4>
-          <span class='post-location'>"+city+"</span>
-          <span class='map-markertype'>| "+eventtype+"</span>
-        </h4>
-        <h1>"+title+"</h1>
-        <p class="post-shorttext">"+shorttext+"</p>
-        <p class="post-body">"+content+"</p>
-      </div>
-
-      <div class="location-info">
-        <div class="location-info-box"><div class="location-info-address">
-          <div class="address">Adresse</div>
-          "+address+"
+    <div class="content-sizer">
+      <section class="article-text-box">
+        <div class="article-text-wrapper">
+          <h4>
+            <span class='post-location'>"+city+"</span>
+            <span class='map-markertype'>| "+eventtype+"</span>
+          </h4>
+          <h1 class="map-title">"+title+"</h1>
+          <p class="post-shorttext"></p>
+          <p class="post-body"></p>
         </div>
-        <div class="location-info-additional">
-          "+additionalInfo+"
-        </div></div>
 
-      </div>
-    </section>
-    <section class="mappage-upcoming">
-      <div class="maplist" id="maplist">
-      </div>
-    </section></div>
+        <div class="location-info">
+          <div class="location-info-box">
+            <div class="location-info-address">
+
+            </div>
+            <div class="location-info-datetime">
+
+            </div>
+            <div class="location-info-additional">
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="mappage-upcoming">
+        <div class="maplist" id="maplist">
+        </div>
+      </section>
+    </div>
 
 
   </main>

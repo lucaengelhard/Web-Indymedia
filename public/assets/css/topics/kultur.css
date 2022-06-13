@@ -33,6 +33,10 @@
   background-color: var(--kultur);
 }
 
+.tagtopic-kultur> div > .map-eventtype-line{
+  background-color: var(--kultur);
+}
+
 #kultur-menu.currentTopic {
   color: var(--kultur);
 }

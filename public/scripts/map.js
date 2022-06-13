@@ -16,6 +16,7 @@ L.mapbox.styleLayer("mapbox://styles/luuccaa/cl467yt3d000e14pkrn0vo6y2").addTo(m
 
 //Icons
 //Icons definieren
+
 var iconKueche = L.icon({
   iconUrl: '/assets/elements/mapicons/iconKueche.png',
   //shadowUrl: 'leaf-shadow.png',
@@ -110,6 +111,7 @@ function filterExecute(placesFilterArray) {
   fetch("/map/maplist.json")
     .then(result => result.json())
     .then(parsedResult => {
+
       //console.log(placesFilterArray);
       mappoints = parsedResult.mappoints;
       filterMap(mappoints, placesFilterArray);
@@ -127,9 +129,19 @@ function filterEventList(mappoints, placesFilterArray) {
     maplist = document.getElementById("maplist");
 
     mappoints.forEach((item, i) => {
-      shouldprint = item.mapnodeid == idToPrint
+      shouldprint = item.mapnodeid == idToPrint;
 
-      if (item.markertype == "event") {
+      //Calculate Date
+
+
+
+
+datecheck = isintheFuture(item);
+
+     //console.log(datecheck);
+
+      if (item.markertype == "event" && datecheck) {
+
         if (item.place != "") {
           place = item.place;
         } else {
@@ -156,6 +168,22 @@ function filterEventList(mappoints, placesFilterArray) {
 
 }
 
+function isintheFuture(item){
+  const today = new Date();
+  datesplit = item.date.split(".");
+
+  date = datesplit[2]+"-"+datesplit[1]+"-"+datesplit[0];
+
+  date = new Date(date);
+
+  //console.log(date);
+
+  //console.log(date > today);
+
+
+ return  date > today;
+}
+
 function filterMap(mappoints, placesFilterArray) {
   placesToDisplay = [];
 
@@ -168,12 +196,24 @@ function filterMap(mappoints, placesFilterArray) {
   });
 
   placesToDisplay.forEach((place, i) => {
-    ////////console.log(place.address);
+    //console.log(place);
+    //console.log(place.latlong);
     currentLocation = place.address + " " + place.city;
-    getLocation(currentLocation, place);
+
+    if(place.markertype == "event"){
+      eventdatecheck = isintheFuture(place);
+      if(eventdatecheck){
+        placeMarker(place);
+      }
+    }else {
+      placeMarker(place);
+    }
+
+
   });
 }
 
+/*
 function getLocation(currentLocation, place) {
   fetch("https://nominatim.openstreetmap.org/search?format=json&polygon=1&addressdetails=1&q=" + currentLocation)
     .then(result => result.json())
@@ -181,31 +221,45 @@ function getLocation(currentLocation, place) {
       placeMarker(parsedResult, place);
     });
 }
-
-function placeMarker(parsedResult, place) {
-  currentLatLong = [];
+*/
+function placeMarker(place) {
+  currentLatLong = place.latlong;
   ////////console.log(parsedResult[0]);
   ////////console.log(parsedResult[0].lat);
   ////////console.log(parsedResult[0].lon);
   ////////console.log(place.city);
 
   ////////console.log(parsedResult[0].address);
-  currentLatLong.push(parsedResult[0].lat);
-  currentLatLong.push(parsedResult[0].lon);
+  //  currentLatLong.push(parsedResult[0].lat);
+  //currentLatLong.push(parsedResult[0].lon);
 
   ////////console.log(currentLatLong);
   //////console.log(place.markertype);
 
+  const randomizePlacement = Math.random() * 0.0001;
+
+  const plusminus = Math.random();
+  if (plusminus > 0.5) {
+    latlongrandom = [currentLatLong[0] + randomizePlacement, currentLatLong[1] - randomizePlacement];
+  } else {
+    latlongrandom = [currentLatLong[0] - randomizePlacement, currentLatLong[1] + randomizePlacement];
+  }
+
+
+
+  //console.log(currentLatLong);
+ //console.log(latlongrandom);
+
   if (place.markertype == "gruppe") {
-    var marker = L.marker(currentLatLong, {
+    var marker = L.marker(latlongrandom, {
       icon: iconGruppe
     }).addTo(map);
   } else if (place.markertype == "ort") {
-    var marker = L.marker(currentLatLong, {
+    var marker = L.marker(latlongrandom, {
       icon: iconOrt
     }).addTo(map);
   } else {
-    marker = eventMarker(currentLatLong, place);
+    marker = eventMarker(latlongrandom, place);
   }
 
 
@@ -214,34 +268,44 @@ function placeMarker(parsedResult, place) {
   //Popups
   popup = [];
 
-  popup.push(parsedResult[0].address.road);
-  popup.push(parsedResult[0].address.house_number);
-  popup.push(parsedResult[0].address.postcode);
+  /*
+    popup.push(parsedResult[0].address.road);
+    popup.push(parsedResult[0].address.house_number);
+    popup.push(parsedResult[0].address.postcode);
+  */
+
+
+
 
   ////////console.log(parsedResult[0].address);
   // ////////console.log(parsedResult[0].address.town);
   ////////console.log(parsedResult[0].address.city);
-
-  if (parsedResult[0].address.town !== undefined) {
-    popup.push(parsedResult[0].address.town);
-  } else {
-    if (parsedResult[0].address.city !== undefined) {
-      popup.push(parsedResult[0].address.city);
+  /*
+    if (parsedResult[0].address.town !== undefined) {
+      popup.push(parsedResult[0].address.town);
     } else {
-      if (parsedResult[0].address.county !== undefined) {
-        popup.push(parsedResult[0].address.county);
+      if (parsedResult[0].address.city !== undefined) {
+        popup.push(parsedResult[0].address.city);
+      } else {
+        if (parsedResult[0].address.county !== undefined) {
+          popup.push(parsedResult[0].address.county);
+        }
       }
-    }
+    }*/
+  //popup.push
+
+  if (place.address != "undefined") {
+    address = place.address + " " + place.city;
+  } else {
+    address = place.city;
   }
 
 
-  address = popup.join(" ");
-
   if (place.place.length !== 0) {
-    popuptext = "<a href='" + place.posturl + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
+    popuptext = "<a href='/map/map.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
     marker.bindPopup(popuptext);
   } else {
-    popuptext = "<a href='" + place.posturl + "'>" + place.title + "</a><div>" + address + "</div>";
+    popuptext = "<a href='/map/map.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + address + "</div>";
     marker.bindPopup(popuptext);
   }
 }
@@ -311,7 +375,12 @@ function locationRange() {
 
       try {
         if (parsedResult[0] == undefined) {
-          throw "Keine übereinstimmenden Orte gefunden";
+          if (firstLoad < 2) {
+            firstLoad++;
+          } else {
+            throw "Keine übereinstimmenden Orte gefunden";
+          }
+
         } else {
           ////////console.log(parsedResult[0].lat);
           ////////console.log(parsedResult[0].lon);
@@ -323,10 +392,10 @@ function locationRange() {
 
           //Range Live Preview
 
-          console.log(circleRange);
+         //console.log(circleRange);
 
           if (circleRange != undefined) {
-            console.log("deleting layers 1");
+           //console.log("deleting layers 1");
             map.removeLayer(circleRange);
             map.removeLayer(circlePoint);
           }
@@ -356,10 +425,12 @@ function locationRange() {
 }
 //Process Data
 filterStart();
+firstLoad = 0;
 locationRange();
 locationRange();
 
 function filterStart() {
+  ;
   let url = window.location.href;
   let params = (new URL(url)).searchParams;
 
@@ -376,7 +447,7 @@ function filterStart() {
 
   if (!filterActive) {
     ////console.log("inactive");
-    fetch('/Map/maplist.json')
+    fetch('/map/maplist.json')
       .then(response => response.json())
       .then(maplist => {
         mapnodes = maplist.mappoints;
@@ -435,10 +506,10 @@ function filterStart() {
   }
 
   //Keep Filter Values
-  console.log(typesearch);
-  console.log(mapSearchParamsType);
-  console.log(mapSearchParamsLocation);
-  console.log(mapSearchParamsTopic);
+ //console.log(typesearch);
+ //console.log(mapSearchParamsType);
+ //console.log(mapSearchParamsLocation);
+ //console.log(mapSearchParamsTopic);
 
   //Keep Search
   if (typesearch != "") {
@@ -542,7 +613,7 @@ function filterStart() {
 
 
 
-        fetch('/Map/maplist.json')
+        fetch('/map/maplist.json')
           .then(response => response.json())
           .then(maplist => {
             mapnodes = maplist.mappoints;
@@ -578,6 +649,8 @@ function filterStart() {
               eventtypecheck = checkEventtype(mapeventtypeactivator, node, mapfilterOutput);
 
               placesFilterArray = [];
+
+
 
 
               if (rangeCheck == false || mapTypeCheck == false || topiccheck == false || eventtypecheck == false) {} else {
@@ -624,7 +697,7 @@ function filterStart() {
       mapeventtypeactivator = true;
     }
 
-    fetch('/Map/maplist.json')
+    fetch('/map/maplist.json')
       .then(response => response.json())
       .then(maplist => {
         mapnodes = maplist.mappoints;
@@ -741,7 +814,11 @@ function checkEventtype(mapeventtypeactivator, node, mapfilterOutput) {
   eventtypecheck = null;
   if (mapeventtypeactivator) {
     eventtypecheck = false;
-    eventtypecheck = mapfilterOutput.includes(node.eventtype.toLowerCase());
+    datecheck = isintheFuture(item);
+    if(datecheck){
+      eventtypecheck = mapfilterOutput.includes(node.eventtype.toLowerCase());
+    }
+
   }
   return eventtypecheck;
 }
@@ -839,7 +916,7 @@ function calcdistance(lat1, lon1, lat2, lon2, unit) {
   }
 }
 
-function rangeCircle(filterLatLon, circleRange, circlePoint, map){
+function rangeCircle(filterLatLon, circleRange, circlePoint, map) {
 
   const rangeLabel = document.getElementById("filter-location-range-label");
   ////////console.log(isLocationRange);
@@ -849,10 +926,10 @@ function rangeCircle(filterLatLon, circleRange, circlePoint, map){
   ////////console.log(filterLatLon);
   currentFilterLocation = filterLatLon;
 
-//console.log(map);
+  //console.log(map);
 
   if (circleRange != undefined) {
-    console.log("deleting layers 2");
+   //console.log("deleting layers 2");
     map.removeLayer(circleRange);
     map.removeLayer(circlePoint);
   }

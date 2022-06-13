@@ -82,25 +82,52 @@ fetch('/Artikel/articlelist.json')
             }
           }
         } else {
+          if (article.mediatype == "video") {
+            if (featured == true) {
+              articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='featured-post " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
-          if (featured == true) {
-            articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='featured-post " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
-
-          } else {
-            if (columnswap == 0) {
-              columnLeft[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
-
-              //console.log("links");
-
-              columnswap = 1;
             } else {
-              columnRight[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+              if (columnswap == 0) {
+                columnLeft[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
-              //console.log("rechts");
+                //console.log("links");
 
-              columnswap = 0;
+                columnswap = 1;
+              } else {
+                columnRight[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-image " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><h4><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </h4> <h1>" + title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+
+                //console.log("rechts");
+
+                columnswap = 0;
+              }
             }
 
+
+          } else {
+            if (article.featured == true) {
+              articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + article.postid + "' class='featured-post " + topicClass + "' title='" + article.title + "'><a class='article-link' href='" + article.posturl + "'><img src='" + article.gallerypath[0] + "'><h4><span class='post-author'>" + article.author + "</span> | <span class='post-date'>" + article.date + "</span> | <span class='post-location'>" + article.location + "</span> </h4> <h1>" + article.title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + article.shorttext + " </p> <a class='morebutton' href='" + article.posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+
+
+
+            } else {
+              if (columnswap == 0) {
+                columnLeft[0].insertAdjacentHTML("afterbegin", "<article id='" + article.postid + "' class='post-image " + topicClass + "' title='" + article.title + "'><a class='article-link' href='" + article.posturl + "'><img src='" + article.gallerypath[0] + "'><h4><span class='post-author'>" + article.author + "</span> | <span class='post-date'>" + article.date + "</span> | <span class='post-location'>" + article.location + "</span> </h4> <h1>" + article.title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + article.shorttext + " </p> <a class='morebutton' href='" + article.posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+
+                //console.log("links");
+
+
+
+                columnswap = 1;
+              } else {
+
+                columnRight[0].insertAdjacentHTML("afterbegin", "<article id='" + article.postid + "' class='post-image " + topicClass + "' title='" + article.title + "'><a class='article-link' href='" + article.posturl + "'><img src='" + article.gallerypath[0] + "'><h4><span class='post-author'>" + article.author + "</span> | <span class='post-date'>" + article.date + "</span> | <span class='post-location'>" + article.location + "</span> </h4> <h1>" + article.title + "</h1> <h4 class='post-tags'>" + topicMarkup + "</h4> <p>" + article.shorttext + " </p> <a class='morebutton' href='" + article.posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+
+                //console.log("rechts");
+                columnswap = 0;
+
+              }
+
+            }
           }
 
 

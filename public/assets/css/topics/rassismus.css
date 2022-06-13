@@ -33,6 +33,10 @@
   background-color: var(--rassismus);
 }
 
+.tagtopic-rassismus> div > .map-eventtype-line{
+  background-color: var(--rassismus);
+}
+
 #rassismus-menu.currentTopic {
   color: var(--rassismus);
 }

@@ -1,3 +1,10 @@
+function torchecker(){
+  $.getJSON("https://api.ipify.org?format=json", function (data) {
+    console.log(data.ip);
+  });
+}
+
+/*
  $.getJSON("https://api.ipify.org?format=json", function (data) {
 
      //console.log(data.ip);
@@ -1238,3 +1245,4 @@
      console.log('usingtor = ' + torcheck);
 
  })
+*/
