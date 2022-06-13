@@ -23,7 +23,7 @@
   color: var(--kultur);
 }
 
-.tagtopic-kultur>a>h4>span {
+.tagtopic-kultur>a>.subtitle>span {
   color: var(--kultur);
   text-decoration: none;
   border-bottom: 0px;

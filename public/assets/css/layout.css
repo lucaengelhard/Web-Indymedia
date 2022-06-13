@@ -111,7 +111,7 @@ video {
     width: 30%;
 }
 
-.article-link > h4 {
+.article-link > .subtitle {
     margin-top: 0.2rem;
 }
 

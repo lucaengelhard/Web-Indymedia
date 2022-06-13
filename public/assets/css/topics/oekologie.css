@@ -23,7 +23,7 @@
   color: var(--oekologie);
 }
 
-.tagtopic-oekologie>a>h4>span {
+.tagtopic-oekologie>a>.subtitle>span {
   color: var(--oekologie);
   text-decoration: none;
   border-bottom: 0px;

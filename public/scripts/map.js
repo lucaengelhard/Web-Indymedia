@@ -155,7 +155,7 @@ datecheck = isintheFuture(item);
 
 
         if (shouldprint) {
-          maplist.insertAdjacentHTML("beforeend", "<article class='map-list-object tagtopic-" + tagTopic + "'><a href='#' class='map-article-link'>        <h4><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </h4>          <h1>" + item.title + "</h1></a>        <h4><ahref='" + item.posturl + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </h4>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
+          maplist.insertAdjacentHTML("beforeend", "<article class='map-list-object tagtopic-" + tagTopic + "'><a href='#' class='map-article-link'>        <div class='subtitle'><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </div>          <h1>" + item.title + "</h1></a>        <div class='subtitle'><ahref='" + item.posturl + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </div>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
         }
       }
 

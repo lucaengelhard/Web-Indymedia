@@ -19,11 +19,11 @@
   color: black;
 }
 
-.tagtopic-militarismus>a>h1:hover {
+.tagtopic-militarismus>a>.subtitle:hover {
   color: var(--militarismus);
 }
 
-.tagtopic-militarismus>a>h4>span {
+.tagtopic-militarismus>a>.subtitle>span {
   color: var(--militarismus);
   text-decoration: none;
   border-bottom: 0px;
