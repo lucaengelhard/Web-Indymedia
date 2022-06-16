@@ -78,6 +78,7 @@ padding-right: 2rem;
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .editor-title-wrapper >* > label{
@@ -163,9 +164,10 @@ scrollbar-width: none;
 
 .editor-eventtype-show {
   display:block;
+  width: 100%;
 }
 
-.editor-eventtype > label{
+.editor-eventtype > div> label{
   font-weight: 600;
   color: black;
 }
@@ -227,6 +229,13 @@ cursor: pointer;
 
 .editor-user-location-list-point:hover{
   border:  1px solid var(--grau);
+}
+
+.text-editor-utility > button{
+  background: none;
+  border: none;
+  border: 1px solid black;
+  margin-top: 0.2rem;
 }
 
 .text-editor-imageselect-wrapper{
@@ -297,6 +306,33 @@ cursor: pointer;
 }
 
 blockquote {
+  margin: 0;
+  display: inline;
+  font-family: Iosevka, monospace;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+blockquote > * {
+  margin: 0;
+  display: inline;
+  font-family: Iosevka, monospace;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+blockquote > * > *{
+  margin: 0;
+  display: inline;
+  font-family: Iosevka, monospace;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+
+blockquote > * > * >*{
+  margin: 0;
+  display: inline;
   font-family: Iosevka, monospace;
   font-weight: 600;
   font-size: 2rem;
@@ -307,6 +343,18 @@ blockquote::before {
   content: url(../elements/quote.svg);
 }
 
+.tutorial-steps-add{
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid black;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid black;
+}
+
 @media screen and (max-width: 720px) {
   .editor-tag-wrapper {
     gap: 1rem;
@@ -314,5 +362,11 @@ blockquote::before {
 
   .editor-tag-wrapper > *> label {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .editor-eventtype > input{
+    display: block;
   }
 }

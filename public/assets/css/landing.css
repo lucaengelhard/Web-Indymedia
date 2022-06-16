@@ -53,7 +53,8 @@
 }
 
 .landingquote {
-    color: black;
+    color: white;
+    font-weight: 600;
     display: none;
     height: 0;
 

@@ -616,7 +616,7 @@ const searchCities = async searchText => {
 
       locationSearch.value = postLocationName;
       locationSearch.dataset.place = postLocationName;
-      locationSearch.dataset.zipcode = postLocationCode;
+      //locationSearch.dataset.zipcode = postLocationCode;
       locationList.style.display = "none";
     })
   });
