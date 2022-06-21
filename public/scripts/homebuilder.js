@@ -247,6 +247,17 @@ fetch("/artikel/articlelist.json")
       }
     });
 
+    const postTagsDiv = Array.from(document.querySelectorAll(".post-tags"));
+
+    //console.log(postTagsDiv);
+
+    postTagsDiv.forEach((div, i) => {
+      Array.from(div.querySelectorAll("span")).forEach((tag, i) => {
+        tag.style.textTransform="capitalize";
+      });
+    });
+
+
     //console.log(section);
     /*
     articleText.insertAdjacentHTML("beforeend", "<div class='post-reminder "+topicClass+"'><h1>Hier könnte dein Beitrag stehen</h1><button class='reminder-button' type'button' onclick='alert('alerta')'>Beitrag schreiben</button></div></div><div class='more-topic '"+topicClass+"><a href='/artikel.html?search=&placesearch=&locationrange=0&filter-topiccheck-"+section.id+"=on&tagsearch=&confirm=Auswahl+bestätigen' class='morebutton'><p>weiterlesen >></p></a></div>")*/

@@ -29,7 +29,7 @@ var iconKueche = L.icon({
 });
 
 var iconKultur = L.icon({
-  iconUrl: '/assets/elements/mapicons/mapicon-food.png',
+  iconUrl: '/assets/elements/mapicons/iconKultur.png',
   //shadowUrl: 'leaf-shadow.png',
 
   iconSize: [40, 60], // size of the icon
@@ -645,6 +645,8 @@ function filterStart() {
               //Check Topic
               topiccheck = checkTopic(maptopicactivator, node, mapfilterOutput);
 
+              console.log(topiccheck);
+
               //Check eventtype
               eventtypecheck = checkEventtype(mapeventtypeactivator, node, mapfilterOutput);
 
@@ -722,6 +724,8 @@ function filterStart() {
           //Check Topic
           topiccheck = checkTopic(maptopicactivator, node, mapfilterOutput);
 
+          console.log(topiccheck);
+
           //Check eventtype
           eventtypecheck = checkEventtype(mapeventtypeactivator, node, mapfilterOutput);
 
@@ -778,12 +782,20 @@ function checkLocation(range, filterCoordinates, node) {
   lat1 = filterCoordinates[0];
   lon1 = filterCoordinates[1];
 
+  //console.log(lat1);
+  //console.log(lon1);
+
   lat2 = node.latlong[0];
   lon2 = node.latlong[1];
+
+  //console.log(lat2);
+  //console.log(lon2);
 
   unit = "M";
 
   var distanceKM = calcdistance(lat1, lon1, lat2, lon2, unit);
+
+  //console.log(distanceKM);
 
   ////////console.log(distanceKM);
 
@@ -812,9 +824,10 @@ function checkType(maptypeactivator, node, mapfilterOutput) {
 
 function checkEventtype(mapeventtypeactivator, node, mapfilterOutput) {
   eventtypecheck = null;
-  if (mapeventtypeactivator) {
+  if (mapeventtypeactivator && node.markertype == "event") {
     eventtypecheck = false;
-    datecheck = isintheFuture(item);
+    //console.log(node);
+    datecheck = isintheFuture(node);
     if(datecheck){
       eventtypecheck = mapfilterOutput.includes(node.eventtype.toLowerCase());
     }
@@ -862,21 +875,26 @@ function checkTopic(maptopicactivator, node, mapfilterOutput) {
         });
     */
 
+    console.log(mapfilterOutput);
+    console.log(topicsLowerCase);
+
+
 
     topiceverycheck = mapfilterOutput.every(item => {
-      //////console.log(item);
-      //////console.log(topicsLowerCase);
-      topiccheck = topicsLowerCase.includes(item);
-      //  ////console.log(topiccheck);
-      return topiccheck;
+      topicswitch = topicsLowerCase.includes(item);
+      if(topicswitch){
+        topiccheck = true;
+        console.log(topiccheck);
+        return topiccheck;
+      }
     });
 
 
 
 
-    //////console.log(topiceverycheck);
+    console.log(topiceverycheck);
 
-    topiccheck = topiceverycheck;
+    //topiccheck = topiceverycheck;
 
   }
   //////console.log(topiccheck);
@@ -934,6 +952,10 @@ function rangeCircle(filterLatLon, circleRange, circlePoint, map) {
     map.removeLayer(circlePoint);
   }
 
+  //console.log(currentRange);
+  currentRange = (parseInt(currentRange) * 1.5);
+
+
   circleRange = L.circle(currentFilterLocation, {
     color: 'black',
     fillColor: 'var(--grau)',
@@ -949,6 +971,13 @@ function rangeCircle(filterLatLon, circleRange, circlePoint, map) {
   }).addTo(map);
 
 
+  //console.log(currentRange);
+
+  currentRange = currentRange.toString().split(".");
+
+  //console.log(currentRange[0]);
+
+  currentRange = parseInt(currentRange[0])
 
 
   if (currentRange >= 1000) {

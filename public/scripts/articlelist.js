@@ -5,7 +5,8 @@ fetch('/Artikel/articlelist.json')
     // Do something with your data
     let i = 0;
     columnswap = 0;
-    articlelist.articles.forEach(article => {
+    featuredCounter = 0;
+    articlelist.articles.slice().reverse().forEach(article => {
       //console.log(filteredArticleList);
 
       //Parse JSON
@@ -23,7 +24,7 @@ fetch('/Artikel/articlelist.json')
       video = article.video;
       shorttext = articlelist.articles[i].shorttext;
 
-      console.log(article);
+      //console.log(article);
 
       if (filteredArticleList.includes(articlelist.articles[i].postid)) { //Topics to Markup
         //console.log(topics);
@@ -61,8 +62,10 @@ fetch('/Artikel/articlelist.json')
             //console.log("noimage");
             articleText[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='post-text " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><div class='subtitle'><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </div> <h1>" + title + "</h1> <div class='post-tags subtitle'>" + topicMarkup + "</div> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
           } else {
-            if (featured == true) {
+            if (featured == true && featuredCounter <= 0) {
               articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='featured-post " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><img src='" + imageurl + "'><div class='subtitle'><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </div> <h1>" + title + "</h1> <div class='post-tags subtitle'>" + topicMarkup + "</div> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+
+              featuredCounter++;
 
             } else {
               if (columnswap == 0) {
@@ -83,8 +86,10 @@ fetch('/Artikel/articlelist.json')
           }
         } else {
           if (article.mediatype == "video") {
-            if (featured == true) {
+            if (featured == true && featuredCounter <= 0) {
               articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + postid + "' class='featured-post " + topicClass + "' title='" + title + "'><a class='article-link' href='" + posturl + "'><video controls> <source src='" + video + "' type='video/mp4'></video><div class='subtitle'><span class='post-author'>" + author + "</span> | <span class='post-date'>" + date + "</span> | <span class='post-location'>" + articlelocation + "</span> </div> <h1>" + title + "</h1> <div class='post-tags subtitle'>" + topicMarkup + "</div> <p>" + shorttext + " </p> <a class='morebutton' href='" + posturl + "'> <p>mehr >></p>  </a> </a> </article>");
+
+              featuredCounter++;
 
             } else {
               if (columnswap == 0) {
@@ -104,11 +109,10 @@ fetch('/Artikel/articlelist.json')
 
 
           } else {
-            if (article.featured == true) {
+            if (article.featured == true && featuredCounter <= 0) {
               articleImage[0].insertAdjacentHTML("afterbegin", "<article id='" + article.postid + "' class='featured-post " + topicClass + "' title='" + article.title + "'><a class='article-link' href='" + article.posturl + "'><img src='" + article.gallerypath[0] + "'><div class='subtitle'><span class='post-author'>" + article.author + "</span> | <span class='post-date'>" + article.date + "</span> | <span class='post-location'>" + article.location + "</span> </div> <h1>" + article.title + "</h1> <div class='post-tags subtitle'>" + topicMarkup + "</div> <p>" + article.shorttext + " </p> <a class='morebutton' href='" + article.posturl + "'> <p>mehr >></p>  </a> </a> </article>");
 
-
-
+              featuredCounter++;
             } else {
               if (columnswap == 0) {
                 columnLeft[0].insertAdjacentHTML("afterbegin", "<article id='" + article.postid + "' class='post-image " + topicClass + "' title='" + article.title + "'><a class='article-link' href='" + article.posturl + "'><img src='" + article.gallerypath[0] + "'><div class='subtitle'><span class='post-author'>" + article.author + "</span> | <span class='post-date'>" + article.date + "</span> | <span class='post-location'>" + article.location + "</span> </div> <h1>" + article.title + "</h1> <div class='post-tags subtitle'>" + topicMarkup + "</div> <p>" + article.shorttext + " </p> <a class='morebutton' href='" + article.posturl + "'> <p>mehr >></p>  </a> </a> </article>");
@@ -144,4 +148,20 @@ fetch('/Artikel/articlelist.json')
       i++;
     });
 
+    const postTagsDiv = Array.from(document.querySelectorAll(".post-tags"));
+
+    console.log(postTagsDiv);
+
+    postTagsDiv.forEach((div, i) => {
+      Array.from(div.querySelectorAll("span")).forEach((tag, i) => {
+        tag.style.textTransform="capitalize";
+      });
+    });
+
+
+
+
+
   });
+
+  //Tags Uppercase

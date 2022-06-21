@@ -168,7 +168,21 @@ input[type=range]:focus {
   display: none;
 }
 
+.featured-post{
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1250px){
+  .filterbox {
+    border: none;
+  }
+}
+
+
 @media screen and (max-width: 1100px) {
+  .filterbox {
+    border-bottom: 1px solid black;
+  }
   .nav-filter {
     border-bottom-color: white;
   }

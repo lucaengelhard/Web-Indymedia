@@ -1,0 +1,12 @@
+{
+    "name": "Indymedia - Don't hate the Media, become the Media!",
+    "short_name": "Indymedia",
+    "icons": [{
+        "src": "/assets/elements/favicon-google-touch.png",
+        "sizes": "512x512"
+    }],
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "start_url":"/index.html",
+    "display": "standalone"
+}
