@@ -106,7 +106,7 @@ flex: 1 1 60%;
 
 @media screen and (max-width: 1100px) {
   .nav-map{
-  border-bottom: 0;
+  border-bottom: 1px solid white;
   }
 
   .map-main {

@@ -310,7 +310,7 @@ fetch('/Artikel/articlelist.json')
   })
 
   .then(formupdater => {
-
+    filterdprint(filteredArticleList);
     //tagsearch Taglistupdate
     //console.log(taglist);
     taglist.forEach(tag => {
