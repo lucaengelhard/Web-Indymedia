@@ -14,27 +14,40 @@
 </head>
 
 <style media="screen">
-  .stylelist {
-    max-width: 900px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
+main {
+  margin-top: 6rem;
+}
 
-  .style-object {
-    padding: 1rem;
-  }
+.style-wrapper {
 
-  .style-object>ul>li {
-    padding: 0.5rem;
-    color: white;
-    font-family: Iosevka;
-    font-weight: 300;
-  }
+  max-width: 900px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+}
+
+.styleguide-left {
+
+  padding: 1rem;
+  width: 70%;
+  padding-right: 1rem;
+  border-right: 1px solid black;
+}
+
+.styleguide-right {
+  padding: 1rem;
+  width: 30%;
+  font-weight: 300;
+}
+
+.style-object>ul>li {
+  padding: 0.5rem;
+  color: white;
+  font-family: Iosevka;
+  font-weight: 300;
+}
+
 </style>
 
 <body>
@@ -98,140 +111,199 @@
   </header>
 
   <main>
-
-    <div class="stylelist">
-      <div class="style-object">
-        <h1 class="rainbow">INDYMEDIA.</h1>
-        <h1 class="rainbow">I.</h1>
-      </div>
-
-      <div class="style-object">
-        <div style="font-family: Iosevka">
-          Headings + Subheadings:<br>Iosevka
-        </div>
-        <div style="margin-top: 0.4rem">
-          Fließtext: <br>Lunchtype22
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object">
+          <h1 class="rainbow">INDYMEDIA.</h1>
+          <h1 class="rainbow">I.</h1>
         </div>
       </div>
 
-      <div class="style-object">
-        <ul style="list-style: none; padding: 0; margin: 0">
-          <li style="background-color: var(--arbeit)">
-            Arbeit
-          </li>
+      <div class="styleguide-right">
+        Das neue Logo spielt ein wenig mit dem reduzierten Retro-Look der Seite. Außerdem sind die Farben den einzelenen Themen zugeschrieben.
+      </div>
+    </article>
 
-          <li style="background-color: var(--sozial)">
-            Sozial
-          </li>
-
-          <li style="background-color: var(--oekologie)">
-            Ökologie
-          </li>
-
-          <li style="background-color: var(--kultur)">
-            Kultur
-          </li>
-
-          <li style="background-color: var(--militarismus)">
-            Militarismus
-          </li>
-
-          <li style="background-color: var(--antifa)">
-            Antifa
-          </li>
-
-          <li style="background-color: var(--feminismus)">
-            Feminismus
-          </li>
-
-          <li style="background-color: var(--rassismus)">
-            Rassismus
-          </li>
-        </ul>
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object">
+          <div style="font-family: Iosevka;font-size: 1.5rem; font-weight: 600">
+            Headings + Subheadings:<br>Iosevka
+          </div>
+          <div style="margin-top: 0.4rem">
+            Fließtext: <br>Lunchtype22
+          </div>
+        </div>
       </div>
 
-      <div class="style-object">
-        <ul style="display: flex; padding: 0; margin: 0">
-          <li>
-            <img src="assets/elements/mapicons/iconAktion.png" alt="">
-          </li>
+      <div class="styleguide-right">
+        Die Schriften sind Open Source und die Headlineschrift Iosevka ist seriös genug um ernst genommen zu werden aber nicht zu nichtssagend.
+      </div>
+    </article>
 
-          <li>
-            <img src="assets/elements/mapicons/iconDemo.png" alt="">
-          </li>
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object">
+          <ul style="list-style: none; padding: 0; margin: 0">
+            <li style="background-color: var(--arbeit)">
+              Arbeit
+            </li>
 
-          <li>
-            <img src="assets/elements/mapicons/iconDiskussion.png" alt="">
-          </li>
+            <li style="background-color: var(--sozial)">
+              Sozial
+            </li>
 
-          <li>
-            <img src="assets/elements/mapicons/iconGruppe.png" alt="">
-          </li>
+            <li style="background-color: var(--oekologie)">
+              Ökologie
+            </li>
 
-          <li>
-            <img src="assets/elements/mapicons/iconInfo.png" alt="">
-          </li>
+            <li style="background-color: var(--kultur)">
+              Kultur
+            </li>
 
-          <li>
-            <img src="assets/elements/mapicons/iconKueche.png" alt="">
-          </li>
+            <li style="background-color: var(--militarismus)">
+              Militarismus
+            </li>
 
-          <li>
-            <img src="assets/elements/mapicons/iconKultur.png" alt="">
-          </li>
+            <li style="background-color: var(--antifa)">
+              Antifa
+            </li>
 
-          <li>
-            <img src="assets/elements/mapicons/iconOrt.png" alt="">
-          </li>
-        </ul>
+            <li style="background-color: var(--feminismus)">
+              Feminismus
+            </li>
+
+            <li style="background-color: var(--rassismus)">
+              Rassismus
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="style-object" style="width:60%">
-        <article id="1" class="featured-post tagtopic-sozial" title="Warum wir uns nicht auf den Staat verlassen dürfen: Der Fall Lützerath"><a class="article-link"
-            href="/Artikel/1-Warum-wir-uns-nicht-auf-den-Staat-verlassen-drfen-Der-Fall-Ltzerath.html"><img src="/assets/images/uploads/54908696406112017-1536x1024.jpg">
-            <div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">Erkelenz</span> </div>
-            <h1>Warum wir uns nicht auf den Staat verlassen dürfen: Der Fall Lützerath</h1>
-            <div class="post-tags subtitle"><span style="text-transform: capitalize;">sozial<span style="text-transform: capitalize;"> | <span style="text-transform: capitalize;">oekologie<span style="text-transform: capitalize;"> | <span
-                        style="text-transform: capitalize;">feminismus<span style="text-transform: capitalize;"> | <span style="text-transform: capitalize;">rassismus<span
-                              style="text-transform: capitalize;"></span></span></span></span></span></span></span></span></div>
-            <p>Beitrag dazu, dass wir nicht immer wieder auf die Wohltätigkeit von Gerichten und Staat hoffen können. Gerichtsprozesse können Dinge verlangsamen aber nicht aufhalten. Für den selbstorganisierten Widerstand von unten! </p>
-          </a><a class="morebutton" href="/Artikel/1-Warum-wir-uns-nicht-auf-den-Staat-verlassen-drfen-Der-Fall-Ltzerath.html">
-            <p>mehr &gt;&gt;</p>
-          </a> </article>
+      <div class="styleguide-right">
+        Die einzelnen Farben bieten Struktur und Orientierung und sind ein immer wiederkehrendes Element auf der Website.
+      </div>
+    </article>
+
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object" style="width:100%">
+          <article id="1" class="featured-post tagtopic-sozial" title="Warum wir uns nicht auf den Staat verlassen dürfen: Der Fall Lützerath"><a class="article-link"
+              href="/Artikel/1-Warum-wir-uns-nicht-auf-den-Staat-verlassen-drfen-Der-Fall-Ltzerath.html"><img src="/assets/images/uploads/54908696406112017-1536x1024.jpg">
+              <div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">Erkelenz</span> </div>
+              <h1>Warum wir uns nicht auf den Staat verlassen dürfen: Der Fall Lützerath</h1>
+              <div class="post-tags subtitle"><span style="text-transform: capitalize;">sozial<span style="text-transform: capitalize;"> | <span style="text-transform: capitalize;">oekologie<span style="text-transform: capitalize;"> | <span
+                          style="text-transform: capitalize;">feminismus<span style="text-transform: capitalize;"> | <span style="text-transform: capitalize;">rassismus<span
+                                style="text-transform: capitalize;"></span></span></span></span></span></span></span></span></div>
+              <p>Beitrag dazu, dass wir nicht immer wieder auf die Wohltätigkeit von Gerichten und Staat hoffen können. Gerichtsprozesse können Dinge verlangsamen aber nicht aufhalten. Für den selbstorganisierten Widerstand von unten! </p>
+            </a><a class="morebutton" href="/Artikel/1-Warum-wir-uns-nicht-auf-den-Staat-verlassen-drfen-Der-Fall-Ltzerath.html">
+              <p>mehr &gt;&gt;</p>
+            </a> </article>
+
+        </div>
       </div>
 
-      <div class="style-object" style="width: 30%">
-        <article id="20" class="post-text tagtopic-arbeit" title="Gorillas hasst diesen Trick - Warehouse entglast!"><a class="article-link" href="/Artikel/20-Gorillas-hasst-diesen-Trick---Warehouse-entglast.html">
-            <div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">Leipzig</span> </div>
-            <h1>Gorillas hasst diesen Trick - Warehouse entglast!</h1>
-            <div class="post-tags subtitle"><span style="text-transform: capitalize;">arbeit<span style="text-transform: capitalize;"></span></span></div>
-            <p>Niemand:
-              Wirklich niemand:
-              Wir am 25.08. um 02:30:
-              Jetzt nen knackigen Glasbruch! </p>
-          </a><a class="morebutton" href="/Artikel/20-Gorillas-hasst-diesen-Trick---Warehouse-entglast.html">
-            <p>mehr &gt;&gt;</p>
-          </a> </article>
+      <div class="styleguide-right">
+        Die Artikelseiten sind so gestaltet, dass sie einen gewissen "Zeitungslook" bekommen.
+      </div>
+    </article>
+
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object" style="width: 50%">
+          <article style="margin-top:0"id="21" class="post-image tagtopic-arbeit" title="" erneuerbare="" ausbeutung'="" -="" zeitung="" zur="" iaa,="" e-mobilität="" und="" künstlicher="" intelligenz'=""><a class="article-link"
+              href="/Artikel/21-Erneuerbare-Ausbeutung---Zeitung-zur-IAA-E-Mobilitt-und-Knstlicher-Intelligenz.html"><img src="/assets/images/uploads/564367550E-6fz-YXsBsuIOd.jpg">
+              <div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">München</span> </div>
+              <h1>'Erneuerbare Ausbeutung' - Zeitung zur IAA, E-Mobilität und Künstlicher Intelligenz</h1>
+              <div class="post-tags subtitle"><span style="text-transform: capitalize;">arbeit<span style="text-transform: capitalize;"> | <span style="text-transform: capitalize;">sozial<span style="text-transform: capitalize;"> | <span
+                          style="text-transform: capitalize;">oekologie<span style="text-transform: capitalize;"></span></span></span></span></span></span></div>
+              <p>Vom 7. bis 12. September 2021 findet die IAA in München statt. Die größte Automesse der Welt war lange Zeit eine Bühne für egomanische Konzernbosse und Treffpunkt ihres PS-fetischistischen Fußvolks. </p>
+            </a><a class="morebutton" href="/Artikel/21-Erneuerbare-Ausbeutung---Zeitung-zur-IAA-E-Mobilitt-und-Knstlicher-Intelligenz.html">
+              <p>mehr &gt;&gt;</p>
+            </a> </article>
+        </div>
       </div>
 
-      <div class="style-object" style="width: 30%">
-        <article style="margin-top:0"id="21" class="post-image tagtopic-arbeit" title="" erneuerbare="" ausbeutung'="" -="" zeitung="" zur="" iaa,="" e-mobilität="" und="" künstlicher="" intelligenz'=""><a class="article-link"
-            href="/Artikel/21-Erneuerbare-Ausbeutung---Zeitung-zur-IAA-E-Mobilitt-und-Knstlicher-Intelligenz.html"><img src="/assets/images/uploads/564367550E-6fz-YXsBsuIOd.jpg">
-            <div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">München</span> </div>
-            <h1>'Erneuerbare Ausbeutung' - Zeitung zur IAA, E-Mobilität und Künstlicher Intelligenz</h1>
-            <div class="post-tags subtitle"><span style="text-transform: capitalize;">arbeit<span style="text-transform: capitalize;"> | <span style="text-transform: capitalize;">sozial<span style="text-transform: capitalize;"> | <span
-                        style="text-transform: capitalize;">oekologie<span style="text-transform: capitalize;"></span></span></span></span></span></span></div>
-            <p>Vom 7. bis 12. September 2021 findet die IAA in München statt. Die größte Automesse der Welt war lange Zeit eine Bühne für egomanische Konzernbosse und Treffpunkt ihres PS-fetischistischen Fußvolks. </p>
-          </a><a class="morebutton" href="/Artikel/21-Erneuerbare-Ausbeutung---Zeitung-zur-IAA-E-Mobilitt-und-Knstlicher-Intelligenz.html">
-            <p>mehr &gt;&gt;</p>
-          </a> </article>
+      <div class="styleguide-right">
+      </div>
+    </article>
+
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object" style="width: 50%">
+          <article id="20" class="post-text tagtopic-arbeit" title="Gorillas hasst diesen Trick - Warehouse entglast!"><a class="article-link" href="/Artikel/20-Gorillas-hasst-diesen-Trick---Warehouse-entglast.html">
+              <div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">Leipzig</span> </div>
+              <h1>Gorillas hasst diesen Trick - Warehouse entglast!</h1>
+              <div class="post-tags subtitle"><span style="text-transform: capitalize;">arbeit<span style="text-transform: capitalize;"></span></span></div>
+              <p>Niemand:
+                Wirklich niemand:
+                Wir am 25.08. um 02:30:
+                Jetzt nen knackigen Glasbruch! </p>
+            </a><a class="morebutton" href="/Artikel/20-Gorillas-hasst-diesen-Trick---Warehouse-entglast.html">
+              <p>mehr &gt;&gt;</p>
+            </a> </article>
+        </div>
       </div>
 
-      <div class="style-object" style="width:60%">
-        <article id="12" class="post-text tagtopic-oekologie" title="Sabotage von Wasserleitungen im Tagebau Jänschwalde"><a class="article-link" href="/Artikel/12-Sabotage-von-Wasserleitungen-im-Tagebau-Jnschwalde.html"><div class="featured-quote"><div>Alle Kohletagebaue verbrauchen viel zu viel Wasser. Wir können sie nicht alle sabotieren, also macht mit!</div></div><div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">Jänschwalde</span> </div> <h1>Sabotage von Wasserleitungen im Tagebau Jänschwalde</h1> <div class="post-tags  subtitle"><span style="text-transform: capitalize;">oekologie<span style="text-transform: capitalize;"></span></span></div> <p>Am Abend des 23. April bohrten wir im Tagebau Jänschwalde auf einer Länge von fast 500 Metern etwa 20 Löcher in mehrere Wasserleitungen. </p> </a><a class="morebutton" href="/Artikel/12-Sabotage-von-Wasserleitungen-im-Tagebau-Jnschwalde.html"> <p>mehr &gt;&gt;</p>  </a>  </article>
+      <div class="styleguide-right">
+      </div>
+    </article>
+
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object" style="width:100%">
+          <article id="12" class="post-text tagtopic-oekologie" title="Sabotage von Wasserleitungen im Tagebau Jänschwalde"><a class="article-link" href="/Artikel/12-Sabotage-von-Wasserleitungen-im-Tagebau-Jnschwalde.html"><div class="featured-quote"><div>Alle Kohletagebaue verbrauchen viel zu viel Wasser. Wir können sie nicht alle sabotieren, also macht mit!</div></div><div class="subtitle"><span class="post-author">anonym</span> | <span class="post-date">14.06.2022</span> | <span class="post-location">Jänschwalde</span> </div> <h1>Sabotage von Wasserleitungen im Tagebau Jänschwalde</h1> <div class="post-tags  subtitle"><span style="text-transform: capitalize;">oekologie<span style="text-transform: capitalize;"></span></span></div> <p>Am Abend des 23. April bohrten wir im Tagebau Jänschwalde auf einer Länge von fast 500 Metern etwa 20 Löcher in mehrere Wasserleitungen. </p> </a><a class="morebutton" href="/Artikel/12-Sabotage-von-Wasserleitungen-im-Tagebau-Jnschwalde.html"> <p>mehr &gt;&gt;</p>  </a>  </article>
+        </div>
       </div>
 
-    </div>
+      <div class="styleguide-right">
+        Natürlich gibt es auch Artikel ohne Titelbild. Hierzu wird anstatt des Titelbild ein prägnantes Zitat aus dem Artikel angezeigt.
+      </div>
+    </article>
+
+    <article class="style-wrapper">
+      <div class="styleguide-left">
+        <div class="style-object">
+          <ul style="display: flex; padding: 0; margin: 0">
+            <li>
+              <img src="assets/elements/mapicons/iconAktion.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconDemo.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconDiskussion.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconGruppe.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconInfo.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconKueche.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconKultur.png" alt="">
+            </li>
+
+            <li>
+              <img src="assets/elements/mapicons/iconOrt.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="styleguide-right">
+        Die Icons auf der Karte zeigen verschiedene Arten von Karteneinträgen.
+      </div>
+    </article>
 
   </main>
 

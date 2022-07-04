@@ -93,5 +93,55 @@
     "info": "Öffnungszeiten:<br>Mittwoch - Montag: 10 - 23 Uhr<br>Dienstag Ruhetag",
     "shorttext": "Foodsharing Café",
     "content": "DAS FOODSHARING-CAFÉ IN STUTTGART<br><br>Mit Raupe Immersatt haben wir Deutschlands erstes foodsharing-Café im Stuttgarter Westen ins Leben gerufen. Damit setzen wir ein Zeichen für mehr Lebensmittelwertschätzung und einen achtsamen Umgang mit unseren Ressourcen. Lass dich von unserem Konzept inspirieren und schau gerne mal vorbei<br>"
+  },
+  {
+    "mediatype": "map",
+    "mapnodeid": 5,
+    "posturl": "/Artikel/5-Kche-fr-Alle.html",
+    "markertype": "event",
+    "title": "Küche für Alle",
+    "date": "05.07.2022",
+    "time": "13:12",
+    "city": "Stuttgart",
+    "place": "",
+    "address": "Johannesstraße 97",
+    "latlong": [
+      48.782018,
+      9.1579717
+    ],
+    "topics": [
+      "sozial",
+      "oekologie",
+      "kultur"
+    ],
+    "eventtype": "kueche",
+    "info": "",
+    "shorttext": "Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et.",
+    "content": "\n    Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et.Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et.Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et.Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et.Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et.Quia quia a sint aut. Doloremque mollitia blanditiis repudiandae et ut architecto nesciunt aut. Amet ut libero iusto et."
+  },
+  {
+    "mediatype": "map",
+    "mapnodeid": 6,
+    "posturl": "/Artikel/6-Esperanza.html",
+    "markertype": "ort",
+    "title": "Esperanza",
+    "date": "",
+    "time": "",
+    "city": "Schwäbisch Gmünd",
+    "place": "",
+    "address": "Benzholzstraße 8",
+    "latlong": [
+      48.80035905,
+      9.821232992354865
+    ],
+    "topics": [
+      "sozial",
+      "antifa"
+    ],
+    "eventtype": "",
+    "image": "/assets/images/uploads/141279122maxresdefault.jpg",
+    "info": "jeden Montag, 19 Uhr<br>Öffentliche Sitzung der JKI / Plenum<br><br>jeden ersten Donnerstag, 19 Uhr<br>-Info Café<br><br>jeden dritten Donnerstag, 19 Uhr<br>-Internationale-Jam-Session<br><br>jeden ersten und dritten Donnerstag, 18 Uhr<br>-Foodsharing<br><br>jeden zweiten und vierten Donnerstag von 15 bis 17 Uhr Eltern-Kind-Treff \"Oststadtpiraten\"<br><br>jki.esperanza@web.de",
+    "shorttext": "Jugendhaus",
+    "content": "    Die \"Jugendkulturinitiative Schwäbisch Gmünd e.V.\" (JKI) ist der Trägerverein des selbstverwalteten Jugendkulturzentrums \"Esperanza\" mit Sitz in Schwäbisch Gmünd. Die Tätigkeiten der JKI umfassen die Instandhaltung des Esperanzas, sowie Organisation und Durchführung (sub)kultureller Veranstaltungen unterschiedlichster Art (Konzerte, Workshops, Ausstellungen...). Diese Veranstaltungen sollen eine Alternative zu kommerziellen Freizeitaktivitäten darstellen und lokalen Künstler:innen eine Plattform bieten. Dabei distanziert sich die JKI klar von faschistischen, rassistischen, sexistischen und homophoben Inhalten. Ein weiteres Ziel der JKI ist es, einen unkommerziellen Freiraum für Jugendliche zu bieten, den diese unter Eigenregie gestalten können. Alle Entscheidungen werden basisdemokratisch getroffen, alle Mitglieder arbeiten ehrenamtlich und jeder ist willkommen – unabhängig von Geschlecht, Herkunft, körperlicher Einschränkungen und sexueller Orientierung. Das Esperanza ist ein Raum der Vielfalt und gelebter Demokratie."
   }
 ]}

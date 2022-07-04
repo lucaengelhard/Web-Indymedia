@@ -44,5 +44,33 @@
       }
     ],
     "mediatype": "tutorial"
+  },
+  {
+    "postid": 3,
+    "posturl": "tutorials/tutorial.html?postid=3",
+    "title": "Wie öffnet man Werbevitrinen?",
+    "author": "anonym",
+    "tags": [],
+    "image": "/assets/images/uploads/4221991075-leuchtet.jpg",
+    "shorttext": "In großen Städten stehen an fast jeder Ecke und fast jedem halbwegs wichtigen Gebäude sogenannte Werbevitrinen rum. Aber wie gehen die eigentlich auf?",
+    "richtext": "\n    <p>Sonstiges</p>\n\n<p>In einigen Städten kommt man mit dem von Ikea bekannten \nTORX-Schlüsseln erstaunlich weit. Sicherheitsschlösser sind nur sehr \nselten. Hier hilft Lockpicking. Darüber hinaus gibt es alles mögliche \naus dem Ratschenkasten. Teilweise reicht sogar das Viereck der Ratsche \nzum Öffnen. Wenn Du versuchst, den Kasten zu öffnen und nichts geht, \nnicht wundern. Die Schließmechanismen sind oft krass runtergerockt. \nSechsecke, die fast rund sind und überdrehen, Türen, die klemmen, usw. \nsind an der Tagesordnung. Ein bisschen Überredungskunst mittels Ruckeln,\n Drücken und Anheben an den Türen während Du den Mechanismus betätigst, \nwirkt Wunder.</p><p>Dein Kasten fehlt?</p>\n\n<p>Wenn der Schließmechanismus deiner Lieblingsvitrine hier fehlt, schau\n auf der unten verlinkten Online-Karte nach und guck, ob einer der \nanderen Mechanismen aus dem Rest der Welt bei dir zuhause rumsteht.</p><p>Und dann?</p>\n\n<p>Das Werbeposter in der Vitrine hängt an sich selbst. Die Poster haben\n einen Knick und eine etwa einen Zentimeter lange Knickkante. Siehst Du \ndie Metallschiene auf dem Licht-Defuser? Da wird das Poster drunter \ngeschoben, bis die Knickkante als Widerhaken wirkt. Rausnehmen ist also \neasy: Einfach fest am Poster ziehen. Jetzt könntest Du das Poster wieder\n unter die Metallkante schieben, bis die Knickkante greift. Das Problem:\n Die Knickkante leiert aus oder reißt oft. Die Poster sind Einwegware \nund nicht dazu gedacht, dass man sie x-mal wieder aufhängt. Nimm \ndoppeltseitiges Klebeband oder Gaffa zum wieder reinhängen.</p><p>Mehr Infos:</p><p>Ein Kollektiv aus New York sammelt westliche Städte und Schlüssel auf\n seiner Homepage. Es veröffentlicht Files für 3D-Drucker und verkauft \nauch Schlüssel (und nebenbei dokumentiert die Auswahl der Städte, wie \neurozentristisch das alles ist...): <a href=\"http://www.publicadcampaign.com/PublicAccess/Index.html\">http://www.publicadcampaign.com/PublicAccess/Index.html</a></p><p>Das Kollektiv „Brandalism“ hat einen Reader veröffentlicht, der Adbusting und Vitrinen öffnen für erklärt: <a href=\"https://dogsection.bigcartel.com/product/brandalism-ad-takeover-guide\">https://dogsection.bigcartel.com/product/brandalism-ad-takeover-guide</a></p><p>Tipps für Papier &amp; Kleister an Plakaten: <a href=\"https://www.projektwerkstatt.de/media/text/kalender_2004_kal_kleben.pdf\">https://www.projektwerkstatt.de/media/text/kalender_2004_kal_kleben.pdf</a></p><p>Eine gute Anleitung zum Lookpicking hat der Verein der Freunde der Schließtechnik veröffentlicht: <a href=\"https://www.ssdev.org/lockpicking/MIT_D/MIT-Handbuch.pdf\">https://www.ssdev.org/lockpicking/MIT_D/MIT-Handbuch.pdf</a></p>\n<p>Weitere Erklärung zu Berlin:</p>\n\n<p><a href=\"http://just.blogsport.de/2006/11/16/werbetafeln/\">http://just.blogsport.de/2006/11/16/werbetafeln/</a></p><p>Ein Video, dass man eigentlich nicht verlinken sollte. So wie die \nHonks in dem Video auf Arbeitssicherheit scheißen, ist es ein Wunder, \ndass sie sich nicht in den Fuß oder die Hand flexen. Aber in dem Video \nsieht man sehr gut, wie die Schlüssel für Berlin aussehen sollten:</p>\n\n<p><a href=\"https://vimeo.com/7184642\">https://vimeo.com/7184642</a></p>",
+    "steps": [
+      {
+        "image": "/assets/images/uploads/88132373031941.jpg",
+        "heading": "Rohrsteckschlüssel 9mm",
+        "content": "Am häufigsten in Berlin findet man einen Verschluss, der sich mit einem Sechtskant-Rohrsteckschlüssel öffen lässt. Sowohl die Größe 9mm als auch 8mm sind üblich. Den kann man einfach so für ein paar Euro im Baumarkt kaufen. Weil die bei Wall aber nicht ganz blöd sind, und nicht wollen, dass einfach dahergelaufene Chaot*innen Blödsinn mit ihrer Luxus-Werbung machen, ist der Drehmechanismus oft mit einer Flügelschraube versehen. Das verhindert, dass man den Rohrsteckschlüssel über den Drehmechanismus schieben kann. Damit der Rohrsteckschlüssel die Flügel aufnehmen kann, muss man mit der Flex oder der Eisensäge einen kurzen, 5mm langen 2mm breiten Schlitz ins Profil des Schlüssels basteln. Der Schlitz sollte das Profil des Schlüssels in der Mitte an der längeren Ausrichtung teilen. Den Schlitz nicht zu tief machen, da er die Stabilität des Werkzeuges beeinträchtigt und zu tief geschlitzte Schlüssel schnell sich verziehen und ausleiern. Du hast keine Flex? Selbstorganisierte Fahrradwerkstätten haben oft alles, was man zur Metallbearbeitung braucht."
+      },
+      {
+        "image": "/assets/images/uploads/42821286631942.jpg",
+        "heading": "Dreikantschlüssel M5",
+        "content": "Die in Berlin zweithäufigste Variante ist der Dreikantschlüssel M5. Denn Schlüssel gibt’s nicht im Baumarkt. Im Werkzeugfachhandel ist er ab und zu vorhanden. Leider passt das klassische runde Hausmeister*innenmodell für Elektroschränke und Absperrpfosten nicht ins Loch, weil es nicht schlank genug ist. Wer viel Zeit hat, kann versuchen, mit der Schleifscheibe der Flex genug Material abzuschleifen, bis der Schlüssel ins Loch passt. Und ab und zu gibt’s auch hier das Problem mit den störenden Inventar… Darüber hinaus muss man bei diesen Kästen den Schlüssel nach dem Öffnen der Verriegelung erst abziehen, bevor sich der Kasten öffnen lässt und der Kästen muss auch wieder abgeschlossen werden."
+      },
+      {
+        "image": "/assets/images/uploads/71625092431943.jpg",
+        "heading": "Standard bei JCDecaux",
+        "content": "Der Standartkasten bei JCDecaux hat an der Seite rechts unten das Schlüsselloch. Da es einige Zentimeter hinein geht, hilft eine Verlängerung aus dem Baumarkt. Der Ratschenbit, der den Kasten öffnet, ist der sechskantige mit 13mm Durchmesser. Wenn der nicht ins Loch passt, einen mit geringerem Außendurchmesser besorgen oder mit der Flex Material abschleifen."
+      }
+    ],
+    "mediatype": "tutorial"
   }
 ]}

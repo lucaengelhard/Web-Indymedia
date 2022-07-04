@@ -314,12 +314,16 @@ function placeMarker(place) {
     address = place.city;
   }
 
+console.log(place);
+
 
   if (place.place.length !== 0) {
     popuptext = "<a href='/map/map.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
+
     marker.bindPopup(popuptext);
   } else {
     popuptext = "<a href='/map/map.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + address + "</div>";
+console.log(marker);
     marker.bindPopup(popuptext);
   }
 }

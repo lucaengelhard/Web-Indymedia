@@ -7,14 +7,14 @@ let params = (new URL(url)).searchParams;
 
 const mapnodeid = parseInt(params.get("mapnodeid"));
 
-console.log(mapnodeid);
+//console.log(mapnodeid);
 
 fetch("/map/maplist.json")
 .then(res => res.json())
 .then(maplist => {
-//console.log(maplist);
+////console.log(maplist);
 currentPage = maplist.mappoints[mapnodeid - 1];
-console.log(currentPage);
+//console.log(currentPage);
 
 if(currentPage.image != undefined){
   document.querySelector(".article-headerimage").innerHTML = "<img src='"+currentPage.image+"'>";
@@ -80,7 +80,7 @@ function eventFiller(mapnodeid) {
   .then(res => res.json())
   .then(maplist => {
     data = maplist.mappoints;
-    console.log(data[pageid - 1]);
+    //console.log(data[pageid - 1]);
 
     if(data[pageid - 1].markertype == "ort"){
       const locationLatlong = data[pageid - 1].latlong;
@@ -88,7 +88,7 @@ function eventFiller(mapnodeid) {
 
       data.forEach((item, i) => {
         latlong = item.latlong;
-        console.log(latlong);
+        //console.log(latlong);
 
         lat1 = locationLatlong[0];
         lon1 = locationLatlong[1];
@@ -100,14 +100,14 @@ function eventFiller(mapnodeid) {
 
         distance = calcdistance(lat1, lon1, lat2, lon2, unit)
 
-        console.log(distance);
+        //console.log(distance);
 
         if(distance <= tolerance) {
           inRange.push(item.mapnodeid);
         }
       });
 
-      console.log(inRange);
+      //console.log(inRange);
 
     printEvents(inRange, data);
     }
@@ -139,11 +139,27 @@ function eventFiller(mapnodeid) {
   }
 
   function printEvents(inRange, data){
-  console.log(inRange);
+  //console.log(inRange);
   console.log(data);
+  console.log(inRange);
+
+
+  eventcheck = false;
+
+  data.forEach((item, i) => {
+    if(item.markertype == "event"){
+      if(inRange.includes(item.mapnodeid)){
+        eventcheck = true;
+        return eventcheck
+      }
+    }
+
+  });
+
+console.log(eventcheck);
+
+if(eventcheck == true){
   maplist.insertAdjacentHTML("beforeend", "<div class='maplist-title'>Events:</div>");
-
-
   data.forEach((item, i) => {
     if(item.markertype == "event"){
       if(inRange.includes(item.mapnodeid)){
@@ -162,18 +178,23 @@ function eventFiller(mapnodeid) {
 
         iconurl = "#";
 
+        console.log(item);
+        console.log(locationlink);
+
 
 
         if(place != ""){
-          maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='#' class='map-article-link'>        <div class='subtitle'><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </div>          <h1>" + item.title + "</h1></a>        <div class='subtitle'><a href='/map/map.html?mapnodeid=" + place.mapnodeid + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </div>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
+          maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='/map/map.html?mapnodeid=" + item.mapnodeid + "' class='map-article-link'>        <div class='subtitle'><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </div>          <h1>" + item.title + "</h1></a>        <div class='subtitle'><a href='/map/map.html?mapnodeid=" + item.mapnodeid + "' class='map-place-link'><span class='map-place'>" + item.city + "</span> |         <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </div>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
         } else {
-          maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='#' class='map-article-link'>        <div class='subtitle'><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </div>          <h1>" + item.title + "</h1></a>        <div  class='subtitle'><a href='/map/map.html?mapnodeid=" + place.mapnodeid + "' class='map-place-link'><span class='map-place'>" + item.city + "</span>          <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </div>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
+          maplist.insertAdjacentHTML("beforeend","<article class='map-list-object tagtopic-"+tagTopic+"'><a href='/map/map.html?mapnodeid=" + item.mapnodeid + "' class='map-article-link'>        <div class='subtitle'><span class='map-date'>" + item.date + "</span> |            <span class='map-time'>" + item.time + "</span>          </div>          <h1>" + item.title + "</h1></a>        <div  class='subtitle'><a href='/map/map.html?mapnodeid=" + item.mapnodeid + "' class='map-place-link'><span class='map-place'>" + item.city + "</span>          <span href='" + locationlink + "' class='map-location-link'><span class='map-location'>" + place + "</span></span>        </div>        <div class='map-icon'>          <div class='map-eventtype-line'></div>          <a href='#' class='map-eventtype-link'><img src='" + iconurl + "' alt=''></a>        </div>      </article>");
         }
 
 
       }
     }
   });
+}
+
 
   }
 }
