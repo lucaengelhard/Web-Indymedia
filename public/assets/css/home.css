@@ -84,6 +84,28 @@ font-weight: 600;
 }
 */
 
+.article-moretopic {
+  border: 1px solid;
+  padding: 1rem;
+  font-family: Iosevka, monospace;
+  font-size: 1rem;
+}
+
+.article-moretopic >a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+
+  width: max-content;
+  margin-top: 1rem;
+}
+
+.section-topic >a {
+  font-family: Iosevka, monospace;
+  justify-self: end;
+}
+
 @media screen and (max-width: 1250px) {
     .homepage-menu {
         width: 100%;

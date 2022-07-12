@@ -41,7 +41,7 @@ fetch("/artikel/articlelist.json")
   const landing = document.querySelector(".landing");
   landingCounter = 0;
   articles.slice().reverse().forEach((article, i) => {
-    console.log(article);
+   //console.log(article);
     if(landingCounter <= 2 && article.featured){
 
       if(article.image != ""){
@@ -57,9 +57,11 @@ fetch("/artikel/articlelist.json")
 
   });
 
+
+
   landinglist = Array.from(landing.children);
 
-  console.log(landinglist);
+ //console.log(landinglist);
 
   landinglist[0].classList.add("landing-current");
 
@@ -247,6 +249,9 @@ fetch("/artikel/articlelist.json")
       }
     });
 
+
+
+
     const postTagsDiv = Array.from(document.querySelectorAll(".post-tags"));
 
     //console.log(postTagsDiv);
@@ -274,17 +279,23 @@ fetch("/artikel/articlelist.json")
 
   });
 
+  sectionList.forEach((section, i) => {
+   console.log(section);
+    section.querySelector(".article-text").insertAdjacentHTML("beforeend","<div class='article-moretopic' >        Hier könnte dein Beitrag stehen        <a href='create.html' style='background-color: var(--"+section.id+")'>Beitrag schreiben</a>  </div>");
+    section.insertAdjacentHTML("beforeend", "<a style='color: var(--"+section.id+")' href='artikel.html?search=&placesearch=&locationrange=0&filter-topiccheck-"+section.id+"=on&tagsearch=&confirm=Auswahl+best%C3%A4tigen'>mehr Artikel >><a>");
+  });
+
   /*
   articles.forEach((article, i) => {
-    console.log(article);
-    console.log(topicArray);
+   //console.log(article);
+   //console.log(topicArray);
 
     topicArray.forEach((topic, i) => {
       //console.log(topic);
       topicCheck = article.topics.includes(topic);
 
       topicCheckString = topic + " " + topicCheck
-      console.log(topicCheckString);
+     //console.log(topicCheckString);
 
       if(topicCheck){
 
@@ -294,4 +305,4 @@ fetch("/artikel/articlelist.json")
 
   });*/
 
-})
+});

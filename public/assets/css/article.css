@@ -267,6 +267,7 @@ input[type=range]:focus {
     opacity: 100;
     padding: 1rem;
     width: calc(100% - 2rem);
+    top: 98px;
   }
 
   .filter-search>.filter-input-box>input {

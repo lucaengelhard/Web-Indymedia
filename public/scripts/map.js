@@ -164,8 +164,20 @@ datecheck = isintheFuture(item);
   });
 
 
+eventheading();
 
+}
 
+function eventheading(){
+  eventtitle = document.querySelector(".maplist-title");
+  eventlist = Array.from(document.querySelector("#maplist").querySelectorAll("article"));
+  console.log(eventlist);
+
+  if(eventlist.length > 0){
+    eventtitle.style.display = "block";
+  } else {
+    eventtitle.style.display = "none";
+  }
 }
 
 function isintheFuture(item){
@@ -250,6 +262,8 @@ function placeMarker(place) {
   //console.log(currentLatLong);
  //console.log(latlongrandom);
 
+ console.log(place);
+
   if (place.markertype == "gruppe") {
     var marker = L.marker(latlongrandom, {
       icon: iconGruppe
@@ -300,12 +314,16 @@ function placeMarker(place) {
     address = place.city;
   }
 
+console.log(place);
+
 
   if (place.place.length !== 0) {
     popuptext = "<a href='/map/map.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + place.place + "</div><div>" + address + "</div>";
+
     marker.bindPopup(popuptext);
   } else {
     popuptext = "<a href='/map/map.html?mapnodeid=" + place.mapnodeid + "'>" + place.title + "</a><div>" + address + "</div>";
+console.log(marker);
     marker.bindPopup(popuptext);
   }
 }
@@ -428,6 +446,7 @@ filterStart();
 firstLoad = 0;
 locationRange();
 locationRange();
+eventheading();
 
 function filterStart() {
   ;
@@ -745,7 +764,7 @@ function filterStart() {
 }
 
 function eventMarker(currentLatLong, place) {
-  if (place.eventtype == "küche") {
+  if (place.eventtype == "kueche") {
     var marker = L.marker(currentLatLong, {
       icon: iconKueche
     }).addTo(map);

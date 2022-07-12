@@ -1,8 +1,13 @@
+function filterdprint(filteredArticleList){
+  console.log(filteredArticleList);
+
+
 //get article list
 fetch('/Artikel/articlelist.json')
   .then(response => response.json())
   .then(articlelist => {
     // Do something with your data
+    console.log(filteredArticleList);
     let i = 0;
     columnswap = 0;
     featuredCounter = 0;
@@ -150,7 +155,7 @@ fetch('/Artikel/articlelist.json')
 
     const postTagsDiv = Array.from(document.querySelectorAll(".post-tags"));
 
-    console.log(postTagsDiv);
+    //console.log(postTagsDiv);
 
     postTagsDiv.forEach((div, i) => {
       Array.from(div.querySelectorAll("span")).forEach((tag, i) => {
@@ -162,6 +167,6 @@ fetch('/Artikel/articlelist.json')
 
 
 
-  });
+  });}
 
   //Tags Uppercase

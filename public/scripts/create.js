@@ -53,14 +53,22 @@ elements.forEach((element, i) => {
 imageSelector(imageselect);
 
 function imageSelector(imageselect) {
-  if(imageselect != null){imageCollection = Array.from(imageselect.querySelectorAll("img"));
-  //console.log(imageCollection);
+  if(imageselect != null){
+    imageCollection = Array.from(imageselect.querySelectorAll("img"));
+
   imageCollection.forEach((image, i) => {
+    imageclicked = false;
     image.addEventListener("click", e => {
       imgURL = e.target.src;
-      document.execCommand("insertImage", false, imgURL);
+      console.log(imageclicked);
+      if(!imageclicked){
+        document.execCommand("insertImage", false, imgURL);
+        imageclicked = true;
+      }
+
     });
-  });}
+  });
+}
 
 
 }
@@ -109,7 +117,7 @@ function imageUpload() {
 $(function() {
   $("#editor-usertags-input").on({
     focusout: function() {
-      var txt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig, " ");
+      var txt = this.value.replace(/[^a-z0-9\+\-\.\#\ä\ö\ü]/ig, " ");
       if (txt) $("<span/>", {
         text: txt.toLowerCase(),
         appendTo: $("#editor-user-tags-selected")
@@ -829,12 +837,22 @@ markerArray.forEach((marker, i) => {
   }
 });
 
+
 if(article.markertype == "event"){
   eventArray = Array.from(document.querySelector(".editor-eventtype").children);
-  eventArray.forEach((type, i) => {
-    if(type.checked){
-      article.eventtype = type.value;
-    }
+  console.log(eventArray);
+  eventArray.forEach((typebox, i) => {
+    console.log(typebox);
+
+      type = typebox.querySelector("input");
+      console.log(type.checked);
+      if(type.checked){
+
+        article.eventtype = type.value;
+      }
+
+
+
   });
 
   dateArray = document.querySelector(".editor-date").value.split("-");
